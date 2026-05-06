@@ -140,38 +140,12 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
   <div class="test-banner-text">
     <span class="test-banner-tag">免費線上測驗</span>
     <h3 class="test-banner-title">親子教養心智光譜測驗</h3>
-    <div class="test-banner-sub">紅 · 橘 · 綠 · 藍 — 看見你跟孩子各自的天賦光譜，把「為什麼他不像我？」變成「原來他是這樣的人」。</div>
+    <div class="test-banner-sub">紅 · 橙 · 綠 · 藍 — 看見你跟孩子各自的天賦光譜，把「為什麼他不像我？」變成「原來他是這樣的人」。</div>
   </div>
   <span class="test-banner-cta">立即測驗 →</span>
 </a>
 
 
-
-<div class="filter-bar">
-  <div class="filter-group">
-    <span class="filter-label">主題軸</span>
-    <span class="filter-chip active" data-type="axis" data-val="all">全部</span>
-    <span class="filter-chip" data-type="axis" data-val="mon">週一 幼兒情緒</span>
-    <span class="filter-chip" data-type="axis" data-val="tue">週二 學習動機</span>
-    <span class="filter-chip" data-type="axis" data-val="wed">週三 青少年</span>
-    <span class="filter-chip" data-type="axis" data-val="thu">週四 覺知對話</span>
-    <span class="filter-chip" data-type="axis" data-val="fri">週五 父母覺知</span>
-    <span class="filter-chip" data-type="axis" data-val="sat">週六 家庭儀式</span>
-    <span class="filter-chip" data-type="axis" data-val="sun">週日 跨世代</span>
-  </div>
-  <div class="filter-group">
-    <span class="filter-label">年齡段</span>
-    <span class="filter-chip active" data-type="age" data-val="all">全部</span>
-    <span class="filter-chip" data-type="age" data-val="0-6">0-6 歲幼兒</span>
-    <span class="filter-chip" data-type="age" data-val="6-12">6-12 歲學齡</span>
-    <span class="filter-chip" data-type="age" data-val="13-18">13-18 歲青少年</span>
-    <span class="filter-chip" data-type="age" data-val="cross">跨齡（家庭/父母）</span>
-  </div>
-  <div class="filter-status">
-    篩選結果：<span class="num" id="resultCount">12</span> / 12 篇
-    <span class="reset" id="filterReset" onclick="resetFilter()">清除篩選</span>
-  </div>
-</div>
 
 <div class="grid">
 <a class="card is-latest theme-blue" href="parenting_essence_2026-05-06.html" data-axis="wed" data-age="13-18">
@@ -266,5 +240,48 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
   <div class="slogans">覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊</div>
 </footer>
 </div>
+
+<script>
+(function(){
+  const cards = document.querySelectorAll('.card[data-axis]');
+  const chips = document.querySelectorAll('.filter-chip');
+  const resultCount = document.getElementById('resultCount');
+  let activeAxis = 'all', activeAge = 'all';
+  
+  function applyFilter(){
+    let count = 0;
+    cards.forEach(c => {
+      const matchAxis = activeAxis === 'all' || c.dataset.axis === activeAxis;
+      const matchAge = activeAge === 'all' || c.dataset.age === activeAge;
+      if(matchAxis && matchAge){ c.classList.remove('is-hidden'); count++; }
+      else c.classList.add('is-hidden');
+    });
+    if(resultCount) resultCount.textContent = count;
+  }
+  
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const type = chip.dataset.type;
+      const val = chip.dataset.val;
+      document.querySelectorAll('.filter-chip[data-type="'+type+'"]').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      if(type === 'axis') activeAxis = val;
+      else activeAge = val;
+      applyFilter();
+    });
+  });
+  
+  window.resetFilter = function(){
+    activeAxis = 'all'; activeAge = 'all';
+    chips.forEach(c => c.classList.remove('active'));
+    document.querySelector('.filter-chip[data-type="axis"][data-val="all"]').classList.add('active');
+    document.querySelector('.filter-chip[data-type="age"][data-val="all"]').classList.add('active');
+    applyFilter();
+  };
+  
+  applyFilter();
+})();
+</script>
+
 </body>
 </html>
