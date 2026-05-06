@@ -28,11 +28,6 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
 .head .sub{color:var(--ink-soft);font-size:15px;letter-spacing:1.2px;}
 .head .meta{margin-top:18px;color:var(--ink-soft);font-size:14px;line-height:1.85;border-top:1px dashed var(--border);padding-top:18px;}
 .head .meta strong{color:var(--brand-deep);}
-.weekly{background:#fff;border-radius:18px;padding:24px 28px;margin-bottom:28px;border:1px solid var(--border);box-shadow:var(--shadow);}
-.weekly h2{font-size:18px;margin:0 0 14px;color:var(--brand-deep);letter-spacing:1.5px;border-left:4px solid var(--accent);padding-left:12px;}
-.weekly-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;}
-.weekly-grid div{background:var(--brand-soft);border-radius:10px;padding:10px 12px;font-size:13.5px;color:var(--brand-deep);}
-.weekly-grid div strong{display:block;color:var(--accent);font-size:12px;letter-spacing:1px;margin-bottom:3px;}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;}
 .card{background:var(--card);border-radius:16px;padding:24px 22px 20px;border:1px solid var(--border);box-shadow:var(--shadow);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease;}
 .card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(59,89,152,0.12);}
@@ -66,33 +61,35 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
 .card.theme-orange.is-latest::before{background:#d97757;}
 
 
+@media(max-width:600px){
+  }
+
 
 .filter-bar{
-  background:#fff;border-radius:18px;padding:20px 24px;margin-bottom:24px;
+  background:#fff;border-radius:18px;padding:18px 22px;margin-bottom:24px;
   border:1px solid var(--border);box-shadow:var(--shadow);
 }
-.filter-group{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;}
-.filter-group:last-child{margin-bottom:0;}
-.filter-label{font-size:13.5px;color:var(--brand-deep);font-weight:700;letter-spacing:1px;margin-right:4px;min-width:60px;}
+.filter-group{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.filter-group:last-of-type{margin-bottom:0;}
+.filter-label{font-size:13px;color:var(--brand-deep);font-weight:700;letter-spacing:1px;flex-shrink:0;min-width:42px;}
+.filter-chips{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding-bottom:2px;flex:1;}
+.filter-chips::-webkit-scrollbar{height:4px;}
+.filter-chips::-webkit-scrollbar-thumb{background:#d4c8a8;border-radius:2px;}
 .filter-chip{
-  display:inline-block;padding:6px 14px;border-radius:18px;font-size:13px;
+  display:inline-block;padding:5px 12px;border-radius:16px;font-size:12.5px;
   background:#f3ede0;color:#5a5048;border:1px solid #e1d6bb;
-  cursor:pointer;transition:all .15s ease;letter-spacing:.5px;
-  user-select:none;
+  cursor:pointer;transition:all .15s ease;letter-spacing:.3px;
+  user-select:none;white-space:nowrap;flex-shrink:0;
 }
 .filter-chip:hover{background:#e8ddc8;}
 .filter-chip.active{background:var(--brand);color:#fff;border-color:var(--brand);}
-.filter-chip.disabled{opacity:.4;cursor:not-allowed;}
-.filter-chip .count{font-size:11px;opacity:.7;margin-left:4px;}
-.filter-status{font-size:13px;color:var(--ink-soft);margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);}
+.filter-status{font-size:12.5px;color:var(--ink-soft);margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);}
 .filter-status .num{color:var(--brand);font-weight:700;}
 .filter-status .reset{color:var(--brand);cursor:pointer;text-decoration:underline;margin-left:8px;}
 .card.is-hidden{display:none !important;}
-.empty-state{text-align:center;padding:60px 20px;color:var(--ink-soft);font-size:15px;display:none;}
-.empty-state.show{display:block;}
 @media(max-width:600px){
-  .filter-label{min-width:auto;width:100%;margin-bottom:4px;}
-  .filter-chip{font-size:12px;padding:5px 12px;}
+  .filter-chip{font-size:12px;padding:4px 10px;}
+  .filter-label{font-size:12px;min-width:38px;}
 }
 
 .test-banner{
@@ -115,34 +112,8 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
 }
 .test-banner:hover .test-banner-cta{background:#fbe9de;}
 @media(max-width:600px){
-  
-.filter-bar{
-  background:#fff;border-radius:18px;padding:20px 24px;margin-bottom:24px;
-  border:1px solid var(--border);box-shadow:var(--shadow);
-}
-.filter-group{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;}
-.filter-group:last-child{margin-bottom:0;}
-.filter-label{font-size:13.5px;color:var(--brand-deep);font-weight:700;letter-spacing:1px;margin-right:4px;min-width:60px;}
-.filter-chip{
-  display:inline-block;padding:6px 14px;border-radius:18px;font-size:13px;
-  background:#f3ede0;color:#5a5048;border:1px solid #e1d6bb;
-  cursor:pointer;transition:all .15s ease;letter-spacing:.5px;
-  user-select:none;
-}
-.filter-chip:hover{background:#e8ddc8;}
-.filter-chip.active{background:var(--brand);color:#fff;border-color:var(--brand);}
-.filter-chip.disabled{opacity:.4;cursor:not-allowed;}
-.filter-chip .count{font-size:11px;opacity:.7;margin-left:4px;}
-.filter-status{font-size:13px;color:var(--ink-soft);margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);}
-.filter-status .num{color:var(--brand);font-weight:700;}
-.filter-status .reset{color:var(--brand);cursor:pointer;text-decoration:underline;margin-left:8px;}
-.card.is-hidden{display:none !important;}
-.empty-state{text-align:center;padding:60px 20px;color:var(--ink-soft);font-size:15px;display:none;}
-.empty-state.show{display:block;}
-@media(max-width:600px){
-  .filter-label{min-width:auto;width:100%;margin-bottom:4px;}
-  .filter-chip{font-size:12px;padding:5px 12px;}
-}
+  @media(max-width:600px){
+  }
 
 .test-banner{padding:22px 20px;flex-direction:column;align-items:flex-start;}
   .test-banner-cta{width:100%;text-align:center;}
@@ -164,19 +135,6 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
   <div class="sub">先懂心　・　再懂教</div>
   <div class="meta"><strong>作者</strong>：K12覺知素養教育學苑<br>覺知 SEL 是 <strong>4C 非認知能力</strong>（創造力 ·  思辨力 ·  溝通力 ·  合作力）的根基。<br>AI 已經能算、能解、能寫，孩子真正能帶走的競爭力，不在分數，而在能不能<strong>看見自己、安住自己、選擇怎麼回應這個世界</strong>。</div>
 </header>
-
-<section class="weekly">
-  <h2>七天主題輪播</h2>
-  <div class="weekly-grid">
-    <div><strong>週一 MON</strong>幼兒情緒與依附</div>
-    <div><strong>週二 TUE</strong>學齡學習動機</div>
-    <div><strong>週三 WED</strong>青少年自我認同</div>
-    <div><strong>週四 THU</strong>3 秒覺知對話</div>
-    <div><strong>週五 FRI</strong>父母自我覺知</div>
-    <div><strong>週六 SAT</strong>家庭氛圍儀式</div>
-    <div><strong>週日 SUN</strong>跨世代家庭文化</div>
-  </div>
-</section>
 
 <a class="test-banner" href="https://zway-education.github.io/mindspectrum/" target="_blank" rel="noopener">
   <div class="test-banner-text">
