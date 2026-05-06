@@ -66,6 +66,35 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
 .card.theme-orange.is-latest::before{background:#d97757;}
 
 
+
+.filter-bar{
+  background:#fff;border-radius:18px;padding:20px 24px;margin-bottom:24px;
+  border:1px solid var(--border);box-shadow:var(--shadow);
+}
+.filter-group{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;}
+.filter-group:last-child{margin-bottom:0;}
+.filter-label{font-size:13.5px;color:var(--brand-deep);font-weight:700;letter-spacing:1px;margin-right:4px;min-width:60px;}
+.filter-chip{
+  display:inline-block;padding:6px 14px;border-radius:18px;font-size:13px;
+  background:#f3ede0;color:#5a5048;border:1px solid #e1d6bb;
+  cursor:pointer;transition:all .15s ease;letter-spacing:.5px;
+  user-select:none;
+}
+.filter-chip:hover{background:#e8ddc8;}
+.filter-chip.active{background:var(--brand);color:#fff;border-color:var(--brand);}
+.filter-chip.disabled{opacity:.4;cursor:not-allowed;}
+.filter-chip .count{font-size:11px;opacity:.7;margin-left:4px;}
+.filter-status{font-size:13px;color:var(--ink-soft);margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);}
+.filter-status .num{color:var(--brand);font-weight:700;}
+.filter-status .reset{color:var(--brand);cursor:pointer;text-decoration:underline;margin-left:8px;}
+.card.is-hidden{display:none !important;}
+.empty-state{text-align:center;padding:60px 20px;color:var(--ink-soft);font-size:15px;display:none;}
+.empty-state.show{display:block;}
+@media(max-width:600px){
+  .filter-label{min-width:auto;width:100%;margin-bottom:4px;}
+  .filter-chip{font-size:12px;padding:5px 12px;}
+}
+
 .test-banner{
   background:linear-gradient(135deg,#3b5998 0%,#d97757 100%);
   border-radius:18px;padding:28px 30px;margin-bottom:28px;
@@ -86,7 +115,36 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
 }
 .test-banner:hover .test-banner-cta{background:#fbe9de;}
 @media(max-width:600px){
-  .test-banner{padding:22px 20px;flex-direction:column;align-items:flex-start;}
+  
+.filter-bar{
+  background:#fff;border-radius:18px;padding:20px 24px;margin-bottom:24px;
+  border:1px solid var(--border);box-shadow:var(--shadow);
+}
+.filter-group{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;}
+.filter-group:last-child{margin-bottom:0;}
+.filter-label{font-size:13.5px;color:var(--brand-deep);font-weight:700;letter-spacing:1px;margin-right:4px;min-width:60px;}
+.filter-chip{
+  display:inline-block;padding:6px 14px;border-radius:18px;font-size:13px;
+  background:#f3ede0;color:#5a5048;border:1px solid #e1d6bb;
+  cursor:pointer;transition:all .15s ease;letter-spacing:.5px;
+  user-select:none;
+}
+.filter-chip:hover{background:#e8ddc8;}
+.filter-chip.active{background:var(--brand);color:#fff;border-color:var(--brand);}
+.filter-chip.disabled{opacity:.4;cursor:not-allowed;}
+.filter-chip .count{font-size:11px;opacity:.7;margin-left:4px;}
+.filter-status{font-size:13px;color:var(--ink-soft);margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);}
+.filter-status .num{color:var(--brand);font-weight:700;}
+.filter-status .reset{color:var(--brand);cursor:pointer;text-decoration:underline;margin-left:8px;}
+.card.is-hidden{display:none !important;}
+.empty-state{text-align:center;padding:60px 20px;color:var(--ink-soft);font-size:15px;display:none;}
+.empty-state.show{display:block;}
+@media(max-width:600px){
+  .filter-label{min-width:auto;width:100%;margin-bottom:4px;}
+  .filter-chip{font-size:12px;padding:5px 12px;}
+}
+
+.test-banner{padding:22px 20px;flex-direction:column;align-items:flex-start;}
   .test-banner-cta{width:100%;text-align:center;}
 }
 
@@ -129,85 +187,113 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
   <span class="test-banner-cta">立即測驗 →</span>
 </a>
 
+
+
+<div class="filter-bar">
+  <div class="filter-group">
+    <span class="filter-label">主題軸</span>
+    <span class="filter-chip active" data-type="axis" data-val="all">全部</span>
+    <span class="filter-chip" data-type="axis" data-val="mon">週一 幼兒情緒</span>
+    <span class="filter-chip" data-type="axis" data-val="tue">週二 學習動機</span>
+    <span class="filter-chip" data-type="axis" data-val="wed">週三 青少年</span>
+    <span class="filter-chip" data-type="axis" data-val="thu">週四 覺知對話</span>
+    <span class="filter-chip" data-type="axis" data-val="fri">週五 父母覺知</span>
+    <span class="filter-chip" data-type="axis" data-val="sat">週六 家庭儀式</span>
+    <span class="filter-chip" data-type="axis" data-val="sun">週日 跨世代</span>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">年齡段</span>
+    <span class="filter-chip active" data-type="age" data-val="all">全部</span>
+    <span class="filter-chip" data-type="age" data-val="0-6">0-6 歲幼兒</span>
+    <span class="filter-chip" data-type="age" data-val="6-12">6-12 歲學齡</span>
+    <span class="filter-chip" data-type="age" data-val="13-18">13-18 歲青少年</span>
+    <span class="filter-chip" data-type="age" data-val="cross">跨齡（家庭/父母）</span>
+  </div>
+  <div class="filter-status">
+    篩選結果：<span class="num" id="resultCount">12</span> / 12 篇
+    <span class="reset" id="filterReset" onclick="resetFilter()">清除篩選</span>
+  </div>
+</div>
+
 <div class="grid">
-<a class="card is-latest theme-blue" href="parenting_essence_2026-05-06.html">
+<a class="card is-latest theme-blue" href="parenting_essence_2026-05-06.html" data-axis="wed" data-age="13-18">
     <div class="card-tags"><span class="age">13-18 歲青少年</span><span class="axis">週三 ｜ 青少年自我認同</span></div>
     <h3 class="card-title">他甩上的那扇門，不是把你關在外面，是他在練習成為自己</h3>
     <p class="card-hook">傍晚六點半，你聽見鑰匙轉動的聲音。「今天考得怎麼樣？」沒有回答，只有書包掉在沙發上的「咚」、一句「煩死了」、然後是房門砰一聲。你站在門外，端著那盤水果，心裡又熱又冷⋯⋯</p>
     <span class="upload-date">📅 2026-05-06　週三</span>
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
-<a class="card is-latest theme-orange" href="parenting_essence_2026-05-05.html">
+<a class="card is-latest theme-orange" href="parenting_essence_2026-05-05.html" data-axis="tue" data-age="6-12">
     <div class="card-tags"><span class="age">6-12 歲學齡</span><span class="axis">週二 ｜ 學習動機與自主</span></div>
     <h3 class="card-title">當孩子一遇難就說「我不會」——他要的不是答案，是被相信</h3>
     <p class="card-hook">「我不會。」三個字從孩子嘴裡蹦出來時，你已經看了兩眼題目，心裡冒出兩種版本的回應⋯⋯但孩子卡住的那一刻，他要的不是答案，是被相信。</p>
     <span class="upload-date">📅 2026-05-05　週二</span>
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
-<a class="card theme-blue" href="parenting_essence_2026-05-04.html">
+<a class="card theme-blue" href="parenting_essence_2026-05-04.html" data-axis="mon" data-age="0-6">
     <div class="card-tags"><span class="age">0-6 歲幼兒</span><span class="axis">週一 ｜ 幼兒情緒與依附</span></div>
     <h3 class="card-title">哭鬧不是無理取鬧，是大腦還沒長好</h3>
     <p class="card-hook">當孩子在賣場崩潰倒地，路人轉頭看你的那一刻——你不是教養失敗，你正在面對一個還在發育中的大腦。</p>
     <span class="upload-date">📅 2026-05-04　週一</span>
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
-<a class="card theme-orange" href="parenting_essence_2026-05-03.html">
+<a class="card theme-orange" href="parenting_essence_2026-05-03.html" data-axis="sun" data-age="cross">
     <div class="card-tags"><span class="age">跨世代</span><span class="axis">週日 ｜ 跨世代與家庭文化</span></div>
     <h3 class="card-title">阿公阿嬤的「以前都這樣」，不是錯，只是不同時代</h3>
     <p class="card-hook">你跟長輩在教養上吵不停。但這不是「誰對誰錯」的戰爭——這是兩個時代對「什麼叫愛孩子」的不同答案，正在同一個屋簷下相遇。</p>
     <span class="upload-date">📅 2026-05-03　週日</span>
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
-<a class="card theme-blue" href="parenting_essence_2026-05-02.html">
+<a class="card theme-blue" href="parenting_essence_2026-05-02.html" data-axis="sat" data-age="cross">
     <div class="card-tags"><span class="age">家庭儀式</span><span class="axis">週六 ｜ 家庭氛圍與儀式感</span></div>
     <h3 class="card-title">餐桌上的 10 分鐘，比一場家庭會議更深</h3>
     <p class="card-hook">家庭關係不是靠週末的盛大計畫維繫的，是靠每天那 10 分鐘——你們同時放下手機、抬頭看見彼此的時間。</p>
     <span class="upload-date">📅 2026-05-02　週六</span>
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
-<a class="card theme-orange" href="parenting_essence_2026-05-01.html">
+<a class="card theme-orange" href="parenting_essence_2026-05-01.html" data-axis="fri" data-age="cross">
     <div class="card-tags"><span class="age">父母自我</span><span class="axis">週五 ｜ 父母自我覺知</span></div>
     <h3 class="card-title">你不是失控，你只是太久沒被接住</h3>
     <p class="card-hook">對孩子大吼之後，你躲在浴室裡無聲掉眼淚。你以為你在對孩子生氣，其實你在跟那個沒人看見、撐了好久的自己說：我真的好累。</p>
     <span class="upload-date">📅 2026-05-01　週五</span>
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
-<a class="card theme-blue" href="parenting_essence_2026-04-30.html">
+<a class="card theme-blue" href="parenting_essence_2026-04-30.html" data-axis="thu" data-age="cross">
     <div class="card-tags"><span class="age">親子溝通</span><span class="axis">週四 ｜ 覺知對話練習</span></div>
     <h3 class="card-title">3 秒鐘覺知對話——關掉自動回應的開關</h3>
     <p class="card-hook">孩子說了一句話，你的反應已經衝出來了——你發現自己又重演了上一代對你的劇本。3 秒鐘，是改變這個劇本唯一的縫隙。</p>
     <span class="upload-date">📅 2026-04-30　週四</span>
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
-<a class="card theme-orange" href="parenting_essence_2026-04-29.html">
+<a class="card theme-orange" href="parenting_essence_2026-04-29.html" data-axis="wed" data-age="13-18">
     <div class="card-tags"><span class="age">13-18 歲青少年</span><span class="axis">週三 ｜ 青少年自我認同</span></div>
     <h3 class="card-title">房門關上的那一刻，他不是在拒絕你，是在練習成為自己</h3>
     <p class="card-hook">他不再回你訊息、晚餐三句就回房間、房門「啪」一聲關上。你站在門外，覺得這個十五歲的人，已經不是你認識的那個孩子了。</p>
     <span class="upload-date">📅 2026-04-29　週三</span>
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
-<a class="card theme-blue" href="parenting_essence_2026-04-28.html">
+<a class="card theme-blue" href="parenting_essence_2026-04-28.html" data-axis="tue" data-age="6-12">
     <div class="card-tags"><span class="age">6-12 歲學齡</span><span class="axis">週二 ｜ 學習動機與自主</span></div>
     <h3 class="card-title">寫作業拖拉的真相——不是懶，是大腦在保護自己</h3>
     <p class="card-hook">孩子坐在書桌前一個小時只寫了三行，你以為他在偷懶。但對一個正在害怕失敗的大腦來說，「不開始」是最划算的選擇。</p>
     <span class="upload-date">📅 2026-04-28　週二</span>
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
-<a class="card theme-orange" href="parenting_essence_2026-04-27.html">
+<a class="card theme-orange" href="parenting_essence_2026-04-27.html" data-axis="mon" data-age="0-6">
     <div class="card-tags"><span class="age">0-6 歲幼兒</span><span class="axis">延伸題 ｜ 幼兒依附建立</span></div>
     <h3 class="card-title">安全感不是滿足需求，是讓孩子知道「你會回來」</h3>
     <p class="card-hook">你不可能 24 小時陪著他，也不需要。孩子真正記得的，不是你陪了多久，而是你每一次「離開後又回來」的承諾。</p>
     <span class="upload-date">📅 2026-04-27　週一</span>
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
-<a class="card theme-blue" href="parenting_essence_2026-04-26.html">
+<a class="card theme-blue" href="parenting_essence_2026-04-26.html" data-axis="sun" data-age="cross">
     <div class="card-tags"><span class="age">手足互動</span><span class="axis">延伸題 ｜ 手足關係</span></div>
     <h3 class="card-title">為什麼孩子會故意「鬧」弟妹？爭的不是玩具，是位置</h3>
     <p class="card-hook">他打了弟弟、搶了姐姐的東西、把妹妹的畫撕了。你以為他在欺負手足，其實他在問你一個問題：「你還愛我嗎？」</p>
     <span class="upload-date">📅 2026-04-26　週日</span>
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
-<a class="card theme-orange" href="parenting_essence_2026-04-25.html">
+<a class="card theme-orange" href="parenting_essence_2026-04-25.html" data-axis="sat" data-age="6-12">
     <div class="card-tags"><span class="age">6-15 歲</span><span class="axis">延伸題 ｜ 學習動機建構</span></div>
     <h3 class="card-title">從他律到自律到自主——孩子學會的不是聽話，是負責</h3>
     <p class="card-hook">你以為「乖孩子」是教養的目標，其實「乖」是最危險的階段。真正的成熟不是聽你的話，是聽他自己內在那個越來越清楚的聲音。</p>
