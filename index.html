@@ -87,6 +87,18 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
 .filter-status .num{color:var(--brand);font-weight:700;}
 .filter-status .reset{color:var(--brand);cursor:pointer;text-decoration:underline;margin-left:8px;}
 .card.is-hidden{display:none !important;}
+
+.load-more-btn{
+  display:block;margin:32px auto 0;padding:12px 32px;
+  background:var(--brand);color:#fff;border:none;border-radius:24px;
+  font-size:14px;font-weight:700;letter-spacing:1.5px;cursor:pointer;
+  transition:background .15s,transform .15s;
+  font-family:inherit;
+}
+.load-more-btn:hover{background:var(--brand-deep);transform:translateY(-1px);}
+.load-more-btn.hidden{display:none;}
+.card.is-paged-hidden{display:none !important;}
+
 @media(max-width:600px){
   .filter-chip{font-size:12px;padding:4px 10px;}
   .filter-label{font-size:12px;min-width:38px;}
@@ -263,6 +275,8 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
 </div>
+<button class="load-more-btn hidden" id="loadMoreBtn" onclick="loadMore()">載入更多 <span id="loadMoreRemaining"></span></button>
+
 
 <footer class="foot">
   <strong>台灣展威文化教育有限公司</strong>　高雄市鼓山區美術東三路 86 號 ｜ 07-2693525 ｜ LINE @zwayedu ｜ admin@z-way-edu.com<br>
@@ -273,21 +287,51 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
 
 <script>
 (function(){
+  const PAGE_SIZE = 14;
   const cards = document.querySelectorAll('.card[data-axis]');
   const chips = document.querySelectorAll('.filter-chip');
   const resultCount = document.getElementById('resultCount');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const remainingEl = document.getElementById('loadMoreRemaining');
   let activeAxis = 'all', activeAge = 'all';
+  let visibleLimit = PAGE_SIZE;
   
-  function applyFilter(){
-    let count = 0;
+  function getMatchedCards(){
+    const matched = [];
     cards.forEach(c => {
       const matchAxis = activeAxis === 'all' || c.dataset.axis === activeAxis;
       const matchAge = activeAge === 'all' || c.dataset.age === activeAge;
-      if(matchAxis && matchAge){ c.classList.remove('is-hidden'); count++; }
-      else c.classList.add('is-hidden');
+      if(matchAxis && matchAge) matched.push(c);
     });
-    if(resultCount) resultCount.textContent = count;
+    return matched;
   }
+  
+  function applyAll(){
+    const matched = getMatchedCards();
+    cards.forEach(c => c.classList.add('is-hidden')); // 全 hide
+    
+    // 顯示前 visibleLimit 張符合條件的
+    matched.slice(0, visibleLimit).forEach(c => c.classList.remove('is-hidden'));
+    
+    // 計數顯示
+    if(resultCount) resultCount.textContent = matched.length;
+    
+    // 載入更多按鈕
+    const remaining = matched.length - visibleLimit;
+    if(loadMoreBtn){
+      if(remaining > 0){
+        loadMoreBtn.classList.remove('hidden');
+        if(remainingEl) remainingEl.textContent = '(' + remaining + ' 篇)';
+      } else {
+        loadMoreBtn.classList.add('hidden');
+      }
+    }
+  }
+  
+  window.loadMore = function(){
+    visibleLimit += PAGE_SIZE;
+    applyAll();
+  };
   
   chips.forEach(chip => {
     chip.addEventListener('click', () => {
@@ -297,19 +341,21 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
       chip.classList.add('active');
       if(type === 'axis') activeAxis = val;
       else activeAge = val;
-      applyFilter();
+      visibleLimit = PAGE_SIZE; // 篩選時 reset 分頁
+      applyAll();
     });
   });
   
   window.resetFilter = function(){
     activeAxis = 'all'; activeAge = 'all';
+    visibleLimit = PAGE_SIZE;
     chips.forEach(c => c.classList.remove('active'));
     document.querySelector('.filter-chip[data-type="axis"][data-val="all"]').classList.add('active');
     document.querySelector('.filter-chip[data-type="age"][data-val="all"]').classList.add('active');
-    applyFilter();
+    applyAll();
   };
   
-  applyFilter();
+  applyAll();
 })();
 </script>
 
