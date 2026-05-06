@@ -65,6 +65,31 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
 .card.theme-orange.is-latest{border:2px solid #d97757;border-left:5px solid #d97757;}
 .card.theme-orange.is-latest::before{background:#d97757;}
 
+
+.test-banner{
+  background:linear-gradient(135deg,#3b5998 0%,#d97757 100%);
+  border-radius:18px;padding:28px 30px;margin-bottom:28px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;
+  box-shadow:0 6px 22px rgba(59,89,152,0.18);
+  text-decoration:none;color:#fff;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.test-banner:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(59,89,152,0.28);}
+.test-banner-text{flex:1;min-width:200px;}
+.test-banner-tag{display:inline-block;background:rgba(255,255,255,.22);padding:3px 10px;border-radius:10px;font-size:12px;letter-spacing:2px;margin-bottom:8px;}
+.test-banner-title{font-size:20px;font-weight:700;margin:0 0 4px;letter-spacing:1px;line-height:1.4;}
+.test-banner-sub{font-size:13.5px;color:rgba(255,255,255,.88);line-height:1.6;}
+.test-banner-cta{
+  display:inline-block;background:#fff;color:#3b5998;font-weight:700;
+  padding:10px 22px;border-radius:24px;font-size:14px;letter-spacing:1px;
+  white-space:nowrap;transition:background .15s;
+}
+.test-banner:hover .test-banner-cta{background:#fbe9de;}
+@media(max-width:600px){
+  .test-banner{padding:22px 20px;flex-direction:column;align-items:flex-start;}
+  .test-banner-cta{width:100%;text-align:center;}
+}
+
 @media(max-width:600px){
   .wrap{padding:24px 14px 60px}
   .head{padding:30px 22px 26px}
@@ -94,6 +119,15 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
     <div><strong>週日 SUN</strong>跨世代家庭文化</div>
   </div>
 </section>
+
+<a class="test-banner" href="https://zway-education.github.io/mindspectrum/" target="_blank" rel="noopener">
+  <div class="test-banner-text">
+    <span class="test-banner-tag">免費線上測驗</span>
+    <h3 class="test-banner-title">親子教養心智光譜測驗</h3>
+    <div class="test-banner-sub">紅 · 橘 · 綠 · 藍 — 看見你跟孩子各自的天賦光譜，把「為什麼他不像我？」變成「原來他是這樣的人」。</div>
+  </div>
+  <span class="test-banner-cta">立即測驗 →</span>
+</a>
 
 <div class="grid">
 <a class="card is-latest theme-blue" href="parenting_essence_2026-05-06.html">
