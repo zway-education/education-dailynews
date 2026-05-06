@@ -147,6 +147,36 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
 
 
 
+<div class="filter-bar">
+  <div class="filter-group">
+    <span class="filter-label">主題</span>
+    <div class="filter-chips">
+      <span class="filter-chip active" data-type="axis" data-val="all">全部</span>
+      <span class="filter-chip" data-type="axis" data-val="mon">週一 幼兒</span>
+      <span class="filter-chip" data-type="axis" data-val="tue">週二 學齡</span>
+      <span class="filter-chip" data-type="axis" data-val="wed">週三 青少</span>
+      <span class="filter-chip" data-type="axis" data-val="thu">週四 對話</span>
+      <span class="filter-chip" data-type="axis" data-val="fri">週五 父母</span>
+      <span class="filter-chip" data-type="axis" data-val="sat">週六 儀式</span>
+      <span class="filter-chip" data-type="axis" data-val="sun">週日 跨代</span>
+    </div>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">年齡</span>
+    <div class="filter-chips">
+      <span class="filter-chip active" data-type="age" data-val="all">全部</span>
+      <span class="filter-chip" data-type="age" data-val="0-6">0-6 歲</span>
+      <span class="filter-chip" data-type="age" data-val="6-12">6-12 歲</span>
+      <span class="filter-chip" data-type="age" data-val="13-18">13-18 歲</span>
+      <span class="filter-chip" data-type="age" data-val="cross">跨齡</span>
+    </div>
+  </div>
+  <div class="filter-status">
+    篩選：<span class="num" id="resultCount">12</span> / 12 篇
+    <span class="reset" id="filterReset" onclick="resetFilter()">清除</span>
+  </div>
+</div>
+
 <div class="grid">
 <a class="card is-latest theme-blue" href="parenting_essence_2026-05-06.html" data-axis="wed" data-age="13-18">
     <div class="card-tags"><span class="age">13-18 歲青少年</span><span class="axis">週三 ｜ 青少年自我認同</span></div>
