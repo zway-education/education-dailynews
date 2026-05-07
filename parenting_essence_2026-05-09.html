@@ -40,12 +40,6 @@ body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;ba
 .outro p{font-size:0.97rem;color:var(--ink);line-height:1.9;margin-bottom:12px;}
 .outro .sign{font-size:0.85rem;color:var(--ink-soft);font-weight:700;margin-top:16px;}
 /* ── IG/FB 發文建議 ── */
-.igfb-section{background:#f0f4ff;border:1.5px solid #c0cce8;border-radius:14px;padding:28px 28px 20px;margin:40px 0 0;}
-.igfb-section h2{font-size:1.05rem;font-weight:800;color:#3b5998;margin:0 0 14px;letter-spacing:.04em;}
-.igfb-body{background:#fff;border:1px solid #dde3f0;border-radius:10px;padding:16px 18px;font-size:0.95rem;line-height:1.8;color:#2a2620;white-space:pre-wrap;word-break:break-word;cursor:text;user-select:all;}
-.igfb-copy-btn{margin-top:12px;display:inline-flex;align-items:center;gap:6px;background:#3b5998;color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:0.9rem;font-family:inherit;cursor:pointer;transition:background .15s;}
-.igfb-copy-btn:hover{background:#2a3f73;}
-.igfb-copy-btn.copied{background:#4caf50;}
 /* ── 自我檢核 ── */
 .checkin{border:2px solid var(--brand);border-radius:16px;padding:28px 32px;margin-top:20px;}
 .checkin h2{font-size:1rem;font-weight:800;color:var(--brand);margin-bottom:16px;}
@@ -147,36 +141,6 @@ body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;ba
 </div>
 
 <!-- IG/FB 發文建議 -->
-<section class="igfb-section">
-  <h2>📱 IG / FB 發文建議</h2>
-  <div class="igfb-body">那天晚上，我對孩子發火之後，一個人站在廚房，聽著水流聲，心裡一直在說「我又來了」。
-
-那種羞愧不是第一次，也不是最後一次。
-
-但有一件事，我後來慢慢明白——
-
-那個羞愧的瞬間，其實是覺知正在敲門。
-
-不是要你懲罰自己，是在問你：「你剛才是什麼狀態？是什麼讓你這麼快就到了臨界點？」
-
-我們常常花很多時間學習怎麼「對孩子說話」，卻忘了先問：「我現在怎麼了？」
-
-先懂自己的心，才能真正懂孩子的心。
-
-如果今天你也有一個讓你後悔的瞬間，沒關係。
-
-給自己 3 分鐘，問自己「剛才我是什麼感受？」——不評判，只是看見。
-
-那就是覺知的起點。
-
-✍️ Written by K12覺知素養教育學苑
-
-#覺知教養 #SEL情緒教育 #親子溝通 #先懂心再懂教 #父母自我覺知 #情緒管理 #親職成長 #教養不孤單 #媽媽的心事</div>
-  <button class="igfb-copy-btn" onclick="copyIgFb(this)">複製發文文字</button>
-</section>
-<script>
-function copyIgFb(btn){var txt=btn.closest('.igfb-section').querySelector('.igfb-body').innerText;navigator.clipboard.writeText(txt).then(function(){btn.textContent='已複製！';btn.classList.add('copied');setTimeout(function(){btn.textContent='複製發文文字';btn.classList.remove('copied');},2000);});}
-</script>
 
 <!-- 自我檢核 -->
 <div class="checkin">

@@ -294,31 +294,6 @@
   </div>
 
   <!-- IG/FB 發文建議 -->
-  <section class="igfb-section">
-    <h2>📱 IG / FB 發文建議</h2>
-    <div class="igfb-body">你的孩子不是「沒有天分」，是還沒找到屬於他的掙扎方式。
-
-Adam Grant 在《隱性潛能》裡說：真正阻礙孩子發揮潛能的，從來不是天分不夠——是我們從來沒有教他們怎麼正確地「掙扎」。
-
-他說，有一種問題，是高成就者的父母幾乎都在問的問題，不是「你考幾分」，而是：「今天你遇到什麼困難？你怎麼處理它的？」
-
-這兩個問題，只差一點點，但傳遞的訊息完全不同。
-
-「你考幾分」告訴孩子：結果才重要。
-「你遇到什麼困難」告訴孩子：你如何面對困難，我在乎。
-
-我很喜歡他書裡的這句話：「孩子需要的不是一個幫他們移除障礙的父母，而是一個讓他們相信自己能過去的父母。」
-
-今天，你問孩子的第一個問題是什麼？
-
-✍️ Written by K12覺知素養教育學苑
-
-——
-
-#覺知教養 #SEL情緒教育 #親子溝通 #先懂心再懂教 #父母自我覺知
-#隱性潛能 #AdamGrant #書籍推薦 #教養心理學 #孩子的潛能 #學習動機</div>
-    <button class="igfb-copy-btn" onclick="copyIgFb(this)">複製發文文字</button>
-  </section>
 
   <!-- 頁尾 -->
   <footer class="foot">
@@ -356,17 +331,6 @@ Adam Grant 在《隱性潛能》裡說：真正阻礙孩子發揮潛能的，從
 <a class="home-fab" href="./" title="回首頁">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l-9 8h2.5v9h13v-9H21L12 3zm0 2.7L18.5 11H17v8h-3v-5h-4v5H7v-8H5.5L12 5.7z"/></svg>
 </a>
-
-<script>
-function copyIgFb(btn) {
-  var txt = btn.closest('.igfb-section').querySelector('.igfb-body').innerText;
-  navigator.clipboard.writeText(txt).then(function(){
-    btn.textContent = '已複製！';
-    btn.classList.add('copied');
-    setTimeout(function(){ btn.textContent = '複製發文文字'; btn.classList.remove('copied'); }, 2000);
-  });
-}
-</script>
 
 </body>
 </html>

@@ -296,34 +296,6 @@
   </div>
 
   <!-- IG/FB 發文建議 -->
-  <section class="igfb-section">
-    <h2>📱 IG / FB 發文建議</h2>
-    <div class="igfb-body">孩子崩潰的時候，你說的道理他真的聽不到——不是不想聽，是「上層腦」已經離線了。
-
-腦科學家 Daniel Siegel 在《全腦教養法》裡說：大腦有「上層」和「下層」。上層腦負責邏輯、同理、做決定。下層腦負責情緒、本能、生存反應。
-
-當孩子（或大人）在強烈情緒裡，上層腦會暫時關機。
-
-所以你蹲下來說「你說道理一點」，孩子沒辦法回應——因為他的大腦根本還沒辦法處理這句話。
-
-Siegel 的建議只有一句：先連結，再教導。
-
-先讓孩子感受到你在、你不批判、這個感受是被允許的。等他稍微平靜，上層腦重新上線，這時候說的話才真的進得去。
-
-但有一件事他在書裡也提醒：你自己也有上層腦和下層腦。孩子崩潰的時候，你的上層腦，上線了嗎？
-
-今天如果孩子崩潰，先試這一句：「我知道你很難過，我在這裡。」
-
-就這樣，先不說別的。
-
-✍️ Written by K12覺知素養教育學苑
-
-——
-
-#覺知教養 #SEL情緒教育 #親子溝通 #先懂心再懂教 #父母自我覺知
-#全腦教養法 #DanielSiegel #腦科學教養 #情緒調節 #孩子崩潰 #教養心理學</div>
-    <button class="igfb-copy-btn" onclick="copyIgFb(this)">複製發文文字</button>
-  </section>
 
   <!-- 頁尾 -->
   <footer class="foot">
@@ -361,17 +333,6 @@ Siegel 的建議只有一句：先連結，再教導。
 <a class="home-fab" href="./" title="回首頁">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l-9 8h2.5v9h13v-9H21L12 3zm0 2.7L18.5 11H17v8h-3v-5h-4v5H7v-8H5.5L12 5.7z"/></svg>
 </a>
-
-<script>
-function copyIgFb(btn) {
-  var txt = btn.closest('.igfb-section').querySelector('.igfb-body').innerText;
-  navigator.clipboard.writeText(txt).then(function(){
-    btn.textContent = '已複製！';
-    btn.classList.add('copied');
-    setTimeout(function(){ btn.textContent = '複製發文文字'; btn.classList.remove('copied'); }, 2000);
-  });
-}
-</script>
 
 </body>
 </html>

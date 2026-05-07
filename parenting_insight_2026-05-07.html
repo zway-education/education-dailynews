@@ -148,12 +148,6 @@
 </style>
 
 <style>
-.igfb-section{background:#f0f4ff;border:1.5px solid #c0cce8;border-radius:14px;padding:28px 28px 20px;margin:40px 0 0;}
-.igfb-section h2{font-size:1.05rem;font-weight:800;color:#3b5998;margin:0 0 14px;letter-spacing:.04em;}
-.igfb-body{background:#fff;border:1px solid #dde3f0;border-radius:10px;padding:16px 18px;font-size:0.95rem;line-height:1.8;color:#2a2620;white-space:pre-wrap;word-break:break-word;cursor:text;user-select:all;}
-.igfb-copy-btn{margin-top:12px;display:inline-flex;align-items:center;gap:6px;background:#3b5998;color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:0.9rem;font-family:inherit;cursor:pointer;transition:background .15s;}
-.igfb-copy-btn:hover{background:#2a3f73;}
-.igfb-copy-btn.copied{background:#4caf50;}
 </style>
 </head>
 <body>
@@ -308,7 +302,6 @@
 
 </div>
 
-
 <style>
 .share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(59,89,152,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
 .share-fab:hover{background:rgba(59,89,152,1);transform:scale(1.08);}
@@ -323,46 +316,6 @@
 .home-fab:hover::after{opacity:1;}
 @media(max-width:600px){.home-fab{bottom:16px;right:64px;width:42px;height:42px;}.home-fab::after{display:none;}}
 </style>
-
-<section class="igfb-section">
-  <h2>📱 IG / FB 發文建議</h2>
-  <div class="igfb-body">「你好聰明！」這句話，可能是你給孩子最昂貴的代價。
-
-心理學家 Carol Dweck 做過一個實驗：把孩子分成兩組，一組稱讚「你好聰明」，一組稱讚「你很努力」。
-
-結果，被稱讚聰明的孩子，遇到更難的挑戰時，大多選擇放棄——因為他們怕失敗之後「聰明」就不見了。
-
-但故事還有下半段。
-
-Dweck 最近說：她的理論被全球「誤用」了。很多家長把「你好努力」當成新的萬用公式——無論孩子做什麼都說這句話。孩子很快就聽出這是假的。
-
-真正的成長型思維，不是換一句話，是換一種眼神。
-
-是當孩子帶著爛成績回家，你先停 3 秒問自己：「我現在心裡是什麼感受？我接下來想說的這句話，是為了孩子，還是為了我自己的焦慮？」
-
-那 3 秒，才是真正的成長型思維。
-
-你今天也有這樣的時刻嗎？歡迎留言分享。
-
-✍️ Written by 李守蕾｜覺知素養教育創辦人
-
-——
-
-#覺知教養 #SEL情緒教育 #親子溝通 #李守蕾 #先懂心再懂教
-#成長型思維 #CarolDweck #心態致勝 #稱讚孩子 #教養心理學 #腦科學教養</div>
-  <button class="igfb-copy-btn" onclick="copyIgFb(this)">複製發文文字</button>
-</section>
-
-<script>
-function copyIgFb(btn) {
-  var txt = btn.closest('.igfb-section').querySelector('.igfb-body').innerText;
-  navigator.clipboard.writeText(txt).then(function(){
-    btn.textContent = '已複製！';
-    btn.classList.add('copied');
-    setTimeout(function(){ btn.textContent = '複製發文文字'; btn.classList.remove('copied'); }, 2000);
-  });
-}
-</script>
 <a class="share-fab" href="parenting_insight_2026-05-07_share.png" download title="下載 IG/FB 分享圖">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.2a3.7 3.7 0 1 1 0-7.4 3.7 3.7 0 0 1 0 7.4zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
 </a>

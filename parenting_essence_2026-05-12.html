@@ -40,12 +40,6 @@ body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;ba
 .outro p{font-size:0.97rem;color:var(--ink);line-height:1.9;margin-bottom:12px;}
 .outro .sign{font-size:0.85rem;color:var(--ink-soft);font-weight:700;margin-top:16px;}
 /* ── IG/FB 發文建議 ── */
-.igfb-section{background:#fff3ee;border:1.5px solid #f0c8b0;border-radius:14px;padding:28px 28px 20px;margin:40px 0 0;}
-.igfb-section h2{font-size:1.05rem;font-weight:800;color:var(--brand-deep);margin:0 0 14px;letter-spacing:.04em;}
-.igfb-body{background:#fff;border:1px solid #f0d8c4;border-radius:10px;padding:16px 18px;font-size:0.95rem;line-height:1.8;color:#2a2620;white-space:pre-wrap;word-break:break-word;cursor:text;user-select:all;}
-.igfb-copy-btn{margin-top:12px;display:inline-flex;align-items:center;gap:6px;background:var(--brand);color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:0.9rem;font-family:inherit;cursor:pointer;transition:background .15s;}
-.igfb-copy-btn:hover{background:var(--brand-deep);}
-.igfb-copy-btn.copied{background:#4caf50;}
 /* ── 自我檢核 ── */
 .checkin{border:2px solid var(--brand);border-radius:16px;padding:28px 32px;margin-top:20px;}
 .checkin-title{font-size:1.0rem;font-weight:800;color:var(--brand);text-align:center;margin-bottom:6px;}
@@ -149,36 +143,6 @@ body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;ba
   </div>
 
   <!-- IG/FB 發文建議 -->
-  <section class="igfb-section">
-    <h2>📱 IG / FB 發文建議</h2>
-    <div class="igfb-body">孩子哭的時候，你有多快不舒服？
-
-那個不舒服，不是壞事。那是你的神經系統在跟著孩子的情緒共振——這是演化留下來的，孩子的哭聲本來就設計來讓大人難受，那是求救信號。
-
-問題不是難受，問題是：你能不能在難受的時候，先讓自己穩住？
-
-0-6 歲的孩子，情緒調節能力幾乎還沒有。他們在哭、在鬧、在崩潰的時候，其實是在問你一個問題：「這個感受是安全的嗎？」
-
-你的穩定，就是他的答案。
-
-不是你說什麼，是你在那個瞬間，你的身體狀態。
-
-所以下次孩子哭，先試這個：
-
-深吸一口氣，讓肩膀往下放鬆。
-說：「媽媽/爸爸在這裡，我知道你很難過。」
-然後，等。
-
-就這樣。讓他哭完。那個「等」，就是在給他安全感。
-
-你今天有機會試試嗎？
-
-✍️ Written by K12覺知素養教育學苑
-
-#覺知教養 #SEL情緒教育 #親子溝通 #先懂心再懂教 #父母自我覺知
-#幼兒情緒 #依附關係 #0到6歲 #孩子哭 #情緒安全感 #教養不孤單</div>
-    <button class="igfb-copy-btn" onclick="copyIgFb(this)">複製發文文字</button>
-  </section>
 
   <!-- 自我檢核 -->
   <div class="checkin">
@@ -234,17 +198,6 @@ body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;ba
 <a class="home-fab" href="./" title="回首頁">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l-9 8h2.5v9h13v-9H21L12 3zm0 2.7L18.5 11H17v8h-3v-5h-4v5H7v-8H5.5L12 5.7z"/></svg>
 </a>
-
-<script>
-function copyIgFb(btn) {
-  var txt = btn.closest('.igfb-section').querySelector('.igfb-body').innerText;
-  navigator.clipboard.writeText(txt).then(function(){
-    btn.textContent = '已複製！';
-    btn.classList.add('copied');
-    setTimeout(function(){ btn.textContent = '複製發文文字'; btn.classList.remove('copied'); }, 2000);
-  });
-}
-</script>
 
 </body>
 </html>
