@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孩子哭的時候你有多快不舒服——那個不舒服，才是關鍵</title>
+<style>
+:root{
+  --brand:#c05c2c;--brand-deep:#8a3a18;--accent:#e8a87c;
+  --ink:#2a2620;--ink-soft:#5a5048;--bg:#fdf5ee;--card:#ffffff;--border:#f0d8c4;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.85;max-width:780px;margin:0 auto;padding:32px 20px 80px;}
+/* ── 頁首 ── */
+.head{background:linear-gradient(135deg,#d96935 0%,#c05c2c 60%,#a84e22 100%);border-radius:18px;padding:40px 36px 36px;margin-bottom:28px;position:relative;overflow:hidden;}
+.head::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,0.07);}
+.head-tag{display:inline-block;background:rgba(255,255,255,0.18);color:#fff;font-size:0.78rem;font-weight:700;letter-spacing:.1em;padding:5px 14px;border-radius:20px;margin-bottom:16px;}
+.head h1{font-size:clamp(1.45rem,4vw,1.9rem);font-weight:900;color:#fff;line-height:1.4;margin-bottom:14px;}
+.head-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.head-meta span{font-size:0.78rem;color:rgba(255,255,255,0.75);background:rgba(255,255,255,0.12);padding:3px 10px;border-radius:12px;}
+.head-hook{font-size:1.0rem;color:rgba(255,255,255,0.92);line-height:1.7;border-left:3px solid var(--accent);padding-left:14px;}
+/* ── 文章本體 ── */
+.body{background:var(--card);border-radius:16px;padding:36px 32px;margin-bottom:20px;border:1px solid var(--border);}
+.body section{margin-bottom:32px;}
+.body section:last-child{margin-bottom:0;}
+.body h2{font-size:1.05rem;font-weight:800;color:var(--brand-deep);margin-bottom:14px;padding-left:14px;border-left:4px solid var(--accent);}
+.body p{font-size:0.97rem;color:var(--ink);margin-bottom:14px;line-height:1.9;}
+/* ── 3步驟 ── */
+.steps{background:var(--card);border-radius:16px;padding:32px;margin-bottom:20px;border:1px solid var(--border);}
+.steps h2{font-size:1.05rem;font-weight:800;color:var(--brand-deep);margin-bottom:20px;padding-left:14px;border-left:4px solid var(--accent);}
+.step{display:flex;gap:18px;margin-bottom:24px;}
+.step:last-child{margin-bottom:0;}
+.step-num{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--brand);color:#fff;font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center;}
+.step-body{flex:1;}
+.step-title{font-weight:800;font-size:0.97rem;color:var(--ink);margin-bottom:6px;}
+.step-desc{font-size:0.93rem;color:var(--ink-soft);line-height:1.8;margin-bottom:10px;}
+.step-dialog{background:#fdf6ec;border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:10px 14px;font-size:0.9rem;color:var(--ink-soft);line-height:1.75;}
+/* ── 收筆 ── */
+.outro{background:linear-gradient(135deg,#fdf0dc 0%,#fbe4cc 100%);border-radius:16px;padding:32px;margin-bottom:20px;border:1px solid var(--border);}
+.outro p{font-size:0.97rem;color:var(--ink);line-height:1.9;margin-bottom:12px;}
+.outro .sign{font-size:0.85rem;color:var(--ink-soft);font-weight:700;margin-top:16px;}
+/* ── IG/FB 發文建議 ── */
+/* ── 自我檢核 ── */
+.checkin{border:2px solid var(--brand);border-radius:16px;padding:28px 32px;margin-top:20px;}
+.checkin-title{font-size:1.0rem;font-weight:800;color:var(--brand);text-align:center;margin-bottom:6px;}
+.checkin-sub{font-size:0.82rem;color:var(--ink-soft);text-align:center;margin-bottom:20px;}
+.checkin-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.checkin-list li{display:flex;align-items:flex-start;gap:12px;font-size:0.95rem;color:var(--ink);}
+.checkin-num{flex-shrink:0;width:28px;height:28px;background:var(--brand);color:#fff;border-radius:50%;font-size:0.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+/* ── 頁尾 ── */
+.foot{background:var(--brand-deep);border-radius:14px;padding:30px 28px;color:rgba(255,255,255,0.8);font-size:0.82rem;line-height:1.9;margin-top:28px;}
+.foot-brand{font-size:0.95rem;font-weight:700;color:var(--accent);margin-bottom:10px;}
+.foot-info{margin-bottom:16px;}
+.foot-tagline{border-top:1px solid rgba(255,255,255,0.15);padding-top:14px;color:rgba(255,255,255,0.55);font-size:0.8rem;text-align:center;letter-spacing:0.1em;}
+@media(max-width:560px){
+  .body{padding:24px 18px;}
+  .head{padding:28px 22px 26px;}
+  .steps{padding:24px 18px;}
+}
+</style>
+</head>
+<body>
+
+  <!-- 頁首卡 -->
+  <header class="head">
+    <div class="head-tag">覺知教養 ｜ 每日精華</div>
+    <h1>孩子哭的時候你有多快不舒服——<br>那個不舒服，才是關鍵</h1>
+    <div class="head-meta">
+      <span>2026-05-12 週二</span>
+      <span>0-6 歲</span>
+      <span>幼兒情緒與依附</span>
+    </div>
+    <div class="head-hook">孩子一哭你就慌，不是因為你不愛他。<br>是因為你還沒學會：如何讓自己先穩住。</div>
+  </header>
+
+  <!-- 文章本文 -->
+  <article class="body">
+
+    <section>
+      <h2>那個讓你說不出話的哭聲</h2>
+      <p>孩子哭了。你走過去，說「不要哭了」「有什麼好哭的」「你已經是大哥哥/大姐姐了」——說完，孩子哭得更大聲，你心裡更煩。</p>
+      <p>這不是你不好。這是因為<strong>你的大腦，在那個當下，也在哭</strong>。</p>
+      <p>心理學有個概念叫「情緒共振」（emotional contagion）：當你身旁的人在強烈情緒中，你的神經系統會自動跟著啟動。這在 6 歲以下的親子互動裡特別明顯——<strong>孩子的哭聲，本來就設計來讓大人難受</strong>，那是演化留下來的求助信號。</p>
+      <p>問題不是你難受，問題是：<strong>你能不能在難受的時候，還是讓自己先穩住？</strong>因為孩子在哭的時候，他的大腦其實在問你：「這個感受是安全的嗎？我可以有這個感受嗎？」你的穩定，就是他的答案。</p>
+    </section>
+
+    <section>
+      <h2>0–6 歲的孩子，其實在練習什麼</h2>
+      <p>這個年紀的孩子，情緒調節能力幾乎還沒有發展出來。大腦的前額葉（負責冷靜思考）要到 25 歲才成熟，而 0-6 歲的孩子，<strong>基本上是純粹的情緒反應體</strong>——哭、鬧、崩潰，都是正常的。</p>
+      <p>但這個階段有一件非常重要的事正在發生：<strong>孩子在學習「情緒是什麼感覺、情緒是不是安全的」</strong>。這個學習，不是靠教的，是靠感覺的。每一次他崩潰，你怎麼回應，都在告訴他的神經系統：這個感受，安全嗎？</p>
+      <p>如果你每次孩子哭都馬上要他停，他學到的是：「我的難受，讓爸媽很不舒服，我最好不要有這個感受。」如果你能先讓自己穩住，說「媽媽在這裡，我知道你很難過」，他學到的是：「我的感受，有人接住了。我是安全的。」</p>
+      <p><strong>後者，正是依附安全感的根基。</strong></p>
+    </section>
+
+    <section>
+      <h2>先穩住自己，才能接住孩子</h2>
+      <p>很多家長覺得「接納孩子的情緒」是一個技巧，學幾句話就好。但這不是技巧，是狀態。</p>
+      <p>如果你自己也在緊繃，身體是僵的，聲音是硬的，就算說出「媽媽理解你很難過」，孩子的神經系統還是感受得到你的焦慮。孩子不讀詞語，<strong>孩子讀的是你的神經系統的狀態</strong>。</p>
+      <p>所以，在孩子哭的那個瞬間，最重要的不是你說什麼，而是：你能不能先做一件事——<strong>深呼吸一口，讓自己的肩膀先放鬆一下。</strong></p>
+      <p>就這樣。先讓你的身體知道：這個情況，我能應對。</p>
+    </section>
+
+  </article>
+
+  <!-- 3 個步驟 -->
+  <section class="steps">
+    <h2>今天可以試試看的 3 個步驟</h2>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-title">先讓自己的肩膀放鬆</div>
+        <div class="step-desc">孩子一哭，注意你自己的肩膀。有沒有往上夾緊？先刻意讓它放鬆。這個動作只要 2 秒，但能讓你的神經系統切換到「我可以應對」的狀態。</div>
+        <div class="step-dialog">不需要說任何話，只是：吸氣，肩膀往下，吐氣。</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-title">說一句「我知道你很難過」，然後停</div>
+        <div class="step-desc">不需要馬上解決，不需要問「為什麼哭」，不需要說「不要哭了」。就只是說這一句，然後靜靜地陪著他。讓孩子感覺到：你在，你不慌，這個感受是被允許的。</div>
+        <div class="step-dialog">「媽媽/爸爸在這裡。我知道你現在很難過，沒關係。」</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-title">等他哭完，再慢慢說話</div>
+        <div class="step-desc">哭是大腦在釋放情緒，不是要被阻止的。等哭聲慢慢小下來，孩子的大腦才真的能聽你說話。在那之前，你說什麼都進不去——所以，等就是做事。</div>
+        <div class="step-dialog">「現在好一點了嗎？要不要說說看剛才發生了什麼？」</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 收筆 -->
+  <div class="outro">
+    <p>孩子哭的時候，你有多快不舒服——這不是判斷你是不是好父母的指標，這是你自己內在還有多少「沒被照顧到的小孩」的指標。</p>
+    <p>這是好事。看見了，才能開始。</p>
+    <p>今天，如果孩子哭了，先試試那個深呼吸和放鬆肩膀。不是為了讓孩子快點停，是為了讓你先回到自己。</p>
+    <p class="sign">✍️ Written by K12覺知素養教育學苑</p>
+  </div>
+
+  <!-- IG/FB 發文建議 -->
+
+  <!-- 自我檢核 -->
+  <div class="checkin">
+    <div class="checkin-title">✦ 3 秒鐘覺知對話・自我檢核</div>
+    <div class="checkin-sub">下次孩子哭的那個瞬間，先問自己</div>
+    <ul class="checkin-list">
+      <li>
+        <span class="checkin-num">1</span>
+        <span><strong>我的身體現在是什麼感受？</strong>——肩膀、胸口、下巴——先感受一下，再說話。</span>
+      </li>
+      <li>
+        <span class="checkin-num">2</span>
+        <span><strong>我接下來想說的話，是要接住他，還是要讓他停？</strong>——動機不同，孩子感受得到。</span>
+      </li>
+      <li>
+        <span class="checkin-num">3</span>
+        <span><strong>我能不能讓自己先穩一秒？</strong>——不是假裝沒事，是讓自己的神經系統先落地，再開口。</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 頁尾 -->
+  <footer class="foot">
+    <div class="foot-info">
+      台灣展威文化教育有限公司　高雄市鼓山區美術東三路 86 號 ｜ 07-2693525 ｜ LINE @zwayedu ｜ admin@z-way-edu.com<br>
+      社團法人中華覺知教育關懷協會（CSECA）　同址 4 樓 ｜ 07-2693525 ｜ contact@z-way-edu.com ｜ 統編 72188904
+    </div>
+    <div class="foot-tagline">覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊</div>
+  </footer>
+
+<style>
+.share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(192,92,44,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.share-fab:hover{background:rgba(192,92,44,1);transform:scale(1.08);}
+.share-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#c05c2c;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.share-fab:hover::after{opacity:1;}
+@media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+.home-fab{position:fixed;bottom:22px;right:78px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(217,119,87,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.home-fab:hover{background:rgba(217,119,87,1);transform:scale(1.08);}
+.home-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.home-fab::after{content:'回首頁';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#a85a31;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.home-fab:hover::after{opacity:1;}
+@media(max-width:600px){.home-fab{bottom:16px;right:64px;width:42px;height:42px;}.home-fab::after{display:none;}}
+</style>
+
+<a class="share-fab" href="parenting_essence_2026-05-12_share.png" download title="下載 IG/FB 分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.2a3.7 3.7 0 1 1 0-7.4 3.7 3.7 0 0 1 0 7.4zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
+</a>
+<a class="home-fab" href="./" title="回首頁">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l-9 8h2.5v9h13v-9H21L12 3zm0 2.7L18.5 11H17v8h-3v-5h-4v5H7v-8H5.5L12 5.7z"/></svg>
+</a>
+
+</body>
+</html>
