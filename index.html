@@ -193,7 +193,7 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
     </div>
   </div>
   <div class="filter-status">
-    篩選：<span class="num" id="resultCount">18</span> / 18 篇
+    篩選：<span class="num" id="resultCount">0</span> 篇
     <span class="reset" id="filterReset" onclick="resetFilter()">清除</span>
   </div>
 </div>
@@ -372,4 +372,32 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
   
   chips.forEach(chip => {
     chip.addEventListener('click', () => {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+         const type = chip.dataset.type;
+      const val = chip.dataset.val;
+      // deactivate all chips of same type
+      document.querySelectorAll(`.filter-chip[data-type="${type}"]`).forEach(ch => ch.classList.remove('active'));
+      chip.classList.add('active');
+      if(type === 'axis') activeAxis = val;
+      if(type === 'age')  activeAge  = val;
+      visibleLimit = PAGE_SIZE;
+      applyAll();
+    });
+  });
+
+  window.resetFilter = function(){
+    activeAxis = 'all'; activeAge = 'all';
+    visibleLimit = PAGE_SIZE;
+    chips.forEach(ch => {
+      const isAll = ch.dataset.val === 'all';
+      ch.classList.toggle('active', isAll);
+    });
+    applyAll();
+  };
+
+  // Init: dynamic count on load
+  applyAll();
+})();
+</script>
+</div>
+</body>
+</html>
