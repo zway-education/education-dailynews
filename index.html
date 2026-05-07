@@ -192,8 +192,8 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
 <div class="grid">
 <a class="card is-latest theme-orange" href="parenting_essence_2026-05-07.html" data-axis="thu" data-age="cross">
     <div class="card-tags"><span class="age">親子溝通</span><span class="axis">週四 ｜ 3 秒鐘覺知對話</span></div>
-    <h3 class="card-title">在開口之前，先給自己 3 秒鐘——讓「我要反應」變成「我可以回應」</h3>
-    <p class="card-hook">傍晚六點，你剛把鍋子端上桌。孩子的書包散在沙發上，他在客廳跟妹妹吵誰先看電視。你的疲倦在這一秒突然爆掉，下一個瞬間，那句你不想說的話已經出去⋯⋯3 秒鐘的暫停，把你從「反應模式」拉回「觀察模式」。</p>
+    <h3 class="card-title">當孩子說「你根本不懂我」—— 那句話背後，藏著一個還沒說完的渴望</h3>
+    <p class="card-hook">「你不懂我。」 那四個字落下來的時候，你是反應了，還是回應了？</p>
     <span class="upload-date">📅 2026-05-07　週四</span>
     <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
   </a>
@@ -342,29 +342,4 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
   
   chips.forEach(chip => {
     chip.addEventListener('click', () => {
-      const type = chip.dataset.type;
-      const val = chip.dataset.val;
-      document.querySelectorAll('.filter-chip[data-type="'+type+'"]').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      if(type === 'axis') activeAxis = val;
-      else activeAge = val;
-      visibleLimit = PAGE_SIZE; // 篩選時 reset 分頁
-      applyAll();
-    });
-  });
-  
-  window.resetFilter = function(){
-    activeAxis = 'all'; activeAge = 'all';
-    visibleLimit = PAGE_SIZE;
-    chips.forEach(c => c.classList.remove('active'));
-    document.querySelector('.filter-chip[data-type="axis"][data-val="all"]').classList.add('active');
-    document.querySelector('.filter-chip[data-type="age"][data-val="all"]').classList.add('active');
-    applyAll();
-  };
-  
-  applyAll();
-})();
-</script>
-
-</body>
-</html>
+   
