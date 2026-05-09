@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>覺知人物誌｜Carol Dweck：那句「你好聰明」，可能是你給孩子最昂貴的一句話 — 2026-05-07</title>
+<style>
+  :root {
+    --brand: #3b5998;
+    --brand-deep: #2a3f73;
+    --accent: #c9a96e;
+    --accent-light: #f5ead8;
+    --ink: #2a2620;
+    --ink-soft: #5a5048;
+    --bg: #fbf7f1;
+    --card: #ffffff;
+    --border: #e8ddc8;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    background: var(--bg); color: var(--ink);
+    line-height: 1.85; padding: 32px 20px 80px;
+  }
+  .wrapper { max-width: 780px; margin: 0 auto; }
+
+  /* 頁首卡 */
+  .head {
+    background: linear-gradient(135deg, var(--brand-deep) 0%, var(--brand) 60%, #4a6aaa 100%);
+    border-radius: 20px; padding: 40px 36px 36px;
+    color: #fff; margin-bottom: 28px;
+    position: relative; overflow: hidden;
+  }
+  .head-svg { position: absolute; top: 0; right: 0; width: 220px; opacity: 0.18; pointer-events: none; }
+  .head-tag {
+    display: inline-block;
+    background: rgba(201,169,110,0.35); color: var(--accent);
+    border: 1px solid rgba(201,169,110,0.6);
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+    padding: 3px 12px; border-radius: 20px; margin-bottom: 16px;
+  }
+  .head h1 {
+    font-size: clamp(1.3rem, 3.5vw, 1.72rem);
+    font-weight: 800; line-height: 1.45; margin-bottom: 18px;
+  }
+  .head-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+  .head-meta span {
+    background: rgba(255,255,255,0.14); border-radius: 30px;
+    font-size: 0.78rem; padding: 3px 12px; color: rgba(255,255,255,0.88);
+  }
+  .head-hook {
+    font-size: 1.03rem; color: var(--accent); font-weight: 600;
+    border-left: 3px solid var(--accent); padding-left: 14px; line-height: 1.6;
+  }
+
+  /* 人物簡介卡 */
+  .profile-card {
+    background: var(--card); border-radius: 14px;
+    border-left: 5px solid var(--accent);
+    padding: 24px 26px; margin-bottom: 24px;
+    border: 1px solid var(--border); border-left-width: 5px;
+  }
+  .profile-name { font-size: 1.3rem; font-weight: 800; color: var(--brand-deep); margin-bottom: 6px; }
+  .profile-title { font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 14px; letter-spacing: 0.03em; }
+  .profile-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .profile-tag {
+    background: var(--accent-light); color: var(--brand-deep);
+    border-radius: 20px; font-size: 0.78rem; font-weight: 600; padding: 3px 12px;
+  }
+
+  /* 文章卡 */
+  .body {
+    background: var(--card); border-radius: 16px;
+    padding: 36px 32px; border: 1px solid var(--border); margin-bottom: 24px;
+  }
+  .body section { margin-bottom: 36px; }
+  .body section:last-child { margin-bottom: 0; }
+  .body h2 {
+    font-size: 1.08rem; font-weight: 800; color: var(--brand-deep);
+    border-left: 4px solid var(--accent); padding-left: 12px;
+    margin-bottom: 16px; line-height: 1.5;
+  }
+  .body p { font-size: 1.0rem; color: var(--ink-soft); margin-bottom: 14px; }
+  .body p:last-child { margin-bottom: 0; }
+  .body strong { color: var(--ink); }
+
+  /* 3 個觀念區塊 */
+  .insights { margin-bottom: 24px; }
+  .insights-title {
+    font-size: 1.05rem; font-weight: 800; color: var(--brand-deep);
+    text-align: center; margin-bottom: 20px;
+  }
+  .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 18px; }
+  .insight-card {
+    background: var(--card); border: 1.5px solid var(--border);
+    border-radius: 14px; padding: 22px 20px 18px;
+  }
+  .insight-num {
+    width: 36px; height: 36px; background: var(--brand); color: #fff;
+    border-radius: 50%; font-size: 1rem; font-weight: 800;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 12px;
+  }
+  .insight-name { font-size: 0.92rem; font-weight: 800; color: var(--brand-deep); margin-bottom: 8px; }
+  .insight-body { font-size: 0.93rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 12px; }
+  .insight-example {
+    background: var(--accent-light); border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 10px 14px;
+    font-size: 0.88rem; color: var(--ink); line-height: 1.65;
+  }
+  .insight-example-label {
+    font-size: 0.75rem; font-weight: 700; color: var(--accent);
+    letter-spacing: 0.08em; margin-bottom: 4px;
+  }
+
+  /* 覺知連結卡 */
+  .awareness-link {
+    background: linear-gradient(135deg, var(--accent) 0%, #d4b07a 100%);
+    border-radius: 16px; padding: 32px 32px 28px; margin-bottom: 24px;
+  }
+  .awareness-link h2 { font-size: 1.08rem; font-weight: 800; color: var(--brand-deep); margin-bottom: 14px; }
+  .awareness-link p { font-size: 1.0rem; line-height: 1.85; margin-bottom: 14px; color: var(--ink); }
+  .awareness-link p:last-of-type { margin-bottom: 20px; }
+  .awareness-sig {
+    font-size: 0.88rem; font-weight: 700; color: var(--brand-deep);
+    border-top: 1px solid rgba(42,47,115,0.25); padding-top: 14px;
+  }
+
+  /* 3 秒鐘自我檢核 */
+  .checkin { background: var(--card); border: 2px solid var(--brand); border-radius: 16px; padding: 28px 28px 24px; margin-bottom: 24px; }
+  .checkin-title { font-size: 1.0rem; font-weight: 800; color: var(--brand); text-align: center; margin-bottom: 6px; }
+  .checkin-sub { font-size: 0.82rem; color: var(--ink-soft); text-align: center; margin-bottom: 20px; }
+  .checkin-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .checkin-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; color: var(--ink); }
+  .checkin-num { flex-shrink: 0; width: 28px; height: 28px; background: var(--brand); color: #fff; border-radius: 50%; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+  /* 頁尾 */
+  .foot { background: var(--brand-deep); border-radius: 14px; padding: 30px 28px; color: rgba(255,255,255,0.8); font-size: 0.82rem; line-height: 1.9; }
+  .foot-brand { font-size: 0.95rem; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+  .foot-info { margin-bottom: 16px; }
+  .foot-tagline { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 14px; color: rgba(255,255,255,0.55); font-size: 0.8rem; text-align: center; letter-spacing: 0.1em; }
+
+  @media (max-width: 560px) {
+    .body { padding: 24px 18px; }
+    .head { padding: 28px 22px 26px; }
+    .awareness-link { padding: 24px 20px; }
+    .insights-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<style>
+</style>
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="覺知人物誌｜Carol Dweck：那句「你好聰明」，可能是你給孩子最昂貴的一句話">
+  <meta property="og:description" content="她用一個實驗改變了全球教育界對「稱讚」的理解。">
+  <meta property="og:image" content="https://zway-education.github.io/education-dailynews/parenting_insight_2026-05-07_share.png">
+  <meta property="og:url" content="https://zway-education.github.io/education-dailynews/parenting_insight_2026-05-07.html">
+  <meta property="og:site_name" content="覺知教養．每日精華">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="覺知人物誌｜Carol Dweck：那句「你好聰明」，可能是你給孩子最昂貴的一句話">
+  <meta name="twitter:description" content="她用一個實驗改變了全球教育界對「稱讚」的理解。">
+  <meta name="twitter:image" content="https://zway-education.github.io/education-dailynews/parenting_insight_2026-05-07_share.png">
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- 頁首卡 -->
+  <header class="head">
+    <svg class="head-svg" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- 書本 + 生長曲線 + 星點 幾何插畫 -->
+      <rect x="60" y="80" width="100" height="70" rx="8" fill="rgba(201,169,110,0.2)" stroke="#c9a96e" stroke-width="2"/>
+      <rect x="60" y="80" width="4" height="70" fill="rgba(201,169,110,0.5)"/>
+      <line x1="75" y1="98" x2="148" y2="98" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="75" y1="110" x2="148" y2="110" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="75" y1="122" x2="130" y2="122" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- 生長曲線箭頭 -->
+      <polyline points="30,160 55,130 90,120 130,90 165,55" fill="none" stroke="#c9a96e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polygon points="165,55 155,65 172,68" fill="#c9a96e"/>
+      <!-- 星點 -->
+      <circle cx="180" cy="40" r="5" fill="rgba(201,169,110,0.6)"/>
+      <circle cx="195" cy="25" r="3" fill="rgba(201,169,110,0.4)"/>
+      <circle cx="35" cy="40" r="4" fill="rgba(201,169,110,0.4)"/>
+    </svg>
+
+    <div class="head-tag">覺知人物誌 ｜ 趨勢人物</div>
+    <h1>Carol Dweck：那句「你好聰明」，<br>可能是你給孩子最昂貴的一句話</h1>
+    <div class="head-meta">
+      <span>2026-05-07 週四</span>
+      <span>趨勢人物</span>
+      <span>腦科學 × 心理學</span>
+      <span>適用 6-18 歲</span>
+    </div>
+    <div class="head-hook">她用一個實驗改變了全球教育界對「稱讚」的理解。<br>但 2025 年，她自己說：「我們用錯了這個理論。」</div>
+  </header>
+
+  <!-- 人物簡介卡 -->
+  <div class="profile-card">
+    <div class="profile-name">Carol S. Dweck</div>
+    <div class="profile-title">史丹佛大學心理學系 Lewis and Virginia Eaton 講座教授 ／ 成長型思維（Growth Mindset）理論創始人</div>
+    <div class="profile-tags">
+      <span class="profile-tag">動機心理學</span>
+      <span class="profile-tag">教育神經科學</span>
+      <span class="profile-tag">《心態致勝》作者</span>
+      <span class="profile-tag">APA 終身成就獎</span>
+    </div>
+  </div>
+
+  <!-- 文章本文 -->
+  <article class="body">
+
+    <section>
+      <h2>今天為什麼說她？</h2>
+      <p>如果你近幾年讀過任何一本教養書、參加過任何一場親子講座，幾乎不可能沒聽到這兩個字：<strong>成長型思維（Growth Mindset）</strong>。</p>
+      <p>它說的是：比起「你好聰明」，「你很努力」這句話，才能讓孩子面對挫折更有韌性、更願意挑戰困難。這個觀念從 1990 年代開始，透過 Carol Dweck 的一系列研究傳遍全世界，成為過去二十年來最廣被引用的教育心理學理論之一。</p>
+      <p>但最近，Carol Dweck 本人在多個場合指出：這個理論「被大量誤用了」。不是說理論錯了，而是全球教育界在應用時，<strong>把它簡化成了一句口號，反而失去了它真正的力量</strong>。台灣的教養現場，我們用對了嗎？</p>
+    </section>
+
+    <section>
+      <h2>她是誰，這個理論在說什麼</h2>
+      <p>Carol Dweck 是史丹佛大學心理學教授，專研動機、人格與發展心理學逾四十年。她的核心發現，來自一個看似簡單的實驗：把同樣程度的孩子分成兩組，做完一道難題後，一組稱讚「你好聰明」，另一組稱讚「你很努力」。然後給兩組孩子更難的挑戰。</p>
+      <p>結果：被稱讚「聰明」的孩子，<strong>大多拒絕嘗試更難的題目</strong>——因為他們把聰明當作固定特質，一旦失敗，「聰明」就消失了。被稱讚「努力」的孩子，<strong>大多願意挑戰更難的題目</strong>——因為他們相信努力是可以累積的。</p>
+      <p>2006 年，她把這套理論整理成《心態致勝》（Mindset: The New Psychology of Success），成為全球銷售超過 300 萬冊的暢銷書，被無數學校、企業、家長奉為圭臬。</p>
+    </section>
+
+    <section>
+      <h2>2025 年的新聲音：理論沒錯，但我們用錯了</h2>
+      <p>近年來，包括 Dweck 本人在內的研究者陸續發現：全球大規模推廣「成長型思維」課程後，<strong>效果遠比實驗室裡小</strong>。為什麼？</p>
+      <p>Dweck 在多個訪談中指出三個最常見的誤用：第一，<strong>把「稱讚努力」變成空洞的口號</strong>——無論孩子做什麼都說「你好努力！」，孩子很快就識破這是假的；第二，<strong>只改變了用詞，沒有改變環境</strong>——父母嘴上說「努力比分數重要」，但眼神和行動告訴孩子「你的成績我看得很緊」；第三，<strong>忽略了「真實的困難」</strong>——成長型思維不是「正向想就好」，孩子需要真正遇到困難、真正掙扎，才能產生真實的韌性。</p>
+      <p>她說：「<strong>成長型思維不是一個你貼上去的標籤，是一個需要被活出來的狀態。</strong>」這句話，對台灣的家長和老師，值得停下來想一想。</p>
+    </section>
+
+  </article>
+
+  <!-- 3 個觀念 -->
+  <section class="insights">
+    <div class="insights-title">▌ 今天就能帶走的 3 個觀念</div>
+    <div class="insights-grid">
+
+      <div class="insight-card">
+        <div class="insight-num">1</div>
+        <div class="insight-name">稱讚「過程」而非「結果」或「特質」</div>
+        <div class="insight-body">不只是「努力」，而是具體說出孩子做了什麼——「我看到你剛才試了三種方法，這個過程很有意思」。這樣的稱讚，孩子知道你真的在看，不是在貼標籤。</div>
+        <div class="insight-example">
+          <div class="insight-example-label">你可以這樣說</div>
+          「你剛才那道數學做錯了，但你沒有放棄，又回去想了一遍——這個才是最值得說的。」
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-num">2</div>
+        <div class="insight-name">讓孩子感受到「還沒會」不等於「不行」</div>
+        <div class="insight-body">Dweck 最喜歡的一個詞是「yet」——不是「你不會」，是「你還沒會」。這一個字，把失敗從終點變成路途中的一個站。台灣家長可以試試把「你怎麼又錯了」換成「這題你還沒掌握，我們來看看卡在哪裡」。</div>
+        <div class="insight-example">
+          <div class="insight-example-label">你可以這樣說</div>
+          「這個你還不會，不是因為你不行，是因為你還沒有練到這裡。」
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-num">3</div>
+        <div class="insight-name">先讓自己的「心態」一致</div>
+        <div class="insight-body">孩子的眼睛比耳朵更靈。如果你口說「努力比成績重要」，但考完試第一個問的是分數，孩子感受到的是後者。成長型思維最難的地方，是先問自己：「我對孩子的挫折，真的能從容嗎？」</div>
+        <div class="insight-example">
+          <div class="insight-example-label">今天可以問自己</div>
+          「上一次孩子考差了，我的第一個反應是什麼？是想了解，還是想解決？」
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 覺知連結卡 -->
+  <div class="awareness-link">
+    <h2>從 Dweck 的理論，看見覺知的核心</h2>
+    <p>Carol Dweck 說成長型思維「需要被活出來」，不是貼上去的標籤。這和「先懂心，再懂教」說的是同一件事——改變不從嘴巴說的話開始，從你在那個當下的內在狀態開始。</p>
+    <p>孩子感受不到「我說努力很重要」，孩子感受得到的是：「媽媽/爸爸在我做不到的時候，是什麼樣的眼神。」那個眼神，才是真正的成長型思維。</p>
+    <p>3 秒鐘覺知對話在這裡很有用——當孩子帶著一張爛成績回家，先停下來問自己：「我現在怎麼了？我現在看到這張成績單，心裡是什麼？」那 3 秒鐘，決定了孩子接下來聽不聽你說話。</p>
+    <div class="awareness-sig">Written by K12覺知素養教育學苑</div>
+  </div>
+
+  <!-- 3 秒鐘覺知對話自我檢核 -->
+  <div class="checkin">
+    <div class="checkin-title">✦ 3 秒鐘覺知對話・自我檢核</div>
+    <div class="checkin-sub">每次開口前，輕聲問自己這三個問題</div>
+    <ul class="checkin-list">
+      <li>
+        <span class="checkin-num">1</span>
+        <span><strong>我現在怎麼了？</strong>——看到孩子的成績或表現，我現在的情緒是什麼？先認出自己的狀態。</span>
+      </li>
+      <li>
+        <span class="checkin-num">2</span>
+        <span><strong>他現在是什麼狀態？</strong>——孩子現在是沮喪、羞愧、還是無所謂？先讀懂他，再決定怎麼開口。</span>
+      </li>
+      <li>
+        <span class="checkin-num">3</span>
+        <span><strong>我要反應，還是回應？</strong>——我即將說出口的這句話，是在接住他，還是在解決我自己的焦慮？</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 頁尾 -->
+  <footer class="foot">
+    <div class="foot-info">
+      台灣展威文化教育股份有限公司　高雄市鼓山區美術東三路 86 號 ｜ 07-2693525 ｜ LINE @zwayedu ｜ admin@z-way-edu.com<br>
+      社團法人中華覺知教育關懷協會（CSECA）　同址 4 樓 ｜ 07-2693525 ｜ contact@z-way-edu.com ｜ 統編 72188904
+    </div>
+    <div class="foot-tagline">覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊</div>
+  </footer>
+
+</div>
+
+<style>
+.share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(59,89,152,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.share-fab:hover{background:rgba(59,89,152,1);transform:scale(1.08);}
+.share-fab svg{width:21px;height:21px;fill:#fff;display:block);}
+.share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#3b5998;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.share-fab:hover::after{opacity:1;}
+@media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+.home-fab{position:fixed;bottom:22px;right:78px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(217,119,87,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.home-fab:hover{background:rgba(217,119,87,1);transform:scale(1.08);}
+.home-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.home-fab::after{content:'回首頁';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#a85a31;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.home-fab:hover::after{opacity:1;}
+@media(max-width:600px){.home-fab{bottom:16px;right:64px;width:42px;height:42px;}.home-fab::after{display:none;}}
+</style>
+<a class="share-fab" href="parenting_insight_2026-05-07_share.png" download title="下載 IG/FB 分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.2a3.7 3.7 0 1 1 0-7.4 3.7 3.7 0 0 1 0 7.4zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
+</a>
+<a class="home-fab" href="./" title="回首頁">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l-9 8h2.5v9h13v-9H21L12 3zm0 2.7L18.5 11H17v8h-3v-5h-4v5H7v-8H5.5L12 5.7z"/></svg>
+</a>
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
