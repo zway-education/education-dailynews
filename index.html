@@ -29,20 +29,20 @@ body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans
 .head .meta{margin-top:18px;color:var(--ink-soft);font-size:14px;line-height:1.85;border-top:1px dashed var(--border);padding-top:18px;}
 .head .meta strong{color:var(--brand-deep);}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;}
-.card{background:var(--card);border-radius:16px;padding:24px 22px 20px;border:1px solid var(--border);box-shadow:var(--shadow);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease;}
+.card{background:var(--card);border-radius:16px;padding:24px 22px 20px;border:1px solid var(--border);box-shadow:var(--shadow);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease;min-height:320px;}
 .card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(59,89,152,0.12);}
 .card-tags{margin-bottom:10px;}
 .card-tags .age{display:inline-block;background:var(--accent);color:#fff;font-size:11px;letter-spacing:1.5px;padding:3px 10px;border-radius:14px;font-weight:600;margin-right:6px;}
 .card-tags .axis{display:inline-block;color:var(--brand);font-size:12px;letter-spacing:1px;}
 .card-title{font-size:18px;color:var(--brand-deep);margin:6px 0 10px;line-height:1.55;font-weight:700;}
-.card-hook{color:var(--ink-soft);font-size:14px;line-height:1.78;margin:0 0 14px;}
+.card-hook{color:var(--ink-soft);font-size:14px;line-height:1.78;flex:1;margin:0 0 14px;}
 .card-cta{color:var(--brand);font-size:13.5px;letter-spacing:1.5px;font-weight:600;}
 .foot{margin-top:36px;padding:24px 22px;background:#fff;border-radius:14px;border:1px solid var(--border);font-size:13px;color:var(--ink-soft);line-height:1.85;text-align:center;}
 .foot strong{color:var(--brand-deep);letter-spacing:1px;}
 .foot .slogans{margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);letter-spacing:2px;color:var(--accent);font-size:13px;}
 .card.is-latest{border:2px solid var(--brand);position:relative;background:linear-gradient(180deg,#fafbfd 0%,#ffffff 60%);}
 .card.is-latest::before{content:'NEW';position:absolute;top:-10px;right:14px;background:var(--brand);color:#fff;font-size:10px;letter-spacing:2px;padding:3px 9px;border-radius:10px;font-weight:700;}
-.card .upload-date{margin-top:auto;display:inline-block;font-size:11px;color:#5a5048;background:#f3ede0;border:1px solid #e1d6bb;border-radius:8px;padding:2px 8px;letter-spacing:.5px;font-family:'JetBrains Mono',Menlo,monospace;margin-top:8px;}
+.card .upload-date{display:inline-block;font-size:11px;color:#5a5048;background:#f3ede0;border:1px solid #e1d6bb;border-radius:8px;padding:2px 8px;letter-spacing:.5px;font-family:'JetBrains Mono',Menlo,monospace;margin-top:8px;}
 
 
 .card.theme-blue{border-left:5px solid #3b5998;}
