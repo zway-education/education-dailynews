@@ -2,8 +2,438 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=parenting_essence/">
-<title>覺知教養・每日精華</title>
+<title>覺知教養．每日精華 ｜ 文章索引</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="覺知 SEL 教育｜每日一篇精華教養文章｜K12 覺知素養教育學苑">
+<style>
+:root{
+  --brand:#3b5998;
+  --brand-deep:#2a3f73;
+  --brand-soft:#e9eef7;
+  --accent:#c9a96e;
+  --accent-soft:#f6efe0;
+  --ink:#2a2620;
+  --ink-soft:#5a5048;
+  --bg:#fbf7f1;
+  --card:#ffffff;
+  --border:#e8ddc8;
+  --shadow:0 4px 20px rgba(59,89,152,0.06);
+}
+*{box-sizing:border-box;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;}
+.wrap{max-width:980px;margin:0 auto;padding:36px 20px 80px}
+.head{background:linear-gradient(135deg,#eef2fb 0%,#f6efe0 100%);border-radius:22px;padding:42px 32px 36px;margin-bottom:32px;border:1px solid var(--border);text-align:center;}
+.head .tag{display:inline-block;background:var(--brand);color:#fff;font-size:18px;letter-spacing:4px;padding:9px 22px;border-radius:24px;font-weight:700;}
+.head h1{font-size:32px;margin:18px 0 10px;letter-spacing:1.5px;color:var(--brand-deep);font-weight:700;}
+.head .sub{color:var(--ink-soft);font-size:15px;letter-spacing:1.2px;}
+.head .meta{margin-top:18px;color:var(--ink-soft);font-size:14px;line-height:1.85;border-top:1px dashed var(--border);padding-top:18px;}
+.head .meta strong{color:var(--brand-deep);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;}
+.card{background:var(--card);border-radius:16px;padding:24px 22px 20px;border:1px solid var(--border);box-shadow:var(--shadow);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease;}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(59,89,152,0.12);}
+.card-tags{margin-bottom:10px;}
+.card-tags .age{display:inline-block;background:var(--accent);color:#fff;font-size:11px;letter-spacing:1.5px;padding:3px 10px;border-radius:14px;font-weight:600;margin-right:6px;}
+.card-tags .axis{display:inline-block;color:var(--brand);font-size:12px;letter-spacing:1px;}
+.card-title{font-size:18px;color:var(--brand-deep);margin:6px 0 10px;line-height:1.55;font-weight:700;}
+.card-hook{color:var(--ink-soft);font-size:14px;line-height:1.78;flex:1;margin:0 0 14px;}
+.card-cta{color:var(--brand);font-size:13.5px;letter-spacing:1.5px;font-weight:600;}
+.foot{margin-top:36px;padding:24px 22px;background:#fff;border-radius:14px;border:1px solid var(--border);font-size:13px;color:var(--ink-soft);line-height:1.85;text-align:center;}
+.foot strong{color:var(--brand-deep);letter-spacing:1px;}
+.foot .slogans{margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);letter-spacing:2px;color:var(--accent);font-size:13px;}
+.card.is-latest{border:2px solid var(--brand);position:relative;background:linear-gradient(180deg,#fafbfd 0%,#ffffff 60%);}
+.card.is-latest::before{content:'NEW';position:absolute;top:-10px;right:14px;background:var(--brand);color:#fff;font-size:10px;letter-spacing:2px;padding:3px 9px;border-radius:10px;font-weight:700;}
+.card .upload-date{display:inline-block;font-size:11px;color:#5a5048;background:#f3ede0;border:1px solid #e1d6bb;border-radius:8px;padding:2px 8px;letter-spacing:.5px;font-family:'JetBrains Mono',Menlo,monospace;margin-top:8px;}
+
+
+.card.theme-blue{border-left:5px solid #3b5998;}
+.card.theme-blue .card-title{color:#2a3f73;}
+.card.theme-blue .card-tags .age{background:#3b5998;}
+.card.theme-blue .card-tags .axis{color:#3b5998;}
+.card.theme-blue .card-cta{color:#3b5998;}
+.card.theme-blue.is-latest{border:2px solid #3b5998;border-left:5px solid #3b5998;}
+.card.theme-blue.is-latest::before{background:#3b5998;}
+.card.theme-orange{border-left:5px solid #d97757;}
+.card.theme-orange .card-title{color:#a85a31;}
+.card.theme-orange .card-tags .age{background:#d97757;}
+.card.theme-orange .card-tags .axis{color:#d97757;}
+.card.theme-orange .card-cta{color:#d97757;}
+.card.theme-orange.is-latest{border:2px solid #d97757;border-left:5px solid #d97757;}
+.card.theme-orange.is-latest::before{background:#d97757;}
+
+.card.theme-yellow{border-left:5px solid #FFC800;}
+.card.theme-yellow .card-title{color:#7a5a00;}
+.card.theme-yellow .card-tags .age{background:#FFC800;color:#3a2800;}
+.card.theme-yellow .card-tags .axis{color:#a07800;}
+.card.theme-yellow .card-cta{color:#a07800;}
+.card.theme-yellow.is-latest{border:2px solid #FFC800;border-left:5px solid #FFC800;}
+.card.theme-yellow.is-latest::before{background:#FFC800;color:#3a2800;}
+
+
+@media(max-width:600px){
+  }
+
+
+.filter-bar{
+  background:#fff;border-radius:18px;padding:18px 22px;margin-bottom:24px;
+  border:1px solid var(--border);box-shadow:var(--shadow);
+}
+.filter-group{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.filter-group:last-of-type{margin-bottom:0;}
+.filter-label{font-size:13px;color:var(--brand-deep);font-weight:700;letter-spacing:1px;flex-shrink:0;min-width:42px;}
+.filter-chips{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding-bottom:2px;flex:1;}
+.filter-chips::-webkit-scrollbar{height:4px;}
+.filter-chips::-webkit-scrollbar-thumb{background:#d4c8a8;border-radius:2px;}
+.filter-chip{
+  display:inline-block;padding:5px 12px;border-radius:16px;font-size:12.5px;
+  background:#f3ede0;color:#5a5048;border:1px solid #e1d6bb;
+  cursor:pointer;transition:all .15s ease;letter-spacing:.3px;
+  user-select:none;white-space:nowrap;flex-shrink:0;
+}
+.filter-chip:hover{background:#e8ddc8;}
+.filter-chip.active{background:var(--brand);color:#fff;border-color:var(--brand);}
+.filter-status{font-size:12.5px;color:var(--ink-soft);margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);}
+.filter-status .num{color:var(--brand);font-weight:700;}
+.filter-status .reset{color:var(--brand);cursor:pointer;text-decoration:underline;margin-left:8px;}
+.card.is-hidden{display:none !important;}
+
+.load-more-btn{
+  display:block;margin:32px auto 0;padding:12px 32px;
+  background:var(--brand);color:#fff;border:none;border-radius:24px;
+  font-size:14px;font-weight:700;letter-spacing:1.5px;cursor:pointer;
+  transition:background .15s,transform .15s;
+  font-family:inherit;
+}
+.load-more-btn:hover{background:var(--brand-deep);transform:translateY(-1px);}
+.load-more-btn.hidden{display:none;}
+.card.is-paged-hidden{display:none !important;}
+
+@media(max-width:600px){
+  .filter-chip{font-size:12px;padding:4px 10px;}
+  .filter-label{font-size:12px;min-width:38px;}
+}
+
+.test-banner{
+  background:linear-gradient(135deg,#3b5998 0%,#d97757 100%);
+  border-radius:18px;padding:28px 30px;margin-bottom:28px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;
+  box-shadow:0 6px 22px rgba(59,89,152,0.18);
+  text-decoration:none;color:#fff;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.test-banner:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(59,89,152,0.28);}
+.test-banner-text{flex:1;min-width:200px;}
+.test-banner-tag{display:inline-block;background:rgba(255,255,255,.22);padding:3px 10px;border-radius:10px;font-size:12px;letter-spacing:2px;margin-bottom:8px;}
+.test-banner-title{font-size:20px;font-weight:700;margin:0 0 4px;letter-spacing:1px;line-height:1.4;}
+.test-banner-sub{font-size:13.5px;color:rgba(255,255,255,.88);line-height:1.6;}
+.test-banner-cta{
+  display:inline-block;background:#fff;color:#3b5998;font-weight:700;
+  padding:10px 22px;border-radius:24px;font-size:14px;letter-spacing:1px;
+  white-space:nowrap;transition:background .15s;
+}
+.test-banner:hover .test-banner-cta{background:#fbe9de;}
+@media(max-width:600px){
+  @media(max-width:600px){
+  }
+
+.test-banner{padding:22px 20px;flex-direction:column;align-items:flex-start;}
+  .test-banner-cta{width:100%;text-align:center;}
+}
+
+@media(max-width:600px){
+  .wrap{padding:24px 14px 60px}
+  .head{padding:30px 22px 26px}
+  .head h1{font-size:25px}
+  .grid{grid-template-columns:1fr;gap:14px}
+}
+</style>
 </head>
-<body></body>
-</html>
+<body>
+<div class="wrap">
+<header class="head">
+  <span class="tag">覺知教養 ｜ 每日精華</span>
+  <h1>每天一篇．陪你穩住</h1>
+  <div class="sub">先懂心　・　再懂教</div>
+  <div class="meta"><strong>作者</strong>：K12覺知素養教育學苑<br>覺知 SEL 是 <strong>4C 非認知能力</strong>（創造力 ·  思辨力 ·  溝通力 ·  合作力）的根基。<br>AI 已經能算、能解、能寫，孩子真正能帶走的競爭力，不在分數，而在能不能<strong>看見自己、安住自己、選擇怎麼回應這個世界</strong>。</div>
+</header>
+
+<a class="test-banner" href="https://zway-education.github.io/mindspectrum/" target="_blank" rel="noopener">
+  <div class="test-banner-text">
+    <span class="test-banner-tag">免費線上測驗</span>
+    <h3 class="test-banner-title">親子教養心智光譜測驗</h3>
+    <div class="test-banner-sub">紅 · 橙 · 綠 · 藍 — 看見你跟孩子各自的天賦光譜，把「為什麼他不像我？」變成「原來他是這樣的人」。</div>
+  </div>
+  <span class="test-banner-cta">立即測驗 →</span>
+</a>
+
+
+
+<div class="filter-bar">
+  <div class="filter-group">
+    <span class="filter-label">主題</span>
+    <div class="filter-chips">
+      <span class="filter-chip active" data-type="axis" data-val="all">全部</span>
+      <span class="filter-chip" data-type="axis" data-val="mon">週一 幼兒</span>
+      <span class="filter-chip" data-type="axis" data-val="tue">週二 學齡</span>
+      <span class="filter-chip" data-type="axis" data-val="wed">週三 青少</span>
+      <span class="filter-chip" data-type="axis" data-val="thu">週四 對話</span>
+      <span class="filter-chip" data-type="axis" data-val="fri">週五 父母</span>
+      <span class="filter-chip" data-type="axis" data-val="sat">週六 儀式</span>
+      <span class="filter-chip" data-type="axis" data-val="sun">週日 跨代</span>
+      <span class="filter-chip" data-type="axis" data-val="insight">📚 書／人／趨勢／TED</span>
+    </div>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">年齡</span>
+    <div class="filter-chips">
+      <span class="filter-chip active" data-type="age" data-val="all">全部</span>
+      <span class="filter-chip" data-type="age" data-val="0-6">0-6 歲</span>
+      <span class="filter-chip" data-type="age" data-val="6-12">6-12 歲</span>
+      <span class="filter-chip" data-type="age" data-val="13-18">13-18 歲</span>
+      <span class="filter-chip" data-type="age" data-val="cross">跨齡</span>
+    </div>
+  </div>
+  <div class="filter-status">
+    篩選：<span class="num" id="resultCount">0</span> 篇
+    <span class="reset" id="filterReset" onclick="resetFilter()">清除</span>
+  </div>
+</div>
+
+<div class="grid">
+
+
+<a class="card is-latest theme-blue" href="parenting_essence_2026-05-10.html" data-axis="sun" data-age="cross">
+    <div class="card-tags"><span class="age">跨世代 ／ 價值傳承</span><span class="axis">週日 ｜ 跨世代與家庭文化</span></div>
+    <h3 class="card-title">你訂的家規，孩子記住的是規定，還是你的樣子？</h3>
+    <p class="card-hook">家規不是牆上的字，也不是罰單。當孩子長大問起「為什麼我們家要這樣？」時，你能說出的那一句話，才是真正被傳下去的東西。不是規定，而是你面對生活的方式，以及你希望他成為的那種人。這篇文，是給所有想把「做人的方式」傳下去的父母。</p>
+    <span class="upload-date">2026-05-10&nbsp;&nbsp;週日</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 &rarr;</span>
+  </a>
+<a class="card theme-yellow" href="2026-05/parenting_essence_2026-05-09.html" data-axis="sat" data-age="cross">
+    <div class="card-tags"><span class="age">家庭氛圍 ｜ 睡前儀式</span><span class="axis">週六 ｜ 家庭氛圍與儀式感</span></div>
+    <h3 class="card-title">睡前 10 分鐘，不是哄睡是一天最深的相遇</h3>
+    <p class="card-hook">關了燈，孩子才真的開口說話——那一刻，你怎麼接住？</p>
+    <span class="upload-date">2026-05-09&nbsp;&nbsp;週六</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 &rarr;</span>
+  </a>
+<a class="card theme-blue" href="2026-05/parenting_essence_2026-05-08.html" data-axis="fri" data-age="cross">
+    <div class="card-tags"><span class="age">父母自我覺知</span><span class="axis">週五 ｜ 父母自我覺知</span></div>
+    <h3 class="card-title">你不是不夠好的媽媽——你只是扛了太多「應該」</h3>
+    <p class="card-hook">「那個對孩子失去耐心的你，不是壞父母——是一個扛了太久卻沒被人接住的大人。」</p>
+    <span class="upload-date">2026-05-08&nbsp;&nbsp;週五</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 &rarr;</span>
+  </a>
+<a class="card theme-yellow" href="2026-05/parenting_insight_2026-05-07.html" data-axis="insight" data-series="insight" data-age="cross">
+    <div class="card-tags"><span class="age">趨勢人物</span><span class="axis">趨勢研究</span></div>
+    <h3 class="card-title">Carol Dweck：那句「你好聰明」， 可能是你給孩子最昂貴的一句話</h3>
+    <p class="card-hook">她用一個實驗改變了全球教育界對「稱讚」的理解。 但 2025 年，她自己說：「我們用錯了這個理論。」</p>
+    <span class="upload-date">2026-05-07&nbsp;&nbsp;週四</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 &rarr;</span>
+  </a>
+<a class="card theme-orange" href="2026-05/parenting_essence_2026-05-07.html" data-axis="thu" data-age="cross">
+    <div class="card-tags"><span class="age">親子溝通</span><span class="axis">週四 ｜ 3 秒鐘覺知對話</span></div>
+    <h3 class="card-title">當孩子說「你根本不懂我」—— 那句話背後，藏著一個還沒說完的渴望</h3>
+    <p class="card-hook">「你不懂我。」 那四個字落下來的時候，你是反應了，還是回應了？</p>
+    <span class="upload-date">2026-05-07&nbsp;&nbsp;週四</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 &rarr;</span>
+  </a>
+<a class="card theme-blue" href="2026-05/parenting_essence_2026-05-06.html" data-axis="wed" data-age="13-18">
+    <div class="card-tags"><span class="age">13-18 歲青少年</span><span class="axis">週三 ｜ 青少年自我認同</span></div>
+    <h3 class="card-title">他甩上的那扇門，不是把你關在外面，是他在練習成為自己</h3>
+    <p class="card-hook">傍晚六點半，你聽見鑰匙轉動的聲音。「今天考得怎麼樣？」沒有回答，只有書包掉在沙發上的「咚」、一句「煩死了」、然後是房門砰一聲。你站在門外，端著那盤水果，心裡又熱又冷⋯⋯</p>
+    <span class="upload-date">📅 2026-05-06　週三</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
+  </a>
+<a class="card theme-orange" href="2026-05/parenting_essence_2026-05-05.html" data-axis="tue" data-age="6-12">
+    <div class="card-tags"><span class="age">6-12 歲學齡</span><span class="axis">週二 ｜ 學習動機與自主</span></div>
+    <h3 class="card-title">當孩子一遇難就說「我不會」——他要的不是答案，是被相信</h3>
+    <p class="card-hook">「我不會。」三個字從孩子嘴裡蹦出來時，你已經看了兩眼題目，心裡冒出兩種版本的回應⋯⋯但孩子卡住的那一刻，他要的不是答案，是被相信。</p>
+    <span class="upload-date">📅 2026-05-05　週二</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
+  </a>
+<a class="card theme-blue" href="2026-05/parenting_essence_2026-05-04.html" data-axis="mon" data-age="0-6">
+    <div class="card-tags"><span class="age">0-6 歲幼兒</span><span class="axis">週一 ｜ 幼兒情緒與依附</span></div>
+    <h3 class="card-title">哭鬧不是無理取鬧，是大腦還沒長好</h3>
+    <p class="card-hook">當孩子在賣場崩潰倒地，路人轉頭看你的那一刻——你不是教養失敗，你正在面對一個還在發育中的大腦。</p>
+    <span class="upload-date">📅 2026-05-04　週一</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
+  </a>
+<a class="card theme-orange" href="2026-05/parenting_essence_2026-05-03.html" data-axis="sun" data-age="cross">
+    <div class="card-tags"><span class="age">跨世代</span><span class="axis">週日 ｜ 跨世代與家庭文化</span></div>
+    <h3 class="card-title">阿公阿嬤的「以前都這樣」，不是錯，只是不同時代</h3>
+    <p class="card-hook">你跟長輩在教養上吵不停。但這不是「誰對誰錯」的戰爭——這是兩個時代對「什麼叫愛孩子」的不同答案，正在同一個屋簷下相遇。</p>
+    <span class="upload-date">📅 2026-05-03　週日</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
+  </a>
+<a class="card theme-blue" href="2026-05/parenting_essence_2026-05-02.html" data-axis="sat" data-age="cross">
+    <div class="card-tags"><span class="age">家庭儀式</span><span class="axis">週六 ｜ 家庭氛圍與儀式感</span></div>
+    <h3 class="card-title">餐桌上的 10 分鐘，比一場家庭會議更深</h3>
+    <p class="card-hook">家庭關係不是靠週末的盛大計畫維繫的，是靠每天那 10 分鐘——你們同時放下手機、抬頭看見彼此的時間。</p>
+    <span class="upload-date">📅 2026-05-02　週六</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
+  </a>
+<a class="card theme-orange" href="2026-05/parenting_essence_2026-05-01.html" data-axis="fri" data-age="cross">
+    <div class="card-tags"><span class="age">父母自我</span><span class="axis">週五 ｜ 父母自我覺知</span></div>
+    <h3 class="card-title">你不是失控，你只是太久沒被接住</h3>
+    <p class="card-hook">對孩子大吼之後，你躲在浴室裡無聲掉眼淚。你以為你在對孩子生氣，其實你在跟那個沒人看見、撐了好久的自己說：我真的好累。</p>
+    <span class="upload-date">📅 2026-05-01　週五</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
+  </a>
+<a class="card theme-blue" href="2026-04/parenting_essence_2026-04-30.html" data-axis="thu" data-age="cross">
+    <div class="card-tags"><span class="age">親子溝通</span><span class="axis">週四 ｜ 覺知對話練習</span></div>
+    <h3 class="card-title">3 秒鐘覺知對話——關掉自動回應的開關</h3>
+    <p class="card-hook">孩子說了一句話，你的反應已經衝出來了——你發現自己又重演了上一代對你的劇本。3 秒鐘，是改變這個劇本唯一的縫隙。</p>
+    <span class="upload-date">📅 2026-04-30　週四</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
+  </a>
+<a class="card theme-orange" href="2026-04/parenting_essence_2026-04-29.html" data-axis="wed" data-age="13-18">
+    <div class="card-tags"><span class="age">13-18 歲青少年</span><span class="axis">週三 ｜ 青少年自我認同</span></div>
+    <h3 class="card-title">房門關上的那一刻，他不是在拒絕你，是在練習成為自己</h3>
+    <p class="card-hook">他不再回你訊息、晚餐三句就回房間、房門「啪」一聲關上。你站在門外，覺得這個十五歲的人，已經不是你認識的那個孩子了。</p>
+    <span class="upload-date">📅 2026-04-29　週三</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
+  </a>
+<a class="card theme-blue" href="2026-04/parenting_essence_2026-04-28.html" data-axis="tue" data-age="6-12">
+    <div class="card-tags"><span class="age">6-12 歲學齡</span><span class="axis">週二 ｜ 學習動機與自主</span></div>
+    <h3 class="card-title">寫作業拖拉的真相——不是懶，是大腦在保護自己</h3>
+    <p class="card-hook">孩子坐在書桌前一個小時只寫了三行，你以為他在偷懶。但對一個正在害怕失敗的大腦來說，「不開始」是最划算的選擇。</p>
+    <span class="upload-date">📅 2026-04-28　週二</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
+  </a>
+<a class="card theme-orange" href="2026-04/parenting_essence_2026-04-27.html" data-axis="mon" data-age="0-6">
+    <div class="card-tags"><span class="age">0-6 歲幼兒</span><span class="axis">延伸題 ｜ 幼兒依附建立</span></div>
+    <h3 class="card-title">安全感不是滿足需求，是讓孩子知道「你會回來」</h3>
+    <p class="card-hook">你不可能 24 小時陪著他，也不需要。孩子真正記得的，不是你陪了多久，而是你每一次「離開後又回來」的承諾。</p>
+    <span class="upload-date">📅 2026-04-27　週一</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
+  </a>
+<a class="card theme-blue" href="2026-04/parenting_essence_2026-04-26.html" data-axis="sun" data-age="cross">
+    <div class="card-tags"><span class="age">手足互動</span><span class="axis">延伸題 ｜ 手足關係</span></div>
+    <h3 class="card-title">為什麼孩子會故意「鬧」弟妹？爭的不是玩具，是位置</h3>
+    <p class="card-hook">他打了弟弟、搶了姐姐的東西、把妹妹的畫撕了。你以為他在欺負手足，其實他在問你一個問題：「你還愛我嗎？」</p>
+    <span class="upload-date">📅 2026-04-26　週日</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
+  </a>
+<a class="card theme-yellow" href="2026-04/parenting_insight_2026-04-24.html" data-axis="insight" data-series="insight" data-age="cross">
+    <div class="card-tags"><span class="age">書籍精華</span><span class="axis">趨勢研究</span></div>
+    <h3 class="card-title">Adam Grant《隱性潛能》： 努力不是答案，「對的掙扎」才是</h3>
+    <p class="card-hook">你的孩子不是「沒有天分」，是還沒找到屬於他的掙扎方式。 Adam Grant 用最新研究告訴你：潛能，是被練出來的，不是天生的。</p>
+    <span class="upload-date">2026-04-24&nbsp;&nbsp;週五</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 &rarr;</span>
+  </a>
+<a class="card theme-orange" href="2026-04/parenting_essence_2026-04-23.html" data-axis="fri" data-age="cross">
+    <div class="card-tags"><span class="age">父母自我覺知</span><span class="axis">週四 ｜ 父母自我覺知</span></div>
+    <h3 class="card-title">當我對孩子發火之後——那個讓你羞愧的夜晚，其實是覺知的入口</h3>
+    <p class="card-hook">你不是壞父母。你只是一個沒被好好照顧過的孩子，現在正在學習成為父母。</p>
+    <span class="upload-date">2026-04-23&nbsp;&nbsp;週四</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 &rarr;</span>
+  </a>
+<a class="card theme-orange" href="2026-04/parenting_essence_2026-04-25.html" data-axis="sat" data-age="6-12">
+    <div class="card-tags"><span class="age">6-15 歲</span><span class="axis">延伸題 ｜ 學習動機建構</span></div>
+    <h3 class="card-title">從他律到自律到自主——孩子學會的不是聽話，是負責</h3>
+    <p class="card-hook">你以為「乖孩子」是教養的目標，其實「乖」是最危險的階段。真正的成熟不是聽你的話，是聽他自己內在那個越來越清楚的聲音。</p>
+    <span class="upload-date">📅 2026-04-25　週六</span>
+    <span class="card-cta" style="margin-top:8px;">閱讀全文 →</span>
+  </a>
+</div>
+<button class="load-more-btn hidden" id="loadMoreBtn" onclick="loadMore()">載入更多 <span id="loadMoreRemaining"></span></button>
+
+
+<footer class="foot">
+  <strong>台灣展威文化教育股份有限公司</strong>　高雄市鼓山區美術東三路 86 號 ｜ 07-2693525 ｜ LINE @zwayedu ｜ admin@z-way-edu.com<br>
+  <strong>社團法人中華覺知教育關懷協會 (CSECA)</strong>　同址 4 樓 ｜ contact@z-way-edu.com
+  <div class="slogans">覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊</div>
+</footer>
+</div>
+
+<script>
+(function(){
+  const PAGE_SIZE = 14;
+  const cards = document.querySelectorAll('.card[data-axis]');
+  const chips = document.querySelectorAll('.filter-chip');
+  const resultCount = document.getElementById('resultCount');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const remainingEl = document.getElementById('loadMoreRemaining');
+  let activeAxis = 'all', activeAge = 'all';
+  let visibleLimit = PAGE_SIZE;
+  
+  function getMatchedCards(){
+    const matched = [];
+    cards.forEach(c => {
+      const matchAxis = activeAxis === 'all' || c.dataset.axis === activeAxis;
+      const matchAge = activeAge === 'all' || c.dataset.age === activeAge;
+      if(matchAxis && matchAge) matched.push(c);
+    });
+    return matched;
+  }
+  
+  function applyAll(){
+    const matched = getMatchedCards();
+    cards.forEach(c => c.classList.add('is-hidden')); // 全 hide
+    
+    // 顯示前 visibleLimit 張符合條件的
+    matched.slice(0, visibleLimit).forEach(c => c.classList.remove('is-hidden'));
+    
+    // 計數顯示
+    if(resultCount) resultCount.textContent = matched.length;
+    
+    // 載入更多按鈕
+    const remaining = matched.length - visibleLimit;
+    if(loadMoreBtn){
+      if(remaining > 0){
+        loadMoreBtn.classList.remove('hidden');
+        if(remainingEl) remainingEl.textContent = '(' + remaining + ' 篇)';
+      } else {
+        loadMoreBtn.classList.add('hidden');
+      }
+    }
+  }
+  
+  window.loadMore = function(){
+    visibleLimit += PAGE_SIZE;
+    applyAll();
+  };
+  
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+         const type = chip.dataset.type;
+      const val = chip.dataset.val;
+      // deactivate all chips of same type
+      document.querySelectorAll(`.filter-chip[data-type="${type}"]`).forEach(ch => ch.classList.remove('active'));
+      chip.classList.add('active');
+      if(type === 'axis') activeAxis = val;
+      if(type === 'age')  activeAge  = val;
+      visibleLimit = PAGE_SIZE;
+      applyAll();
+    });
+  });
+
+  window.resetFilter = function(){
+    activeAxis = 'all'; activeAge = 'all';
+    visibleLimit = PAGE_SIZE;
+    chips.forEach(ch => {
+      const isAll = ch.dataset.val === 'all';
+      ch.classList.toggle('active', isAll);
+    });
+    applyAll();
+  };
+
+  // Init: dynamic count on load
+  applyAll();
+})();
+</script>
+</div>
+
+<script>
+// 自動標記今日文章為 NEW
+(function(){
+  const today = new Date().toLocaleDateString('sv-SE'); // YYYY-MM-DD 台灣時間
+  // 移除所有舊 document.querySelectorAll('.card.is-latest').forEach(c => c.classList.remove('is-latest'));
+  // 找 href 含今天日期的卡片加上 document.querySelectorAll('.card[href]').forEach(c => {
+    if(c.getAttribute('href').includes(today)){
+      c.classList.add('is-latest');
+    }
+  });
+})();
+</script>
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

@@ -1,4 +1,5 @@
+system-commandline-sentinel-files/
 *.tmp
 *.log
-.DS_Store
 Thumbs.db
+desktop.ini
