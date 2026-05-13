@@ -222,6 +222,97 @@ body{
   font-weight:600;
   color:#4a3a15;
 }
+.spectrum{
+  margin-top:22px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:28px 24px 24px;
+}
+.spectrum > h2{
+  font-size:19px;
+  color:var(--brand-deep);
+  border-left:4px solid var(--accent);
+  padding-left:12px;
+  margin:0 0 6px;
+  font-weight:700;
+  letter-spacing:0.3px;
+}
+.spectrum .sub{
+  font-size:14px;
+  color:var(--ink-soft);
+  margin:0 0 18px;
+  line-height:1.8;
+}
+.spec-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.spec-card{
+  border-radius:12px;
+  padding:14px 14px 12px;
+  border:1px solid rgba(0,0,0,0.06);
+  background:#fff;
+}
+.spec-card .dot{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  margin-right:8px;
+  vertical-align:middle;
+}
+.spec-card h4{
+  margin:0 0 6px;
+  font-size:15.5px;
+  font-weight:700;
+  color:var(--ink);
+  display:flex;
+  align-items:center;
+  gap:2px;
+}
+.spec-card h4 .type{
+  font-size:13px;
+  color:var(--ink-soft);
+  font-weight:500;
+  margin-left:6px;
+}
+.spec-card p{
+  margin:0;
+  font-size:13.5px;
+  color:var(--ink-soft);
+  line-height:1.7;
+}
+.spec-card.red{background:#fff2ee;border-color:#f3c5b3}
+.spec-card.red .dot{background:#e85d3a}
+.spec-card.orange{background:#fdf1e0;border-color:#eccfa1}
+.spec-card.orange .dot{background:#e89a3a}
+.spec-card.green{background:#eef6ed;border-color:#bcd9b8}
+.spec-card.green .dot{background:#5aa551}
+.spec-card.blue{background:#eaf0f9;border-color:#c3d0e5}
+.spec-card.blue .dot{background:#3b5998}
+.spec-takeaway{
+  background:#fbf3e2;
+  border-left:3px solid var(--accent);
+  border-radius:8px;
+  padding:12px 14px;
+  margin-top:14px;
+  font-size:14px;
+  color:#6f5a35;
+  line-height:1.85;
+}
+.spec-link{
+  margin-top:10px;
+  font-size:12.5px;
+  color:var(--ink-soft);
+  text-align:center;
+}
+.spec-link a{color:var(--brand);text-decoration:none}
+.spec-link a:hover{text-decoration:underline}
+@media(max-width:600px){
+  .spec-grid{grid-template-columns:1fr}
+}
 .foot{
   margin-top:26px;
   padding:22px 22px 24px;
@@ -345,43 +436,22 @@ body{
     <div class="sign">Written by K12覺知素養教育學苑</div>
   </div>
 
-  <div class="foot">
-    <div>
-      <strong>台灣展威文化教育股份有限公司</strong><br>
-      高雄市鼓山區美術東三路 86 號　｜　07-2693525　｜　傳真 07-2693526　｜　admin@z-way-edu.com　｜　LINE：@zwayedu
-    </div>
-    <div style="margin-top:10px">
-      <strong>社團法人中華覺知教育關懷協會（CSECA）</strong><br>
-      高雄市鼓山區美術東三路 86 號 4 樓　｜　07-2693525　｜　統編：72188904　｜　contact@z-way-edu.com<br>
-      服務時間：週一至週五 9:00–18:00
-    </div>
-    <div class="tagline">
-      覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊
-    </div>
-  </div>
+  <div class="spectrum">
+    <h2>光譜延伸 ｜ 不同光譜的孩子，會考週會用不同方式承接壓力</h2>
+    <p class="sub">覺知心智光譜把孩子的性格分成 4 色（感性/理性 × 對事/對人）。會考週同樣的壓力，不同光譜的孩子會用完全不同的方式自我修復——認識你家孩子偏哪一色，今晚的回應就會更貼。</p>
 
-</div>
+    <div class="spec-grid">
 
-<style>
-.share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(59,89,152,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
-.share-fab:hover{background:rgba(59,89,152,1);transform:scale(1.08);}
-.share-fab svg{width:21px;height:21px;fill:#fff;display:block;}
-.share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#3b5998;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
-.share-fab:hover::after{opacity:1;}
-@media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
-.home-fab{position:fixed;bottom:22px;right:78px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(217,119,87,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
-.home-fab:hover{background:rgba(217,119,87,1);transform:scale(1.08);}
-.home-fab svg{width:21px;height:21px;fill:#fff;display:block;}
-.home-fab::after{content:'回首頁';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#a85a31;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
-.home-fab:hover::after{opacity:1;}
-@media(max-width:600px){.home-fab{bottom:16px;right:64px;width:42px;height:42px;}.home-fab::after{display:none;}}
-</style>
-<a class="share-fab" href="parenting_essence_2026-05-13_share.png" download title="下載 IG/FB 分享圖">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.2a3.7 3.7 0 1 1 0-7.4 3.7 3.7 0 0 1 0 7.4zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
-</a>
-<a class="home-fab" href="../" title="回首頁">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l-9 8h2.5v9h13v-9H21L12 3zm0 2.7L18.5 11H17v8h-3v-5h-4v5H7v-8H5.5L12 5.7z"/></svg>
-</a>
-</body>
-</html>
-  
+      <div class="spec-card red">
+        <h4><span class="dot"></span>紅色<span class="type">開創型 ｜ 感性×對事</span></h4>
+        <p>壓力大時容易焦躁、講話變大聲、想摔書或踢椅子。需要的不是道理，是一個能讓他「動起來」消化壓力的出口——散步、運動、敲牆都可以。</p>
+      </div>
+
+      <div class="spec-card orange">
+        <h4><span class="dot"></span>橙色<span class="type">關懷型 ｜ 感性×對人</span></h4>
+        <p>壓力大時容易哭、跟朋友通電話到半夜、覺得「沒人懂我」。需要的不是答案，是有人願意坐在旁邊聽——不打斷、不評價、不急著給建議。</p>
+      </div>
+
+      <div class="spec-card green">
+        <h4><span class="dot"></span>綠色<span class="type">和諧型 ｜ 理性×對人</span></h4>
+        <p>壓力大時表面還算 OK，但晚上睡�
