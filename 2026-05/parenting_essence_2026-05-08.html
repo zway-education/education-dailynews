@@ -602,9 +602,13 @@ body header.head .hook{padding:24px 60px 28px !important;margin:0 !important;}
 
 </style>
 
-<!-- v13-token-override-injected -->
+
+
+
+
+<!-- v13-article-override-v2 -->
 <style>
-/* v13 5x3 final token override (2026-05-15) - espresso + 朱紅 + 金棕 */
+/* v13 5x3 final article override v2 (2026-05-15) — espresso Hero + 朱紅 + 金棕 */
 :root{
   --brand:#3a2818 !important;
   --brand-deep:#1a0e07 !important;
@@ -620,7 +624,68 @@ body header.head .hook{padding:24px 60px 28px !important;margin:0 !important;}
   --bg-warm:#fffaed !important;
   --border:#e8ddc8 !important;
 }
-/* keep all other custom theming intact - only colors are overridden */
+
+/* Hero 深 espresso 底,白字 (覆蓋舊 #eef2fb→#f6efe0 淺底) */
+.head{
+  background:linear-gradient(135deg,#3a2818 0%,#1a0e07 100%) !important;
+  border-color:#5a4f44 !important;
+  min-height:auto !important;   /* 取消 70vh, 用 padding 自然撐 */
+  padding:50px 32px 40px !important;
+}
+/* 強制覆蓋 v13 design.css 的入場動畫 opacity:0 */
+.head h1, .head .tag, .head .meta, .head .hook, .head::after{
+  opacity:1 !important;
+  animation:none !important;
+}
+.head h1{ color:#fdfaf3 !important; text-shadow:0 2px 8px rgba(0,0,0,0.4); padding:0 24px !important; }
+.head .tag{ background:#c0392b !important; color:#fff !important; }
+.head .age{ background:#c0392b !important; color:#fff !important; }
+.head .date{ color:#d4b07a !important; }
+.head .meta{ color:#d4b07a !important; }
+.head .meta strong{ color:#fdfaf3 !important; }
+.head .hook{ color:rgba(253,250,243,0.85) !important; }
+.head .datebadge{ color:#d4b07a !important; border-color:#a08555 !important; }
+
+/* Body 米白底 */
+body{ background:#faf2dc !important; color:#2a1810 !important; }
+
+/* Article body 區塊 */
+.body{ background:#fffaed !important; border-color:#e8ddc8 !important; }
+.body h2{ color:#3a2818 !important; }
+.body h2::before, .body h2::after{ background:#c0392b !important; }
+.body p{ color:#2a1810 !important; }
+.body strong{ color:#c0392b !important; }
+
+/* Steps 卡 */
+.steps{ background:#fffaed !important; }
+.steps .step{ background:#ffffff !important; border-color:#e8ddc8 !important; }
+.steps .step-num{ background:#3a2818 !important; color:#fffaed !important; }
+.steps .step-name{ color:#3a2818 !important; }
+.steps .talk{ background:#fde8e3 !important; color:#3a2818 !important; border-left-color:#c0392b !important; }
+
+/* Pull quote / quote box */
+.pull-quote, blockquote, .quote-box{ background:#fffaed !important; border-left-color:#c0392b !important; color:#2a1810 !important; }
+
+/* Outro 收筆 */
+.outro{ background:linear-gradient(135deg,#fffaed 0%,#f5e8c4 100%) !important; color:#2a1810 !important; }
+.outro strong{ color:#c0392b !important; }
+
+/* Foot 公司資訊 */
+.foot{ background:#fffaed !important; color:#5a4f44 !important; }
+.foot strong{ color:#3a2818 !important; }
+.foot .tagline{ color:#8a5e1f !important; }
+
+/* 任何寫死的舊藍/金色強制蓋掉 */
+[style*="#2c4373"], [style*="#3b5998"]{ color:#3a2818 !important; }
+[style*="#c9a96e"], [style*="#a08456"]{ color:#c08940 !important; }
+
+/* FAB buttons (圖釘按鈕) */
+.share-fab, .home-fab{ background:#c0392b !important; }
+
+/* Spectrum CTA 區塊 */
+.spec-cta{ background:#fffaed !important; border-color:#e8ddc8 !important; }
+.cta-btn{ background:#c0392b !important; color:#fff !important; }
+.cta-btn:hover{ background:#922a1f !important; }
 </style>
 </head>
 <body>
