@@ -244,74 +244,94 @@ body{
   margin:0 0 18px;
   line-height:1.8;
 }
-.spec-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
+.spec-mini-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:6px 0 16px;
 }
-.spec-card{
-  border-radius:12px;
-  padding:14px 14px 12px;
-  border:1px solid rgba(0,0,0,0.06);
-  background:#fff;
+.spec-mini{
+  flex:1 1 calc(50% - 8px);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 12px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:600;
+  color:var(--ink);
 }
-.spec-card .dot{
-  display:inline-block;
+.spec-mini .dot{
   width:10px;
   height:10px;
   border-radius:50%;
-  margin-right:8px;
-  vertical-align:middle;
+  flex-shrink:0;
 }
-.spec-card h4{
-  margin:0 0 6px;
-  font-size:15.5px;
-  font-weight:700;
-  color:var(--ink);
-  display:flex;
-  align-items:center;
-  gap:2px;
-}
-.spec-card h4 .type{
-  font-size:13px;
+.spec-mini .type-mini{
+  font-size:12.5px;
   color:var(--ink-soft);
   font-weight:500;
-  margin-left:6px;
+  margin-left:4px;
 }
-.spec-card p{
-  margin:0;
-  font-size:13.5px;
-  color:var(--ink-soft);
-  line-height:1.7;
-}
-.spec-card.red{background:#fff2ee;border-color:#f3c5b3}
-.spec-card.red .dot{background:#e85d3a}
-.spec-card.orange{background:#fdf1e0;border-color:#eccfa1}
-.spec-card.orange .dot{background:#e89a3a}
-.spec-card.green{background:#eef6ed;border-color:#bcd9b8}
-.spec-card.green .dot{background:#5aa551}
-.spec-card.blue{background:#eaf0f9;border-color:#c3d0e5}
-.spec-card.blue .dot{background:#3b5998}
+.spec-mini.red{background:#fff2ee;border:1px solid #f3c5b3}
+.spec-mini.red .dot{background:#e85d3a}
+.spec-mini.orange{background:#fdf1e0;border:1px solid #eccfa1}
+.spec-mini.orange .dot{background:#e89a3a}
+.spec-mini.green{background:#eef6ed;border:1px solid #bcd9b8}
+.spec-mini.green .dot{background:#5aa551}
+.spec-mini.blue{background:#eaf0f9;border:1px solid #c3d0e5}
+.spec-mini.blue .dot{background:#3b5998}
 .spec-takeaway{
   background:#fbf3e2;
   border-left:3px solid var(--accent);
   border-radius:8px;
   padding:12px 14px;
-  margin-top:14px;
+  margin-top:6px;
   font-size:14px;
   color:#6f5a35;
   line-height:1.85;
 }
-.spec-link{
+.spec-cta{
+  margin-top:18px;
+  text-align:center;
+  padding:16px 14px 14px;
+  background:linear-gradient(135deg,#f1ecdb 0%,#fbf3e2 100%);
+  border-radius:12px;
+  border:1px dashed var(--accent);
+}
+.spec-cta .lead{
+  font-size:14.5px;
+  color:var(--ink);
+  margin:0 0 10px;
+  font-weight:600;
+}
+.spec-cta .cta-btn{
+  display:inline-block;
+  background:var(--brand);
+  color:#fff;
+  text-decoration:none;
+  padding:10px 22px;
+  border-radius:24px;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:0.5px;
+  box-shadow:0 3px 10px rgba(59,89,152,0.25);
+  transition:transform .2s, box-shadow .2s;
+}
+.spec-cta .cta-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 5px 14px rgba(59,89,152,0.32);
+}
+.spec-cta .sub-link{
   margin-top:10px;
   font-size:12.5px;
   color:var(--ink-soft);
-  text-align:center;
 }
-.spec-link a{color:var(--brand);text-decoration:none}
-.spec-link a:hover{text-decoration:underline}
+.spec-cta .sub-link a{color:var(--brand);text-decoration:none}
+.spec-cta .sub-link a:hover{text-decoration:underline}
 @media(max-width:600px){
-  .spec-grid{grid-template-columns:1fr}
+  .spec-mini{flex:1 1 calc(50% - 6px);font-size:13px}
+  .spec-mini .type-mini{display:none}
 }
 .foot{
   margin-top:26px;
@@ -437,42 +457,24 @@ body{
   </div>
 
   <div class="spectrum">
-    <h2>光譜延伸 ｜ 不同光譜的孩子，會考週會用不同方式承接壓力</h2>
-    <p class="sub">覺知心智光譜把孩子的性格分成 4 色（感性/理性 × 對事/對人）。會考週同樣的壓力，不同光譜的孩子會用完全不同的方式自我修復——認識你家孩子偏哪一色，今晚的回應就會更貼。</p>
+    <h2>光譜延伸 ｜ 你家孩子是哪一色光譜？</h2>
+    <p class="sub">覺知心智光譜把性格分成 4 色（感性/理性 × 對事/對人）。同樣的壓力，不同光譜的孩子會用完全不同的方式承接——認識你家孩子偏哪一色，今晚的回應就會更貼。</p>
 
-    <div class="spec-grid">
-
-      <div class="spec-card red">
-        <h4><span class="dot"></span>紅色<span class="type">開創型 ｜ 感性×對事</span></h4>
-        <p>壓力大時容易焦躁、講話變大聲、想摔書或踢椅子。需要的不是道理，是一個能讓他「動起來」消化壓力的出口——散步、運動、敲牆都可以。</p>
-      </div>
-
-      <div class="spec-card orange">
-        <h4><span class="dot"></span>橙色<span class="type">關懷型 ｜ 感性×對人</span></h4>
-        <p>壓力大時容易哭、跟朋友通電話到半夜、覺得「沒人懂我」。需要的不是答案，是有人願意坐在旁邊聽——不打斷、不評價、不急著給建議。</p>
-      </div>
-
-      <div class="spec-card green">
-        <h4><span class="dot"></span>綠色<span class="type">和諧型 ｜ 理性×對人</span></h4>
-        <p>壓力大時表面還算 OK，但晚上睡不好、胃痛、不想出門。需要的不是逼問「妳怎麼了」，是維持規律的吃飯、睡覺、跟家人小事閒聊。</p>
-      </div>
-
-      <div class="spec-card blue">
-        <h4><span class="dot"></span>藍色<span class="type">分析型 ｜ 理性×對事</span></h4>
-        <p>壓力大時把自己關進房間、戴上耳機、循環同一首歌或一直滑手機。需要的不是被打斷，是有獨處的空間，等他自己整理好了才會出來。</p>
-      </div>
-
+    <div class="spec-mini-row">
+      <div class="spec-mini red"><span class="dot"></span>紅色<span class="type-mini">｜開創</span></div>
+      <div class="spec-mini orange"><span class="dot"></span>橙色<span class="type-mini">｜關懷</span></div>
+      <div class="spec-mini green"><span class="dot"></span>綠色<span class="type-mini">｜和諧</span></div>
+      <div class="spec-mini blue"><span class="dot"></span>藍色<span class="type-mini">｜分析</span></div>
     </div>
 
     <div class="spec-takeaway">
-      <strong>連回今天文章</strong>：小恬戴耳機循環同一首歌、不想被敲門——典型的<strong>藍色光譜</strong>承接壓力方式。怡蓉媽媽改放水果＋不敲門，正好給了藍色孩子最需要的東西：被尊重的獨處空間。
+      文章裡的小恬，關門、戴耳機、循環同一首歌——是典型的<strong>藍色光譜</strong>承接壓力方式。怡蓉媽媽改放水果＋不敲門，正好給了藍色孩子最需要的：被尊重的獨處空間。
     </div>
 
-    <div class="spec-link">
-      想更深入認識家裡每個人的光譜，可以試試線上測評：
-      <a href="https://zway-education.github.io/mindspectrum/" target="_blank">基礎版</a>
-      ｜
-      <a href="https://zway-education.github.io/mindspectrum-advanced/" target="_blank">進階版</a>
+    <div class="spec-cta">
+      <p class="lead">想知道你家每個人偏哪一色？</p>
+      <a href="https://zway-education.github.io/mindspectrum/" target="_blank" class="cta-btn">👉 去測心智光譜</a>
+      <div class="sub-link">5 分鐘基礎測評 ｜ <a href="https://zway-education.github.io/mindspectrum-advanced/" target="_blank">進階版含人才發展建議</a></div>
     </div>
   </div>
 
@@ -515,3 +517,4 @@ body{
 </a>
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                               
