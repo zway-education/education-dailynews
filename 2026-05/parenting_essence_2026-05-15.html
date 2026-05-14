@@ -2,589 +2,310 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<title>餐桌上的 10 分鐘，比一場家庭會議更深 ｜ 覺知教養．每日精華</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="家庭關係不是靠週末的盛大計畫維繫的，是靠每天那 10 分鐘——你們同時放下手機、抬頭看見彼此的時間。">
+<meta name="share-title" content="晚餐前，你把「早點睡」說得很用力">
+<title>今晚，別讓擔心替你說話 ｜ 覺知教養．每日精華</title>
 <style>
 :root{
+  --bg:#faf2dc;
+  --paper:#fffaed;
+  --white:#ffffff;
+  --ink:#2a1810;
+  --ink-soft:#5a4f44;
+  --accent:#c0392b;
+  --accent-deep:#8a2716;
+  --gold:#c08940;
+  --gold-deep:#8a5e1f;
+  --border:#e8ddc8;
   --brand:#3b5998;
   --brand-deep:#2a3f73;
-  --brand-soft:#e9eef7;
-  --accent:#c9a96e;
-  --accent-soft:#f6efe0;
-  --ink:#2a2620;
-  --ink-soft:#5a5048;
-  --bg:#fbf7f1;
-  --card:#ffffff;
-  --border:#e8ddc8;
-  --shadow:0 4px 20px rgba(59,89,152,0.06);
 }
-*{box-sizing:border-box;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
 body{
   margin:0;
-  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
   background:var(--bg);
   color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
   line-height:1.85;
-  font-size:16px;
+  -webkit-font-smoothing:antialiased;
 }
-.wrap{max-width:780px;margin:0 auto;padding:32px 20px 80px}
+.wrap{
+  max-width:780px;
+  margin:0 auto;
+  padding:32px 20px 80px;
+}
 .head{
-  background:linear-gradient(135deg,#eef2fb 0%,#f6efe0 100%);
+  background:linear-gradient(135deg,var(--gold) 0%,var(--gold-deep) 100%);
+  color:#fffaed;
   border-radius:20px;
-  padding:32px 28px 28px;
-  margin-bottom:28px;
-  border:1px solid var(--border);
+  padding:36px 30px 32px;
+  box-shadow:0 12px 36px rgba(138,94,31,0.22);
   position:relative;
   overflow:hidden;
 }
 .head .tag{
   display:inline-block;
-  background:var(--brand);
-  color:#fff;
-  font-size:12px;
-  letter-spacing:3px;
-  padding:5px 14px;
-  border-radius:20px;
-  font-weight:600;
-}
-.head .age{
-  display:inline-block;
-  margin-left:8px;
-  background:var(--accent);
-  color:#fff;
-  font-size:12px;
+  background:rgba(255,250,237,0.22);
+  color:#fffaed;
+  font-size:13px;
   letter-spacing:2px;
-  padding:5px 12px;
-  border-radius:20px;
-  font-weight:600;
+  padding:6px 14px;
+  border-radius:30px;
+  margin-bottom:18px;
+  border:1px solid rgba(255,250,237,0.28);
 }
 .head h1{
+  font-family:"Noto Serif TC",serif;
   font-size:26px;
-  margin:16px 0 10px;
-  letter-spacing:1px;
-  color:var(--brand-deep);
   line-height:1.55;
+  margin:0 0 18px;
   font-weight:700;
+  letter-spacing:0.4px;
 }
-.head .date{
-  color:var(--ink-soft);
-  font-size:13px;
-  letter-spacing:1.5px;
+.head .meta{
+  font-size:14px;
+  color:#fbeed1;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 16px;
+  margin-bottom:18px;
+}
+.head .meta span.datebadge{
+  background:rgba(255,250,237,0.18);
+  padding:3px 10px;
+  border-radius:14px;
+}
+.head .meta span.age{
+  background:rgba(192,57,43,0.32);
+  padding:3px 10px;
+  border-radius:14px;
+  color:#fffaed;
 }
 .head .hook{
-  margin-top:18px;
-  color:var(--ink-soft);
-  font-size:15px;
-  line-height:1.85;
+  font-size:16px;
+  line-height:1.95;
+  color:#fffaed;
+  background:rgba(0,0,0,0.18);
+  padding:18px 20px;
+  border-radius:14px;
   border-left:3px solid var(--accent);
-  padding-left:14px;
+  margin:0;
 }
-.hero{
-  margin:0 0 28px;
+.body{
+  background:var(--paper);
   border-radius:18px;
-  overflow:hidden;
-  background:#fff;
+  padding:36px 32px 30px;
+  margin-top:22px;
+  box-shadow:0 4px 18px rgba(60,55,40,0.06);
   border:1px solid var(--border);
-  box-shadow:var(--shadow);
 }
-.hero svg{display:block;width:100%;height:auto}
-section.body{
-  background:var(--card);
-  border-radius:18px;
-  padding:30px 28px;
-  margin-bottom:22px;
-  border:1px solid var(--border);
-  box-shadow:var(--shadow);
-}
-section.body h2{
+.body section{margin-bottom:30px}
+.body section:last-child{margin-bottom:0}
+.body h2{
   font-size:19px;
+  color:var(--accent-deep);
+  border-left:4px solid var(--gold);
+  padding-left:12px;
   margin:0 0 14px;
-  padding-left:14px;
-  border-left:4px solid var(--brand);
-  color:var(--brand-deep);
-  letter-spacing:1px;
+  font-weight:700;
+  letter-spacing:0.3px;
 }
-section.body p{margin:0 0 14px;color:var(--ink)}
-section.body p:last-child{margin-bottom:0}
+.body p{
+  margin:0 0 14px;
+  font-size:16px;
+  color:var(--ink);
+}
+.body p:last-child{margin-bottom:0}
 .steps{
-  background:var(--brand-soft);
+  background:#fdf9f0;
+  border:1px solid var(--border);
   border-radius:18px;
-  padding:28px 24px 22px;
-  margin-bottom:22px;
-  border:1px solid #d6dff0;
+  padding:28px 24px;
+  margin-top:22px;
 }
-.steps > h2{
+.steps h2{
   font-size:19px;
+  color:var(--accent-deep);
+  border-left:4px solid var(--gold);
+  padding-left:12px;
   margin:0 0 18px;
-  color:var(--brand-deep);
-  letter-spacing:1px;
-  text-align:center;
+  font-weight:700;
 }
-.step{
+.step-card{
   background:#fff;
   border-radius:14px;
   padding:20px 20px 18px;
-  margin-bottom:14px;
-  border:1px solid #dde4f1;
+  margin-bottom:16px;
+  border:1px solid var(--border);
   position:relative;
 }
-.step:last-child{margin-bottom:0}
-.step .num{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+.step-card:last-child{margin-bottom:0}
+.step-card .num{
+  position:absolute;
+  top:-12px;
+  left:18px;
   width:32px;
   height:32px;
+  background:var(--accent);
+  color:#fff;
   border-radius:50%;
-  background:var(--brand);
-  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   font-weight:700;
   font-size:15px;
-  margin-right:10px;
-  vertical-align:middle;
+  box-shadow:0 4px 10px rgba(192,57,43,0.3);
 }
-.step h3{
-  display:inline;
+.step-card h3{
+  margin:8px 0 8px;
   font-size:17px;
-  color:var(--brand-deep);
-  letter-spacing:0.5px;
-  margin:0;
-  vertical-align:middle;
-}
-.step p{margin:12px 0 10px;color:var(--ink);font-size:15px;line-height:1.8}
-.step .quote{
-  background:var(--accent-soft);
-  border-left:3px solid var(--accent);
-  padding:10px 14px;
-  margin:8px 0 0;
-  border-radius:0 8px 8px 0;
-  font-size:14.5px;
-  color:#6f5a35;
-  line-height:1.75;
-}
-.step .quote::before{
-  content:"你可以這樣說　";
-  color:var(--accent);
+  color:var(--accent-deep);
   font-weight:700;
-  letter-spacing:1px;
 }
-.outro{
-  background:linear-gradient(135deg,#c9a96e 0%,#b8975a 100%);
-  color:#fff;
-  border-radius:18px;
-  padding:30px 28px;
-  margin-bottom:22px;
-  box-shadow:var(--shadow);
-}
-.outro h2{
-  font-size:19px;
-  margin:0 0 14px;
-  color:#fff;
-  letter-spacing:2px;
-  border-left:4px solid #fff;
-  padding-left:14px;
-}
-.outro p{margin:0 0 12px;line-height:1.85}
-.outro p:last-of-type{margin-bottom:18px}
-.outro .practice{
-  background:rgba(255,255,255,0.18);
-  border-radius:12px;
-  padding:14px 18px;
-  margin:14px 0 18px;
-  font-size:15px;
-  line-height:1.8;
-}
-.outro .practice strong{color:#fff;letter-spacing:1px}
-.outro .signature{
-  text-align:right;
-  font-size:14px;
-  letter-spacing:1.5px;
-  margin-top:14px;
-  opacity:0.95;
-}
-.checklist{
-  background:#fff;
-  border:1.5px dashed var(--brand);
-  border-radius:14px;
-  padding:22px 22px 18px;
-  margin-bottom:22px;
-}
-.checklist h3{
-  font-size:16px;
-  margin:0 0 12px;
-  color:var(--brand-deep);
-  letter-spacing:1.5px;
-}
-.checklist ol{
-  margin:0;
-  padding-left:22px;
+.step-card p{
+  margin:0 0 10px;
+  font-size:15.5px;
   color:var(--ink-soft);
-  font-size:14.5px;
   line-height:1.85;
 }
-.checklist ol li{margin-bottom:6px}
-.foot{
-  margin-top:20px;
-  padding:22px 20px;
-  background:#fff;
-  border-radius:14px;
-  border:1px solid var(--border);
-  font-size:13px;
-  color:var(--ink-soft);
+.step-card .say{
+  background:#fbf3e2;
+  border-left:3px solid var(--gold);
+  padding:11px 14px;
+  border-radius:8px;
+  font-size:14.5px;
+  color:#6f5a35;
+  margin-top:8px;
   line-height:1.8;
 }
-.foot .row{margin-bottom:8px}
-.foot .row strong{color:var(--brand-deep);letter-spacing:1px}
-.foot .slogans{
-  margin-top:12px;
-  padding-top:12px;
-  border-top:1px dashed var(--border);
+.check{
+  background:#fff;
+  border:1px dashed var(--gold);
+  border-radius:14px;
+  padding:18px 20px;
+  margin-top:22px;
+}
+.check h3{
+  margin:0 0 10px;
+  font-size:16px;
+  color:var(--accent-deep);
+}
+.check ol{
+  margin:0;
+  padding-left:22px;
+  font-size:15px;
+  color:var(--ink-soft);
+  line-height:1.85;
+}
+.check li{margin-bottom:6px}
+.outro{
+  background:linear-gradient(135deg,#e8c97a 0%,var(--gold) 100%);
+  color:#3a2e10;
+  border-radius:18px;
+  padding:28px 26px;
+  margin-top:22px;
   text-align:center;
-  letter-spacing:2px;
-  color:var(--accent);
+}
+.outro p{
+  margin:0 0 12px;
+  font-size:16px;
+  line-height:1.9;
+  color:#3a2e10;
+}
+.outro .sign{
+  font-size:14px;
+  margin-top:14px;
+  letter-spacing:1.5px;
+  font-weight:600;
+  color:#4a3a15;
+}
+.spectrum{
+  margin-top:22px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:26px 24px 22px;
+}
+.spec-cta{
+  text-align:center;
+  padding:18px 16px 16px;
+  background:linear-gradient(135deg,#f1ecdb 0%,#fbf3e2 100%);
+  border-radius:12px;
+  border:1px dashed var(--gold);
+}
+.spec-cta .lead{
+  font-size:15px;
+  color:var(--ink);
+  margin:0 0 14px;
+  font-weight:500;
+  line-height:1.85;
+}
+.spec-cta .lead strong{
+  color:var(--brand);
+  font-weight:700;
+}
+.spec-cta .cta-btn{
+  display:inline-block;
+  background:var(--brand);
+  color:#fff;
+  text-decoration:none;
+  padding:10px 22px;
+  border-radius:24px;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:0.5px;
+  box-shadow:0 3px 10px rgba(59,89,152,0.25);
+  transition:transform .2s, box-shadow .2s;
+}
+.spec-cta .cta-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 5px 14px rgba(59,89,152,0.32);
+}
+.spec-cta .sub-link{
+  margin-top:10px;
+  font-size:12.5px;
+  color:var(--ink-soft);
+}
+.foot{
+  margin-top:26px;
+  padding:22px 22px 24px;
+  background:var(--paper);
+  border:1px solid var(--border);
+  border-radius:14px;
   font-size:13px;
+  color:var(--ink-soft);
+  line-height:1.85;
+}
+.foot strong{color:var(--accent-deep)}
+.foot .tagline{
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid var(--border);
+  color:var(--gold-deep);
+  font-weight:600;
+  letter-spacing:1px;
+  text-align:center;
 }
 @media(max-width:600px){
-  .wrap{padding:20px 14px 60px}
-  .head{padding:26px 22px 22px}
+  .wrap{padding:18px 14px 70px}
+  .head{padding:26px 22px 24px}
   .head h1{font-size:22px}
-  section.body{padding:24px 22px}
-  section.body h2{font-size:17px}
-  .steps{padding:22px 18px 18px}
-  .step{padding:18px}
-  .outro{padding:26px 22px}
-  .outro h2{font-size:17px}
+  .body{padding:26px 20px 22px}
+  .body h2{font-size:17px}
+  .body p{font-size:15.5px}
+  .steps{padding:22px 16px}
+  .step-card{padding:18px 16px 16px}
+  .step-card h3{font-size:16px}
+  .spec-cta .lead{font-size:14px}
 }
-
-.foot-brand{font-weight:700;font-size:14px;color:var(--brand-deep,#2c4a7c);margin-bottom:10px;letter-spacing:1px;}
-.foot-info{font-size:12.5px;line-height:2;color:var(--ink-soft,#555);}
-.foot-info strong{color:var(--brand-deep,#2c4a7c);}
-.foot-tagline{margin-top:12px;padding-top:10px;border-top:1px dashed var(--border,#ddd);text-align:center;letter-spacing:2px;color:var(--accent,#c05c2c);font-size:13px;}
 
 /* PARENTING_ESSENCE_DESIGN_V13 */
 /* ════════════════════════════════════════════════════════
-   parenting_essence 設計｜v13（2026-05-13 定版）
-   - Hero 全屏照片 + 大字 + Ken Burns 縮放
-   - 軟邊 + 縮一級比例 + 朱紅章戳
-   - 章節羅馬數字、Pull Quote、兩欄段落、進場動畫
-   - 注意：本檔不包含 Hero 照片 URL，
-     Hero 照片由文章自己的 <style> 設定 .head{background-image:...}
+   v13 5×3 final — Complete article design from _optimized/2026-05-13
+   Theme: 墨綠 (#2d4a3e) × 琥珀 (#c08b3c) × 古紙 (#f4ecda)
+   生效範圍: 所有 production parenting_essence 文章
+   生成時間: 2026-05-14 08:36
    ════════════════════════════════════════════════════════ */
-
-/* 1. Hero 結構（不指定背景圖，由文章本身設定） */
-.head{
-  min-height:70vh !important;
-  overflow:hidden !important;
-  position:relative !important;
-}
-.head h1{
-  font-size:48px !important;
-  line-height:1.2 !important;
-  letter-spacing:1px !important;
-  padding:0 50px !important;
-  margin:0 0 24px !important;
-}
-.head .tag{
-  border-radius:999px !important;
-  font-size:10.5px !important;
-  letter-spacing:3px !important;
-  padding:7px 16px !important;
-  top:24px !important;left:28px !important;
-}
-.head::after{
-  font-size:11px !important;
-  letter-spacing:3px !important;
-  top:24px !important;right:28px !important;
-  background:transparent !important;
-  border:1px solid rgba(255,255,255,0.45) !important;
-  border-radius:999px !important;
-  padding:6px 14px !important;
-}
-.head .meta{
-  padding:0 50px 24px !important;
-  gap:12px !important;
-}
-.head .meta .datebadge{
-  border-radius:999px !important;
-  font-size:11px !important;
-  letter-spacing:2.5px !important;
-  padding:5px 12px !important;
-}
-.head .meta .age{
-  border-radius:999px !important;
-  font-size:10.5px !important;
-  letter-spacing:2px !important;
-  padding:5px 12px !important;
-}
-.head .hook{
-  padding:24px 50px 28px !important;
-  font-size:15px !important;
-  line-height:1.95 !important;
-  border-top:2px solid var(--accent) !important;
-}
-
-/* 2. Hero 進場動畫 + Ken Burns */
-.head .tag{opacity:0;animation:heroFade .9s ease .15s forwards;}
-.head h1{opacity:0;transform:translateY(24px);animation:heroSlideUp 1.1s cubic-bezier(.2,.7,.2,1) .25s forwards;}
-.head .meta{opacity:0;animation:heroFade 1.0s ease .55s forwards;}
-.head .hook{opacity:0;animation:heroFade 1.0s ease .8s forwards;}
-.head::after{opacity:0;animation:heroFade .9s ease 1.0s forwards;}
-@keyframes heroSlideUp{to{opacity:1;transform:translateY(0);}}
-@keyframes heroFade{to{opacity:1;}}
-
-.head::before{
-  content:'' !important;display:block !important;
-  position:absolute !important;inset:0 !important;
-  background:inherit !important;
-  background-size:cover !important;
-  background-position:center !important;
-  z-index:0 !important;
-  animation:kenBurns 26s ease-in-out infinite alternate;
-  pointer-events:none;
-}
-.head > *{position:relative;z-index:1;}
-@keyframes kenBurns{
-  0%{transform:scale(1) translate(0,0);}
-  100%{transform:scale(1.07) translate(-1.5%, -1%);}
-}
-
-/* 3. 文章主體：軟邊 + 縮一級 */
-.body{
-  border-radius:14px !important;
-  padding:60px 48px 44px !important;
-  max-width:780px;margin:0 auto !important;
-}
-.body::before{
-  border-radius:8px !important;
-  inset:14px !important;
-}
-.body h2{font-size:28px !important;}
-.body h2::before{font-size:54px !important;}
-.body p{
-  font-size:16.5px !important;
-  line-height:2.05 !important;
-}
-.body section:first-of-type p:first-of-type::first-letter{
-  font-size:5em !important;
-}
-
-/* 4. Pull Quote 軟邊 */
-.pull-quote{
-  margin:32px 0 28px !important;
-  padding:30px 0 !important;
-  border-top:2px solid var(--ink) !important;
-  border-bottom:2px solid var(--ink) !important;
-}
-.pull-quote q{
-  font-size:27px !important;
-  line-height:1.5 !important;
-}
-
-/* 5. Steps：軟邊 + 縮小 */
-.steps{
-  background:linear-gradient(180deg,#fafafa 0%,#f5f5f5 100%) !important;
-  border:1px solid var(--line) !important;
-  border-radius:14px !important;
-  padding:54px 44px !important;
-  max-width:780px;margin:36px auto 0 !important;
-  border-top:none !important;border-bottom:none !important;
-}
-.step-card{
-  border-radius:10px !important;
-  border:1px solid rgba(0,0,0,0.06) !important;
-  border-left:3px solid var(--accent) !important;
-  padding:28px 24px 22px !important;
-  background:#ffffff !important;
-  box-shadow:0 4px 14px rgba(0,0,0,0.04) !important;
-}
-.step-card .num{
-  border-radius:50% !important;
-  width:34px !important;height:34px !important;
-  font-size:14px !important;
-}
-.step-card h3{font-size:18px !important;}
-.step-card p{font-size:15.5px !important;line-height:1.9 !important;}
-.step-card .say{
-  border-radius:8px !important;
-  font-size:14px !important;
-}
-
-/* 6. Check：軟邊 */
-.check{
-  border-radius:10px !important;
-  border:1px dashed var(--accent) !important;
-  max-width:780px;margin:24px auto !important;
-}
-
-/* 7. Outro：米白卡 + 紅左槓（不再大塊黑） */
-.outro{
-  background:#fdfaf3 !important;
-  background-image:none !important;
-  color:var(--ink) !important;
-  border:1px solid rgba(0,0,0,0.06) !important;
-  border-left:4px solid var(--accent) !important;
-  border-radius:14px !important;
-  padding:42px 38px !important;
-  max-width:780px;margin:30px auto 0 !important;
-  box-shadow:0 6px 22px rgba(0,0,0,0.05) !important;
-}
-.outro::before{display:none !important;}
-.outro p{
-  color:var(--ink) !important;
-  font-size:16px !important;
-  line-height:1.95 !important;
-}
-.outro .sign{
-  color:var(--accent) !important;
-  font-size:13px !important;
-  letter-spacing:6px !important;
-  text-transform:uppercase;
-}
-
-/* 8. Spectrum CTA：軟邊 */
-.spectrum{
-  border-radius:14px !important;
-  border:1px solid var(--line) !important;
-  padding:48px 44px !important;
-  max-width:780px;margin:30px auto 0 !important;
-}
-.spec-cta{
-  border-radius:10px !important;
-  border:none !important;
-  border-left:3px solid var(--accent) !important;
-}
-.spec-cta .cta-btn{
-  border-radius:999px !important;
-  padding:12px 28px !important;
-  font-size:12.5px !important;
-  letter-spacing:2px !important;
-}
-
-/* 9. Footer：軟邊 */
-.foot{
-  border:none !important;
-  border-top:1px solid var(--line) !important;
-  padding:30px 36px !important;
-  max-width:780px;margin:30px auto 0 !important;
-}
-.foot strong{font-size:11px !important;letter-spacing:1.5px !important;}
-.foot .tagline{font-size:12px !important;letter-spacing:6px !important;}
-
-/* 10. 文章區塊捲動進場（fade + slide up，需要 JS 觸發 .is-revealed） */
-.body, .steps, .pull-quote, .check, .outro, .spectrum{
-  opacity:0;
-  transform:translateY(24px);
-  transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1);
-}
-.body.is-revealed, .steps.is-revealed, .pull-quote.is-revealed,
-.check.is-revealed, .outro.is-revealed, .spectrum.is-revealed{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* 11. 浮動分享/回首頁按鈕 圓形軟邊 */
-.share-fab, .home-fab{
-  border-radius:50% !important;
-}
-
-/* 12. v13 修正：用更強選擇器強制 Hero h1 不爆框 */
-body header.head h1{
-  font-size:38px !important;
-  line-height:1.32 !important;
-  letter-spacing:0.5px !important;
-  padding:0 60px !important;
-  margin:0 0 22px !important;
-  max-width:100% !important;
-  word-break:break-word;
-  overflow-wrap:break-word;
-}
-body header.head .tag{top:28px !important;left:32px !important;}
-body header.head::after{top:28px !important;right:32px !important;}
-body header.head .meta{padding:0 60px 22px !important;}
-body header.head .hook{padding:24px 60px 28px !important;margin:0 !important;}
-
-/* 13. 行動端 */
-@media(max-width:768px){
-  .head{min-height:60vh !important;}
-  .head h1{font-size:32px !important;padding:0 22px !important;letter-spacing:0.5px !important;}
-  .head .tag{top:16px !important;left:16px !important;font-size:9.5px !important;padding:5px 12px !important;}
-  .head::after{top:16px !important;right:16px !important;font-size:10px !important;padding:5px 11px !important;}
-  .head .meta{padding:0 22px 18px !important;}
-  .head .hook{padding:20px 22px 24px !important;font-size:14px !important;}
-  body header.head h1{font-size:26px !important;padding:0 24px !important;line-height:1.4 !important;}
-  body header.head .tag{top:18px !important;left:18px !important;}
-  body header.head::after{top:18px !important;right:18px !important;}
-  body header.head .meta{padding:0 24px 18px !important;}
-  body header.head .hook{padding:20px 24px 24px !important;}
-
-  .body{padding:44px 24px 32px !important;border-radius:10px !important;}
-  .body::before{inset:10px !important;}
-  .body h2{font-size:22px !important;}
-  .body h2::before{font-size:40px !important;}
-  .body p{font-size:15.5px !important;line-height:1.95 !important;}
-  .body section{column-count:1 !important;}
-
-  .pull-quote{margin:24px 0 20px !important;padding:22px 0 !important;}
-  .pull-quote q{font-size:20px !important;}
-
-  .steps{padding:36px 22px !important;border-radius:12px !important;}
-  .step-card{padding:24px 20px 20px !important;}
-  .outro{padding:32px 22px !important;border-radius:12px !important;}
-  .spectrum{padding:36px 22px !important;border-radius:12px !important;}
-}
-
-/* 14. 尊重 prefers-reduced-motion */
-@media(prefers-reduced-motion: reduce){
-  .head::before, .head .tag, .head h1, .head .meta, .head .hook, .head::after,
-  .body, .steps, .pull-quote, .check, .outro, .spectrum{
-    animation:none !important;
-    transition:none !important;
-    opacity:1 !important;
-    transform:none !important;
-  }
-}
-
-</style>
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="餐桌上的 10 分鐘，比一場家庭會議更深 ｜ 覺知教養．每日精華">
-  <meta property="og:description" content="家庭關係不是靠週末的盛大計畫維繫的，是靠每天那 10 分鐘——你們同時放下手機、抬頭看見彼此的時間。">
-  <meta property="og:image" content="https://zway-education.github.io/education-dailynews/parenting_essence_2026-05-02_share.png">
-  <meta property="og:url" content="https://zway-education.github.io/education-dailynews/parenting_essence_2026-05-02.html">
-  <meta property="og:site_name" content="覺知教養．每日精華">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="餐桌上的 10 分鐘，比一場家庭會議更深 ｜ 覺知教養．每日精華">
-  <meta name="twitter:description" content="家庭關係不是靠週末的盛大計畫維繫的，是靠每天那 10 分鐘——你們同時放下手機、抬頭看見彼此的時間。">
-  <meta name="twitter:image" content="https://zway-education.github.io/education-dailynews/parenting_essence_2026-05-02_share.png">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- v13-optimized-513-applied -->
-<style id="v13-final-override">
 
 /* ── _optimized/5-13 style block #1 ── */
 
@@ -2381,7 +2102,7 @@ body{
   /* unsplash-photo (內頁 Hero) — 換照片改這個 URL */
   background-image:
     linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.9) 100%),
-    url("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1920&auto=format&fit=crop&q=80") !important;
+    url("https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1920&auto=format&fit=crop&q=80") !important;
   background-size:cover, cover !important;
   background-position:center, center !important;
   background-repeat:no-repeat, no-repeat !important;
@@ -2795,7 +2516,7 @@ body{
   /* ─── 內頁 Hero（會考週主題）──────────────────────
      主題：女兒在房裡戴耳機，媽媽切水果放門口
      換照片改下方 URL；備案：
-        photo-1505740420928-5e560c06d30e  書桌靜物（目前）
+        photo-1456513080510-7bf3a84b82f8  書桌靜物（目前）
         photo-1517457373958-b7bdd4587205  攤開書本特寫
         photo-1481627834876-b7833e8f5570  書本疊立
         photo-1457369804613-52c61a468e7d  書頁陽光
@@ -2803,7 +2524,7 @@ body{
   */
   background-image:
     linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.9) 100%),
-    url("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1920&auto=format&fit=crop&q=80") !important;
+    url("https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1920&auto=format&fit=crop&q=80") !important;
   min-height:70vh !important;   /* 從 100vh → 70vh，縮一級 */
   overflow:hidden !important;
   position:relative !important;
@@ -3154,107 +2875,98 @@ body header.head .hook{
 /* ════════════════════════════════════════════════════════
    2026-05-15 final fixes:
    1. Hero 右上角 ::after 日期戳隱藏(跟下方 .meta datebadge 重複)
+   2. (index card date 對齊「閱讀全文」在 index.html 內處理)
    ════════════════════════════════════════════════════════ */
 .head::after{display:none !important;content:'' !important;}
 body header.head::after{display:none !important;content:'' !important;}
+
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header class="head">
-  <span class="tag">覺知教養 ｜ 每日精華</span>
-  <span class="age">家庭儀式</span>
-  <h1>餐桌上的 10 分鐘，比一場家庭會議更深</h1>
-  <div class="date">週六．家庭氛圍與儀式感</div>
-  <div class="hook">家庭關係不是靠週末的盛大計畫維繫的，是靠每天那 10 分鐘——你們同時放下手機、抬頭看見彼此的時間。</div>
+  <div class="tag">覺知教養 ｜ 每日精華</div>
+  <h1>今晚，別讓擔心替你說話</h1>
+  <div class="meta">
+    <span class="datebadge">2026-05-15 ｜ 週五</span>
+    <span class="age">父母自我覺知</span>
+    <span>先穩自己</span>
+  </div>
+  <div class="hook">晚上 7 點多，孩子碗裡的飯還沒吃完，父母心裡已經在排明天的順序：幾點洗澡、幾點上床、准考證放進書包了沒。明明只是想提醒，一出口卻變得很硬。會考前這一晚，最難收回的，常常是大人自己的語氣。</div>
 </header>
 
-<div class="hero"><svg viewBox="0 0 780 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-  <defs>
-    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#eef2fb"/>
-      <stop offset="100%" stop-color="#f6efe0"/>
-    </linearGradient>
-    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#3b5998" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#2a3f73" stop-opacity="0.85"/>
-    </linearGradient>
-  </defs>
-  <rect width="780" height="220" fill="url(#g1)"/>
-  <circle cx="640" cy="60" r="42" fill="#c9a96e" opacity="0.55"/>
-  <circle cx="690" cy="120" r="22" fill="#c9a96e" opacity="0.35"/>
-  <path d="M0,170 Q195,110 390,160 T780,140 L780,220 L0,220 Z" fill="url(#g2)"/>
-  <path d="M0,190 Q195,150 390,185 T780,170 L780,220 L0,220 Z" fill="#2a3f73" opacity="0.5"/>
-  <g transform="translate(110,90)" fill="#3b5998" opacity="0.75">
-    <circle cx="0" cy="0" r="8"/>
-    <circle cx="40" cy="-12" r="6"/>
-    <circle cx="80" cy="0" r="8"/>
-    <path d="M0,0 L40,-12 L80,0" stroke="#3b5998" stroke-width="1.5" fill="none" opacity="0.5"/>
-  </g>
-  <g transform="translate(280,55)" fill="#c9a96e">
-    <path d="M0,30 C 5,5 25,-5 30,30 Z" opacity="0.7"/>
-    <path d="M14,30 L14,55" stroke="#b8975a" stroke-width="2" opacity="0.7"/>
-  </g>
-</svg></div>
+<article class="body">
 
-<section class="body">
-  <h2>共鳴開場</h2>
-  <p>晚餐桌上，三支手機、一台平板。爸爸在看股票、媽媽在回工作群組、姐姐在追劇、弟弟在打遊戲。沒有人在聊天，但大家都覺得「我們有一起吃飯」。</p>
-<p>飯吃完了，碗一收，各自回房間。你關上廚房的燈，突然發現——這一個小時裡，你跟孩子加起來說的話，可能不到二十句。</p>
-<p>你不是不關心，你只是太累。但你也隱約知道，如果再這樣下去，等到孩子十七歲、二十歲，你想跟他說話，他可能也不知道怎麼跟你說了。因為你們從來沒有練習過，怎麼安靜地，看著對方吃飯。</p>
+<section>
+  <h2>會考前一晚，家裡的聲音會不知不覺變大</h2>
+  <p>會考前的最後一個晚上，很多家庭其實很安靜。安靜到一句「早點睡」、一句「不要再滑手機了」、一句「你自己要知道時間」，都會比平常更大聲。</p>
+  <p>父母不是想念孩子。只是擔心一多，提醒就一句接一句：水壺帶了嗎、文具削好了嗎、鬧鐘設了嗎。每一句單獨看都是關心，疊在一起，孩子聽到的卻是整個家都在緊張。</p>
 </section>
 
-<section class="body">
-  <h2>覺知洞察</h2>
-  <p>儀式感聽起來很玄，但它在家庭裡的功能很實際——它是讓「我們是一家人」這件事被身體記得的方式。每天固定的時間、固定的位置、固定的動作，會在孩子的大腦裡建立一個叫做「家」的迴路。這個迴路，是他長大後遇到挫折時，會想回來的地方。</p>
-<p>研究家庭治療的學者很早就指出：每週一起吃飯五次以上的家庭，孩子的情緒問題、學業表現、人際關係都明顯較穩定。但這個「一起吃飯」有一個前提——是真的「一起」，不是「同時各看各的螢幕」。</p>
-<p>覺知教育的「先懂心，再懂教」，在家庭儀式裡的實踐就是：每天有那麼一段不長的時間，全家人放下手機、放下角色，只是「在這裡」。不教導、不檢查、不評價，只是一起。</p>
-<p>這 10 分鐘不會立刻變出什麼成績，但它在堆積一個東西——孩子十年後想到「家」時，腦海裡會浮現的那張畫面。那張畫面，會決定他往後要怎麼對待自己跟別人。</p>
+<section>
+  <h2>父母也有一扇窗，擔心滿出來，提醒就變成壓力</h2>
+  <p>覺知教養裡有一個工具叫「容納之窗」——每個人都有一個能消化情緒的範圍。這扇窗還開著的時候，提醒就只是提醒；一旦擔心滿出來、超過那扇窗，語氣會先變硬，句子也會愈講愈長。</p>
+  <p>我們常把這扇窗想成孩子的事，其實大人也有自己的窗。會考前一晚，父母怕的不只是孩子考差，是怕睡不好、怕忘東西、怕明天考場慌亂、怕自己有哪句話沒提醒到。這些擔心沒有出口，就只能順著一句一句的叮嚀往外流。</p>
+  <p>學苑常提一句話：先懂心，再懂教。今晚要先懂的，不是孩子的心，是大人自己的——先看見「我現在很緊張」，才不會把緊張包裝成一句又一句的提醒，輪流送進孩子房間。</p>
 </section>
 
-<section class="body">
-  <h2>真實案例（化名）</h2>
-  <p>覺知有個孩子，家裡是雙薪家庭、三個小孩。她升上國中後，每天回家就回房間，連晚餐都要外帶到房間吃。爸爸試過罵、試過規定、試過獎賞，都沒用。</p>
-<p>後來他做了一個小改變：每天晚上 7 點到 7 點 15 分，全家人，包括他自己，把手機放在客廳一個固定的籃子裡，誰都不能碰。然後一起吃飯，不准談學業、不准談分數，可以聊任何事——電動、漫畫、笑話、學校的鬧劇都行。</p>
-<p>第一週，孩子們覺得很彆扭，常常沒話講。第二週，弟弟開始講學校發生的趣事。第三週，姐姐第一次主動分享她在追的小說劇情。第六週，大女兒突然在飯桌上說：「爸，我可以問你一件事嗎？」</p>
-<p>他後來說：「我以為我要做的是『跟孩子聊天』。後來才知道，我要做的是先把那個『可以聊天的位置』穩定地擺在那裡。她準備好的時候，自然會走過來坐下。」</p>
+<section>
+  <h2>真實案例｜許媽、林爸與會考前一晚</h2>
+  <p>在 K12 覺知素養教育學苑的家長共學裡，許媽曾經分享，國三的阿澤要會考的前一晚，她最想做的不是念孩子，而是確認每一件事都不要出錯。她在客廳走來走去，書包看了三次，准考證拿出來又放回去。</p>
+  <p>晚餐後，阿澤回房間了。許媽還想再進去提醒准考證，林爸也想問鬧鐘設了沒。兩個人站在廚房，一個擦桌子、一個滑手機，差點就脫口而出那句「你去跟他講」。後來林爸先停下來，輕聲說：「我們今晚只留一句就好，其他明天再說。」許媽愣了一下，點點頭，把原本想講的五件事，收成一句話走到門口：「水壺在桌上，早點休息。」那一晚，兩個大人的緊張，沒有輪流走進阿澤的房間。</p>
 </section>
+
+</article>
 
 <div class="steps">
-  <h2>3 個今天就能做的步驟</h2>
-  <div class="step">
-    <span class="num">1</span><h3>選一個全家都到得了的時段</h3>
-    <p>不一定要晚餐，可以是早餐、宵夜、睡前 10 分鐘的果汁時間。重點是「每天同一個時段，全家在同一個空間」。固定，比完美更重要。</p>
-    <div class="quote">（全家會議時）「我們以後 7 點到 7 點 15 分，大家都坐在客廳，誰晚到誰要洗碗。」</div>
+  <h2>今晚的三個收聲動作</h2>
+
+  <div class="step-card">
+    <div class="num">1</div>
+    <h3>先把句子縮短</h3>
+    <p>擔心多的時候，句子會愈講愈長。先把要說的話砍到剩一句，孩子比較聽得進去，家裡也比較不吵。</p>
+    <div class="say">「水壺在桌上，等一下記得帶。」</div>
   </div>
-  <div class="step">
-    <span class="num">2</span><h3>幫手機設一個「家」</h3>
-    <p>在客廳放一個小籃子或盒子，這 10 分鐘所有人的手機都進去。不是沒收，是讓手機也「下班」。當手機不在手裡，眼睛才會抬起來。</p>
-    <div class="quote">「等等吃飯時間，手機們也要去睡覺，全部放這個籃子裡。」</div>
+
+  <div class="step-card">
+    <div class="num">2</div>
+    <h3>把語氣放輕一點</h3>
+    <p>同一句話，用力說和輕輕說，孩子收到的完全不同。提醒的內容可以不變，只把音量和速度都放慢半拍。</p>
+    <div class="say">「時間差不多了，先去洗澡吧。」</div>
   </div>
-  <div class="step">
-    <span class="num">3</span><h3>禁止「教育性話題」</h3>
-    <p>這 10 分鐘不准問成績、不准提作業、不准談未來。可以聊：今天最好笑的一件事、最莫名其妙的一件事、最想吃的東西、最近在看的影片。讓餐桌成為「不被審查的地方」。</p>
-    <div class="quote">「我們今天每個人講一件最廢的事，看誰廢。」</div>
+
+  <div class="step-card">
+    <div class="num">3</div>
+    <h3>爸媽先對齊一句</h3>
+    <p>兩個大人各自的擔心，如果輪流送進孩子房間，就會變成雙倍的緊張。睡前先彼此對一句話，今晚就留這句。</p>
+    <div class="say">「我們今晚講一件事就好，其他明天再說。」</div>
   </div>
 </div>
 
-<section class="outro">
-  <h2>覺知收筆</h2>
-  <p>家庭關係不是大事決定的，是日常的 10 分鐘累積出來的。當孩子知道「每天 7 點，那個位置上一定有人在等我」，他的世界就有了一個錨。</p>
-<p>你不需要當一個有趣的父母、不需要每天有新點子、不需要把家經營成一個樂園。你只需要每天到場，準時坐下。光是這個動作，就已經是給孩子一輩子的禮物了。</p>
-  <div class="practice"><strong>今晚 1 分鐘小練習</strong>：今晚找全家人，討論明天起想要的「10 分鐘儀式」是什麼時段。寫在一張紙上，貼在冰箱。從明天開始試一週，週末再來檢討。</div>
-  <div class="signature">Written by K12覺知素養教育學苑</div>
-</section>
-
-<div class="checklist">
-  <h3>3 秒鐘覺知對話．自我檢核</h3>
+<div class="check">
+  <h3>3 秒鐘覺知對話自我檢核</h3>
   <ol>
-    <li>我現在怎麼了？（先看見自己的情緒）</li>
-    <li>他現在是什麼狀態？（再看見孩子的處境）</li>
-    <li>我要反應，還是回應？（選擇你想成為的父母）</li>
+    <li>我現在是什麼狀態？是累、是擔心，還是真的有事非說不可？</li>
+    <li>孩子現在需要的，是再一次提醒，還是一個安靜的家？</li>
+    <li>這句話，我要現在說出口，還是先放回心裡？</li>
   </ol>
+</div>
+
+<div class="outro">
+  <p><strong>1 分鐘小練習｜把五句話收成一句</strong></p>
+  <p>今晚睡前，把心裡最想叮嚀孩子的五句話，一句一句寫在紙上或備忘錄裡。<br>
+  寫完看一遍，問自己：哪一句是孩子真的需要的，哪幾句其實是我自己不安心？<br>
+  最後只留一句，走到房門口輕輕說完；剩下的四句，留到明天，或者留給自己。</p>
+  <div class="sign">Written by K12覺知素養教育學苑</div>
+</div>
+
+<div class="spectrum">
+  <div class="spec-cta">
+    <p class="lead">文章裡的許媽，會考前一晚反覆檢查書包、想確認每一件事都不出錯——這是典型的 <strong>藍色光譜</strong> 在面對壓力時的樣子。你和孩子，又各自是哪一色？</p>
+    <a href="https://zway-education.github.io/mindspectrum/" target="_blank" class="cta-btn">👉 去測心智光譜</a>
+    <div class="sub-link">5 分鐘線上測評，測出你的教養風格</div>
+  </div>
 </div>
 
 <div class="foot">
@@ -3271,65 +2983,28 @@ body header.head::after{display:none !important;content:'' !important;}
     覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊
   </div>
 </div>
-</div>
+
 </div>
 <style>
-.share-fab{
-  position:fixed;bottom:22px;right:22px;z-index:9999;
-  width:46px;height:46px;border-radius:50%;
-  background:rgba(59,89,152,0.78);
-  display:flex;align-items:center;justify-content:center;
-  text-decoration:none;
-  box-shadow:0 3px 14px rgba(0,0,0,0.18);
-  transition:transform .2s,background .2s;
-  border:1px solid rgba(255,255,255,0.25);
-}
+.share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(59,89,152,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
 .share-fab:hover{background:rgba(59,89,152,1);transform:scale(1.08);}
 .share-fab svg{width:21px;height:21px;fill:#fff;display:block;}
-.share-fab::after{
-  content:'下載 IG/FB 分享圖';
-  position:absolute;right:56px;top:50%;transform:translateY(-50%);
-  background:#3b5998;color:#fff;font-size:12px;
-  padding:6px 12px;border-radius:6px;white-space:nowrap;
-  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-  opacity:0;pointer-events:none;transition:opacity .15s;
-}
+.share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#3b5998;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
 .share-fab:hover::after{opacity:1;}
 @media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
-</style>
-<a class="share-fab" href="parenting_essence_2026-05-02_share.png" download title="下載 IG/FB 分享圖">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.2a3.7 3.7 0 1 1 0-7.4 3.7 3.7 0 0 1 0 7.4zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
-</a>
-
-
-<style>
-.home-fab{
-  position:fixed;bottom:22px;right:78px;z-index:9999;
-  width:46px;height:46px;border-radius:50%;
-  background:rgba(217,119,87,0.78);
-  display:flex;align-items:center;justify-content:center;
-  text-decoration:none;
-  box-shadow:0 3px 14px rgba(0,0,0,0.18);
-  transition:transform .2s,background .2s;
-  border:1px solid rgba(255,255,255,0.25);
-}
+.home-fab{position:fixed;bottom:22px;right:78px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(217,119,87,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
 .home-fab:hover{background:rgba(217,119,87,1);transform:scale(1.08);}
 .home-fab svg{width:21px;height:21px;fill:#fff;display:block;}
-.home-fab::after{
-  content:'回首頁';
-  position:absolute;right:56px;top:50%;transform:translateY(-50%);
-  background:#a85a31;color:#fff;font-size:12px;
-  padding:6px 12px;border-radius:6px;white-space:nowrap;
-  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-  opacity:0;pointer-events:none;transition:opacity .15s;
-}
+.home-fab::after{content:'回首頁';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#a85a31;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
 .home-fab:hover::after{opacity:1;}
 @media(max-width:600px){.home-fab{bottom:16px;right:64px;width:42px;height:42px;}.home-fab::after{display:none;}}
 </style>
+<a class="share-fab" href="parenting_essence_2026-05-15_share.png" download title="下載 IG/FB 分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.2a3.7 3.7 0 1 1 0-7.4 3.7 3.7 0 0 1 0 7.4zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
+</a>
 <a class="home-fab" href="../" title="回首頁">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l-9 8h2.5v9h13v-9H21L12 3zm0 2.7L18.5 11H17v8h-3v-5h-4v5H7v-8H5.5L12 5.7z"/></svg>
 </a>
-
 <script>
 // PARENTING_ESSENCE_DESIGN_V13
 // parenting_essence 內頁進場動畫｜v13
@@ -3351,6 +3026,7 @@ body header.head::after{display:none !important;content:'' !important;}
   }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
   blocks.forEach(b => io.observe(b));
 })();
+
 </script>
 </body>
 </html>
