@@ -2904,6 +2904,30 @@ body{
   }
   .card.is-revealed{opacity:1;transform:none;}
 }
+
+/* ════════════════════════════════════════════════════════
+   2026-05-15 final: 卡片底部 upload-date 與「閱讀全文」對齊到同一行
+   ════════════════════════════════════════════════════════ */
+.card{position:relative;padding-bottom:54px !important;}
+.card .upload-date{
+  position:absolute !important;
+  left:22px !important;
+  bottom:18px !important;
+  margin-top:0 !important;
+}
+.card .card-cta{
+  position:absolute !important;
+  right:22px !important;
+  bottom:20px !important;
+  border-top:none !important;
+  padding-top:0 !important;
+  margin-top:0 !important;
+}
+@media(max-width:600px){
+  .card{padding-bottom:50px !important;}
+  .card .upload-date{left:16px !important;bottom:14px !important;font-size:11px !important;}
+  .card .card-cta{right:16px !important;bottom:16px !important;}
+}
 </style>
 </head>
 <body>

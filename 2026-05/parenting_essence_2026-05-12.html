@@ -406,6 +406,10 @@ body header.head .hook{padding:24px 60px 28px !important;margin:0 !important;}
 
 
 
+
+
+
+
 <!-- v13-optimized-513-applied -->
 <style id="v13-final-override">
 
@@ -2974,6 +2978,12 @@ body header.head .hook{
 @media(max-width:600px){.home-fab{bottom:16px;right:64px;width:42px;height:42px;}.home-fab::after{display:none;}}
 
 
+/* ════════════════════════════════════════════════════════
+   2026-05-15 final fixes:
+   1. Hero 右上角 ::after 日期戳隱藏(跟下方 .meta datebadge 重複)
+   ════════════════════════════════════════════════════════ */
+.head::after{display:none !important;content:'' !important;}
+body header.head::after{display:none !important;content:'' !important;}
 </style>
 </head>
 <body>
