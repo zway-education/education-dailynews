@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>CTA v1 carousel preview - 2026-05-16</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#1a1a1a;margin:0;padding:0}
+#stage{width:1080px;margin:0 auto;background:#888}
+.slide{
+  width:1080px;height:1350px;position:relative;overflow:hidden;
+  background:#1a0e07;
+  border-bottom:2px dashed #444;
+}
+.slide:last-child{border-bottom:none}
+/* slide number badge */
+.slide-num{
+  position:absolute;left:30px;top:30px;z-index:50;
+  background:rgba(0,0,0,0.55);color:#fff;
+  padding:6px 14px;border-radius:18px;
+  font:600 16px "Microsoft JhengHei",sans-serif;
+  letter-spacing:1px;
+}
+/* TAG pill */
+.tag{
+  position:absolute;left:60px;top:80px;
+  background:#c0392b;color:#fff;
+  padding:13px 22px;border-radius:30px;
+  font:700 26px "Microsoft JhengHei",sans-serif;
+  letter-spacing:1px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.4);
+}
+.datebadge{
+  position:absolute;right:60px;top:80px;
+  border:2px solid #f4ecda;color:#f4ecda;
+  padding:11px 20px;border-radius:30px;
+  font:700 24px "Microsoft JhengHei",sans-serif;
+  letter-spacing:1px;
+  background:rgba(0,0,0,0.45);
+}
+
+/* ── Slide 1 Cover ── */
+.s1 .photo{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(180deg, rgba(15,8,4,0.78) 0%, rgba(15,8,4,0.42) 45%, rgba(15,8,4,0.55) 100%),
+    url('https://images.unsplash.com/photo-1713942589752-6c6bb58ca8b6?w=1920&auto=format&fit=crop&q=80');
+  background-size:cover;background-position:center 40%;
+}
+.s1 .title{
+  position:absolute;left:70px;right:70px;top:380px;
+  color:#fffaed;
+  font:900 78px "Noto Serif TC","Microsoft JhengHei",serif;
+  line-height:1.32;letter-spacing:1px;text-align:center;
+  text-shadow:0 0 14px rgba(0,0,0,0.95), 0 4px 18px rgba(0,0,0,0.85);
+}
+.s1 .subtag{
+  position:absolute;left:0;right:0;top:830px;text-align:center;
+}
+.s1 .subtag .pill{
+  display:inline-block;
+  border:2px solid #fde8e3;color:#fffaed;
+  padding:10px 24px;border-radius:26px;
+  font:700 24px "Microsoft JhengHei",sans-serif;
+  background:rgba(192,57,43,0.78);
+}
+.s1 .swipe{
+  position:absolute;left:0;right:0;bottom:80px;text-align:center;
+  color:#fff;font:600 26px "Microsoft JhengHei",sans-serif;
+  letter-spacing:4px;opacity:0.9;
+  text-shadow:0 2px 8px rgba(0,0,0,0.6);
+}
+.s1 .swipe::after{content:'  →';font-size:34px}
+
+/* ── Slide 2 覺知洞察金句 ── */
+.s2{background:linear-gradient(180deg,#3a2818 0%,#1a0e07 100%);}
+.s2 .quote-mark{
+  position:absolute;left:60px;top:220px;
+  font:900 200px "Georgia",serif;color:#c08940;line-height:1;
+}
+.s2 .quote{
+  position:absolute;left:90px;right:90px;top:430px;
+  color:#fffaed;
+  font:700 56px "Noto Serif TC","Microsoft JhengHei",serif;
+  line-height:1.55;letter-spacing:1.5px;
+}
+.s2 .quote em{color:#c08940;font-style:normal;font-weight:900}
+.s2 .source{
+  position:absolute;right:80px;bottom:120px;
+  color:#c08940;font:600 22px "Microsoft JhengHei",sans-serif;
+  letter-spacing:2px;
+}
+
+/* ── Slide 3 三步驟摘要 ── */
+.s3{background:linear-gradient(180deg,#faf2dc 0%,#fff5d8 100%)}
+.s3 .head{
+  position:absolute;left:70px;right:70px;top:170px;text-align:center;
+  color:#2a1810;
+  font:900 50px "Noto Serif TC","Microsoft JhengHei",serif;
+  letter-spacing:1.5px;
+}
+.s3 .head small{display:block;margin-top:14px;font:500 22px "Microsoft JhengHei",sans-serif;color:#8a5e1f;letter-spacing:3px}
+.s3 .step{
+  position:absolute;left:80px;right:80px;
+  background:#fff;border-radius:18px;
+  padding:30px 38px 24px;
+  box-shadow:0 6px 22px rgba(0,0,0,0.08);
+  border-left:4px solid #c0392b;
+}
+.s3 .step .num{
+  display:inline-block;width:46px;height:46px;border-radius:50%;
+  background:#c0392b;color:#fff;
+  font:900 22px "Microsoft JhengHei",sans-serif;
+  line-height:46px;text-align:center;margin-right:14px;vertical-align:middle;
+  box-shadow:0 4px 10px rgba(192,57,43,0.3);
+}
+.s3 .step h3{
+  display:inline-block;vertical-align:middle;
+  color:#2a1810;font:700 32px "Microsoft JhengHei",sans-serif;
+}
+.s3 .step1{top:360px;height:170px}
+.s3 .step2{top:560px;height:170px}
+.s3 .step3{top:760px;height:170px}
+.s3 .step p{
+  margin-top:14px;color:#5a4f44;
+  font:500 24px "Microsoft JhengHei",sans-serif;line-height:1.6;
+}
+.s3 .swipe{
+  position:absolute;left:0;right:0;bottom:60px;text-align:center;
+  color:#8a5e1f;font:600 24px "Microsoft JhengHei",sans-serif;letter-spacing:3px;
+}
+.s3 .swipe::after{content:'  →';font-size:30px;}
+
+/* ── Slide 4 L2 心智光譜基礎 ── */
+.s4{background:linear-gradient(180deg,#fff5e8 0%,#ffe2c4 100%);}
+.s4 .badge{
+  position:absolute;left:60px;top:60px;
+  background:rgba(192,57,43,0.18);color:#922a1f;
+  padding:8px 18px;border-radius:18px;
+  font:700 20px "Microsoft JhengHei",sans-serif;letter-spacing:3px;
+}
+.s4 .title{
+  position:absolute;left:70px;right:70px;top:170px;
+  color:#2a1810;
+  font:900 60px "Noto Serif TC","Microsoft JhengHei",serif;
+  line-height:1.4;letter-spacing:1px;
+}
+.s4 .title em{color:#3b5998;font-style:normal;font-weight:900}
+.s4 .lead{
+  position:absolute;left:80px;right:80px;top:420px;
+  color:#5a4f44;
+  font:500 30px "Microsoft JhengHei",sans-serif;
+  line-height:1.7;
+}
+/* 4 色光譜 chip */
+.s4 .colors{
+  position:absolute;left:80px;right:80px;top:660px;
+  display:grid;grid-template-columns:1fr 1fr;gap:18px;
+}
+.s4 .ch{
+  background:#fff;border-radius:14px;padding:16px 22px;
+  display:flex;align-items:center;gap:14px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.06);
+}
+.s4 .ch .dot{width:36px;height:36px;border-radius:50%}
+.s4 .ch .lbl{font:700 22px "Microsoft JhengHei",sans-serif;color:#2a1810}
+.s4 .ch.r .dot{background:#e85d3a}
+.s4 .ch.o .dot{background:#e89a3a}
+.s4 .ch.g .dot{background:#5aa551}
+.s4 .ch.b .dot{background:#3b5998}
+.s4 .cta{
+  position:absolute;left:0;right:0;bottom:140px;text-align:center;
+}
+.s4 .cta a{
+  display:inline-block;
+  background:#3b5998;color:#fff;
+  padding:22px 50px;border-radius:50px;
+  font:700 30px "Microsoft JhengHei",sans-serif;letter-spacing:2px;
+  text-decoration:none;
+  box-shadow:0 8px 22px rgba(59,89,152,0.4);
+}
+.s4 .sub{
+  position:absolute;left:0;right:0;bottom:80px;text-align:center;
+  color:#8a5e1f;font:500 20px "Microsoft JhengHei",sans-serif;
+}
+
+/* ── Slide 5 L2 教養風格測 ── */
+.s5{background:linear-gradient(180deg,#e8f2e8 0%,#c4e0d0 100%);}
+.s5 .badge{
+  position:absolute;left:60px;top:60px;
+  background:rgba(58,138,87,0.25);color:#2d5f3e;
+  padding:8px 18px;border-radius:18px;
+  font:700 20px "Microsoft JhengHei",sans-serif;letter-spacing:3px;
+}
+.s5 .title{
+  position:absolute;left:70px;right:70px;top:170px;
+  color:#1a3a25;
+  font:900 60px "Noto Serif TC","Microsoft JhengHei",serif;
+  line-height:1.4;letter-spacing:1px;
+}
+.s5 .title em{color:#c0392b;font-style:normal;font-weight:900}
+.s5 .lead{
+  position:absolute;left:80px;right:80px;top:420px;
+  color:#2d5f3e;
+  font:500 28px "Microsoft JhengHei",sans-serif;line-height:1.7;
+}
+/* 4 風格小卡 */
+.s5 .styles{
+  position:absolute;left:80px;right:80px;top:660px;
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+}
+.s5 .stcard{
+  background:#fff;border-radius:14px;padding:20px 22px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.06);
+  border-left:4px solid #5aa551;
+}
+.s5 .stcard h4{color:#1a3a25;font:700 22px "Microsoft JhengHei",sans-serif;margin-bottom:6px}
+.s5 .stcard p{color:#5a4f44;font:500 17px "Microsoft JhengHei",sans-serif;line-height:1.5}
+.s5 .cta{
+  position:absolute;left:0;right:0;bottom:140px;text-align:center;
+}
+.s5 .cta a{
+  display:inline-block;
+  background:#5aa551;color:#fff;
+  padding:22px 50px;border-radius:50px;
+  font:700 30px "Microsoft JhengHei",sans-serif;letter-spacing:2px;
+  text-decoration:none;
+  box-shadow:0 8px 22px rgba(90,165,81,0.4);
+}
+.s5 .sub{
+  position:absolute;left:0;right:0;bottom:80px;text-align:center;
+  color:#2d5f3e;font:500 20px "Microsoft JhengHei",sans-serif;
+}
+
+/* ── Slide 6 L3 + L1 分享 ── */
+.s6{background:linear-gradient(180deg,#fffaed 0%,#fae6c4 50%,#c08940 100%);}
+.s6 .badge{
+  position:absolute;left:60px;top:60px;
+  background:rgba(138,94,31,0.18);color:#5a3f10;
+  padding:8px 18px;border-radius:18px;
+  font:700 20px "Microsoft JhengHei",sans-serif;letter-spacing:3px;
+}
+.s6 .title{
+  position:absolute;left:70px;right:70px;top:170px;
+  color:#2a1810;
+  font:900 56px "Noto Serif TC","Microsoft JhengHei",serif;
+  line-height:1.42;letter-spacing:1px;
+}
+.s6 .title em{color:#c0392b;font-style:normal;font-weight:900}
+/* L3 主 CTA 卡片 */
+.s6 .l3{
+  position:absolute;left:80px;right:80px;top:430px;
+  background:#fff;border-radius:18px;padding:32px 36px;
+  box-shadow:0 8px 26px rgba(0,0,0,0.12);
+}
+.s6 .l3 h3{
+  color:#922a1f;font:900 30px "Microsoft JhengHei",sans-serif;margin-bottom:10px;letter-spacing:1px;
+}
+.s6 .l3 p{color:#5a4f44;font:500 22px "Microsoft JhengHei",sans-serif;line-height:1.55;margin-bottom:18px}
+.s6 .l3 a{
+  display:inline-block;background:#c0392b;color:#fff;
+  padding:16px 36px;border-radius:38px;
+  font:700 24px "Microsoft JhengHei",sans-serif;letter-spacing:2px;
+  text-decoration:none;
+  box-shadow:0 6px 16px rgba(192,57,43,0.35);
+}
+/* L1 分享邀請（下半） */
+.s6 .l1{
+  position:absolute;left:80px;right:80px;bottom:90px;
+  background:rgba(255,255,255,0.92);border-radius:14px;padding:22px 30px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+  border-top:4px solid #3b5998;
+}
+.s6 .l1 .emoji{display:inline-block;font-size:32px;vertical-align:middle;margin-right:8px}
+.s6 .l1 p{
+  display:inline;color:#2a1810;
+  font:700 26px "Microsoft JhengHei",sans-serif;
+}
+.s6 .l1 .small{
+  display:block;margin-top:10px;color:#5a4f44;
+  font:500 18px "Microsoft JhengHei",sans-serif;
+}
+
+#ready{position:fixed;left:0;top:0;background:#0f0;color:#000;font:12px monospace;padding:2px 6px;z-index:9999;display:none}
+#ready.on{display:block}
+</style>
+</head>
+<body>
+<div id="ready">READY</div>
+<div id="stage">
+
+<!-- ─── Slide 1 ─── -->
+<div class="slide s1">
+  <div class="slide-num">1 / 6 · 封面</div>
+  <div class="photo"></div>
+  <div class="tag">覺知教養 ｜ 每日精華</div>
+  <div class="datebadge">2026 · 05 · 16</div>
+  <div class="title">水龍頭嘩啦啦響著，他<br>突然開口了</div>
+  <div class="subtag"><span class="pill">家庭氛圍 ｜ 共做家事的儀式</span></div>
+  <div class="swipe">滑往下看完整版</div>
+</div>
+
+<!-- ─── Slide 2 ─── -->
+<div class="slide s2">
+  <div class="slide-num">2 / 6 · 覺知洞察</div>
+  <div class="quote-mark">&ldquo;</div>
+  <div class="quote">家不需要<em>重大時刻</em>，<br>需要的是一段<br><em>不催、不問、不教</em>的<br>「一起做」時間。</div>
+  <div class="source">— 覺知教養．每日精華</div>
+</div>
+
+<!-- ─── Slide 3 ─── -->
+<div class="slide s3">
+  <div class="slide-num">3 / 6 · 本週六試試這三件事</div>
+  <div class="head">本週六，先試試<br><small>30 分鐘的「一起做」時間</small></div>
+  <div class="step step1">
+    <span class="num">1</span><h3>把「順便問」收回口袋</h3>
+    <p>30 分鐘不開話題，等過完這段，要進房間之前還有時間問。</p>
+  </div>
+  <div class="step step2">
+    <span class="num">2</span><h3>用「我手邊」代替「你怎麼」</h3>
+    <p>說自己手邊在做什麼，讓兩人之間有聲音，不會卡在尷尬沉默。</p>
+  </div>
+  <div class="step step3">
+    <span class="num">3</span><h3>孩子開口時，先留 5 秒</h3>
+    <p>第一個動作不是回應、不是建議——讓他自己決定要不要繼續講。</p>
+  </div>
+  <div class="swipe">看你和孩子的光譜</div>
+</div>
+
+<!-- ─── Slide 4 ─── -->
+<div class="slide s4">
+  <div class="slide-num">4 / 6 · L2 心智光譜（已有）</div>
+  <div class="badge">L2 ｜ 品牌深度互動</div>
+  <div class="title">文章裡的子安，<br>是 <em>藍色光譜</em> 的孩子。<br>你家又是哪一色？</div>
+  <div class="lead">「藍色」孩子需要可預測的時段才慢慢開口；「紅色」孩子直接、需要被理解；「橘色」孩子情感豐富；「綠色」孩子穩定、需要主動引發。</div>
+  <div class="colors">
+    <div class="ch r"><div class="dot"></div><div class="lbl">🔴 紅 ｜ 開創</div></div>
+    <div class="ch o"><div class="dot"></div><div class="lbl">🟠 橘 ｜ 關懷</div></div>
+    <div class="ch g"><div class="dot"></div><div class="lbl">🟢 綠 ｜ 和諧</div></div>
+    <div class="ch b"><div class="dot"></div><div class="lbl">🔵 藍 ｜ 分析</div></div>
+  </div>
+  <div class="cta"><a href="#">👉 去測心智光譜</a></div>
+  <div class="sub">5 分鐘線上測評，免費</div>
+</div>
+
+<!-- ─── Slide 5 ─── -->
+<div class="slide s5">
+  <div class="slide-num">5 / 6 · L2 教養風格測（待建）</div>
+  <div class="badge">L2 ｜ 品牌深度互動</div>
+  <div class="title">你跟另一半，<br>是 <em>同一種</em> 教養風格嗎？</div>
+  <div class="lead">很多衝突不是「誰錯了」，是兩人的風格本來就不同。先看見差異，才能合作。</div>
+  <div class="styles">
+    <div class="stcard"><h4>權威・引導</h4><p>規則清楚 + 溫暖陪伴</p></div>
+    <div class="stcard"><h4>民主・對話</h4><p>商量為主、彈性 + 共識</p></div>
+    <div class="stcard"><h4>嚴格・要求</h4><p>標準高、紀律優先</p></div>
+    <div class="stcard"><h4>放任・尊重</h4><p>給空間、孩子自己決定</p></div>
+  </div>
+  <div class="cta"><a href="#">👉 測 5 分鐘・你 vs 伴侶</a></div>
+  <div class="sub">夫妻可分開測、最後比對</div>
+</div>
+
+<!-- ─── Slide 6 ─── -->
+<div class="slide s6">
+  <div class="slide-num">6 / 6 · L3 進階轉化 + L1 分享</div>
+  <div class="badge">L3 ｜ 想更深一點？</div>
+  <div class="title">想跟<em>覺知學苑老師</em>一對一<br>聊聊你家狀況？</div>
+  <div class="l3">
+    <h3>家長學堂體驗課（免費）</h3>
+    <p>30 分鐘，跟老師對話一次。學苑經營 20 年，覺知 SEL 系統化的家長支持，已陪伴超過 6,000 個家庭。</p>
+    <a href="#">📅 預約體驗課</a>
+  </div>
+  <div class="l1">
+    <span class="emoji">❤️</span><p>Tag 一位最近覺得跟青春期小孩越來越遠的爸媽。</p>
+    <span class="small">先存起來，這個週六試一次 30 分鐘「不催、不問、不教」</span>
+  </div>
+</div>
+
+</div>
+<script>
+(function(){
+  const url = 'https://images.unsplash.com/photo-1713942589752-6c6bb58ca8b6?w=1920&auto=format&fit=crop&q=80';
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = function(){ document.getElementById('ready').classList.add('on'); };
+  img.onerror = function(){ document.getElementById('ready').innerText='ERR'; document.getElementById('ready').classList.add('on'); };
+  img.src = url;
+})();
+</script>
+</body>
+</html>
