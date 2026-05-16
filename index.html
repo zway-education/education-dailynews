@@ -1986,7 +1986,7 @@ body{
 /* 期數標：定位右下 */
 .head::after{
   display:block !important;
-  content:'VOL.05 ISSUE 13' !important;
+  content:var(--issue-label, 'VOL.05 ISSUE 16') !important;
   position:absolute !important;
   top:32px !important;right:36px !important;left:auto !important;bottom:auto !important;
   background:transparent !important;
@@ -3318,6 +3318,20 @@ body{
     c.dataset.revealIdx = (i % 6);  // 每 6 張為一組做 stagger
     io.observe(c);
   });
+})();
+</script>
+
+<script>
+// 期數標 VOL.MM ISSUE DD 依「最新文章日期」自動更新
+(function(){
+  const first = document.querySelector('.grid .card[href]');
+  if (!first) return;
+  const m = first.getAttribute('href').match(/(\d{4})-(\d{2})-(\d{2})/);
+  if (!m) return;
+  const mm = parseInt(m[2], 10);
+  const dd = parseInt(m[3], 10);
+  const label = `VOL.${String(mm).padStart(2,'0')} ISSUE ${String(dd).padStart(2,'0')}`;
+  document.documentElement.style.setProperty('--issue-label', `"${label}"`);
 })();
 </script>
 </body>
