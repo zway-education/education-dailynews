@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<title>share preview 2026-05-16 P2 photo v2</title>
+<title>share preview 2026-05-16 P2 photo v3 edu</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{background:#888}
@@ -11,7 +11,6 @@
     background:#1a0e07;
     margin:0 auto;
   }
-  /* === Top half: photo background with stronger top/center darkening for title readability === */
   #photo{
     position:absolute;left:0;top:0;width:1080px;height:760px;
     background-image:
@@ -21,10 +20,9 @@
         rgba(15,8,4,0.42) 45%,
         rgba(15,8,4,0.30) 70%,
         rgba(15,8,4,0.55) 100%),
-      url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&auto=format&fit=crop&q=80');
+      url('https://images.unsplash.com/photo-1713942589752-6c6bb58ca8b6?w=1920&auto=format&fit=crop&q=80');
     background-size:cover;background-position:center 40%;
   }
-  /* tag pill 左上 (朱紅) */
   #tag{
     position:absolute;left:70px;top:80px;
     background:#c0392b;color:#fff;
@@ -33,7 +31,6 @@
     font-weight:700;font-size:28px;letter-spacing:1px;
     box-shadow:0 4px 14px rgba(0,0,0,0.4);
   }
-  /* 日期框 右上 (反白邊框) */
   #date{
     position:absolute;right:70px;top:80px;
     border:2px solid #f4ecda;color:#f4ecda;
@@ -42,7 +39,6 @@
     font-weight:700;font-size:26px;letter-spacing:1px;
     background:rgba(0,0,0,0.45);
   }
-  /* 主標題 */
   #title{
     position:absolute;left:80px;right:80px;top:235px;
     color:#fffaed;
@@ -55,7 +51,6 @@
       0 4px 18px rgba(0,0,0,0.85),
       0 0 4px rgba(0,0,0,0.95);
   }
-  /* 副 tag */
   #subtag{
     position:absolute;left:0;right:0;top:570px;
     text-align:center;
@@ -69,7 +64,6 @@
     background:rgba(192,57,43,0.78);
     box-shadow:0 4px 16px rgba(0,0,0,0.35);
   }
-  /* === Bottom half: cream quote card (larger, smaller font) === */
   #card{
     position:absolute;left:80px;right:80px;
     top:680px;bottom:60px;
@@ -122,8 +116,13 @@
 </div>
 <script>
 (function(){
-  const url = 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&auto=format&fit=crop&q=80';
+  const url = 'https://images.unsplash.com/photo-1713942589752-6c6bb58ca8b6?w=1920&auto=format&fit=crop&q=80';
   const img = new Image();
   img.crossOrigin = 'anonymous';
   img.onload = function(){ document.getElementById('ready').classList.add('on'); };
-  img.onerror = fun
+  img.onerror = function(){ document.getElementById('ready').innerText='PHOTO LOAD ERROR'; document.getElementById('ready').classList.add('on'); };
+  img.src = url;
+})();
+</script>
+</body>
+</html>
