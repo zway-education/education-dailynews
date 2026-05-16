@@ -3027,4 +3027,29 @@ body header.head::after{display:none !important;content:'' !important;}
     entries.forEach(e => {
       if (e.isIntersecting){
         e.target.classList.add('is-revealed');
-  
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  blocks.forEach(b => io.observe(b));
+})();
+
+</script>
+<style>
+/* === 2026-05-16 Hero photo override: Saturday pool[1] 家庭餐桌 === */
+body header.head {
+  background-image:
+    linear-gradient(180deg, rgba(15,8,4,0.58) 0%, rgba(15,8,4,0.30) 38%, rgba(15,8,4,0.50) 100%),
+    url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&auto=format&fit=crop&q=80') !important;
+  background-size: cover !important;
+  background-position: center 38% !important;
+  background-repeat: no-repeat !important;
+}
+/* Force-reveal sections in case JS fails (safety net) */
+.body, .steps, .pull-quote, .check, .outro, .spectrum {
+  opacity: 1 !important;
+  transform: none !important;
+}
+</style>
+</body>
+</html>
