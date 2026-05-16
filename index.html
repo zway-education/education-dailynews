@@ -3249,40 +3249,27 @@ body{
 // 取得 ID 方法：unsplash.com 找到照片 → URL 是 photos/<slug-photoID>
 // ════════════════════════════════════════════════════════
 (function(){
-  // 25 張 Unsplash 親子 / 家庭 / 沉思類照片 ID
-  const ESSENCE_THUMBS = [
-    "photo-1503454537195-1dcabb73ffb9",   // 1  孩子戶外
-    "photo-1488998427799-e3362cec87c3",   // 2  窗光沉思
-    "photo-1503676260728-1c00da094a0b",   // 3  書桌工作
-    "photo-1499209974431-9dddcece7f88",   // 4  母女
-    "photo-1490818387583-1baba5e638af",   // 5  閱讀
-    "photo-1529390079861-591de354faf5",   // 6  戶外家庭
-    "photo-1414235077428-338989a2e8c0",   // 7  餐桌
-    "photo-1577563908411-5077b6dc7624",   // 8  跨世代
-    "photo-1481627834876-b7833e8f5570",   // 9  書本/圖書館
-    "photo-1542805980-13fa10b9bedb",      // 10 兒童遊戲
-    "photo-1591084728795-1149f32d9866",   // 11 居家家庭
-    "photo-1518495973542-4542c06a5843",   // 12 開卷
-    "photo-1518709268805-4e9042af2176",   // 13 窗邊閱讀
-    "photo-1485395037613-e83d5c1f5290",   // 14 兒童剪影
-    "photo-1480480565647-1c4385c7c0bf",   // 15 親子互動
-    "photo-1471560090527-d1af5e4e6eb6",   // 16 書架
-    "photo-1542223189-67a03fa0f0bd",      // 17 平靜
-    "photo-1455777278458-4ba1ed9c1a32",   // 18 書本
-    "photo-1531983412531-1f49a365ffed",   // 19 生活
-    "photo-1457369804613-52c61a468e7d",   // 20 書頁
-    "photo-1456513080510-7bf3a84b82f8",   // 21 桌上書
-    "photo-1444723121867-7a241cacace9",   // 22 書本特寫
-    "photo-1490633874781-1c63cc424610",   // 23 木質背景
-    "photo-1554415707-6e8cfc93fe23",      // 24 靜物
-    "photo-1532012197267-da84d127e765"    // 25 茶具
-  ];
-
+  // 依星期幾選照片（跟文章 Hero 照片一致，每天 NEW 自動換）
+  const WEEKDAY_POOLS = {
+    0: ["photo-1503454537195-1dcabb73ffb9","photo-1518709268805-4e9042af9f23","photo-1543342384-1f1350e27861","photo-1518349619113-03114f06ac3a","photo-1535378917042-10a22c95931a"],
+    1: ["photo-1456513080510-7bf3a84b82f8","photo-1497633762265-9d179a990aa6","photo-1481627834876-b7833e8f5570","photo-1457369804613-52c61a468e7d","photo-1532153975070-2e9ab71f1b14"],
+    2: ["photo-1506905925346-21bda4d32df4","photo-1469474968028-56623f02e42e","photo-1454165804606-c3d57bc86b40","photo-1519681393784-d120267933ba","photo-1542038784456-1ea8e935640e"],
+    3: ["photo-1455218873509-8097305ee378","photo-1487530811176-3780de880c2d","photo-1502086223501-7ea6ecd79368","photo-1448375240586-882707db888b","photo-1516627145497-ae6968895b74"],
+    4: ["photo-1490818387583-1baba5e638af","photo-1495446815901-a7297e633e8d","photo-1518611012118-696072aa579a","photo-1502920917128-1aa500764cbd","photo-1442570468985-f63ed5de9086"],
+    5: ["photo-1444858291040-58f756a3bdd6","photo-1414235077428-338989a2e8c0","photo-1556909114-f6e7ad7d3136","photo-1466637574441-749b8f19452f","photo-1505740420928-5e560c06d30e"],
+    6: ["photo-1488521787991-ed7bbaae773c","photo-1474552226712-ac0f0961a954","photo-1521295121783-8a321d551ad2","photo-1559757175-5700dde675bc","photo-1485827404703-89b55fcc595e"]
+  };
+  const EPOCH = Date.UTC(2000, 0, 1);
   const cards = document.querySelectorAll('.grid .card[href]');
-  cards.forEach((card, idx) => {
-    const photoId = ESSENCE_THUMBS[idx % ESSENCE_THUMBS.length];
-    const url = `https://images.unsplash.com/${photoId}?w=800&auto=format&fit=crop&q=80`;
-    card.style.setProperty('--thumb', `url("${url}")`);
+  cards.forEach((card) => {
+    const m = card.getAttribute('href').match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (!m) return;
+    const d = Date.UTC(+m[1], +m[2]-1, +m[3]);
+    const weekday = (new Date(d).getUTCDay() + 6) % 7;
+    const weekIdx = Math.floor((d - EPOCH) / (7*24*3600*1000));
+    const photoId = WEEKDAY_POOLS[weekday][((weekIdx % 5) + 5) % 5];
+    const url = "https://images.unsplash.com/" + photoId + "?w=800&auto=format&fit=crop&q=80";
+    card.style.setProperty('--thumb', 'url("' + url + '")');
   });
 })();
 
