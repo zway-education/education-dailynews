@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>share preview 2026-05-16 P2 photo</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#888}
+  #stage{
+    width:1080px;height:1440px;position:relative;overflow:hidden;
+    background:#1a0e07;
+    margin:0 auto;
+  }
+  /* === Top half: photo background === */
+  #photo{
+    position:absolute;left:0;top:0;width:1080px;height:780px;
+    background-image:
+      linear-gradient(180deg, rgba(20,12,8,0.45) 0%, rgba(20,12,8,0.25) 35%, rgba(20,12,8,0.55) 100%),
+      url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&auto=format&fit=crop&q=80');
+    background-size:cover;background-position:center 35%;
+  }
+  /* tag pill 左上 (朱紅) */
+  #tag{
+    position:absolute;left:70px;top:80px;
+    background:#c0392b;color:#fff;
+    padding:14px 22px;border-radius:30px;
+    font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",sans-serif;
+    font-weight:700;font-size:28px;letter-spacing:1px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.3);
+  }
+  /* 日期框 右上 (反白邊框) */
+  #date{
+    position:absolute;right:70px;top:80px;
+    border:2px solid #f4ecda;color:#f4ecda;
+    padding:12px 20px;border-radius:30px;
+    font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",sans-serif;
+    font-weight:700;font-size:26px;letter-spacing:1px;
+    background:rgba(0,0,0,0.25);
+  }
+  /* 主標題 */
+  #title{
+    position:absolute;left:80px;right:80px;top:235px;
+    color:#fffaed;
+    font-family:"Microsoft JhengHei","PingFang TC","Noto Serif TC",serif;
+    font-weight:900;font-size:84px;line-height:1.32;
+    letter-spacing:1px;
+    text-align:center;
+    text-shadow:0 4px 18px rgba(0,0,0,0.55);
+  }
+  /* 副 tag */
+  #subtag{
+    position:absolute;left:0;right:0;top:580px;
+    text-align:center;
+  }
+  #subtag .pill{
+    display:inline-block;
+    border:2px solid #fde8e3;color:#fffaed;
+    padding:10px 22px;border-radius:26px;
+    font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",sans-serif;
+    font-weight:700;font-size:26px;letter-spacing:0.5px;
+    background:rgba(192,57,43,0.6);
+    box-shadow:0 4px 16px rgba(0,0,0,0.25);
+  }
+  /* === Bottom half: cream quote card === */
+  #card{
+    position:absolute;left:80px;right:80px;
+    top:700px;bottom:90px;
+    background:#fffaed;
+    border-radius:24px;
+    box-shadow:0 14px 36px rgba(0,0,0,0.25);
+    overflow:hidden;
+  }
+  #card .stripe{
+    position:absolute;left:0;top:30px;bottom:30px;width:5px;
+    background:#c0392b;
+  }
+  #card .qmark{
+    position:absolute;left:45px;top:28px;
+    font-family:"Georgia","Microsoft JhengHei",serif;
+    font-size:130px;line-height:1;color:#c0392b;
+    font-weight:900;
+  }
+  #card .hook{
+    position:absolute;left:65px;right:65px;top:135px;bottom:80px;
+    font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",sans-serif;
+    color:#2a1810;font-size:48px;line-height:1.65;
+    letter-spacing:0.5px;
+    text-align:justify;
+    font-feature-settings:"palt" 1;
+  }
+  #card .sign{
+    position:absolute;right:30px;bottom:24px;
+    font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",sans-serif;
+    color:#8a5e1f;font-size:24px;letter-spacing:1px;font-weight:600;
+  }
+  #ready{position:fixed;left:0;top:0;background:#0f0;color:#000;font:12px monospace;padding:2px 6px;z-index:9999;display:none}
+  #ready.on{display:block}
+</style>
+</head>
+<body>
+<div id="ready">READY</div>
+<div id="stage">
+  <div id="photo"></div>
+  <div id="tag">覺知教養 ｜ 每日精華</div>
+  <div id="date">2026 · 05 · 16</div>
+  <div id="title">水龍頭嘩啦啦響著，他<br>突然開口了</div>
+  <div id="subtag"><span class="pill">家庭氛圍 ｜ 共做家事的儀式</span></div>
+  <div id="card">
+    <div class="stripe"></div>
+    <div class="qmark">&ldquo;</div>
+    <div class="hook">週六早上 9 點，洗碗槽前的水嘩啦啦響。高中的孩子睡飽才下樓，站在大人旁邊洗碗，看起來只是順手。但這 5 分鐘，是這禮拜他離家裡最近、也最願意把話放出來的時段。家不需要重大時刻，需要的是一段不催、不問、不教的「一起做」時間。</div>
+    <div class="sign">— K12 覺知素養教育學苑</div>
+  </div>
+</div>
+<script>
+// Mark READY only after the Unsplash photo finishes loading
+(function(){
+  const url = 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&auto=format&fit=crop&q=80';
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = function(){ document.getElementById('ready').classList.add('on'); };
+  img.onerror = function(){ document.getElementById('ready').innerText='PHOTO LOAD ERROR'; document.getElementById('ready').classList.add('on'); };
+  img.src = url;
+})();
+</script>
+</body>
+</html>
