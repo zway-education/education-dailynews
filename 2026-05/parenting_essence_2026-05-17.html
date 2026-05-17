@@ -2903,6 +2903,20 @@ body header.head .hook {
   column-gap: 0 !important;
   column-rule: none !important;
 }
+/* 修正：v13 CSS 讓 .head 變成 flex column + align-items:stretch，
+   導致 .tag-pill (inline-block span) 被拉伸成全寬紅條擋到 Hero 照片 */
+body header.head > .tag-pill {
+  align-self: flex-start !important;
+  width: max-content !important;
+  max-width: 80% !important;
+}
+body header.head > .meta {
+  align-self: flex-start !important;
+  width: auto !important;
+}
+body header.head > h1 {
+  align-self: flex-start !important;
+}
 </style>
 
 <style>
@@ -2939,15 +2953,4 @@ body header.head .hook {
   const io = new IntersectionObserver((entries, obs) => {
     entries.forEach(e => {
       if (e.isIntersecting){
-        e.target.classList.add('is-revealed');
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-  blocks.forEach(b => io.observe(b));
-})();
-
-</script>
-</body>
-</html>
-                                                                                                                                                                                                                                                            
+        e.target.classList.add('
