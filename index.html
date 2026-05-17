@@ -3276,12 +3276,17 @@ body{
   const EPOCH = Date.UTC(2000, 0, 1);
   const cards = document.querySelectorAll('.grid .card[href]');
   cards.forEach((card) => {
-    const m = card.getAttribute('href').match(/(\d{4})-(\d{2})-(\d{2})/);
+    const href = card.getAttribute('href');
+    const m = href.match(/(\d{4})-(\d{2})-(\d{2})/);
     if (!m) return;
     const d = Date.UTC(+m[1], +m[2]-1, +m[3]);
     const weekday = (new Date(d).getUTCDay() + 6) % 7;
     const weekIdx = Math.floor((d - EPOCH) / (7*24*3600*1000));
-    const photoId = WEEKDAY_POOLS[weekday][((weekIdx % 5) + 5) % 5];
+    // 同日不同 series 必須拿不同 photo：essence salt=0 / insight salt=2 / 其他變體再加偏移
+    const series = card.dataset.series || (href.includes('insight') ? 'insight' : 'essence');
+    const SERIES_SALT = { essence: 0, insight: 2 };
+    const salt = SERIES_SALT[series] !== undefined ? SERIES_SALT[series] : 1;
+    const photoId = WEEKDAY_POOLS[weekday][(((weekIdx + salt) % 5) + 5) % 5];
     const url = "https://images.unsplash.com/" + photoId + "?w=800&auto=format&fit=crop&q=80";
     card.style.setProperty('--thumb', 'url("' + url + '")');
   });
