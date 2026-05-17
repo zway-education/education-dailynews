@@ -2953,4 +2953,14 @@ body header.head > h1 {
   const io = new IntersectionObserver((entries, obs) => {
     entries.forEach(e => {
       if (e.isIntersecting){
-        e.target.classList.add('
+        e.target.classList.add('is-revealed');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  blocks.forEach(b => io.observe(b));
+})();
+
+</script>
+</body>
+</html>
