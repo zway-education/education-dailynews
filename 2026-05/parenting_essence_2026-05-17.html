@@ -2917,6 +2917,20 @@ body header.head > .meta {
 body header.head > h1 {
   align-self: flex-start !important;
 }
+/* 修正：v13 CSS 在 .head::before 設了 Ken Burns 慢速縮放動畫 (background:inherit + animation:kenBurns 26s)，
+   會把 Hero 圖再疊一層在底圖上慢慢縮放，造成「疊影」視覺殘留 */
+body header.head::before {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  background-image: none !important;
+  animation: none !important;
+}
+body header.head::after {
+  display: none !important;
+  content: none !important;
+  animation: none !important;
+}
 </style>
 
 <style>
