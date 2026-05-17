@@ -133,14 +133,6 @@
   .checkin-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; color: var(--ink); }
   .checkin-num { flex-shrink: 0; width: 28px; height: 28px; background: var(--brand); color: #fff; border-radius: 50%; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
 
-  /* IG/FB 發文建議區塊 */
-  .igfb-section{background:#f0f4ff;border:1.5px solid #c0cce8;border-radius:14px;padding:28px 28px 20px;margin:0 0 24px;}
-  .igfb-section h2{font-size:1.05rem;font-weight:800;color:#3b5998;margin:0 0 14px;letter-spacing:.04em;}
-  .igfb-body{background:#fff;border:1px solid #dde3f0;border-radius:10px;padding:16px 18px;font-size:0.95rem;line-height:1.8;color:#2a2620;white-space:pre-wrap;word-break:break-word;cursor:text;user-select:all;}
-  .igfb-copy-btn{margin-top:12px;display:inline-flex;align-items:center;gap:6px;background:#3b5998;color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:0.9rem;font-family:inherit;cursor:pointer;transition:background .15s;}
-  .igfb-copy-btn:hover{background:#2a3f73;}
-  .igfb-copy-btn.copied{background:#4caf50;}
-
   /* 頁尾 */
   .foot { background: var(--brand-deep); border-radius: 14px; padding: 30px 28px; color: rgba(255,255,255,0.8); font-size: 0.82rem; line-height: 1.9; }
   .foot-brand { font-size: 0.95rem; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
@@ -3008,40 +3000,6 @@ body .body section {
       </li>
     </ul>
   </div>
-
-  <!-- IG / FB 發文建議 -->
-  <section class="igfb-section">
-    <h2>📱 IG / FB 發文建議</h2>
-    <div class="igfb-body">母親節已經過完一週了，但你的心是不是還沒回來？
-
-不是不愛孩子。你還是會起床弄早餐、簽聯絡簿、晚上盯功課、夜裡幫他蓋被子。但某一刻你發現——所有事都還能做，可是已經沒有感覺了。
-
-這不是「太累了」可以帶過去的話。
-
-比利時魯汶大學一份涵蓋 42 國、超過 1 萬 7 千名家長的研究，把這個狀態取了一個名字：教養倦怠（Parental Burnout）。
-
-研究中最讓人停下來的三句話：
-
-一、教養倦怠不是「沒愛孩子」，是慢慢被掏空，到最後連感覺都鈍了。
-
-二、越是要求自己當好父母的人，越容易耗竭。完美主義是最大的隱形風險因子。
-
-三、最有效的處方，不是再多學一招教養技巧，是「把我自己找回來」。
-
-研究者說，第一步不是再撐一下，是承認自己已經到極限。
-
-今晚不用做什麼——只想一句話：「我今天有哪一個瞬間，是『我自己』，不是『誰的媽媽 / 爸爸』？」
-
-如果想不出來，那就是身體在跟你說話。
-
-✍️ Written by K12覺知素養教育學苑
-
-#覺知教養 #SEL情緒教育 #親子溝通 #先懂心再懂教 #教養倦怠 #母親節後 #媽媽心情 #育兒疲憊 #心理研究 #自我照顧</div>
-    <button class="igfb-copy-btn" onclick="copyIgFb(this)">複製發文文字</button>
-  </section>
-  <script>
-  function copyIgFb(btn){var txt=btn.closest('.igfb-section').querySelector('.igfb-body').innerText;navigator.clipboard.writeText(txt).then(function(){btn.textContent='已複製！';btn.classList.add('copied');setTimeout(function(){btn.textContent='複製發文文字';btn.classList.remove('copied');},2000);});}
-  </script>
 
   <!-- 頁尾 -->
   <div class="foot">
