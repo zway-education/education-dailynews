@@ -9,78 +9,193 @@
 <meta name="share-photo" content="https://images.unsplash.com/photo-1560328055-e938bb2ed50a?w=1920&auto=format&fit=crop&q=80">
 <style>
 :root{
-  --bg:#faf2dc;--paper:#fffaed;--white:#ffffff;
-  --ink:#2a1810;--ink-soft:#5a4f44;
-  --accent:#c0392b;--gold:#c08940;--gold-deep:#8a5e1f;
+  --bg:#faf2dc;
+  --paper:#ffffff;
+  --ink:#2a1810;
+  --ink-soft:#5a4f44;
+  --espresso:#2a1810;
+  --accent:#c0392b;
+  --gold:#c08940;
+  --gold-deep:#8a5e1f;
   --brand:#2a1810;
+  --border:#ead9b2;
+  --line:#e8e0d0;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --serif:"Noto Serif TC",serif;
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
-  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-  line-height:1.85;-webkit-font-smoothing:antialiased;}
-.wrap{max-width:780px;margin:0 auto;padding:32px 20px 80px;}
-.head{background:
-    linear-gradient(180deg, rgba(15,8,4,0.58) 0%, rgba(15,8,4,0.30) 38%, rgba(15,8,4,0.50) 100%),
-    url('https://images.unsplash.com/photo-1560328055-e938bb2ed50a?w=1920&auto=format&fit=crop&q=80') center 38%/cover no-repeat,
-    #3a2818;
-  color:#fffaed;border-radius:18px;padding:42px 32px;margin-bottom:24px;position:relative;overflow:hidden;}
-.tag-pill{display:inline-block;background:var(--accent);color:#fff;
-  padding:6px 14px;border-radius:999px;font-size:13px;letter-spacing:0.06em;font-weight:600;}
-.head h1{font-family:"Noto Serif TC",serif;font-size:30px;line-height:1.4;
-  margin:18px 0 14px;color:#fffaed;font-weight:700;letter-spacing:0.01em;}
-.meta{font-size:13px;color:#e8d49a;margin-bottom:16px;display:flex;gap:14px;flex-wrap:wrap;}
-.datebadge{background:rgba(255,250,237,0.12);padding:4px 10px;border-radius:6px;}
-.hook{font-size:15.5px;color:#fffaed;line-height:1.85;
-  padding-top:14px;border-top:1px solid rgba(255,250,237,0.2);font-style:normal;}
-.body{background:var(--paper);border-radius:18px;padding:36px 32px;margin-bottom:24px;
-  box-shadow:0 2px 12px rgba(42,24,16,0.06);}
-.body section{margin-bottom:26px;}
-.body h2{font-family:"Noto Serif TC",serif;font-size:21px;color:var(--ink);
-  border-left:4px solid var(--accent);padding-left:12px;margin:0 0 14px;font-weight:700;}
-.body p{margin:0 0 14px;font-size:16px;color:var(--ink);}
-.steps{background:var(--paper);border-radius:18px;padding:36px 32px;margin-bottom:24px;}
-.steps h2{font-family:"Noto Serif TC",serif;font-size:21px;color:var(--ink);
-  border-left:4px solid var(--gold);padding-left:12px;margin:0 0 18px;font-weight:700;}
-.step{background:#fff8e8;border-radius:12px;padding:18px 20px 16px 60px;margin-bottom:14px;
-  position:relative;border:1px solid #ead9b2;}
-.step-num{position:absolute;left:18px;top:18px;width:30px;height:30px;border-radius:50%;
-  background:var(--brand);color:#fff;font-weight:700;
-  display:flex;align-items:center;justify-content:center;font-size:14px;}
-.step-name{font-weight:700;font-size:16.5px;color:var(--ink);margin-bottom:6px;}
-.step-body{font-size:15px;color:var(--ink-soft);line-height:1.78;}
-.dialog{background:#fdf1e0;border-left:3px solid var(--gold);padding:10px 14px;
-  margin-top:10px;font-size:14.5px;color:var(--ink);border-radius:0 8px 8px 0;font-style:italic;}
-.check{background:#fff;border:1.5px dashed var(--gold);border-radius:14px;
-  padding:22px 26px;margin-bottom:24px;}
-.check-title{font-weight:700;color:var(--gold-deep);margin-bottom:10px;font-size:15px;letter-spacing:0.05em;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.85;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:none;padding:0;margin:0;}
+.head{
+  position:relative;min-height:100vh;padding:0;margin:0;
+  border:none;border-radius:0;box-shadow:none;overflow:hidden;
+  display:flex;flex-direction:column;align-items:stretch;justify-content:flex-end;
+  background:#1a1a1a;
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.9) 100%),
+    url("https://images.unsplash.com/photo-1560328055-e938bb2ed50a?w=1920&auto=format&fit=crop&q=80");
+  background-size:cover, cover;background-position:center, center;background-repeat:no-repeat, no-repeat;
+}
+.head .tag{
+  position:absolute;top:32px;left:36px;
+  background:var(--accent);color:#fff;font-family:var(--sans);
+  font-size:11px;letter-spacing:5px;font-weight:700;text-transform:uppercase;
+  padding:7px 16px;border-radius:0;border:none;margin:0;display:inline-block;z-index:3;
+}
+.head::after{
+  content:'2026 · 05 · 18';display:block;position:absolute;top:32px;right:36px;
+  background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.5);
+  font-family:var(--serif);font-size:12px;letter-spacing:4px;font-weight:700;
+  padding:6px 14px;border-radius:0;z-index:3;
+}
+.head h1{
+  font-family:var(--serif);font-size:54px;font-weight:900;
+  line-height:1.22;letter-spacing:1px;color:#fff;
+  margin:0 0 24px;padding:0 60px;text-align:left;
+  text-shadow:0 6px 30px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.4);
+  position:relative;z-index:2;
+}
+.head .meta{
+  display:flex;gap:14px;flex-wrap:wrap;
+  padding:0 60px 30px;margin:0;color:rgba(255,255,255,0.85);justify-content:flex-start;
+}
+.head .meta .datebadge{
+  font-family:var(--sans);background:transparent;color:#fff;
+  border:1px solid rgba(255,255,255,0.45);
+  font-size:11px;letter-spacing:3px;font-weight:700;
+  padding:5px 12px;border-radius:0;text-transform:uppercase;
+}
+.head .meta .age{
+  background:var(--accent);color:#fff;border:none;border-radius:0;
+  font-family:var(--sans);font-weight:700;letter-spacing:2px;font-size:11px;
+  padding:5px 12px;text-transform:uppercase;
+}
+.head .hook{
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:none;border-top:3px solid var(--accent);border-radius:0;
+  padding:30px 60px 36px;font-size:18px;line-height:1.95;color:#f5f5f5;
+  position:relative;font-family:var(--sans);text-align:left;margin:0;text-indent:0;
+}
+.body{
+  background:#fff;border:none;border-radius:0;
+  padding:90px 60px 70px;margin:0 auto;max-width:780px;box-shadow:none;position:relative;
+}
+.body section{padding:0;margin-bottom:50px;}
+.body h2{
+  font-family:var(--serif);font-size:30px;font-weight:900;color:var(--ink);
+  letter-spacing:0;text-align:left;margin:0 0 24px;padding:0;border:none;position:relative;
+}
+.body h2::before{
+  content:'';display:block;width:60px;height:3px;background:var(--accent);margin-bottom:18px;
+}
+.body p{
+  font-family:var(--sans);font-size:17.5px;line-height:2.05;color:var(--ink);
+  text-align:left;text-indent:0;margin:0 0 22px;font-feature-settings:"palt" 1;
+}
+.body p strong{color:var(--accent);font-weight:700;}
+.body section:first-of-type p:first-of-type::first-letter{
+  font-family:var(--serif);font-size:5.2em;float:left;line-height:0.86;
+  padding:10px 16px 0 0;color:var(--accent);font-weight:900;
+}
+.steps{
+  background:#fafafa;border:none;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:70px 60px;margin:0;
+}
+.steps-inner{max-width:780px;margin:0 auto;}
+.steps h2{
+  font-family:var(--serif);color:var(--ink);text-align:left;letter-spacing:0;
+  font-size:30px;font-weight:900;margin:0 0 32px;position:relative;
+}
+.steps h2::before{
+  content:'';display:block;width:60px;height:3px;background:var(--accent);margin-bottom:18px;
+}
+.step-card{
+  background:#fff;border:none;border-left:3px solid var(--accent);border-radius:0;
+  padding:30px 28px 24px 58px;margin-bottom:18px;position:relative;
+}
+.step-card .num{
+  position:absolute;left:-20px;top:24px;width:38px;height:38px;border-radius:50%;
+  background:var(--accent);color:#fff;font-family:var(--serif);font-weight:900;font-size:18px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 10px rgba(192,57,43,0.35);
+}
+.step-card h3{
+  font-family:var(--serif);font-size:21px;font-weight:900;color:var(--ink);
+  margin:0 0 10px;padding:0;
+}
+.step-card p{
+  font-family:var(--sans);font-size:16px;line-height:1.92;color:var(--ink-soft);margin:0 0 12px;
+}
+.step-card .say{
+  background:#fdf4e3;border-left:3px solid var(--gold);
+  padding:12px 16px;font-family:var(--serif);font-style:italic;
+  font-size:15.5px;color:var(--ink);margin-top:6px;border-radius:0 4px 4px 0;
+}
+.check-wrap{padding:60px 60px 0;max-width:780px;margin:0 auto;}
+.check{background:#fff;border:1.5px dashed var(--gold);border-radius:0;padding:26px 28px;}
+.check-title{
+  font-family:var(--serif);font-weight:900;color:var(--gold-deep);
+  letter-spacing:3px;margin-bottom:14px;font-size:14px;text-transform:uppercase;
+}
 .check ul{margin:0;padding-left:20px;}
-.check li{margin-bottom:6px;font-size:14.5px;color:var(--ink-soft);}
-.outro{background:linear-gradient(135deg,#f5e8c4 0%,#e8d49a 100%);
-  border-radius:18px;padding:30px 32px;margin-bottom:24px;color:var(--ink);}
-.outro p{margin:0 0 12px;font-size:15.5px;line-height:1.85;}
-.sign{margin-top:18px;text-align:right;font-family:"Noto Serif TC",serif;
-  font-size:14.5px;color:var(--gold-deep);font-weight:600;letter-spacing:0.04em;}
-.spectrum{margin:0 0 24px;}
-.spec-cta{background:#fff;border-radius:18px;padding:26px 28px;text-align:center;
-  box-shadow:0 2px 10px rgba(42,24,16,0.08);}
-.spec-cta .lead{font-size:15.5px;line-height:1.85;margin:0 0 16px;color:var(--ink);}
-.cta-btn{display:inline-block;background:var(--brand);color:#fffaed;
-  padding:12px 28px;border-radius:999px;text-decoration:none;font-weight:700;
-  font-size:15px;letter-spacing:0.04em;box-shadow:0 4px 12px rgba(42,24,16,0.25);
-  transition:transform 0.2s;}
+.check li{margin-bottom:8px;font-size:15.5px;color:var(--ink-soft);line-height:1.85;}
+.outro-wrap{padding:40px 60px 0;max-width:780px;margin:0 auto;}
+.outro{
+  background:linear-gradient(135deg,#f3e3c1 0%,#e6d29a 100%);
+  border:1px dashed var(--accent);border-radius:0;padding:42px 36px;color:var(--ink);position:relative;
+}
+.outro p{font-family:var(--sans);font-size:16.5px;line-height:2;color:#2a1808;margin:0 0 14px;}
+.outro .sign{
+  margin-top:24px;text-align:right;font-family:var(--serif);font-weight:900;
+  font-size:14px;color:#1a1004;letter-spacing:5px;
+}
+.spectrum-wrap{padding:40px 60px 0;max-width:780px;margin:0 auto;}
+.spectrum{background:#fffaed;border:1px solid var(--border);border-radius:3px;padding:36px 32px;text-align:center;}
+.spec-cta{
+  background:linear-gradient(135deg,#f3e3c1 0%,#e6d29a 100%);
+  border:1px dashed var(--accent);border-radius:2px;padding:30px 28px;
+}
+.spec-cta .lead{font-size:16px;line-height:1.95;margin:0 0 20px;color:var(--ink);}
+.cta-btn{
+  display:inline-block;background:var(--accent);color:#fffaed;border-radius:2px;
+  font-family:var(--serif);font-weight:900;letter-spacing:3px;
+  padding:14px 30px;text-decoration:none;font-size:15px;
+  box-shadow:0 8px 20px rgba(205,58,43,0.4);transition:transform .2s;
+}
 .cta-btn:hover{transform:translateY(-2px);}
-.sub-link{margin-top:10px;font-size:13px;color:var(--ink-soft);}
-.foot{background:#fff;border:1px solid #ead9b2;border-radius:14px;
-  padding:22px 24px;font-size:13px;color:var(--ink-soft);line-height:1.78;}
-.foot strong{color:var(--ink);}
-.foot .tagline{margin-top:14px;padding-top:12px;border-top:1px solid #ead9b2;
-  text-align:center;color:var(--gold-deep);font-weight:600;letter-spacing:0.06em;}
-@media(max-width:600px){
-  .wrap{padding:18px 12px 60px;}
-  .head{padding:32px 22px;}
-  .head h1{font-size:24px;}
-  .body,.steps,.outro,.spec-cta{padding:24px 20px;}
-  .step{padding:16px 16px 14px 56px;}
+.sub-link{margin-top:14px;font-size:13px;color:var(--ink-soft);}
+.foot-wrap{padding:50px 60px 80px;max-width:780px;margin:0 auto;}
+.foot{
+  background:rgba(255,250,235,0.7);color:var(--ink-soft);
+  border:1px solid var(--border);border-radius:2px;padding:28px 26px;font-size:13px;line-height:1.85;
+}
+.foot strong{font-family:var(--serif);color:var(--espresso);letter-spacing:2px;font-weight:900;}
+.foot .tagline{
+  margin-top:16px;padding-top:14px;border-top:1px solid var(--border);
+  text-align:center;color:var(--gold-deep);font-family:var(--serif);font-weight:900;letter-spacing:5px;
+}
+@media(max-width:768px){
+  .head{min-height:90vh;}
+  .head h1{font-size:36px;padding:0 28px;}
+  .head .meta{padding:0 28px 24px;}
+  .head .hook{padding:24px 28px 28px;font-size:16px;}
+  .head .tag{top:22px;left:22px;font-size:10px;letter-spacing:3px;padding:6px 12px;}
+  .head::after{top:22px;right:22px;font-size:10px;letter-spacing:2px;padding:5px 10px;}
+  .body{padding:50px 24px 40px;}
+  .body h2{font-size:24px;}
+  .body p{font-size:16.5px;line-height:1.95;}
+  .body section:first-of-type p:first-of-type::first-letter{font-size:4em;padding:6px 12px 0 0;}
+  .steps{padding:50px 24px;}
+  .steps h2{font-size:24px;}
+  .step-card{padding:24px 20px 18px 46px;}
+  .step-card .num{left:-14px;top:18px;width:32px;height:32px;font-size:16px;}
+  .step-card h3{font-size:18px;}
+  .check-wrap,.outro-wrap,.spectrum-wrap{padding-left:24px;padding-right:24px;}
+  .outro{padding:32px 24px;}
+  .spectrum{padding:28px 22px;}
+  .foot-wrap{padding:40px 24px 60px;}
 }
 </style>
 </head>
@@ -88,16 +203,18 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
 <div class="wrap">
 
 <header class="head">
-  <span class="tag-pill">覺知教養 ｜ 每日精華</span>
+  <div class="tag">覺知教養 ｜ 每日精華</div>
   <h1>那天早上，3 歲的安安在玄關哭了 12 分鐘——我沒有催她，只是蹲下來</h1>
   <div class="meta">
-    <span class="datebadge">2026 · 05 · 18 ｜ 週一</span>
-    <span>0-6 幼兒 ｜ 情緒與依附</span>
+    <span class="datebadge">2026-05-18 ｜ 週一</span>
+    <span class="age">0-6 幼兒</span>
+    <span>情緒與依附</span>
   </div>
   <div class="hook">玄關鞋櫃前，她抱著我的腿，眼淚一直停不下來。我心裡也急——遲到要扣考績、會議來不及、保母會看我臉色。可那一刻，她不是在「鬧」。她只是還沒準備好跟我分開。我蹲下來，把她抱進懷裡，那 12 分鐘，後來成了我們之間最深的一次靠近。</div>
 </header>
 
-<section class="body">
+<article class="body">
+
   <section>
     <h2>那個讓媽媽差點落淚的早晨</h2>
     <p>早上 7 點 40 分，安安站在玄關，小小的手指扣住媽媽的褲管，怎麼勸都不放。「我不要去學校。」她的聲音細細的，眼眶紅紅的，鼻涕還掛在嘴邊。</p>
@@ -106,7 +223,7 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
 
   <section>
     <h2>分離的那一刻，孩子不是在鬧</h2>
-    <p>覺知教養有一句話：沒有無意義的搗蛋，只有沒被看懂的求救。0-6 歲孩子在「分離」這件事上，大腦還在學一件大人覺得理所當然的事——媽媽不見了，但她還在；下午她會回來。這個能力要到 3 歲才漸漸成熟。</p>
+    <p>覺知教養有一句話：<strong>沒有無意義的搗蛋，只有沒被看懂的求救</strong>。0-6 歲孩子在「分離」這件事上，大腦還在學一件大人覺得理所當然的事——媽媽不見了，但她還在；下午她會回來。這個能力要到 3 歲才漸漸成熟。</p>
     <p>所以那 12 分鐘的眼淚，不是任性。是她的小神經系統正在處理一件大事：媽媽要離開了，我能不能撐住自己？</p>
     <p>大人最常見的反應，是用「快點」、「妳已經是大孩子了」把她推回去。但孩子要的，從來不是被推一把。她要的，是在離開之前，先被靠近一下下。短短的、踏實的、被抱滿的那一下下。</p>
   </section>
@@ -117,69 +234,80 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
     <p>那天親子課後，安媽紅著眼睛問老師：「我是不是太縱容她了？」老師只問她一句：「妳早上跟她說再見的時候，自己是不是也很捨不得？」安媽眼淚就掉下來——她說，每天送孩子上學的路上，她其實也想哭，只是不敢讓自己哭。</p>
     <p>第二週，安媽試著做一件小事：早上送學前，先讓自己在車裡深呼吸三次，告訴自己「沒事，她下午就回來了」。然後，到玄關時，她蹲下來，抱安安一下，告訴她：「妳吃完午餐睡飽起來，媽媽就在校門口等。」那天，安安還是哭了，但只哭了 3 分鐘。一週後，剩下小小的鼻音。</p>
   </section>
-</section>
+
+</article>
 
 <section class="steps">
-  <h2>今天就能做的 3 個小步驟</h2>
+  <div class="steps-inner">
+    <h2>今天就能做的 3 個小步驟</h2>
 
-  <div class="step">
-    <div class="step-num">1</div>
-    <div class="step-name">出門前，先給自己 3 個深呼吸</div>
-    <div class="step-body">大人的緊張，孩子的小身體感覺得到。在出門前，先讓自己慢一秒——深呼吸三次，告訴自己「她不是在針對我」。當大人自己穩了一點，孩子才有可能跟著穩下來。</div>
-    <div class="dialog">默念：「她在練習跟我分開。我也在練習放心走。」</div>
-  </div>
+    <div class="step-card">
+      <div class="num">1</div>
+      <h3>出門前，先給自己 3 個深呼吸</h3>
+      <p>大人的緊張，孩子的小身體感覺得到。在出門前，先讓自己慢一秒——深呼吸三次，告訴自己「她不是在針對我」。當大人自己穩了一點，孩子才有可能跟著穩下來。</p>
+      <div class="say">默念：「她在練習跟我分開。我也在練習放心走。」</div>
+    </div>
 
-  <div class="step">
-    <div class="step-num">2</div>
-    <div class="step-name">蹲下來，跟孩子同高</div>
-    <div class="step-body">不要站著對她說話。蹲下，看著她的眼睛，把她抱進懷裡 10 秒——讓她的小神經系統先收到「妳被靠近了」的訊息。這 10 秒，比 10 分鐘的勸說更有效。</div>
-    <div class="dialog">輕輕說：「我知道妳今天不想去。媽媽抱抱妳。」</div>
-  </div>
+    <div class="step-card">
+      <div class="num">2</div>
+      <h3>蹲下來，跟孩子同高</h3>
+      <p>不要站著對她說話。蹲下，看著她的眼睛，把她抱進懷裡 10 秒——讓她的小神經系統先收到「妳被靠近了」的訊息。這 10 秒，比 10 分鐘的勸說更有效。</p>
+      <div class="say">輕輕說：「我知道妳今天不想去。媽媽抱抱妳。」</div>
+    </div>
 
-  <div class="step">
-    <div class="step-num">3</div>
-    <div class="step-name">給一個她能想像的承諾</div>
-    <div class="step-body">「下午來接妳」對 3 歲孩子太抽象。改成她能想像的具體畫面：吃完午餐、睡飽起來、太陽下山前——這些她日常熟悉的時間錨點，會讓她在你離開之後，心裡有個「媽媽會回來」的圖像可以抓住。</div>
-    <div class="dialog">「妳吃完午餐睡飽起來，媽媽就在門口等妳。」</div>
+    <div class="step-card">
+      <div class="num">3</div>
+      <h3>給一個她能想像的承諾</h3>
+      <p>「下午來接妳」對 3 歲孩子太抽象。改成她能想像的具體畫面：吃完午餐、睡飽起來、太陽下山前——這些她日常熟悉的時間錨點，會讓她在你離開之後，心裡有個「媽媽會回來」的圖像可以抓住。</p>
+      <div class="say">「妳吃完午餐睡飽起來，媽媽就在門口等妳。」</div>
+    </div>
   </div>
 </section>
 
-<div class="check">
-  <div class="check-title">🌿 3 秒鐘覺知對話 · 自我檢核</div>
-  <ul>
-    <li>我現在怎麼了？（我心裡也急，是不是把急投射到孩子身上了？）</li>
-    <li>她現在是什麼狀態？（她不是在鬧，她在處理分離。）</li>
-    <li>我要反應，還是回應？（先蹲下，再說話。）</li>
-  </ul>
-</div>
-
-<section class="outro">
-  <p>今晚睡前，給自己 1 分鐘——回想今天早上分開的那一刻，孩子的眼神是什麼樣？妳當時的心裡，又是什麼樣？</p>
-  <p>不用懊悔，只是看一眼。明天早上，先別急著穿鞋。先蹲下來，給她 10 秒的擁抱，再開門。</p>
-  <p>那 10 秒，是孩子一整天最安全的地方，也是妳們之間，最深的一次靠近。</p>
-  <div class="sign">Written by K12覺知素養教育學苑</div>
-</section>
-
-<div class="spectrum">
-  <div class="spec-cta">
-    <p class="lead">文章裡的安安，分開前那 12 分鐘抱著腿不放、眼眶紅紅停不下來——是典型的<strong>橙色光譜</strong>承接分離焦慮的方式：敏感、情緒豐富、需要被靠近多一點才安心。<br>你家孩子是哪一色？</p>
-    <a href="https://zway-education.github.io/mindspectrum/" target="_blank" class="cta-btn">👉 去測心智光譜</a>
-    <div class="sub-link">5 分鐘線上測評，測出你的教養風格</div>
+<div class="check-wrap">
+  <div class="check">
+    <div class="check-title">🌿 3 秒鐘覺知對話 · 自我檢核</div>
+    <ul>
+      <li>我現在怎麼了？（我心裡也急，是不是把急投射到孩子身上了？）</li>
+      <li>她現在是什麼狀態？（她不是在鬧，她在處理分離。）</li>
+      <li>我要反應，還是回應？（先蹲下，再說話。）</li>
+    </ul>
   </div>
 </div>
 
-<div class="foot">
-  <div>
-    <strong>台灣展威文化教育股份有限公司</strong><br>
-    高雄市鼓山區美術東三路 86 號　｜　07-2693525　｜　傳真 07-2693526　｜　admin@z-way-edu.com　｜　LINE：@zwayedu
+<div class="outro-wrap">
+  <section class="outro">
+    <p>今晚睡前，給自己 1 分鐘——回想今天早上分開的那一刻，孩子的眼神是什麼樣？妳當時的心裡，又是什麼樣？</p>
+    <p>不用懊悔，只是看一眼。明天早上，先別急著穿鞋。先蹲下來，給她 10 秒的擁抱，再開門。</p>
+    <p>那 10 秒，是孩子一整天最安全的地方，也是妳們之間，最深的一次靠近。</p>
+    <div class="sign">Written by K12覺知素養教育學苑</div>
+  </section>
+</div>
+
+<div class="spectrum-wrap">
+  <div class="spectrum">
+    <div class="spec-cta">
+      <p class="lead">文章裡的安安，分開前那 12 分鐘抱著腿不放、眼眶紅紅停不下來——是典型的<strong>橙色光譜</strong>承接分離焦慮的方式：敏感、情緒豐富、需要被靠近多一點才安心。<br>你家孩子是哪一色？</p>
+      <a href="https://zway-education.github.io/mindspectrum/" target="_blank" class="cta-btn">👉 去測心智光譜</a>
+      <div class="sub-link">5 分鐘線上測評，測出你的教養風格</div>
+    </div>
   </div>
-  <div style="margin-top:10px">
-    <strong>社團法人中華覺知教育關懷協會（CSECA）</strong><br>
-    高雄市鼓山區美術東三路 86 號 4 樓　｜　07-2693525　｜　統編：72188904　｜　contact@z-way-edu.com<br>
-    服務時間：週一至週五 9:00–18:00
-  </div>
-  <div class="tagline">
-    覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊
+</div>
+
+<div class="foot-wrap">
+  <div class="foot">
+    <div>
+      <strong>台灣展威文化教育股份有限公司</strong><br>
+      高雄市鼓山區美術東三路 86 號　｜　07-2693525　｜　傳真 07-2693526　｜　admin@z-way-edu.com　｜　LINE：@zwayedu
+    </div>
+    <div style="margin-top:10px">
+      <strong>社團法人中華覺知教育關懷協會（CSECA）</strong><br>
+      高雄市鼓山區美術東三路 86 號 4 樓　｜　07-2693525　｜　統編：72188904　｜　contact@z-way-edu.com<br>
+      服務時間：週一至週五 9:00–18:00
+    </div>
+    <div class="tagline">
+      覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊
+    </div>
   </div>
 </div>
 
@@ -206,4 +334,3 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
 </a>
 </body>
 </html>
-                       
