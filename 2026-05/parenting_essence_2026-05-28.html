@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>家裡的晚餐變安靜了——小五兒子放學總是「沒事啦」時，我們怎麼接？ ｜ 覺知教養．每日精華</title>
+<meta name="description" content="覺知開智班小五兒子的『沉默季』——每天放學後只剩兩個字『還好』，雙薪爸媽用一個 30 秒餐前儀式，把對話一點點接回來。家庭儀式 × Stuart Shanker 自我調節 × Barbara Fiese 儀式研究。">
+<meta name="share-palette" content="blue-fade">
+<meta name="share-title" content="家裡晚餐變安靜的那一個月——小五兒子只剩兩個字「還好」">
+<meta name="share-photo" content="https://images.unsplash.com/photo-1577896850561-dc005e5b5689?w=1920&auto=format&fit=crop&q=80">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf2dc;
+  --paper:#fffaed;
+  --white:#ffffff;
+  --ink:#2a1810;
+  --ink-soft:#5a4f44;
+  --accent:#c0392b;
+  --gold:#c08940;
+  --gold-deep:#8a5e1f;
+  --serif:"Noto Serif TC", "Songti TC", serif;
+  --sans:"Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.85;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* 全寬 wrap、無 padding */
+.wrap{max-width:none;padding:0;margin:0;}
+
+/* 100vh 滿版 Hero */
+.head{
+  position:relative;
+  min-height:100vh;
+  padding:0;margin:0;
+  border:none;border-radius:0;box-shadow:none;
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  align-items:stretch;justify-content:flex-end;
+  background:#1a1a1a;
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.9) 100%),
+    url("https://images.unsplash.com/photo-1577896850561-dc005e5b5689?w=1920&auto=format&fit=crop&q=80");
+  background-size:cover, cover;
+  background-position:center, center;
+  background-repeat:no-repeat, no-repeat;
+}
+
+/* tag pill 左上 absolute */
+.head .tag{
+  position:absolute;top:32px;left:36px;
+  background:var(--accent);color:#fff;
+  font-size:11px;letter-spacing:5px;font-weight:700;
+  text-transform:uppercase;padding:7px 16px;
+  border-radius:0;z-index:3;
+}
+
+/* 日期戳右上 pseudo */
+.head::after{
+  content:'2026 · 05 · 28';
+  display:block;position:absolute;top:32px;right:36px;
+  background:transparent;color:#fff;
+  border:1px solid rgba(255,255,255,0.5);
+  font-family:var(--serif);font-size:12px;letter-spacing:4px;
+  font-weight:700;padding:6px 14px;border-radius:0;z-index:3;
+}
+
+/* 大標題 左下 magazine cover */
+.head h1{
+  font-family:var(--serif);
+  font-size:54px;font-weight:900;
+  line-height:1.22;color:#fff;
+  margin:0 0 24px;padding:0 60px;
+  text-shadow:0 6px 30px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.4);
+  position:relative;z-index:2;
+}
+
+/* meta 行 */
+.head .meta{
+  display:flex;gap:14px;flex-wrap:wrap;
+  padding:0 60px 30px;margin:0;
+  color:rgba(255,255,255,0.85);
+  font-size:14px;letter-spacing:1.5px;
+  position:relative;z-index:2;
+}
+.head .meta .datebadge{
+  border:1px solid rgba(255,255,255,0.6);
+  padding:5px 12px;border-radius:2px;
+  font-family:var(--serif);
+}
+.head .meta .age{
+  background:var(--accent);color:#fff;
+  padding:5px 12px;border-radius:2px;
+  font-weight:700;
+}
+.head .meta .axis{
+  padding:5px 12px;border-radius:2px;
+  color:rgba(255,255,255,0.78);
+}
+
+/* hook：底部黑半透 + 紅頂框 */
+.head .hook{
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-top:3px solid var(--accent);
+  padding:30px 60px 36px;
+  font-size:18px;line-height:1.95;
+  color:#f5f5f5;
+  font-family:var(--serif);
+  position:relative;z-index:2;
+}
+
+/* 文章主體：白底雜誌頁 */
+.body{
+  background:#fff;
+  padding:90px 60px 70px;
+  margin:0 auto;
+  max-width:780px;
+}
+.body section{margin-bottom:54px;}
+.body h2{
+  font-family:var(--serif);
+  font-size:28px;font-weight:900;
+  color:var(--ink);
+  margin:0 0 24px;
+  letter-spacing:1px;
+  position:relative;
+}
+.body h2::before{
+  content:'';display:block;
+  width:60px;height:3px;
+  background:var(--accent);
+  margin-bottom:18px;
+}
+.body p{
+  margin:0 0 18px;
+  font-size:17px;line-height:1.95;
+  color:var(--ink);
+}
+.body section:first-of-type p:first-of-type::first-letter{
+  font-family:var(--serif);
+  font-size:5.2em;
+  float:left;
+  line-height:0.95;
+  margin:6px 14px 0 0;
+  color:var(--accent);
+  font-weight:900;
+}
+.body strong{color:var(--accent);font-weight:700;}
+.body em{font-style:normal;color:var(--gold-deep);font-weight:500;}
+
+/* steps 灰底滿版 */
+.steps{
+  background:#fafafa;
+  padding:70px 60px;
+  margin:0;
+}
+.steps-inner{
+  max-width:780px;margin:0 auto;
+}
+.steps h2{
+  font-family:var(--serif);
+  font-size:28px;font-weight:900;
+  margin:0 0 36px;
+  text-align:center;
+  color:var(--ink);
+}
+.steps h2::after{
+  content:'';display:block;
+  width:60px;height:3px;background:var(--accent);
+  margin:14px auto 0;
+}
+.step-card{
+  background:#fff;
+  border-left:3px solid var(--accent);
+  padding:30px 28px 24px 58px;
+  margin-bottom:22px;
+  position:relative;
+  box-shadow:0 2px 12px rgba(0,0,0,0.04);
+}
+.step-card .num{
+  position:absolute;left:-20px;top:24px;
+  width:40px;height:40px;
+  background:var(--accent);color:#fff;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:18px;font-weight:900;
+}
+.step-card h3{
+  font-family:var(--serif);
+  font-size:20px;font-weight:700;
+  color:var(--ink);
+  margin:0 0 12px;
+}
+.step-card p{
+  margin:0 0 14px;
+  font-size:16px;line-height:1.85;
+  color:var(--ink);
+}
+.step-card .say{
+  background:#fdf6e8;
+  border-left:2px solid var(--gold);
+  padding:14px 18px;
+  margin-top:14px;
+  font-size:15px;line-height:1.8;
+  color:var(--ink-soft);
+  border-radius:2px;
+}
+.step-card .say::before{
+  content:'✦ 你可以這樣說';
+  display:block;font-size:12px;
+  font-weight:700;color:var(--gold-deep);
+  letter-spacing:2px;margin-bottom:6px;
+}
+
+/* check 自我檢核小卡 */
+.check-wrap{padding:60px 60px 20px;max-width:780px;margin:0 auto;}
+.check{
+  background:#fff;
+  border:1px solid #ede5d4;
+  border-radius:6px;
+  padding:28px 28px 22px;
+}
+.check h3{
+  font-family:var(--serif);
+  font-size:18px;color:var(--ink);
+  margin:0 0 14px;
+  letter-spacing:1px;
+}
+.check ol{
+  margin:0;padding-left:22px;
+  font-size:15px;line-height:1.85;
+  color:var(--ink-soft);
+}
+.check ol li{margin-bottom:8px;}
+
+/* outro 收筆 */
+.outro-wrap{padding:30px 60px 20px;max-width:780px;margin:0 auto;}
+.outro{
+  background:#fdf6e8;
+  border-top:3px solid var(--gold);
+  padding:36px 32px 30px;
+  border-radius:0 0 6px 6px;
+}
+.outro p{
+  margin:0 0 14px;
+  font-size:16px;line-height:1.95;
+  color:var(--ink);
+}
+.outro .sign{
+  margin-top:18px;
+  font-family:var(--serif);
+  font-size:14px;
+  color:var(--gold-deep);
+  letter-spacing:2px;
+}
+
+/* 光譜延伸（極簡版 teaser） */
+.spectrum-wrap{padding:30px 60px 30px;max-width:780px;margin:0 auto;}
+.spectrum{
+  background:#fff;
+  border:1px solid #ede5d4;
+  border-radius:6px;
+  padding:32px 28px 28px;
+  text-align:center;
+}
+.spec-cta .lead{
+  font-size:16px;line-height:1.85;
+  color:var(--ink);
+  margin:0 0 18px;
+}
+.spec-cta .lead strong{color:#5aa551;font-weight:700;}
+.cta-btn{
+  display:inline-block;
+  background:#2d4a3e;color:#fff;
+  font-size:15px;font-weight:700;
+  letter-spacing:1px;
+  padding:12px 28px;border-radius:32px;
+  text-decoration:none;
+  box-shadow:0 4px 14px rgba(45,74,62,0.25);
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.cta-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(45,74,62,0.32);
+}
+.sub-link{
+  margin-top:12px;
+  font-size:13px;color:var(--ink-soft);
+}
+
+/* foot */
+.foot-wrap{padding:40px 60px 80px;max-width:780px;margin:0 auto;}
+.foot{
+  font-size:13px;line-height:1.85;
+  color:var(--ink-soft);
+  border-top:1px solid #ede5d4;
+  padding-top:22px;
+}
+.foot strong{color:var(--ink);}
+.foot .tagline{
+  margin-top:14px;
+  font-family:var(--serif);
+  color:var(--gold-deep);
+  letter-spacing:2px;
+  font-size:13px;
+}
+
+/* Force-reveal safety net */
+.body, .steps, .pull-quote, .check, .outro, .spectrum{
+  opacity:1 !important;
+  transform:none !important;
+}
+
+/* RWD */
+@media (max-width:768px){
+  .head h1{font-size:36px;padding:0 32px;line-height:1.28;}
+  .head .meta{padding:0 32px 22px;font-size:12px;gap:8px;}
+  .head .hook{padding:24px 32px 28px;font-size:16px;line-height:1.9;}
+  .head .tag{top:20px;left:20px;font-size:10px;letter-spacing:3px;padding:6px 12px;}
+  .head::after{top:20px;right:20px;font-size:10px;letter-spacing:2px;padding:5px 10px;}
+  .body{padding:60px 28px 50px;}
+  .body h2{font-size:23px;}
+  .body section{margin-bottom:42px;}
+  .steps{padding:50px 28px;}
+  .steps h2{font-size:23px;}
+  .step-card{padding:26px 22px 20px 48px;}
+  .step-card .num{left:-18px;width:36px;height:36px;font-size:16px;}
+  .check-wrap,.outro-wrap,.spectrum-wrap,.foot-wrap{padding-left:28px;padding-right:28px;}
+}
+</style>
+
+<!-- ===== GEO_AEO_V1 GEO/AEO 結構化資料 ===== -->
+<link rel="canonical" href="https://zway-education.github.io/education-dailynews/2026-05/parenting_essence_2026-05-28.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="家裡的晚餐變安靜了——小五兒子放學總是「沒事啦」時，我們怎麼接？">
+<meta property="og:description" content="覺知開智班小五兒子的『沉默季』——每天放學後只剩兩個字『還好』，雙薪爸媽用一個 30 秒餐前儀式，把對話一點點接回來。家庭儀式 × Stuart Shanker 自我調節 × Barbara Fiese 儀式研究。">
+<meta property="og:image" content="https://zway-education.github.io/education-dailynews/2026-05/parenting_essence_2026-05-28_share.png">
+<meta property="og:url" content="https://zway-education.github.io/education-dailynews/2026-05/parenting_essence_2026-05-28.html">
+<meta property="og:site_name" content="K12 覺知素養教育學苑">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2026-05-28T06:00:00+08:00">
+<meta property="article:author" content="K12 覺知素養教育學苑">
+<meta property="article:section" content="覺知教養">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="家裡晚餐變安靜的那一個月——小五兒子只剩兩個字「還好」">
+<meta name="twitter:description" content="覺知開智班小五兒子的『沉默季』——每天放學後只剩兩個字『還好』，雙薪爸媽用一個 30 秒餐前儀式，把對話一點點接回來。家庭儀式 × Stuart Shanker 自我調節 × Barbara Fiese 儀式研究。">
+<meta name="twitter:image" content="https://zway-education.github.io/education-dailynews/2026-05/parenting_essence_2026-05-28_share.png">
+
+<!-- Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "家裡的晚餐變安靜了——小五兒子放學總是「沒事啦」時，我們怎麼接？",
+  "description": "覺知開智班小五兒子的『沉默季』——每天放學後只剩兩個字『還好』，雙薪爸媽用一個 30 秒餐前儀式，把對話一點點接回來。家庭儀式 × Stuart Shanker 自我調節 × Barbara Fiese 儀式研究。",
+  "image": [
+    "https://zway-education.github.io/education-dailynews/2026-05/parenting_essence_2026-05-28_share.png"
+  ],
+  "datePublished": "2026-05-28T06:00:00+08:00",
+  "dateModified": "2026-05-28T06:00:00+08:00",
+  "inLanguage": "zh-Hant",
+  "author": {
+    "@type": "Organization",
+    "name": "K12 覺知素養教育學苑",
+    "url": "https://zway-education.github.io/Introduction/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "K12 覺知素養教育學苑",
+    "url": "https://zway-education.github.io/Introduction/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zway-education.github.io/education-dailynews/2026-05/parenting_essence_2026-05-28.html"
+  }
+}
+</script>
+
+<!-- ===== /GEO_AEO_V1 ===== -->
+
+</head>
+<body>
+<div class="wrap">
+
+<header class="head">
+  <div class="tag">覺知教養 ｜ 每日精華</div>
+  <h1>家裡的晚餐變安靜了——小五兒子放學總是「沒事啦」時，我們怎麼接？</h1>
+  <div class="meta">
+    <span class="datebadge">2026-05-28 ｜ 週四</span>
+    <span class="age">6-12 學齡</span>
+    <span class="axis">家庭儀式</span>
+  </div>
+  <div class="hook">兒子升上小五那個學期，餐桌上的對話只剩兩個字——「還好」「不知道」。我們以為他長大了。後來我們做了一件 30 秒的事，他開始把今天還沒消化的，一點一點放回桌上。</div>
+</header>
+
+<article class="body">
+
+  <section>
+    <h2>當「今天還好嗎？」換來三個句點</h2>
+    <p>週四晚上七點，蘿蔔湯端上桌，餐桌已經安靜了三分鐘。「今天還好嗎？」我問。「嗯。」子翔點頭，眼睛沒離開碗。「老師教什麼？」「就那些啊。」「跟同學玩什麼？」「沒什麼。」</p>
+    <p>這是我跟小五兒子最近的標準對話。三個問句、三個句點，整頓晚餐就在這樣的節奏裡結束。他不是不愛我們，他只是把白天累積的事，原樣帶回房間關上門。</p>
+    <p>過去兩個月，我跟太太討論過：要不要直接放著他、不再問？還是反過來追問到他開口？兩種我們都試過——前者讓他更沉默，後者讓他更躲。我們卡在中間。</p>
+  </section>
+
+  <section>
+    <h2>學齡孩子的「沒事啦」，其實是神經系統還沒整理完</h2>
+    <p>覺知教養有一句心法：<strong>「沒有無意義的搗蛋，只有沒被看懂的求救。」</strong>但學齡孩子的「求救」常常不長那個樣子。它不是哭鬧、不是頂嘴，而是這種——「沒事啦」「還好」「不知道」。</p>
+    <p>兒童發展心理學家 Stuart Shanker（自我調節 Self-Reg 模型提出者）的研究指出，6-12 歲孩子放學後的「沉默」多半不是情緒抗拒，而是神經系統還在處理一整天的累積：跟同學的小摩擦、小考的緊張、跟老師的不舒服。他們的前額葉皮質還沒長到能像大人那樣「邊吃飯邊整理」，所以選最省力的方式——先擱著。</p>
+    <p>問題不是孩子不想說，是大人問話的「介面」對不上他的狀態。「今天還好嗎？」需要他把整天打包成一個答案。他打不包，所以只能丟一句「還好」。</p>
+    <p>家庭儀式的功能，在這裡就清楚了。儀式不是規矩，也不是逼孩子分享，它是<strong>一個固定的訊號</strong>——告訴孩子：「現在這個時間，這張桌子，是你可以慢慢說的地方。」研究家庭儀式 30 年的 Barbara Fiese 教授（雪城大學）一句話總結：「儀式創造了一種預期，讓孩子知道情緒會被接住，不是被處理掉。」儀式越短越好。短到孩子不會覺得是「另一場考試」。</p>
+  </section>
+
+  <section>
+    <h2>覺知開智班的子翔，從「還好」到「我覺得這學期有點累」</h2>
+    <p>我家小五兒子子翔，在覺知開智班上課將近一年。他個性偏穩、做事規律，從小不太黏人——是綠色光譜典型的孩子，習慣自己處理自己。</p>
+    <p>升上小五那學期，他開始有了「沉默季」。我問太太：「他是不是被同學排擠？」太太說：「我問過，他說沒有。」我們去問導師——導師回：「他跟班上互動正常，下課還會跟兩個男生打牌。」</p>
+    <p>於是我們改變策略。沒再追問，而是把問句拿掉，換成一個動作。每天晚餐開動前，我們三個人各說「今天一件小小的事」——不一定要是大事，可以是「中午吃到喜歡的玉米湯」、「上課很想睡」、「在走廊看到流浪貓」。每人 10 秒，總共 30 秒。</p>
+    <p>第一週子翔配合地說「沒什麼特別的」。第二週開始，他會擠出一句：「今天數學考卷發回來。」我們忍住沒接「考幾分」，只說「喔，那感覺怎樣」。第三週他主動講：「今天小柏忘記帶聯絡簿，老師罵了他，他下課臉很臭。」太太那天晚上跟我說：他從來沒講過小柏的事。</p>
+    <p>兩個月後的一個週末晚餐，子翔在 30 秒儀式裡停了一下，說：「我覺得這學期有點累。」這是他第一次主動講自己。我跟太太互看一眼，沒催他繼續，只說：「那等會吃完飯，要不要我們三個出去走一下。」</p>
+  </section>
+
+</article>
+
+<section class="steps">
+  <div class="steps-inner">
+    <h2>今天就能做的 3 個小步驟</h2>
+
+    <div class="step-card">
+      <div class="num">1</div>
+      <h3>把「問句」換成「儀式」</h3>
+      <p>不要再問「今天還好嗎」這種需要孩子打包整理的問題。改成一個固定的、低門檻的動作。例如餐前一人一句「今天一件小小的事」、睡前 5 分鐘「3 個今天的時刻」、回家路上「今天最想忘記的一件事」。重點是讓孩子知道：這個時間，就是要說一點點，不必整理。</p>
+      <div class="say">我們今天試試一個新規定，吃飯前每個人講一件今天的小事，可以是好的、可以是不好的、可以是無聊的——一個人 10 秒，講完就吃。</div>
+    </div>
+
+    <div class="step-card">
+      <div class="num">2</div>
+      <h3>第一個開口的，要是大人</h3>
+      <p>孩子在「沉默季」最怕被點名先講。爸媽先示範，他才有安全感跟上。重點是大人講的也要「真的不重要」——例如「我今天電梯遇到鄰居的狗，牠尾巴搖到我」，不要講工作大事或考試訓話。孩子感受到「原來這裡可以講小事」，他自己的小事才出得來。</p>
+      <div class="say">今天我去買便當，那個阿姨多給我一顆滷蛋，我超開心。換你。</div>
+    </div>
+
+    <div class="step-card">
+      <div class="num">3</div>
+      <h3>聽完就停，不追問、不解決</h3>
+      <p>這是最難也最關鍵的一步。當孩子終於講出「今天小柏被老師罵」時，大人的本能會想接「那他做錯什麼？」或「你也要注意這種事」。停住。只說「喔」「這樣啊」「謝謝你跟我說」——讓他講完那一口氣。追問會把儀式變成審問，孩子下次就再也不開口。</p>
+      <div class="say">嗯，謝謝你跟我說。等等想再講可以，不想就吃飯。</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="check-wrap">
+  <div class="check">
+    <h3>✦ 3 秒鐘覺知對話自我檢核</h3>
+    <ol>
+      <li>我現在怎麼了？（自己今天有沒有先把工作的情緒帶上桌？）</li>
+      <li>他現在是什麼狀態？（孩子說「沒事啦」時，是真沒事，還是在等一個安全的時段？）</li>
+      <li>我要反應，還是回應？（追問解決是反應；忍住、等下一口氣，是回應。）</li>
+    </ol>
+  </div>
+</div>
+
+<div class="outro-wrap">
+  <section class="outro">
+    <p>覺知教養不是一套技巧，而是一個提醒——當大人急著「處理孩子」時，常常忘記他需要的，只是一個安全的時段。</p>
+    <p>家庭儀式的價值，不在儀式本身，在它建立的<strong>預期</strong>：孩子知道每天晚上 7 點，有一張桌子在等他；有 30 秒，是專屬他講今天小事的時間。久而久之，那 30 秒會慢慢延長成 3 分鐘、10 分鐘——但前提是，前面那 30 秒沒有被大人變成審問。</p>
+    <p>協會主軸是「先有動機，再談成績」——學齡孩子要願意說話，得先有「想說的動機」。動機從哪裡來？從一個短短的、不被追問的、可以預期的時段。</p>
+    <p>今晚的 1 分鐘小練習：放下手機，跟家人說「我今天有一件無聊的小事想分享」，然後用 10 秒講完，停下，等對方接話。不解釋為什麼這樣做，就讓那 10 秒自然發生。</p>
+    <div class="sign">Written by K12覺知素養教育學苑</div>
+  </section>
+</div>
+
+<div class="spectrum-wrap">
+  <div class="spectrum">
+    <div class="spec-cta">
+      <p class="lead">文章裡的子翔，安靜、規律、習慣自己處理——是典型的<strong>綠色光譜</strong>承接日常壓力的方式。<br>你家孩子是哪一色？</p>
+      <a href="https://zway-education.github.io/mindspectrum/" target="_blank" class="cta-btn">去測心智光譜</a>
+      <div class="sub-link">3 分鐘線上測評，測出你的教養風格</div>
+    </div>
+  </div>
+</div>
+
+<div class="foot-wrap">
+  <div class="foot">
+    <div>
+      <strong>台灣展威文化教育股份有限公司</strong><br>
+      高雄市鼓山區美術東三路 86 號　｜　07-2693525　｜　傳真 07-2693526　｜　admin@z-way-edu.com　｜　LINE：@zwayedu
+    </div>
+    <div style="margin-top:10px">
+      <strong>社團法人中華覺知教育關懷協會（CSECA）</strong><br>
+      高雄市鼓山區美術東三路 86 號 4 樓　｜　07-2693525　｜　統編：72188904　｜　contact@z-way-edu.com<br>
+      服務時間：週一至週五 9:00–18:00
+    </div>
+    <div class="tagline">
+      覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊
+    </div>
+  </div>
+</div>
+
+</div>
+<style>
+.share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(59,89,152,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.share-fab:hover{background:rgba(59,89,152,1);transform:scale(1.08);}
+.share-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#3b5998;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.share-fab:hover::after{opacity:1;}
+@media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+.home-fab{position:fixed;bottom:22px;right:78px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(217,119,87,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.home-fab:hover{background:rgba(217,119,87,1);transform:scale(1.08);}
+.home-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.home-fab::after{content:'回首頁';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#a85a31;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.home-fab:hover::after{opacity:1;}
+@media(max-width:600px){.home-fab{bottom:16px;right:64px;width:42px;height:42px;}.home-fab::after{display:none;}}
+</style>
+<a class="share-fab" href="parenting_essence_2026-05-28_share.png" download title="下載 IG/FB 分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.2a3.7 3.7 0 1 1 0-7.4 3.7 3.7 0 0 1 0 7.4zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
+</a>
+<a class="home-fab" href="../" title="回首頁">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l-9 8h2.5v9h13v-9H21L12 3zm0 2.7L18.5 11H17v8h-3v-5h-4v5H7v-8H5.5L12 5.7z"/></svg>
+</a>
+<!-- ZW_TOOLBAR_BLOCK v4 — 覺知學苑右側社群按鈕(官網用品牌 logo) + 計數器(全站參訪/瀏覽 + 每篇本篇瀏覽)。post_essence.py inject_social 讀本檔注入 </body> 前。idempotent 標記：zw-social -->
+<style>
+/* === 覺知學苑工具列：右側社群按鈕 + 計數器 === */
+.zw-social{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:9990;display:flex;flex-direction:column;gap:9px;padding:11px 9px;background:rgba(255,255,255,0.58);border-radius:14px 0 0 14px;box-shadow:0 4px 18px rgba(0,0,0,0.13);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);}
+.zw-social a{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.22);transition:transform .16s;position:relative;}
+.zw-social a:hover{transform:scale(1.12);}
+.zw-social a svg{width:22px;height:22px;fill:#fff;display:block;}
+.zw-social .zw-web{background:#fff;overflow:hidden;}
+.zw-social .zw-web img{width:100%;height:100%;object-fit:contain;display:block;}
+.zw-social .zw-fb{background:#1877f2;}
+.zw-social .zw-line{background:#06c755;}
+.zw-social .zw-map{background:#ea4335;}
+.zw-social a::after{content:attr(data-label);position:absolute;right:54px;top:50%;transform:translateY(-50%);background:#2a1810;color:#fff;font-size:12px;padding:6px 11px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.zw-social a:hover::after{opacity:1;}
+.zw-counter{text-align:center;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:13px;color:#8a7a5f;padding:22px 16px 32px;letter-spacing:.5px;line-height:1.8;}
+.zw-counter .zw-dot{margin:0 9px;color:#c9bfa6;}
+.zw-counter b{color:#c0392b;font-weight:700;font-variant-numeric:tabular-nums;}
+.zw-counter .zw-art{color:#2d4a3e;}
+.zw-counter .zw-art b{color:#2d4a3e;}
+  /* 修正：頁尾標語(.foot .tagline)過長換行 → 字距字級縮小，桌機不換行 */
+  .foot .tagline{font-size:12px !important;letter-spacing:1px !important;white-space:nowrap !important;}
+@media(max-width:600px){
+  .foot .tagline{white-space:normal !important;font-size:10.5px !important;letter-spacing:0 !important;}
+
+  .zw-social{gap:6px;padding:7px 5px;border-radius:11px 0 0 11px;}
+  .zw-social a{width:38px;height:38px;}
+  .zw-social a svg{width:19px;height:19px;}
+  .zw-social a::after{display:none;}
+  .zw-counter{font-size:12px;padding:18px 14px 26px;}
+  .zw-counter .zw-dot{margin:0 5px;}
+}
+</style>
+<nav class="zw-social" aria-label="覺知學苑連結">
+  <a class="zw-web" href="https://z-way-edu.com/" target="_blank" rel="noopener" data-label="覺知官網">
+    <img src="https://zway-education.github.io/education-dailynews/zw-logo.png" alt="覺知官網" loading="lazy">
+  </a>
+  <a class="zw-fb" href="https://www.facebook.com/K12KHART/" target="_blank" rel="noopener" data-label="Facebook 粉專">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.9h-2.34V22c4.78-.76 8.43-4.92 8.43-9.94z"/></svg>
+  </a>
+  <a class="zw-line" href="https://lin.ee/zHOtaIm" target="_blank" rel="noopener" data-label="LINE@ 諮詢">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3.5c-5.24 0-9.5 3.44-9.5 7.68 0 3.8 3.38 6.99 7.94 7.59.31.07.73.2.84.47.1.24.06.62.03.86l-.13.81c-.04.24-.19.94.83.51 1.02-.43 5.48-3.23 7.48-5.53 1.38-1.51 2.01-3.05 2.01-5.21 0-4.24-4.26-7.68-9.5-7.68z"/></svg>
+  </a>
+  <a class="zw-map" href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%9B%84%E5%B8%82%E9%BC%93%E5%B1%B1%E5%8D%80%E7%BE%8E%E8%A1%93%E6%9D%B1%E4%B8%89%E8%B7%AF86%E8%99%9F" target="_blank" rel="noopener" data-label="Google 地圖">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+  </a>
+</nav>
+<div class="zw-counter">
+  <span class="zw-art" id="zwArtWrap" style="display:none">本篇已被閱讀 <b id="zwArt">&#8230;</b> 次<span class="zw-dot">·</span></span>累計參訪 <b id="zwVisits">&#8230;</b> 人次<span class="zw-dot">·</span>累計瀏覽 <b id="zwViews">&#8230;</b> 次
+</div>
+<script>
+(function(){
+  var NS='k12kh-essence';
+  function show(id,v){var e=document.getElementById(id);if(e&&typeof v==='number'){e.textContent=v.toLocaleString('en-US');}}
+  fetch('https://abacus.jasoncameron.dev/hit/'+NS+'/views').then(function(r){return r.json();}).then(function(d){show('zwViews',d.value);}).catch(function(){});
+  var visited=false;
+  try{visited=!!sessionStorage.getItem('zw_v');if(!visited){sessionStorage.setItem('zw_v','1');}}catch(e){}
+  fetch('https://abacus.jasoncameron.dev/'+(visited?'get':'hit')+'/'+NS+'/visits').then(function(r){return r.json();}).then(function(d){show('zwVisits',d.value);}).catch(function(){});
+  var m=location.pathname.match(/parenting_(?:essence|insight)_(\d{4})-(\d{2})-(\d{2})/);
+  if(m){
+    var key='p'+m[1]+m[2]+m[3];
+    var w=document.getElementById('zwArtWrap'); if(w){w.style.display='';}
+    fetch('https://abacus.jasoncameron.dev/hit/'+NS+'/'+key).then(function(r){return r.json();}).then(function(d){show('zwArt',d.value);}).catch(function(){});
+  }
+})();
+</script>
+<!-- /ZW_TOOLBAR_BLOCK -->
+
+</body>
+</html>

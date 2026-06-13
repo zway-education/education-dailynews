@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>他一進門就喊「媽媽你看」，我沒抬頭，回了一聲「嗯」 ｜ 覺知教養．每日精華</title>
+<meta name="description" content="3-6 歲孩子放學急著分享，大人忙著回一聲「嗯」。蹲下來的那三秒，就是 3 秒覺知對話。給啟蒙班孩子家長的親子溝通練習。">
+<meta name="share-palette" content="coffee">
+<meta name="share-title" content="他一進門喊「媽媽你看」，我沒抬頭">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf2dc; --paper:#fffaed; --white:#ffffff;
+    --ink:#2a1810; --ink-soft:#5a4f44;
+    --accent:#c0392b; --gold:#c08940; --gold-deep:#8a5e1f;
+    --brand:#34507a;
+    --serif:"Noto Serif TC",serif;
+    --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:var(--bg);}
+  body{font-family:var(--sans);color:var(--ink);line-height:1.85;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+
+  /* ===== 全寬 wrap ===== */
+  .wrap{max-width:none;margin:0;padding:0;}
+
+  /* ===== 100vh 滿版 Hero ===== */
+  .head{
+    position:relative;min-height:100vh;
+    padding:0;margin:0;border:none;border-radius:0;box-shadow:none;overflow:hidden;
+    display:flex;flex-direction:column;align-items:stretch;justify-content:flex-end;
+    background:#1a1a1a;
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.9) 100%),
+      url("https://images.unsplash.com/photo-1600779438084-a87b966aab99?w=1920&auto=format&fit=crop&q=80");
+    background-size:cover,cover;
+    background-position:center,center;
+    background-repeat:no-repeat,no-repeat;
+  }
+  .head .tag{
+    position:absolute;top:32px;left:36px;
+    background:var(--accent);color:#fff;
+    font-size:11px;letter-spacing:4px;font-weight:700;
+    padding:7px 16px;border-radius:0;z-index:3;
+  }
+  .head::after{
+    content:'2026 · 05 · 24';
+    display:block;position:absolute;top:32px;right:36px;
+    background:transparent;color:#fff;
+    border:1px solid rgba(255,255,255,0.55);
+    font-family:var(--serif);font-size:12px;letter-spacing:3px;
+    font-weight:700;padding:6px 14px;border-radius:0;z-index:3;
+  }
+  .head h1{
+    font-family:var(--serif);
+    font-size:46px;font-weight:900;line-height:1.3;color:#fff;
+    margin:0 0 22px;padding:0 60px;
+    text-shadow:0 6px 30px rgba(0,0,0,0.55),0 2px 6px rgba(0,0,0,0.4);
+    position:relative;z-index:2;
+  }
+  .head .meta{
+    display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+    padding:0 60px 28px;margin:0;
+    color:rgba(255,255,255,0.9);font-size:13px;position:relative;z-index:2;
+  }
+  .head .meta .datebadge{
+    border:1px solid rgba(255,255,255,0.5);padding:4px 12px;border-radius:0;
+    letter-spacing:1px;
+  }
+  .head .meta .age{
+    background:var(--accent);color:#fff;padding:4px 12px;font-weight:700;
+  }
+  .head .meta .axis{color:rgba(255,255,255,0.78);letter-spacing:1px;}
+  .head .hook{
+    background:rgba(0,0,0,0.6);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border-top:3px solid var(--accent);
+    padding:30px 60px 36px;
+    font-size:18px;line-height:1.95;color:#f5f5f5;
+    position:relative;z-index:2;
+  }
+
+  /* ===== 文章主體 ===== */
+  .body{
+    background:#fff;padding:84px 60px 64px;margin:0 auto;max-width:780px;
+  }
+  .body section{margin-bottom:46px;}
+  .body section:last-child{margin-bottom:0;}
+  .body h2{
+    font-family:var(--serif);font-size:25px;font-weight:900;color:var(--ink);
+    line-height:1.45;margin-bottom:20px;
+  }
+  .body h2::before{
+    content:'';display:block;width:58px;height:3px;
+    background:var(--accent);margin-bottom:16px;
+  }
+  .body p{font-size:16.5px;color:var(--ink-soft);margin-bottom:16px;}
+  .body p:last-child{margin-bottom:0;}
+  .body section:first-of-type p:first-of-type::first-letter{
+    font-family:var(--serif);font-size:5em;float:left;line-height:0.86;
+    color:var(--accent);font-weight:900;margin:6px 12px 0 0;
+  }
+  .body strong{color:var(--accent);font-weight:700;}
+
+  /* ===== 3 步驟 ===== */
+  .steps{background:#faf6ec;padding:66px 60px;margin:0;}
+  .steps-inner{max-width:780px;margin:0 auto;}
+  .steps-inner > h2{
+    font-family:var(--serif);font-size:25px;font-weight:900;color:var(--ink);
+    margin-bottom:30px;
+  }
+  .steps-inner > h2::before{
+    content:'';display:block;width:58px;height:3px;background:var(--accent);margin-bottom:16px;
+  }
+  .step-card{
+    position:relative;background:#fff;border-left:3px solid var(--accent);
+    padding:28px 30px 24px 56px;margin-bottom:22px;
+    box-shadow:0 4px 18px rgba(42,24,16,0.06);
+  }
+  .step-card:last-child{margin-bottom:0;}
+  .step-card .num{
+    position:absolute;left:-19px;top:24px;width:38px;height:38px;
+    background:var(--accent);color:#fff;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:19px;font-weight:900;
+  }
+  .step-card h3{
+    font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;
+  }
+  .step-card p{font-size:15.5px;color:var(--ink-soft);margin-bottom:14px;}
+  .step-card .say{
+    background:#fbf0d8;border-radius:8px;padding:13px 16px;
+    font-size:15px;color:var(--gold-deep);line-height:1.8;
+  }
+  .step-card .say::before{
+    content:'你可以這樣說';display:block;font-size:12px;letter-spacing:2px;
+    color:var(--accent);font-weight:700;margin-bottom:4px;
+  }
+
+  /* ===== 共用 wrap ===== */
+  .check-wrap,.outro-wrap,.spectrum-wrap,.foot-wrap{
+    max-width:780px;margin:0 auto;padding:0 60px;
+  }
+  .check-wrap{padding-top:56px;}
+  .spectrum-wrap{padding-bottom:10px;}
+
+  /* ===== 3 秒覺知對話檢核小卡 ===== */
+  .check{
+    background:#fff;border:1px solid #e7dcc2;border-top:4px solid var(--gold);
+    border-radius:10px;padding:28px 30px;
+  }
+  .check h3{
+    font-family:var(--serif);font-size:18px;color:var(--ink);margin-bottom:14px;
+  }
+  .check ol{margin:0;padding-left:20px;}
+  .check li{font-size:15.5px;color:var(--ink-soft);margin-bottom:9px;line-height:1.8;}
+  .check li:last-child{margin-bottom:0;}
+
+  /* ===== 收筆 ===== */
+  .outro{
+    background:linear-gradient(160deg,#fbf3df,#f6e9c8);
+    border-radius:10px;padding:36px 34px;margin-top:30px;
+  }
+  .outro p{font-size:16px;color:#4a3a28;margin-bottom:14px;line-height:1.95;}
+  .outro p:last-of-type{margin-bottom:0;}
+  .outro .sign{
+    margin-top:20px;font-family:var(--serif);font-size:15px;
+    color:var(--gold-deep);font-weight:700;letter-spacing:1px;
+  }
+
+  /* ===== 光譜延伸 ===== */
+  .spectrum{margin-top:34px;}
+  .spec-cta{
+    background:linear-gradient(155deg,#33507c,#26406a);
+    border-radius:12px;padding:34px 30px;text-align:center;
+  }
+  .spec-cta .lead{
+    font-size:16px;color:#eef2f8;line-height:1.95;margin-bottom:20px;
+  }
+  .spec-cta .lead strong{color:#ffd9a0;font-weight:700;}
+  .cta-btn{
+    display:inline-block;background:var(--accent);color:#fff;
+    font-size:16px;font-weight:700;text-decoration:none;
+    padding:13px 30px;border-radius:40px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.28);transition:transform .2s;
+  }
+  .cta-btn:hover{transform:translateY(-2px);}
+  .sub-link{margin-top:12px;font-size:13px;color:#b9c6da;}
+
+  /* ===== 頁尾 ===== */
+  .foot{
+    margin-top:50px;padding:30px 0 8px;border-top:1px solid #e7dcc2;
+    font-size:13px;color:var(--ink-soft);line-height:1.85;
+  }
+  .foot strong{color:var(--ink);}
+  .foot .tagline{
+    margin-top:14px;padding-top:12px;border-top:1px dashed #e0d4b8;
+    color:var(--gold-deep);font-family:var(--serif);
+  }
+
+  @media(max-width:600px){
+    .head h1{font-size:30px;padding:0 24px;}
+    .head .meta{padding:0 24px 22px;}
+    .head .hook{padding:24px 24px 30px;font-size:16px;}
+    .head .tag{top:20px;left:20px;}
+    .head::after{top:20px;right:20px;}
+    .body{padding:54px 24px 48px;}
+    .body h2{font-size:21px;}
+    .body p{font-size:15.5px;}
+    .steps{padding:48px 24px;}
+    .step-card{padding:26px 22px 22px 46px;}
+    .step-card .num{left:-16px;width:33px;height:33px;font-size:16px;}
+    .check-wrap,.outro-wrap,.spectrum-wrap,.foot-wrap{padding:0 24px;}
+    .check-wrap{padding-top:44px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="head">
+    <div class="tag">覺知教養 ｜ 每日精華</div>
+    <h1>他一進門就喊「媽媽你看」，我沒抬頭，回了一聲「嗯」</h1>
+    <div class="meta">
+      <span class="datebadge">2026-05-24 ｜ 週日</span>
+      <span class="age">3-6 歲幼兒</span>
+      <span class="axis">親子溝通．蹲下傾聽</span>
+    </div>
+    <div class="hook">
+      放學回到家，孩子急著講今天發生的事，大人手上正忙著煮飯、回訊息。一句「嗯」、「等一下」，孩子的聲音就慢慢小了下去。他要的其實不多——只是想知道，自己說的話有人在聽。今天，我們聊聊蹲下來的那三秒鐘。
+    </div>
+  </header>
+
+  <article class="body">
+    <section>
+      <h2>那句「嗯」，每個累壞的父母都說過</h2>
+      <p>傍晚六點，門一開，孩子幾乎是衝進屋裡的。書包還掛在肩上，鞋子只脫了一隻，嘴巴已經開始講：今天在學校發生了什麼、誰跟誰怎麼了、老師說了哪一句話。這個時間的大人，多半正站在廚房顧著鍋子，或盯著手機處理還沒回完的訊息。於是孩子一連串的話，常常換來一句「嗯」、「真的喔」、「等一下喔」。</p>
+      <p>這幾句話沒有惡意，每個累壞的父母都說過。只是日子久了會發現一件小事：孩子放學回家講話的聲音，好像一天比一天小。本來搶著講的孩子，慢慢變成回家就自己進房間。許多父母把這個變化讀成「孩子長大了、比較獨立」，覺得有點欣慰——但事情有時候，並不是這樣。</p>
+    </section>
+
+    <section>
+      <h2>孩子急著講話的時候，他其實在問什麼？</h2>
+      <p>三到六歲的孩子急著跟大人說話，表面上是在報告今天的事，底層還在確認另一件事：我講的話，重要嗎？這個年紀的孩子，正在形成「我是不是值得被注意」這份對自己的基本感覺，而這份感覺，幾乎完全來自大人怎麼回應他。</p>
+      <p>兒童發展研究把這種一來一往的互動，稱為「發球與回擊」（serve and return）：孩子拋出一個訊號——一句話、一個表情、一聲「你看」——大人接住，回一個訊號，孩子再拋下一個。一次次被接住，孩子大腦裡負責語言和情緒的迴路就一次次被使用，運作得愈來愈順。問題在於，「嗯」「等一下」這類回應，等於讓孩子那一球落了空。他還太小，不會分析這件事，但他感覺得到。</p>
+      <p>覺知教養有一句話：孩子不是不聽話，只是還沒有被聽見。要接住那一球，其實不必挪出一大段時間，而是先做完一個三秒鐘的覺知對話——我現在怎麼了，是不是正在忙、有點煩？他現在是什麼狀態，是想分享，還是需要幫忙？我接下來要直接反應，還是先停一下、好好回應？問完這三個問題，大概就是三秒。</p>
+    </section>
+
+    <section>
+      <h2>一個大班孩子，和媽媽重新找回的對話</h2>
+      <p>覺知啟蒙班有個上大班的孩子叫小睿，今年六歲。他媽媽在一次親子課裡提到一個變化：小睿以前一放學就講個不停，最近卻愈來愈安靜，回家就自己進房間玩。媽媽起初也覺得，孩子大了、比較獨立了，心裡還有點欣慰。</p>
+      <p>後來她仔細回想才發現，那陣子她下班接小睿回家，剛好都卡在趕晚餐的時間。小睿一開口，她的回答幾乎都是「嗯」「等一下喔」「你先去玩」。不是不想聽，是真的忙不過來，手上的事一件接一件。</p>
+      <p>老師建議她試一件很小的事：不用特地空出一段完整的時間，只要小睿一開口，就先把手邊的事停下來三秒，蹲下去，讓自己的眼睛跟他一樣高，看著他說「你說，我在聽」。媽媽試了幾天。她說，大概到第三天，小睿講到一半忽然停下來看她，然後笑了，那天講得比平常都久。又過了一個多禮拜，小睿在那個蹲下來、平視的高度，第一次跟她說，他今天在學校被同學說「你畫得很醜」，有點難過。媽媽說，如果她當時還是站著、回一聲「嗯」，這句話小睿大概就自己吞回去了。</p>
+    </section>
+  </article>
+
+  <section class="steps">
+    <div class="steps-inner">
+      <h2>今天放學後就能做的 3 件小事</h2>
+
+      <div class="step-card">
+        <div class="num">1</div>
+        <h3>先停三秒，再開口回答</h3>
+        <p>孩子一靠過來講話，先別急著用「嗯」打發。在心裡默數三秒，把那三個覺知問題快速問過一遍。三秒很短，卻足夠讓大人從「自動回話」切換成「真的在回應」。</p>
+        <div class="say">你等我一下下，我把這個關掉，就來聽你說。</div>
+      </div>
+
+      <div class="step-card">
+        <div class="num">2</div>
+        <h3>蹲下來，讓眼睛跟孩子一樣高</h3>
+        <p>站著低頭跟孩子說話，孩子接收到的訊息是大人很高、很忙。蹲下去，視線一樣高，孩子才會感覺到「他是專程來跟我說話的」。這個動作只花兩秒，效果卻最直接。</p>
+        <div class="say">（蹲下來，看著他）好，你說，我在聽。</div>
+      </div>
+
+      <div class="step-card">
+        <div class="num">3</div>
+        <h3>用「複述」代替「嗯」</h3>
+        <p>聽完之後，把孩子說的重點，用自己的話再講一次。複述等於告訴孩子：你說的，我真的接到了。比起一句「嗯」，這會讓他更想繼續說下去。</p>
+        <div class="say">你說溜滑梯今天排了好久喔？那你後來有玩到嗎？</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="check-wrap">
+    <div class="check">
+      <h3>3 秒覺知對話 ｜ 今天的自我檢核</h3>
+      <ol>
+        <li>此刻我是想「忙完再聽」，還是願意先停下三秒？</li>
+        <li>孩子現在是想分享一件開心的事，還是需要我幫忙？</li>
+        <li>我接下來要回的，是一聲「嗯」，還是真的接住他說的話？</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="outro-wrap">
+    <section class="outro">
+      <p>今晚如果孩子又跑來找你說話，可以試一個一分鐘的小練習：先不要急著回答，在心裡默數三秒，把那三個問題問自己一遍；然後，蹲下來。</p>
+      <p>簡單來說，三到六歲的孩子要的不是一段很長的陪伴，是確定大人真的在。一聲「嗯」，和一個蹲下來的三秒，差別就在這裡。今晚他靠過來的時候，先把手上的事放下三秒，看看會發生什麼。</p>
+      <div class="sign">Written by K12覺知素養教育學苑</div>
+    </section>
+  </div>
+
+  <div class="spectrum-wrap">
+    <div class="spectrum">
+      <div class="spec-cta">
+        <p class="lead">文章裡的小睿，一進門就急著把整天的事全倒出來——這種藏不住的表達熱情，常出現在偏向<strong>紅色光譜</strong>的孩子身上。但有的孩子要醞釀很久才講一句，有的要先被穩穩接住才敢開口。<br>你家孩子，是哪一種？</p>
+        <a href="https://zway-education.github.io/mindspectrum/" target="_blank" class="cta-btn">👉 去測心智光譜</a>
+        <div class="sub-link">3 分鐘線上測評，測出你的教養風格</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-wrap">
+    <div class="foot">
+      <div>
+        <strong>台灣展威文化教育股份有限公司</strong><br>
+        高雄市鼓山區美術東三路 86 號　｜　07-2693525　｜　傳真 07-2693526　｜　admin@z-way-edu.com　｜　LINE：@zwayedu
+      </div>
+      <div style="margin-top:10px">
+        <strong>社團法人中華覺知教育關懷協會（CSECA）</strong><br>
+        高雄市鼓山區美術東三路 86 號 4 樓　｜　07-2693525　｜　統編：72188904　｜　contact@z-way-edu.com<br>
+        服務時間：週一至週五 9:00–18:00
+      </div>
+      <div class="tagline">
+        覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊
+      </div>
+    </div>
+  </div>
+
+</div>
+<style>
+.share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(59,89,152,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.share-fab:hover{background:rgba(59,89,152,1);transform:scale(1.08);}
+.share-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#3b5998;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.share-fab:hover::after{opacity:1;}
+@media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+.home-fab{position:fixed;bottom:22px;right:78px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(217,119,87,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.home-fab:hover{background:rgba(217,119,87,1);transform:scale(1.08);}
+.home-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.home-fab::after{content:'回首頁';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#a85a31;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.home-fab:hover::after{opacity:1;}
+@media(max-width:600px){.home-fab{bottom:16px;right:64px;width:42px;height:42px;}.home-fab::after{display:none;}}
+</style>
+<a class="share-fab" href="parenting_essence_2026-05-24_share.png" download title="下載 IG/FB 分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.2a3.7 3.7 0 1 1 0-7.4 3.7 3.7 0 0 1 0 7.4zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
+</a>
+<a class="home-fab" href="../" title="回首頁">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l-9 8h2.5v9h13v-9H21L12 3zm0 2.7L18.5 11H17v8h-3v-5h-4v5H7v-8H5.5L12 5.7z"/></svg>
+</a>
+<!-- ZW_TOOLBAR_BLOCK v4 — 覺知學苑右側社群按鈕(官網用品牌 logo) + 計數器(全站參訪/瀏覽 + 每篇本篇瀏覽)。post_essence.py inject_social 讀本檔注入 </body> 前。idempotent 標記：zw-social -->
+<style>
+/* === 覺知學苑工具列：右側社群按鈕 + 計數器 === */
+.zw-social{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:9990;display:flex;flex-direction:column;gap:9px;padding:11px 9px;background:rgba(255,255,255,0.58);border-radius:14px 0 0 14px;box-shadow:0 4px 18px rgba(0,0,0,0.13);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);}
+.zw-social a{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.22);transition:transform .16s;position:relative;}
+.zw-social a:hover{transform:scale(1.12);}
+.zw-social a svg{width:22px;height:22px;fill:#fff;display:block;}
+.zw-social .zw-web{background:#fff;overflow:hidden;}
+.zw-social .zw-web img{width:100%;height:100%;object-fit:contain;display:block;}
+.zw-social .zw-fb{background:#1877f2;}
+.zw-social .zw-line{background:#06c755;}
+.zw-social .zw-map{background:#ea4335;}
+.zw-social a::after{content:attr(data-label);position:absolute;right:54px;top:50%;transform:translateY(-50%);background:#2a1810;color:#fff;font-size:12px;padding:6px 11px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.zw-social a:hover::after{opacity:1;}
+.zw-counter{text-align:center;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:13px;color:#8a7a5f;padding:22px 16px 32px;letter-spacing:.5px;line-height:1.8;}
+.zw-counter .zw-dot{margin:0 9px;color:#c9bfa6;}
+.zw-counter b{color:#c0392b;font-weight:700;font-variant-numeric:tabular-nums;}
+.zw-counter .zw-art{color:#2d4a3e;}
+.zw-counter .zw-art b{color:#2d4a3e;}
+  /* 修正：頁尾標語(.foot .tagline)過長換行 → 字距字級縮小，桌機不換行 */
+  .foot .tagline{font-size:12px !important;letter-spacing:1px !important;white-space:nowrap !important;}
+@media(max-width:600px){
+  .foot .tagline{white-space:normal !important;font-size:10.5px !important;letter-spacing:0 !important;}
+
+  .zw-social{gap:6px;padding:7px 5px;border-radius:11px 0 0 11px;}
+  .zw-social a{width:38px;height:38px;}
+  .zw-social a svg{width:19px;height:19px;}
+  .zw-social a::after{display:none;}
+  .zw-counter{font-size:12px;padding:18px 14px 26px;}
+  .zw-counter .zw-dot{margin:0 5px;}
+}
+</style>
+<nav class="zw-social" aria-label="覺知學苑連結">
+  <a class="zw-web" href="https://z-way-edu.com/" target="_blank" rel="noopener" data-label="覺知官網">
+    <img src="https://zway-education.github.io/education-dailynews/zw-logo.png" alt="覺知官網" loading="lazy">
+  </a>
+  <a class="zw-fb" href="https://www.facebook.com/K12KHART/" target="_blank" rel="noopener" data-label="Facebook 粉專">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.9h-2.34V22c4.78-.76 8.43-4.92 8.43-9.94z"/></svg>
+  </a>
+  <a class="zw-line" href="https://lin.ee/zHOtaIm" target="_blank" rel="noopener" data-label="LINE@ 諮詢">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3.5c-5.24 0-9.5 3.44-9.5 7.68 0 3.8 3.38 6.99 7.94 7.59.31.07.73.2.84.47.1.24.06.62.03.86l-.13.81c-.04.24-.19.94.83.51 1.02-.43 5.48-3.23 7.48-5.53 1.38-1.51 2.01-3.05 2.01-5.21 0-4.24-4.26-7.68-9.5-7.68z"/></svg>
+  </a>
+  <a class="zw-map" href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%9B%84%E5%B8%82%E9%BC%93%E5%B1%B1%E5%8D%80%E7%BE%8E%E8%A1%93%E6%9D%B1%E4%B8%89%E8%B7%AF86%E8%99%9F" target="_blank" rel="noopener" data-label="Google 地圖">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+  </a>
+</nav>
+<div class="zw-counter">
+  <span class="zw-art" id="zwArtWrap" style="display:none">本篇已被閱讀 <b id="zwArt">&#8230;</b> 次<span class="zw-dot">·</span></span>累計參訪 <b id="zwVisits">&#8230;</b> 人次<span class="zw-dot">·</span>累計瀏覽 <b id="zwViews">&#8230;</b> 次
+</div>
+<script>
+(function(){
+  var NS='k12kh-essence';
+  function show(id,v){var e=document.getElementById(id);if(e&&typeof v==='number'){e.textContent=v.toLocaleString('en-US');}}
+  fetch('https://abacus.jasoncameron.dev/hit/'+NS+'/views').then(function(r){return r.json();}).then(function(d){show('zwViews',d.value);}).catch(function(){});
+  var visited=false;
+  try{visited=!!sessionStorage.getItem('zw_v');if(!visited){sessionStorage.setItem('zw_v','1');}}catch(e){}
+  fetch('https://abacus.jasoncameron.dev/'+(visited?'get':'hit')+'/'+NS+'/visits').then(function(r){return r.json();}).then(function(d){show('zwVisits',d.value);}).catch(function(){});
+  var m=location.pathname.match(/parenting_(?:essence|insight)_(\d{4})-(\d{2})-(\d{2})/);
+  if(m){
+    var key='p'+m[1]+m[2]+m[3];
+    var w=document.getElementById('zwArtWrap'); if(w){w.style.display='';}
+    fetch('https://abacus.jasoncameron.dev/hit/'+NS+'/'+key).then(function(r){return r.json();}).then(function(d){show('zwArt',d.value);}).catch(function(){});
+  }
+})();
+</script>
+<!-- /ZW_TOOLBAR_BLOCK -->
+
+</body>
+</html>

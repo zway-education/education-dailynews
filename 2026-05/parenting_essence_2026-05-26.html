@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>群組曬滿分的那一晚，我差點問錯第一句話 ｜ 覺知教養．每日精華</title>
+<meta name="description" content="班親群組裡的滿分考卷一張接一張，最先被比較推著走的其實是父母。一位媽媽如何把焦慮的鏡頭，從排名表轉回孩子今晚的那一題。">
+<meta name="share-palette" content="blue-deep">
+<meta name="share-title" content="群組曬滿分的那一晚">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf2dc; --paper:#fffaed; --white:#ffffff;
+    --ink:#2a1810; --ink-soft:#5a4f44;
+    --accent:#c0392b; --gold:#c08940; --gold-deep:#8a5e1f;
+    --brand:#34507a;
+    --serif:"Noto Serif TC",serif;
+    --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:var(--bg);}
+  body{font-family:var(--sans);color:var(--ink);line-height:1.85;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+
+  /* ===== 全寬 wrap ===== */
+  .wrap{max-width:none;margin:0;padding:0;}
+
+  /* ===== 100vh 滿版 Hero ===== */
+  .head{
+    position:relative;min-height:100vh;
+    padding:0;margin:0;border:none;border-radius:0;box-shadow:none;overflow:hidden;
+    display:flex;flex-direction:column;align-items:stretch;justify-content:flex-end;
+    background:#1a1a1a;
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.9) 100%),
+      url("https://images.unsplash.com/photo-1610484826625-ac2be7f1c8c1?w=1920&auto=format&fit=crop&q=80");
+    background-size:cover,cover;
+    background-position:center,center;
+    background-repeat:no-repeat,no-repeat;
+  }
+  .head .tag{
+    position:absolute;top:32px;left:36px;
+    background:var(--accent);color:#fff;
+    font-size:11px;letter-spacing:4px;font-weight:700;
+    padding:7px 16px;border-radius:0;z-index:3;
+  }
+  .head::after{
+    content:'2026 · 05 · 26';
+    display:block;position:absolute;top:32px;right:36px;
+    background:transparent;color:#fff;
+    border:1px solid rgba(255,255,255,0.55);
+    font-family:var(--serif);font-size:12px;letter-spacing:3px;
+    font-weight:700;padding:6px 14px;border-radius:0;z-index:3;
+  }
+  .head h1{
+    font-family:var(--serif);
+    font-size:45px;font-weight:900;line-height:1.32;color:#fff;
+    margin:0 0 22px;padding:0 60px;
+    text-shadow:0 6px 30px rgba(0,0,0,0.55),0 2px 6px rgba(0,0,0,0.4);
+    position:relative;z-index:2;
+  }
+  .head .meta{
+    display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+    padding:0 60px 28px;margin:0;
+    color:rgba(255,255,255,0.9);font-size:13px;position:relative;z-index:2;
+  }
+  .head .meta .datebadge{
+    border:1px solid rgba(255,255,255,0.5);padding:4px 12px;border-radius:0;
+    letter-spacing:1px;
+  }
+  .head .meta .age{
+    background:var(--accent);color:#fff;padding:4px 12px;font-weight:700;
+  }
+  .head .meta .axis{color:rgba(255,255,255,0.78);letter-spacing:1px;}
+  .head .hook{
+    background:rgba(0,0,0,0.6);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border-top:3px solid var(--accent);
+    padding:30px 60px 36px;
+    font-size:18px;line-height:1.95;color:#f5f5f5;
+    position:relative;z-index:2;
+  }
+
+  /* ===== 文章主體 ===== */
+  .body{
+    background:#fff;padding:84px 60px 64px;margin:0 auto;max-width:780px;
+  }
+  .body section{margin-bottom:46px;}
+  .body section:last-child{margin-bottom:0;}
+  .body h2{
+    font-family:var(--serif);font-size:25px;font-weight:900;color:var(--ink);
+    line-height:1.45;margin-bottom:20px;
+  }
+  .body h2::before{
+    content:'';display:block;width:58px;height:3px;
+    background:var(--accent);margin-bottom:16px;
+  }
+  .body p{font-size:16.5px;color:var(--ink-soft);margin-bottom:16px;}
+  .body p:last-child{margin-bottom:0;}
+  .body section:first-of-type p:first-of-type::first-letter{
+    font-family:var(--serif);font-size:5em;float:left;line-height:0.86;
+    color:var(--accent);font-weight:900;margin:6px 12px 0 0;
+  }
+  .body strong{color:var(--accent);font-weight:700;}
+
+  /* ===== 3 步驟 ===== */
+  .steps{background:#faf6ec;padding:66px 60px;margin:0;}
+  .steps-inner{max-width:780px;margin:0 auto;}
+  .steps-inner > h2{
+    font-family:var(--serif);font-size:25px;font-weight:900;color:var(--ink);
+    margin-bottom:30px;
+  }
+  .steps-inner > h2::before{
+    content:'';display:block;width:58px;height:3px;background:var(--accent);margin-bottom:16px;
+  }
+  .step-card{
+    position:relative;background:#fff;border-left:3px solid var(--accent);
+    padding:28px 30px 24px 56px;margin-bottom:22px;
+    box-shadow:0 4px 18px rgba(42,24,16,0.06);
+  }
+  .step-card:last-child{margin-bottom:0;}
+  .step-card .num{
+    position:absolute;left:-19px;top:24px;width:38px;height:38px;
+    background:var(--accent);color:#fff;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:19px;font-weight:900;
+  }
+  .step-card h3{
+    font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;
+  }
+  .step-card p{font-size:15.5px;color:var(--ink-soft);margin-bottom:14px;}
+  .step-card .say{
+    background:#fbf0d8;border-radius:8px;padding:13px 16px;
+    font-size:15px;color:var(--gold-deep);line-height:1.8;
+  }
+  .step-card .say::before{
+    content:'你可以這樣說';display:block;font-size:12px;letter-spacing:2px;
+    color:var(--accent);font-weight:700;margin-bottom:4px;
+  }
+
+  /* ===== 共用 wrap ===== */
+  .check-wrap,.outro-wrap,.spectrum-wrap,.foot-wrap{
+    max-width:780px;margin:0 auto;padding:0 60px;
+  }
+  .check-wrap{padding-top:56px;}
+  .spectrum-wrap{padding-bottom:10px;}
+
+  /* ===== 3 秒覺知對話檢核小卡 ===== */
+  .check{
+    background:#fff;border:1px solid #e7dcc2;border-top:4px solid var(--gold);
+    border-radius:10px;padding:28px 30px;
+  }
+  .check h3{
+    font-family:var(--serif);font-size:18px;color:var(--ink);margin-bottom:14px;
+  }
+  .check ol{margin:0;padding-left:20px;}
+  .check li{font-size:15.5px;color:var(--ink-soft);margin-bottom:9px;line-height:1.8;}
+  .check li:last-child{margin-bottom:0;}
+
+  /* ===== 收筆 ===== */
+  .outro{
+    background:linear-gradient(160deg,#fbf3df,#f6e9c8);
+    border-radius:10px;padding:36px 34px;margin-top:30px;
+  }
+  .outro p{font-size:16px;color:#4a3a28;margin-bottom:14px;line-height:1.95;}
+  .outro p:last-of-type{margin-bottom:0;}
+  .outro .sign{
+    margin-top:20px;font-family:var(--serif);font-size:15px;
+    color:var(--gold-deep);font-weight:700;letter-spacing:1px;
+  }
+
+  /* ===== 光譜延伸 ===== */
+  .spectrum{margin-top:34px;}
+  .spec-cta{
+    background:linear-gradient(155deg,#33507c,#26406a);
+    border-radius:12px;padding:34px 30px;text-align:center;
+  }
+  .spec-cta .lead{
+    font-size:16px;color:#eef2f8;line-height:1.95;margin-bottom:20px;
+  }
+  .spec-cta .lead strong{color:#ffd9a0;font-weight:700;}
+  .cta-btn{
+    display:inline-block;background:var(--accent);color:#fff;
+    font-size:16px;font-weight:700;text-decoration:none;
+    padding:13px 30px;border-radius:40px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.28);transition:transform .2s;
+  }
+  .cta-btn:hover{transform:translateY(-2px);}
+  .sub-link{margin-top:12px;font-size:13px;color:#b9c6da;}
+
+  /* ===== 頁尾 ===== */
+  .foot{
+    margin-top:50px;padding:30px 0 8px;border-top:1px solid #e7dcc2;
+    font-size:13px;color:var(--ink-soft);line-height:1.85;
+  }
+  .foot strong{color:var(--ink);}
+  .foot .tagline{
+    margin-top:14px;padding-top:12px;border-top:1px dashed #e0d4b8;
+    color:var(--gold-deep);font-family:var(--serif);
+  }
+
+  @media(max-width:600px){
+    .head h1{font-size:29px;padding:0 24px;}
+    .head .meta{padding:0 24px 22px;}
+    .head .hook{padding:24px 24px 30px;font-size:16px;}
+    .head .tag{top:20px;left:20px;}
+    .head::after{top:20px;right:20px;}
+    .body{padding:54px 24px 48px;}
+    .body h2{font-size:21px;}
+    .body p{font-size:15.5px;}
+    .steps{padding:48px 24px;}
+    .steps-inner > h2{font-size:21px;}
+    .step-card{padding:26px 22px 22px 46px;}
+    .step-card .num{left:-16px;width:33px;height:33px;font-size:16px;}
+    .check-wrap,.outro-wrap,.spectrum-wrap,.foot-wrap{padding:0 24px;}
+    .check-wrap{padding-top:46px;}
+  }
+</style>
+
+<!-- ===== GEO/AEO 結構化資料 (2026-05-26 v1 試水 by KWJ) ===== -->
+<link rel="canonical" href="https://zway-education.github.io/education-dailynews/2026-05/parenting_essence_2026-05-26.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="群組曬滿分的那一晚，我差點問錯第一句話">
+<meta property="og:description" content="班親群組裡的滿分考卷一張接一張，最先被比較推著走的其實是父母。一位媽媽如何把焦慮的鏡頭，從排名表轉回孩子今晚的那一題。">
+<meta property="og:image" content="https://zway-education.github.io/education-dailynews/2026-05/parenting_essence_2026-05-26_share.png">
+<meta property="og:url" content="https://zway-education.github.io/education-dailynews/2026-05/parenting_essence_2026-05-26.html">
+<meta property="og:site_name" content="K12 覺知素養教育學苑">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2026-05-26T06:00:00+08:00">
+<meta property="article:author" content="K12 覺知素養教育學苑">
+<meta property="article:section" content="覺知教養">
+<meta property="article:tag" content="比較焦慮">
+<meta property="article:tag" content="覺知教養">
+<meta property="article:tag" content="心智光譜">
+<meta property="article:tag" content="自我效能">
+<meta property="article:tag" content="親子溝通">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="群組曬滿分的那一晚，我差點問錯第一句話">
+<meta name="twitter:description" content="班親群組裡的滿分考卷一張接一張，最先被比較推著走的其實是父母。">
+<meta name="twitter:image" content="https://zway-education.github.io/education-dailynews/2026-05/parenting_essence_2026-05-26_share.png">
+
+<!-- Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "群組曬滿分的那一晚，我差點問錯第一句話",
+  "description": "班親群組裡的滿分考卷一張接一張，最先被比較推著走的其實是父母。一位媽媽如何把焦慮的鏡頭，從排名表轉回孩子今晚的那一題。",
+  "image": ["https://zway-education.github.io/education-dailynews/2026-05/parenting_essence_2026-05-26_share.png"],
+  "datePublished": "2026-05-26T06:00:00+08:00",
+  "dateModified": "2026-05-26T06:00:00+08:00",
+  "inLanguage": "zh-Hant",
+  "author": {
+    "@type": "Organization",
+    "name": "K12 覺知素養教育學苑",
+    "url": "https://zway-education.github.io/Introduction/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "K12 覺知素養教育學苑",
+    "url": "https://zway-education.github.io/Introduction/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://zway-education.github.io/Introduction/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zway-education.github.io/education-dailynews/2026-05/parenting_essence_2026-05-26.html"
+  },
+  "keywords": "比較焦慮, 覺知教養, 心智光譜, 自我效能, 班親群組, 親子溝通, 教養焦慮, K12 覺知素養"
+}
+</script>
+
+<!-- FAQ Schema (AI 引擎最愛從這抓答案) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "看到班親群組的滿分考卷，怎麼控制比較焦慮？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "心理學的自我效能（self-efficacy）概念指出，孩子能不能繼續學，關鍵不是現在考幾分，是相不相信自己可以從一個小步驟往前走。具體做法：先把手機放下再走進房間；問一題，不問整張考卷；把比較換成一個具體的下一步。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「先有動機，再談成績」是什麼意思？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "這是覺知教育的核心理念之一。父母滿腦子是排名時，回到家容易把焦慮說成要求——「你看人家」「你要再加強」。孩子接收到的不是「我被在乎」，而是「我又讓爸媽失望了」。先看孩子，再看分數。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "什麼是「心智光譜」測驗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "心智光譜是 K12 覺知素養教育學苑的測評工具。它把人的特質與焦慮反應分成紅色（開創）、橘色（溫暖）、綠色（守序）、藍色（理性）四種光譜，幫家長看清自己與孩子天生的樣子。3 分鐘線上測評。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "孩子考不好，第一句該說什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不要問「這次考幾分」「總共錯幾題」。把範圍縮小到一題，例如「今天作業裡，哪一題你覺得最不好下手？」一題是孩子今晚搆得到的起點，也才知道下一步要從哪裡開始。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "覺知教養跟一般教養課的差別？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "覺知教養是先讓家長覺察「我現在的狀態是什麼」，再去處理孩子。沒有覺知，教養容易把焦慮說成要求；有了覺知，家長能在當下停一拍，把鏡頭從比較轉回孩子眼前那一題。"
+      }
+    }
+  ]
+}
+</script>
+<!-- ===== /GEO/AEO 結構化資料 ===== -->
+
+</head>
+<body>
+<div class="wrap">
+
+  <header class="head">
+    <div class="tag">覺知教養 ｜ 每日精華</div>
+    <h1>群組曬滿分的那一晚，我差點問錯第一句話</h1>
+    <div class="meta">
+      <span class="datebadge">2026-05-26 ｜ 週二</span>
+      <span class="age">父母自我覺知</span>
+      <span class="axis">比較焦慮 · 回到孩子的這一題</span>
+    </div>
+    <div class="hook">
+      晚上八點多，孩子的書包還擱在玄關，手機螢幕卻先亮了。班親群組裡，一張滿分考卷貼出來，接著第二張、第三張。明明還沒翻開自己孩子的作業，心裡那把尺已經先量過一輪。今晚，先把鏡頭轉回來。
+    </div>
+  </header>
+
+  <article class="body">
+    <section>
+      <h2>群組裡那幾張滿分考卷</h2>
+      <p>晚餐收完，孩子在房間，你坐在沙發上滑手機。班親群組忽然熱鬧起來——有家長貼出孩子的數學考卷，鮮紅的一百分，配一句「這次總算進步了」。沒多久，第二張、第三張也跟著出現。</p>
+      <p>大概也經歷過接下來那幾秒：手指停在螢幕上，腦袋裡冒出的不是「真好」，而是一個很快、很安靜的問句——我家孩子，這次考幾分？</p>
+      <p>那時候，你還沒走進孩子房間，還沒翻開他的作業本，可是心裡已經先替他打了分數、排了名次。比較這件事，常常不是從孩子身上開始的，是從大人的手機螢幕開始的。</p>
+    </section>
+
+    <section>
+      <h2>被群組拉走的，是父母的鏡頭</h2>
+      <p>心理學有一個概念叫自我效能（self-efficacy），指的是一個人相不相信「我做得到」。研究指出，孩子願不願意繼續學，關鍵往往不是他現在考幾分，而是他還相不相信，自己可以從某一題、某一個小步驟開始往前。</p>
+      <p>群組裡的滿分考卷，本身不是問題。真正會出狀況的，是它把父母的鏡頭整個拉走了——原本對準的是「我家孩子今天學到什麼」，一比較，鏡頭就轉去對準「別人家孩子考幾分」。鏡頭一偏，大人看見的就只剩下落差。</p>
+      <p>覺知教育有一句話：先有動機，再談成績。當父母滿腦子是排名，回到家很容易把焦慮說成要求——「你看人家」「你要再加強」。孩子接收到的，不是「我被在乎」，而是「我又讓爸媽失望了」。父母自我覺知的第一步，不是把擔心壓下去，而是先看清楚一件事：我現在是在看孩子，還是在看那張排名表？</p>
+    </section>
+
+    <section>
+      <h2>周媽那天晚上的問句</h2>
+      <p>在 K12 覺知素養教育學苑的一場家長學堂裡，周媽說起一件小事。她的女兒庭安念小四，那天晚上，班親群組裡接連跳出好幾張滿分考卷。周媽放下手機，第一個動作是走進房間問庭安：「你這次數學考幾分？」</p>
+      <p>庭安說七十幾分，聲音愈講愈小。周媽說，那一刻她差點脫口說出「你看人家都考一百」，手也已經想去翻評量，盤算著週末要不要再加報一科。</p>
+      <p>但她停了一下，想起家長學堂裡聊過的一句話——先看孩子，再看分數。她把問句換掉，改問：「那今天這張考卷，哪一題你覺得最難？」庭安愣了一下，翻出考卷，指著一題應用題說，這種題目她每次都看不懂在問什麼。</p>
+      <p>周媽說，那天晚上她們沒有再談分數，只一起把那一題重看了一遍。庭安把題目慢慢唸出來，自己忽然「啊」了一聲——原來她漏看了一個條件。周媽說，比起七十幾分那個數字，她更記得女兒弄懂那一題時，眼睛亮起來的樣子。後來幾次小考，庭安開始會主動說「這題我有點卡」，而不是把考卷收進書包最底層。</p>
+    </section>
+  </article>
+
+  <section class="steps">
+    <div class="steps-inner">
+      <h2>今晚就能做的 3 個覺知反思</h2>
+
+      <div class="step-card">
+        <div class="num">1</div>
+        <h3>先把手機放下，再走進房間</h3>
+        <p>群組一洗版，父母最容易一邊滑手機、一邊跟孩子說話。先把手機反扣在桌上，給自己幾分鐘只看著眼前的孩子，不看那些考卷照片。手放下了，語氣才不會帶著別人家的分數。</p>
+        <div class="say">我先把手機放旁邊，等你吃完飯，我們再一起看作業。</div>
+      </div>
+
+      <div class="step-card">
+        <div class="num">2</div>
+        <h3>問一題，不問整張考卷</h3>
+        <p>不要一開口就問「這次考幾分」「總共錯幾題」。把範圍縮小到一題，孩子才接得住，也才知道下一步要從哪裡開始。一題，是孩子今晚搆得到的起點。</p>
+        <div class="say">今天的作業裡，哪一題你覺得最不好下手？</div>
+      </div>
+
+      <div class="step-card">
+        <div class="num">3</div>
+        <h3>把比較，換成一個下一步</h3>
+        <p>當「人家考一百分」的念頭冒出來，試著把它換成一個具體的下一步。比較會讓孩子定在原地反覆掂量自己；一個清楚的下一步，才會讓他真的往前走一格。</p>
+        <div class="say">我們先把這一題弄懂，剩下的明天再慢慢排。</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="check-wrap">
+    <div class="check">
+      <h3>比較焦慮 ｜ 今晚的自我檢核</h3>
+      <ol>
+        <li>我現在是擔心孩子，還是被別人家孩子的表現帶著走？</li>
+        <li>孩子今晚真正要處理的，是哪一件具體的小事？</li>
+        <li>我等一下開口，會讓孩子更想開始，還是更想躲起來？</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="outro-wrap">
+    <section class="outro">
+      <p>今晚如果群組又熱鬧起來，可以做一個一分鐘的小練習：把手機反扣在桌上，安靜地坐六十秒，把上面那三個問題問自己一遍。</p>
+      <p>一分鐘過後，你可能會發現，孩子今晚需要的不是一個更高的分數，而是一個願意陪他看「這一題」的大人。把鏡頭轉回來，對準眼前這個孩子——他正卡著的這一題，就是他往前走的起點。</p>
+      <div class="sign">Written by K12覺知素養教育學苑</div>
+    </section>
+  </div>
+
+  <div class="spectrum-wrap">
+    <div class="spectrum">
+      <div class="spec-cta">
+        <p class="lead">今天故事裡的周媽，一看到群組的滿分考卷，第一個念頭就是替女兒安排加強——這是偏<strong>紅色光譜</strong>的大人，面對比較時很自然的反應。每個人焦慮起來的樣子，其實都有跡可循。<br>你和孩子，各自偏哪一色？</p>
+        <a href="https://zway-education.github.io/mindspectrum/" target="_blank" class="cta-btn">👉 去測心智光譜</a>
+        <div class="sub-link">3 分鐘線上測評，認識自己與孩子天生的樣子</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-wrap">
+    <div class="foot">
+      <div>
+        <strong>台灣展威文化教育股份有限公司</strong><br>
+        高雄市鼓山區美術東三路 86 號　｜　07-2693525　｜　傳真 07-2693526　｜　admin@z-way-edu.com　｜　LINE：@zwayedu
+      </div>
+      <div style="margin-top:10px">
+        <strong>社團法人中華覺知教育關懷協會（CSECA）</strong><br>
+        高雄市鼓山區美術東三路 86 號 4 樓　｜　07-2693525　｜　統編：72188904　｜　contact@z-way-edu.com<br>
+        服務時間：週一至週五 9:00–18:00
+      </div>
+      <div class="tagline">
+        覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊
+      </div>
+    </div>
+  </div>
+
+</div>
+<style>
+.share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(59,89,152,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.share-fab:hover{background:rgba(59,89,152,1);transform:scale(1.08);}
+.share-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#3b5998;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.share-fab:hover::after{opacity:1;}
+@media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+.home-fab{position:fixed;bottom:22px;right:78px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(217,119,87,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.home-fab:hover{background:rgba(217,119,87,1);transform:scale(1.08);}
+.home-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.home-fab::after{content:'回首頁';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#a85a31;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.home-fab:hover::after{opacity:1;}
+@media(max-width:600px){.home-fab{bottom:16px;right:64px;width:42px;height:42px;}.home-fab::after{display:none;}}
+</style>
+<a class="share-fab" href="parenting_essence_2026-05-26_share.png" download title="下載 IG/FB 分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.2a3.7 3.7 0 1 1 0-7.4 3.7 3.7 0 0 1 0 7.4zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
+</a>
+<a class="home-fab" href="../" tit

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>『出現』比『管教』更有力——讓 3-6 歲爸媽鬆口氣的一本腦科學書</title>
+<meta name="share-palette" content="honey">
+<meta name="share-title" content="『出現』兩個字，比 100 個教養法都管用">
+<meta name="share-photo" content="https://images.unsplash.com/photo-1514369118554-e20d93546b30?w=1920&auto=format&fit=crop&q=80">
+<style>
+:root{
+  --bg:#faf2dc;
+  --paper:#ffffff;
+  --ink:#2a1810;
+  --ink-soft:#5a4f44;
+  --espresso:#2a1810;
+  --accent:#c0392b;
+  --gold:#c08940;
+  --gold-deep:#8a5e1f;
+  --brand:#2a1810;
+  --border:#ead9b2;
+  --line:#e8e0d0;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --serif:"Noto Serif TC",serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.85;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:none;padding:0;margin:0;}
+.head{
+  position:relative;min-height:100vh;padding:0;margin:0;
+  border:none;border-radius:0;box-shadow:none;overflow:hidden;
+  display:flex;flex-direction:column;align-items:stretch;justify-content:flex-end;
+  background:#1a1a1a;
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.9) 100%),
+    url("https://images.unsplash.com/photo-1514369118554-e20d93546b30?w=1920&auto=format&fit=crop&q=80");
+  background-size:cover, cover;background-position:center, center;background-repeat:no-repeat, no-repeat;
+}
+.head .tag{
+  position:absolute;top:32px;left:36px;
+  background:var(--accent);color:#fff;font-family:var(--sans);
+  font-size:11px;letter-spacing:5px;font-weight:700;text-transform:uppercase;
+  padding:7px 16px;border-radius:0;border:none;margin:0;display:inline-block;z-index:3;
+}
+.head::after{
+  content:'2026 · 05 · 19';display:block;position:absolute;top:32px;right:36px;
+  background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.5);
+  font-family:var(--serif);font-size:12px;letter-spacing:4px;font-weight:700;
+  padding:6px 14px;border-radius:0;z-index:3;
+}
+.head h1{
+  font-family:var(--serif);font-size:50px;font-weight:900;
+  line-height:1.24;letter-spacing:1px;color:#fff;
+  margin:0 0 24px;padding:0 60px;text-align:left;
+  text-shadow:0 6px 30px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.4);
+  position:relative;z-index:2;
+}
+.head .meta{
+  display:flex;gap:14px;flex-wrap:wrap;
+  padding:0 60px 30px;margin:0;color:rgba(255,255,255,0.85);justify-content:flex-start;
+}
+.head .meta .datebadge{
+  font-family:var(--sans);background:transparent;color:#fff;
+  border:1px solid rgba(255,255,255,0.45);
+  font-size:11px;letter-spacing:3px;font-weight:700;
+  padding:5px 12px;border-radius:0;text-transform:uppercase;
+}
+.head .meta .age{
+  background:var(--accent);color:#fff;border:none;border-radius:0;
+  font-family:var(--sans);font-weight:700;letter-spacing:2px;font-size:11px;
+  padding:5px 12px;text-transform:uppercase;
+}
+.head .hook{
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:none;border-top:3px solid var(--accent);border-radius:0;
+  padding:30px 60px 36px;font-size:18px;line-height:1.95;color:#f5f5f5;
+  position:relative;font-family:var(--sans);text-align:left;margin:0;text-indent:0;
+}
+.body{
+  background:#fff;border:none;border-radius:0;
+  padding:90px 60px 70px;margin:0 auto;max-width:780px;box-shadow:none;position:relative;
+}
+.body section{padding:0;margin-bottom:50px;}
+.body h2{
+  font-family:var(--serif);font-size:30px;font-weight:900;color:var(--ink);
+  letter-spacing:0;text-align:left;margin:0 0 24px;padding:0;border:none;position:relative;
+}
+.body h2::before{
+  content:'';display:block;width:60px;height:3px;background:var(--accent);margin-bottom:18px;
+}
+.body p{
+  font-family:var(--sans);font-size:17.5px;line-height:2.05;color:var(--ink);
+  text-align:left;text-indent:0;margin:0 0 22px;font-feature-settings:"palt" 1;
+}
+.body p strong{color:var(--accent);font-weight:700;}
+.body section:first-of-type p:first-of-type::first-letter{
+  font-family:var(--serif);font-size:5.2em;float:left;line-height:0.86;
+  padding:10px 16px 0 0;color:var(--accent);font-weight:900;
+}
+.book-card{
+  background:#fdf4e3;border-left:5px solid var(--gold);border-radius:0;
+  padding:22px 26px;margin:20px 0 30px;font-size:15.5px;line-height:1.9;
+  color:var(--ink);font-family:var(--sans);
+}
+.book-card .label{
+  font-family:var(--serif);font-weight:900;color:var(--gold-deep);
+  font-size:12px;letter-spacing:5px;margin-bottom:8px;display:block;text-transform:uppercase;
+}
+.book-card .title-zh{font-family:var(--serif);font-weight:900;color:var(--ink);font-size:18.5px;margin-bottom:2px;}
+.book-card .title-en{color:var(--ink-soft);font-style:italic;font-size:14px;margin-bottom:8px;}
+.book-card .meta-line{color:var(--ink-soft);font-size:13.5px;}
+.steps{
+  background:#fafafa;border:none;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:70px 60px;margin:0;
+}
+.steps-inner{max-width:780px;margin:0 auto;}
+.steps h2{
+  font-family:var(--serif);color:var(--ink);text-align:left;letter-spacing:0;
+  font-size:30px;font-weight:900;margin:0 0 32px;position:relative;
+}
+.steps h2::before{
+  content:'';display:block;width:60px;height:3px;background:var(--accent);margin-bottom:18px;
+}
+.step-card{
+  background:#fff;border:none;border-left:3px solid var(--accent);border-radius:0;
+  padding:30px 28px 24px 58px;margin-bottom:18px;position:relative;
+}
+.step-card .num{
+  position:absolute;left:-20px;top:24px;width:38px;height:38px;border-radius:50%;
+  background:var(--accent);color:#fff;font-family:var(--serif);font-weight:900;font-size:18px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 10px rgba(192,57,43,0.35);
+}
+.step-card h3{
+  font-family:var(--serif);font-size:21px;font-weight:900;color:var(--ink);
+  margin:0 0 10px;padding:0;
+}
+.step-card p{
+  font-family:var(--sans);font-size:16px;line-height:1.92;color:var(--ink-soft);margin:0 0 12px;
+}
+.step-card .say{
+  background:#fdf4e3;border-left:3px solid var(--gold);
+  padding:12px 16px;font-family:var(--serif);font-style:italic;
+  font-size:15.5px;color:var(--ink);margin-top:6px;border-radius:0 4px 4px 0;
+}
+.check-wrap{padding:60px 60px 0;max-width:780px;margin:0 auto;}
+.check{background:#fff;border:1.5px dashed var(--gold);border-radius:0;padding:26px 28px;}
+.check-title{
+  font-family:var(--serif);font-weight:900;color:var(--gold-deep);
+  letter-spacing:3px;margin-bottom:14px;font-size:14px;text-transform:uppercase;
+}
+.check ul{margin:0;padding-left:20px;}
+.check li{margin-bottom:8px;font-size:15.5px;color:var(--ink-soft);line-height:1.85;}
+.outro-wrap{padding:40px 60px 0;max-width:780px;margin:0 auto;}
+.outro{
+  background:linear-gradient(135deg,#f3e3c1 0%,#e6d29a 100%);
+  border:1px dashed var(--accent);border-radius:0;padding:42px 36px;color:var(--ink);position:relative;
+}
+.outro p{font-family:var(--sans);font-size:16.5px;line-height:2;color:#2a1808;margin:0 0 14px;}
+.outro .sign{
+  margin-top:24px;text-align:right;font-family:var(--serif);font-weight:900;
+  font-size:14px;color:#1a1004;letter-spacing:5px;
+}
+.spectrum-wrap{padding:40px 60px 0;max-width:780px;margin:0 auto;}
+.spectrum{background:#fffaed;border:1px solid var(--border);border-radius:3px;padding:36px 32px;text-align:center;}
+.spec-cta{
+  background:linear-gradient(135deg,#f3e3c1 0%,#e6d29a 100%);
+  border:1px dashed var(--accent);border-radius:2px;padding:30px 28px;
+}
+.spec-cta .lead{font-size:16px;line-height:1.95;margin:0 0 20px;color:var(--ink);}
+.cta-btn{
+  display:inline-block;background:var(--accent);color:#fffaed;border-radius:2px;
+  font-family:var(--serif);font-weight:900;letter-spacing:3px;
+  padding:14px 30px;text-decoration:none;font-size:15px;
+  box-shadow:0 8px 20px rgba(205,58,43,0.4);transition:transform .2s;
+}
+.cta-btn:hover{transform:translateY(-2px);}
+.sub-link{margin-top:14px;font-size:13px;color:var(--ink-soft);}
+.foot-wrap{padding:50px 60px 80px;max-width:780px;margin:0 auto;}
+.foot{
+  background:rgba(255,250,235,0.7);color:var(--ink-soft);
+  border:1px solid var(--border);border-radius:2px;padding:28px 26px;font-size:13px;line-height:1.85;
+}
+.foot strong{font-family:var(--serif);color:var(--espresso);letter-spacing:2px;font-weight:900;}
+.foot .tagline{
+  margin-top:16px;padding-top:14px;border-top:1px solid var(--border);
+  text-align:center;color:var(--gold-deep);font-family:var(--serif);font-weight:900;letter-spacing:5px;
+}
+@media(max-width:768px){
+  .head{min-height:90vh;}
+  .head h1{font-size:34px;padding:0 28px;}
+  .head .meta{padding:0 28px 24px;}
+  .head .hook{padding:24px 28px 28px;font-size:16px;}
+  .head .tag{top:22px;left:22px;font-size:10px;letter-spacing:3px;padding:6px 12px;}
+  .head::after{top:22px;right:22px;font-size:10px;letter-spacing:2px;padding:5px 10px;}
+  .body{padding:50px 24px 40px;}
+  .body h2{font-size:24px;}
+  .body p{font-size:16.5px;line-height:1.95;}
+  .body section:first-of-type p:first-of-type::first-letter{font-size:4em;padding:6px 12px 0 0;}
+  .steps{padding:50px 24px;}
+  .steps h2{font-size:24px;}
+  .step-card{padding:24px 20px 18px 46px;}
+  .step-card .num{left:-14px;top:18px;width:32px;height:32px;font-size:16px;}
+  .step-card h3{font-size:18px;}
+  .check-wrap,.outro-wrap,.spectrum-wrap{padding-left:24px;padding-right:24px;}
+  .outro{padding:32px 24px;}
+  .spectrum{padding:28px 22px;}
+  .foot-wrap{padding:40px 24px 60px;}
+  .book-card{padding:18px 20px;font-size:15px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="head">
+  <div class="tag">覺知閱讀 ｜ 書籍推薦</div>
+  <h1>『出現』比『管教』更有力——讓 3-6 歲爸媽鬆口氣的一本腦科學書</h1>
+  <div class="meta">
+    <span class="datebadge">2026-05-19 ｜ 週二</span>
+    <span class="age">3-6 歲</span>
+    <span>書籍推薦 · 安全依附</span>
+  </div>
+  <div class="hook">你以為要當「懂教養」的父母才合格——但腦科學權威 Daniel Siegel 翻遍研究告訴你：3-6 歲孩子要的，不是更聰明、更會教的爸媽，而是一個「會出現」的人。簡單到讓所有完美主義媽媽鬆一口氣，也深到要練上一輩子。</div>
+</header>
+
+<article class="body">
+
+  <section>
+    <h2>為什麼今天要讀這本書？</h2>
+    <p>覺知啟蒙班的翔翔今年 5 歲，會在課堂上突然抱住老師大腿，又會主動安慰哭泣的同學。翔媽是家長學堂的老學員，前陣子課後紅著眼問：「為什麼我天天讀教養書、上覺知課，回家還是會吼小孩？是不是只有我做不到？」</p>
+    <p>那一刻，學苑老師沒有教她技巧，反而推薦了一本書——《<strong>從陪伴開始的全腦教養</strong>》。書裡只講一件事：3-6 歲孩子真正需要的，不是「答對所有題目」的爸媽，而是「會出現」的那個大人。出現，不是 24 小時黏著，是<strong>他需要的時候，你在</strong>。</p>
+  </section>
+
+  <section>
+    <h2>作者是誰？這本書在說什麼</h2>
+    <div class="book-card">
+      <span class="label">本日推薦</span>
+      <div class="title-zh">《從陪伴開始的全腦教養》</div>
+      <div class="title-en">The Power of Showing Up</div>
+      <div class="meta-line">作者：Daniel J. Siegel ／ Tina Payne Bryson．譯者：崔宏立．出版：地平線文化（漫遊者）</div>
+    </div>
+    <p>Daniel Siegel 是 UCLA 醫學院精神科臨床教授，當代腦神經教養的代表人物；Tina Payne Bryson 是兒童發展博士。兩人合著的《教孩子跟情緒做朋友》暢銷全球 31 國、超過 200 萬冊。</p>
+    <p>這本書把幾十年的依附理論濃縮成<strong>四個英文字</strong>：<strong>Safe（安全）、Seen（被看見）、Soothed（被安撫）、Secure（有安全感）</strong>，簡稱「4S」。對 3-6 歲家長特別溫柔——它把那段「孩子最黏、爸媽最累」的時期，重新定義成「安全感的黃金期」。</p>
+  </section>
+
+  <section>
+    <h2>3 個讀完就能帶走的觀念</h2>
+    <p><strong>1. 安全（Safe）：不需要完美，只要「不嚇我」</strong>。書裡提醒：吼一次、罵一次，孩子大腦的警報系統就被啟動。長期下來，他學到的不是「我要更乖」，而是「我要會閃」。安全感的反面不是危險，是不可預測——你今天笑、明天炸，他就把自己縮起來。</p>
+    <p><strong>2. 被看見（Seen）：不是看到，是進入他的內在</strong>。3 歲在玄關哭、5 歲搶玩具、6 歲忽然賴皮——這些都不是「症狀」，是訊號。被看見的孩子，會內化一個聲音：「有人懂我在發生什麼。」這個聲音，會跟著他到 30 歲。</p>
+    <p><strong>3. 被安撫（Soothed）：被陪過低谷，才會走出低谷</strong>。很多大人怕「安撫太多會寵壞」，腦科學的答案剛好相反——被穩穩接住情緒的孩子，神經系統會「學會」如何冷靜，長大才有能力自己處理壓力。</p>
+  </section>
+
+</article>
+
+<section class="steps">
+  <div class="steps-inner">
+    <h2>讀完今天就能做的 3 件事</h2>
+
+    <div class="step-card">
+      <div class="num">1</div>
+      <h3>把「等等、快點」減半，多一次「我看見你了」</h3>
+      <p>留意今天對孩子說了幾次「等等」「快點」「不要這樣」。明天，把其中一半換成「我看見你了」「我知道你想要這個」。先看見，再處理。</p>
+      <div class="say">「我看見你今天很想再玩一下下。等等吃完飯，我們再玩 10 分鐘好不好？」</div>
+    </div>
+
+    <div class="step-card">
+      <div class="num">2</div>
+      <h3>蹲下來 10 秒，先看眼睛再開口</h3>
+      <p>Siegel 反覆強調：孩子要的不是更多話，是先被靠近。下次他鬧、哭、卡住時，先蹲下、看他眼睛、深呼吸一次——再決定要說什麼。10 秒之後，常常根本不用說那麼多。</p>
+      <div class="say">（不說話，只是蹲下，把手放在他的小肩膀上。）</div>
+    </div>
+
+    <div class="step-card">
+      <div class="num">3</div>
+      <h3>不急著修，先在旁邊一下</h3>
+      <p>看到孩子難過就想快點解決——買冰淇淋、轉移注意力、講道理，是最常踩的雷。先別解決，陪一下，讓他知道「難過也可以」。被陪過的孩子，下一次會更快回到自己。</p>
+      <div class="say">「你現在很難過，沒關係。媽媽在這裡，等你想說的時候我聽。」</div>
+    </div>
+  </div>
+</section>
+
+<div class="check-wrap">
+  <div class="check">
+    <div class="check-title">🌿 3 秒鐘覺知對話 · 自我檢核</div>
+    <ul>
+      <li>我現在怎麼了？（我是不是又掉進「我不夠好」的內心戲？）</li>
+      <li>他現在是什麼狀態？（他在發出訊號，還是只是累了、餓了？）</li>
+      <li>我要反應，還是回應？（先「出現」一下，再決定怎麼說。）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="outro-wrap">
+  <section class="outro">
+    <p>讀完這本書最大的禮物，不是學到 4S，而是被允許——你不需要更會教，你需要的是在他需要你的時候，真的在那裡。</p>
+    <p>今晚 1 分鐘練習：閉上眼，回想今天有沒有一個小小的時刻，你「真的出現」過？可能只是 10 秒的眼神交會、一次蹲下抱抱、一句「我看見你」。記住那個時刻，明天再多做一次。</p>
+    <p>3-6 歲不會太久，但你「出現」過的那幾秒，會跟著他一輩子。</p>
+    <div class="sign">Written by K12覺知素養教育學苑</div>
+  </section>
+</div>
+
+<div class="spectrum-wrap">
+  <div class="spectrum">
+    <div class="spec-cta">
+      <p class="lead">文章裡的翔翔，會主動安慰哭泣同學、也容易在課堂上抱住老師——是典型的<strong>橙色光譜</strong>接收世界的方式：敏感、溫柔、需要被靠近多一點才安心。<br>你家孩子是哪一色？</p>
+      <a href="https://zway-education.github.io/mindspectrum/" target="_blank" class="cta-btn">👉 去測心智光譜</a>
+      <div class="sub-link">3 分鐘線上測評，測出你的教養風格</div>
+    </div>
+  </div>
+</div>
+
+<div class="foot-wrap">
+  <div class="foot">
+    <div>
+      <strong>台灣展威文化教育股份有限公司</strong><br>
+      高雄市鼓山區美術東三路 86 號　｜　07-2693525　｜　傳真 07-2693526　｜　admin@z-way-edu.com　｜　LINE：@zwayedu
+    </div>
+    <div style="margin-top:10px">
+      <strong>社團法人中華覺知教育關懷協會（CSECA）</strong><br>
+      高雄市鼓山區美術東三路 86 號 4 樓　｜　07-2693525　｜　統編：72188904　｜　contact@z-way-edu.com<br>
+      服務時間：週一至週五 9:00–18:00
+    </div>
+    <div class="tagline">
+      覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊
+    </div>
+  </div>
+</div>
+
+</div>
+<style>
+.share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(59,89,152,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.share-fab:hover{background:rgba(59,89,152,1);transform:scale(1.08);}
+.share-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#3b5998;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.share-fab:hover::after{opacity:1;}
+@media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+.home-fab{position:fixed;bottom:22px;right:78px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(217,119,87,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.home-fab:hover{background:rgba(217,119,87,1);transform:scale(1.08);}
+.home-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.home-fab::after{content:'回首頁';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#a85a31;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.home-fab:hover::after{opacity:1;}
+@media(max-width:600px){.home-fab{bottom:16px;right:64px;width:42px;height:42px;}.home-fab::after{display:none;}}
+</style>
+<a class="share-fab" href="parenting_essence_2026-05-19_share.png" download title="下載 IG/FB 分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.2a3.7 3.7 0 1 1 0-7.4 3.7 3.7 0 0 1 0 7.4zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
+</a>
+<a class="home-fab" href="../" title="回首頁">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l-9 8h2.5v9h13v-9H21L12 3zm0 2.7L18.5 11H17v8h-3v-5h-4v5H7v-8H5.5L12 5.7z"/></svg>
+</a>
+<!-- ZW_TOOLBAR_BLOCK v1 — 覺知學苑右側社群按鈕 + 參訪/瀏覽計數器。單一真實來源：本檔。post_essence.py 與批次腳本都讀這份注入到 </body> 前。idempotent 標記字串：zw-social -->
+<style>
+/* === 覺知學苑工具列：右側社群按鈕 + 計數器 === */
+.zw-social{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:9990;display:flex;flex-direction:column;gap:9px;padding:11px 9px;background:rgba(255,255,255,0.58);border-radius:14px 0 0 14px;box-shadow:0 4px 18px rgba(0,0,0,0.13);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);}
+.zw-social a{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.22);transition:transform .16s;position:relative;}
+.zw-social a:hover{transform:scale(1.12);}
+.zw-social a svg{width:22px;height:22px;fill:#fff;display:block;}
+.zw-social .zw-web{background:#fff;overflow:hidden;}
+.zw-social .zw-web img{width:100%;height:100%;object-fit:contain;display:block;}
+.zw-social .zw-fb{background:#1877f2;}
+.zw-social .zw-line{background:#06c755;}
+.zw-social .zw-map{background:#ea4335;}
+.zw-social a::after{content:attr(data-label);position:absolute;right:54px;top:50%;transform:translateY(-50%);background:#2a1810;color:#fff;font-size:12px;padding:6px 11px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.zw-social a:hover::after{opacity:1;}
+.zw-counter{text-align:center;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:13px;color:#8a7a5f;padding:22px 16px 32px;letter-spacing:.5px;line-height:1.8;}
+.zw-counter .zw-dot{margin:0 9px;color:#c9bfa6;}
+.zw-counter b{color:#c0392b;font-weight:700;font-variant-numeric:tabular-nums;}
+.zw-counter .zw-art{color:#2d4a3e;}
+.zw-counter .zw-art b{color:#2d4a3e;}
+  /* 修正：頁尾標語(.foot .tagline)過長換行 → 字距字級縮小，桌機不換行 */
+  .foot .tagline{font-size:12px !important;letter-spacing:1px !important;white-space:nowrap !important;}
+@media(max-width:600px){
+  .foot .tagline{white-space:normal !important;font-size:10.5px !important;letter-spacing:0 !important;}
+
+  .zw-social{gap:6px;padding:7px 5px;border-radius:11px 0 0 11px;}
+  .zw-social a{width:38px;height:38px;}
+  .zw-social a svg{width:19px;height:19px;}
+  .zw-social a::after{display:none;}
+  .zw-counter{font-size:12px;padding:18px 14px 26px;}
+  .zw-counter .zw-dot{margin:0 5px;}
+}
+</style>
+<nav class="zw-social" aria-label="覺知學苑連結">
+  <a class="zw-web" href="https://z-way-edu.com/" target="_blank" rel="noopener" data-label="覺知官網">
+    <img src="https://zway-education.github.io/education-dailynews/zw-logo.png" alt="覺知官網" loading="lazy">
+  </a>
+  <a class="zw-fb" href="https://www.facebook.com/K12KHART/" target="_blank" rel="noopener" data-label="Facebook 粉專">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.9h-2.34V22c4.78-.76 8.43-4.92 8.43-9.94z"/></svg>
+  </a>
+  <a class="zw-line" href="https://lin.ee/zHOtaIm" target="_blank" rel="noopener" data-label="LINE@ 諮詢">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3.5c-5.24 0-9.5 3.44-9.5 7.68 0 3.8 3.38 6.99 7.94 7.59.31.07.73.2.84.47.1.24.06.62.03.86l-.13.81c-.04.24-.19.94.83.51 1.02-.43 5.48-3.23 7.48-5.53 1.38-1.51 2.01-3.05 2.01-5.21 0-4.24-4.26-7.68-9.5-7.68z"/></svg>
+  </a>
+  <a class="zw-map" href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%9B%84%E5%B8%82%E9%BC%93%E5%B1%B1%E5%8D%80%E7%BE%8E%E8%A1%93%E6%9D%B1%E4%B8%89%E8%B7%AF86%E8%99%9F" target="_blank" rel="noopener" data-label="Google 地圖">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+  </a>
+</nav>
+<div class="zw-counter">
+  <span class="zw-art" id="zwArtWrap" style="display:none">本篇已被閱讀 <b id="zwArt">&#8230;</b> 次<span class="zw-dot">·</span></span>累計參訪 <b id="zwVisits">&#8230;</b> 人次<span class="zw-dot">·</span>累計瀏覽 <b id="zwViews">&#8230;</b> 次
+</div>
+<script>
+(function(){
+  var NS='k12kh-essence';
+  function show(id,v){var e=document.getElementById(id);if(e&&typeof v==='number'){e.textContent=v.toLocaleString('en-US');}}
+  fetch('https://abacus.jasoncameron.dev/hit/'+NS+'/views').then(function(r){return r.json();}).then(function(d){show('zwViews',d.value);}).catch(function(){});
+  var visited=false;
+  try{visited=!!sessionStorage.getItem('zw_v');if(!visited){sessionStorage.setItem('zw_v','1');}}catch(e){}
+  fetch('https://abacus.jasoncameron.dev/'+(visited?'get':'hit')+'/'+NS+'/visits').then(function(r){return r.json();}).then(function(d){show('zwVisits',d.value);}).catch(function(){});
+  var m=location.pathname.match(/parenting_(?:essence|insight)_(\d{4})-(\d{2})-(\d{2})/);
+  if(m){
+    var key='p'+m[1]+m[2]+m[3];
+    var w=document.getElementById('zwArtWrap'); if(w){w.style.display='';}
+    fetch('https://abacus.jasoncameron.dev/hit/'+NS+'/'+key).then(function(r){return r.json();}).then(function(d){show('zwArt',d.value);}).catch(function(){});
+  }
+})();
+</script>
+<!-- /ZW_TOOLBAR_BLOCK -->
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
