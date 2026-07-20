@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="share-palette" content="honey">
+<meta name="share-title" content="42 國研究：你不是不愛，是真的累壞了">
+<title>覺知趨勢｜你不是不愛孩子，是真的累壞了——來自 42 國的「教養倦怠」研究 — 2026-05-17</title>
+<style>
+  :root {
+    --brand: #c08940;
+    --brand-deep: #8a5e1f;
+    --accent: #c0392b;
+    --accent-deep: #8a2716;
+    --accent-light: #fbeed1;
+    --gold: #c08940;
+    --gold-deep: #8a5e1f;
+    --ink: #2a1810;
+    --ink-soft: #5a4f44;
+    --bg: #faf2dc;
+    --paper: #fffaed;
+    --card: #fffaed;
+    --border: #e8ddc8;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    background: var(--bg); color: var(--ink);
+    line-height: 1.85; padding: 32px 20px 80px;
+  }
+  .wrapper { max-width: 780px; margin: 0 auto; }
+
+  /* 頁首卡 */
+  .head {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    border-radius: 20px; padding: 40px 36px 36px;
+    color: #fff; margin-bottom: 28px;
+    position: relative; overflow: hidden;
+  }
+  .head-svg { position: absolute; top: 0; right: 0; width: 220px; opacity: 0.18; pointer-events: none; }
+  .head-tag {
+    display: inline-block;
+    background: rgba(255,250,237,0.22); color: #fffaed;
+    border: 1px solid rgba(255,250,237,0.28);
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+    padding: 3px 12px; border-radius: 20px; margin-bottom: 16px;
+  }
+  .head h1 {
+    font-size: clamp(1.3rem, 3.5vw, 1.72rem);
+    font-weight: 800; line-height: 1.45; margin-bottom: 18px;
+  }
+  .head-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+  .head-meta span {
+    background: rgba(255,255,255,0.14); border-radius: 30px;
+    font-size: 0.78rem; padding: 3px 12px; color: rgba(255,255,255,0.88);
+  }
+  .head-hook {
+    font-size: 1.03rem; color: #fbeed1; font-weight: 600;
+    border-left: 3px solid #fbeed1; padding-left: 14px; line-height: 1.6;
+  }
+
+  /* 研究資訊卡 */
+  .profile-card {
+    background: var(--card); border-radius: 14px;
+    border-left: 5px solid var(--accent);
+    padding: 24px 26px; margin-bottom: 24px;
+    border: 1px solid var(--border); border-left-width: 5px;
+  }
+  .profile-name { font-size: 1.3rem; font-weight: 800; color: var(--brand-deep); margin-bottom: 6px; }
+  .profile-title { font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 14px; letter-spacing: 0.03em; }
+  .profile-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .profile-tag {
+    background: var(--accent-light); color: var(--brand-deep);
+    border-radius: 20px; font-size: 0.78rem; font-weight: 600; padding: 3px 12px;
+  }
+
+  /* 文章卡 */
+  .body {
+    background: var(--card); border-radius: 16px;
+    padding: 36px 32px; border: 1px solid var(--border); margin-bottom: 24px;
+  }
+  .body section { margin-bottom: 36px; }
+  .body section:last-child { margin-bottom: 0; }
+  .body h2 {
+    font-size: 1.08rem; font-weight: 800; color: var(--brand-deep);
+    border-left: 4px solid var(--accent); padding-left: 12px;
+    margin-bottom: 16px; line-height: 1.5;
+  }
+  .body p { font-size: 1.0rem; color: var(--ink-soft); margin-bottom: 14px; }
+  .body p:last-child { margin-bottom: 0; }
+  .body strong { color: var(--ink); }
+
+  /* 3 個觀念區塊 */
+  .insights { margin-bottom: 24px; }
+  .insights-title {
+    font-size: 1.05rem; font-weight: 800; color: var(--brand-deep);
+    text-align: center; margin-bottom: 20px;
+  }
+  .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 18px; }
+  .insight-card {
+    background: var(--card); border: 1.5px solid var(--border);
+    border-radius: 14px; padding: 22px 20px 18px;
+  }
+  .insight-num {
+    width: 36px; height: 36px; background: var(--brand); color: #fff;
+    border-radius: 50%; font-size: 1rem; font-weight: 800;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 12px;
+  }
+  .insight-name { font-size: 0.92rem; font-weight: 800; color: var(--brand-deep); margin-bottom: 8px; }
+  .insight-body { font-size: 0.93rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 12px; }
+  .insight-example {
+    background: var(--accent-light); border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 10px 14px;
+    font-size: 0.88rem; color: var(--ink); line-height: 1.65;
+  }
+  .insight-example-label {
+    font-size: 0.75rem; font-weight: 700; color: var(--accent);
+    letter-spacing: 0.08em; margin-bottom: 4px;
+  }
+
+  /* 覺知連結卡 */
+  .awareness-link {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    border-radius: 16px; padding: 32px 32px 28px; margin-bottom: 24px;
+  }
+  .awareness-link h2 { font-size: 1.08rem; font-weight: 800; color: #fffaed; margin-bottom: 14px; }
+  .awareness-link p { font-size: 1.0rem; line-height: 1.85; margin-bottom: 14px; color: #fffaed; }
+  .awareness-link p:last-of-type { margin-bottom: 20px; }
+  .awareness-sig { font-size: 0.88rem; font-weight: 700; color: #fffaed; border-top: 1px solid rgba(255,250,237,0.35); padding-top: 14px; }
+
+  /* 3 秒鐘自我檢核 */
+  .checkin { background: var(--card); border: 2px solid var(--brand); border-radius: 16px; padding: 28px 28px 24px; margin-bottom: 24px; }
+  .checkin-title { font-size: 1.0rem; font-weight: 800; color: var(--brand); text-align: center; margin-bottom: 6px; }
+  .checkin-sub { font-size: 0.82rem; color: var(--ink-soft); text-align: center; margin-bottom: 20px; }
+  .checkin-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .checkin-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; color: var(--ink); }
+  .checkin-num { flex-shrink: 0; width: 28px; height: 28px; background: var(--brand); color: #fff; border-radius: 50%; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+  /* 頁尾 */
+  .foot { background: var(--ink); border-radius: 14px; padding: 30px 28px; color: rgba(255,255,255,0.8); font-size: 0.82rem; line-height: 1.9; }
+  .foot-brand { font-size: 0.95rem; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+  .foot-info { margin-bottom: 16px; }
+  .foot-tagline { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 14px; color: rgba(255,255,255,0.55); font-size: 0.8rem; text-align: center; letter-spacing: 0.1em; }
+
+  @media (max-width: 560px) {
+    .body { padding: 24px 18px; }
+    .head { padding: 28px 22px 26px; }
+    .awareness-link { padding: 24px 20px; }
+    .insights-grid { grid-template-columns: 1fr; }
+  }
+
+
+/* PARENTING_ESSENCE_DESIGN_V13 — insight: intentionally bare, no v13 overrides (Hero is gradient, not photo) */
+</style>
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="覺知趨勢｜你不是不愛孩子，是真的累壞了——來自 42 國的「教養倦怠」研究">
+  <meta property="og:description" content="心理學近年用一個新名字描述母親節後仍回不來的那個空：教養倦怠。">
+  <meta property="og:image" content="https://zway-education.github.io/education-dailynews/parenting_insight_2026-05-17_share.png">
+  <meta property="og:url" content="https://zway-education.github.io/education-dailynews/parenting_insight_2026-05-17.html">
+  <meta property="og:site_name" content="覺知教養．每日精華">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="覺知趨勢｜你不是不愛孩子，是真的累壞了——來自 42 國的「教養倦怠」研究">
+  <meta name="twitter:description" content="心理學近年用一個新名字描述母親節後仍回不來的那個空：教養倦怠。">
+  <meta name="twitter:image" content="https://zway-education.github.io/education-dailynews/parenting_insight_2026-05-17_share.png">
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- 頁首卡 -->
+  <header class="head">
+    <svg class="head-svg" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- 蠟燭 + 燭芯漸弱 + 心電圖 幾何插畫 -->
+      <rect x="92" y="78" width="36" height="86" rx="6" fill="rgba(192,137,64,0.22)" stroke="#c08940" stroke-width="2"/>
+      <path d="M110 78 C 106 64, 116 60, 110 46" fill="none" stroke="#c08940" stroke-width="2.5" stroke-linecap="round"/>
+      <ellipse cx="110" cy="42" rx="5" ry="9" fill="rgba(192,137,64,0.55)"/>
+      <!-- 下方代表「情緒拉平」的心電圖線 -->
+      <polyline points="20,170 50,170 60,150 70,185 80,150 95,170 130,170 140,158 150,180 160,170 200,170"
+                fill="none" stroke="#c08940" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- 星點 -->
+      <circle cx="184" cy="48" r="4.5" fill="rgba(192,137,64,0.55)"/>
+      <circle cx="34" cy="58" r="3.5" fill="rgba(192,137,64,0.4)"/>
+      <circle cx="200" cy="30" r="3" fill="rgba(192,137,64,0.35)"/>
+    </svg>
+
+    <div class="head-tag">覺知趨勢 ｜ 最新研究</div>
+    <h1>你不是不愛孩子，是真的累壞了：<br>來自 42 國的「教養倦怠」研究</h1>
+    <div class="head-meta">
+      <span>2026-05-17 週日</span>
+      <span>趨勢研究</span>
+      <span>心理學 × SEL</span>
+      <span>適用 0-18 歲家長</span>
+    </div>
+    <div class="head-hook">母親節已經過完一週了，可是你的心好像還沒回來。<br>心理學家在過去十年發現：那個感覺，有名字。</div>
+  </header>
+
+  <!-- 研究資訊卡 -->
+  <div class="profile-card">
+    <div class="profile-name">教養倦怠 Parental Burnout</div>
+    <div class="profile-title">由比利時魯汶大學（UCLouvain）Isabelle Roskam &amp; Moïra Mikolajczak 提出 ／《教養倦怠量表》（PBA）／ 涵蓋 42 國的國際研究（IIPB）</div>
+    <div class="profile-tags">
+      <span class="profile-tag">慢性心理耗竭</span>
+      <span class="profile-tag">情感疏離</span>
+      <span class="profile-tag">家長心理健康</span>
+      <span class="profile-tag">2017 起持續發表</span>
+    </div>
+  </div>
+
+  <!-- 文章本文 -->
+  <article class="body">
+
+    <section>
+      <h2>母親節之後，那個沒人說出口的低潮</h2>
+      <p>母親節已經過完一週了，但很多媽媽（和爸爸）心裡，其實還沒回來。</p>
+      <p>你不是不愛孩子。你還是會起床弄早餐、簽聯絡簿、晚上盯功課、夜裡幫他蓋被子——所有事都還能做。但某一個瞬間，你忽然發現：<strong>我已經對這些事，沒有感覺了</strong>。</p>
+      <p>這不是「累」兩個字可以帶過去的話。心理學近年正在用一個新名字描述它——<strong>教養倦怠（Parental Burnout）</strong>。它不是脆弱，也不是不夠愛，是一個被低估的真實狀態。</p>
+    </section>
+
+    <section>
+      <h2>這份研究是誰做的、在說什麼</h2>
+      <p>這個概念由比利時魯汶大學（UCLouvain）的心理學家 Isabelle Roskam 與 Moïra Mikolajczak 提出，並從 2017 年起發展出可量測的工具《教養倦怠量表》（Parental Burnout Assessment, PBA）。</p>
+      <p>她們發現，教養倦怠不是普通的「帶小孩好累」，而是一種特定型態的慢性心理耗竭，包含三個核心症狀：<strong>極度疲憊、情感上漸漸與孩子拉開距離、覺得自己已經不是過去那個喜歡當父母的自己</strong>。</p>
+      <p>更受矚目的是 2018 年起的「國際教養倦怠研究」（IIPB），涵蓋 42 個國家、超過 1 萬 7 千名家長。研究結論顛覆了許多人的直覺：<strong>越是「個人主義」、強調家長要做最好的西方國家，倦怠比率反而最高</strong>。亞洲華人圈過去整體分數較低，但近十年正在快速追上。</p>
+    </section>
+
+    <section>
+      <h2>為什麼這件事在華人家長身上更值得停下來看</h2>
+      <p>你可能會說：「我們不是西方那種要求要很完美的家長啊。」可是研究者在近年訪談裡反覆提醒：教養倦怠真正的引爆點，不是外在期待，而是<strong>你心裡那個對「好媽媽 / 好爸爸」的版本，越完整、越具體、越無法妥協，倦怠的風險就越高</strong>。</p>
+      <p>而台灣這一代家長剛好踩進一個歷史夾縫：上一代用體罰打罵教，我們發誓要做完全相反的版本——要溫柔、要傾聽、要不吼不打、要陪閱讀、要懂情緒、要會 SEL、要能正向回應。<strong>問題不是這些是錯的；問題是當所有都要做到，那個版本只能由一個人撐。</strong></p>
+      <p>研究中最讓人停下來的一句話，我想留給你：「<strong>教養倦怠的家長，不是不愛孩子，是耗盡了愛的能量。</strong>」</p>
+    </section>
+
+  </article>
+
+  <!-- 3 個觀念 -->
+  <section class="insights">
+    <div class="insights-title">▌ 今天就能帶走的 3 個觀念</div>
+    <div class="insights-grid">
+
+      <div class="insight-card">
+        <div class="insight-num">1</div>
+        <div class="insight-name">「我累」和「我倦怠」不是同一件事</div>
+        <div class="insight-body">累，是睡一覺會好；倦怠，是睡再多也回不來。倦怠最早的訊號不是疲憊，是「情感疏離」——你會發現自己對孩子的喜悅沒反應、連他生病的擔心也鈍了。看見這一點，是停損的第一步。</div>
+        <div class="insight-example">
+          <div class="insight-example-label">今天可以問自己</div>
+          上一次孩子湊到我身邊講學校的事，我是「真的有在聽」，還是「身體在場、人不在」？
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-num">2</div>
+        <div class="insight-name">完美主義，是最大的隱形風險因子</div>
+        <div class="insight-body">研究發現：對自己當父母的標準訂得越高、越無法接受「夠好」的家長，越容易倦怠。那不一定是壞事的高標準——更常是「把所有事都扛在自己身上」的高標準。</div>
+        <div class="insight-example">
+          <div class="insight-example-label">你可以這樣問</div>
+          這件事，是真的只有我能做？還是「我覺得只有我會做得讓我安心」？
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-num">3</div>
+        <div class="insight-name">把「我自己」找回來，是最有效的處方</div>
+        <div class="insight-body">研究指出，最有效的介入不是技巧訓練，而是讓家長重新接觸「自己這個人」。一週至少有一段不是「某某人媽媽 / 爸爸」的時間：讀一本跟教養無關的書、看一部跟孩子無關的電影、跟一個只認識你本人的朋友吃飯。</div>
+        <div class="insight-example">
+          <div class="insight-example-label">小小自我測試</div>
+          上一次有人問「你最近在想什麼」，我有答案嗎？如果想不出來，那是身體在跟你說話。
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 覺知連結卡 -->
+  <div class="awareness-link">
+    <h2>從「教養倦怠」研究回看「先懂心，再懂教」</h2>
+    <p>研究者強調的「先承認自己到極限」，其實就是覺知教育最一開始要練的事：<strong>先看見自己的狀態，而不是急著去處理孩子的問題</strong>。</p>
+    <p>3 秒鐘覺知對話之所以放在「開口之前」，不是為了話講得更漂亮，是因為那 3 秒鐘，是你重新認回「我是誰」的時間——我現在是疲憊的我、是焦慮的我、還是已經卡在自動模式裡的我？</p>
+    <p>倦怠不是失敗，倦怠是身體在替你說：「該停下來看見自己了。」這份看見，才是回到孩子身邊的開始。</p>
+    <div class="awareness-sig">Written by K12覺知素養教育學苑</div>
+  </div>
+
+  <!-- 3 秒鐘覺知對話自我檢核 -->
+  <div class="checkin">
+    <div class="checkin-title">✦ 3 秒鐘覺知對話・自我檢核</div>
+    <div class="checkin-sub">今晚睡前，輕聲問自己這三個問題</div>
+    <ul class="checkin-list">
+      <li>
+        <span class="checkin-num">1</span>
+        <span><strong>我現在怎麼了？</strong>——這一刻看著孩子，我心裡的感覺是熱的，還是已經麻了？</span>
+      </li>
+      <li>
+        <span class="checkin-num">2</span>
+        <span><strong>我是「累」，還是「倦怠」？</strong>——睡一覺會好嗎？還是已經睡了好幾天，也回不來？</span>
+      </li>
+      <li>
+        <span class="checkin-num">3</span>
+        <span><strong>我下一個能照顧自己的時刻，在哪裡？</strong>——不是等到孩子睡了，而是今天，我可以給自己 10 分鐘。</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 頁尾 -->
+  <div class="foot">
+  <div>
+    <strong>台灣展威文化教育股份有限公司</strong><br>
+    高雄市鼓山區美術東三路 86 號　｜　07-2693525　｜　傳真 07-2693526　｜　admin@z-way-edu.com　｜　LINE：@zwayedu
+  </div>
+  <div style="margin-top:10px">
+    <strong>社團法人中華覺知教育關懷協會（CSECA）</strong><br>
+    高雄市鼓山區美術東三路 86 號 4 樓　｜　07-2693525　｜　統編：72188904　｜　contact@z-way-edu.com<br>
+    服務時間：週一至週五 9:00–18:00
+  </div>
+  <div class="foot-tagline">
+    覺察己心　・　知行合一　｜　先懂心　・　再懂教　｜　蒙以養正　・　老而有尊
+  </div>
+</div>
+</div>
+
+<style>
+.share-fab{position:fixed;bottom:22px;right:22px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(138,94,31,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.share-fab:hover{background:rgba(138,94,31,1);transform:scale(1.08);}
+.share-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.share-fab::after{content:'下載 IG/FB 分享圖';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#8a5e1f;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.share-fab:hover::after{opacity:1;}
+@media(max-width:600px){.share-fab{bottom:16px;right:16px;width:42px;height:42px;}.share-fab::after{display:none;}}
+.home-fab{position:fixed;bottom:22px;right:78px;z-index:9999;width:46px;height:46px;border-radius:50%;background:rgba(217,119,87,0.78);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 3px 14px rgba(0,0,0,0.18);transition:transform .2s,background .2s;border:1px solid rgba(255,255,255,0.25);}
+.home-fab:hover{background:rgba(217,119,87,1);transform:scale(1.08);}
+.home-fab svg{width:21px;height:21px;fill:#fff;display:block;}
+.home-fab::after{content:'回首頁';position:absolute;right:56px;top:50%;transform:translateY(-50%);background:#a85a31;color:#fff;font-size:12px;padding:6px 12px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.home-fab:hover::after{opacity:1;}
+@media(max-width:600px){.home-fab{bottom:16px;right:64px;width:42px;height:42px;}.home-fab::after{display:none;}}
+</style>
+<a class="share-fab" href="parenting_insight_2026-05-17_share.png" download title="下載 IG/FB 分享圖">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.2a3.7 3.7 0 1 1 0-7.4 3.7 3.7 0 0 1 0 7.4zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
+</a>
+<a class="home-fab" href="../" title="回首頁">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l-9 8h2.5v9h13v-9H21L12 3zm0 2.7L18.5 11H17v8h-3v-5h-4v5H7v-8H5.5L12 5.7z"/></svg>
+</a>
+
+<!-- ZW_TOOLBAR_BLOCK v1 — 覺知學苑右側社群按鈕 + 參訪/瀏覽計數器。單一真實來源：本檔。post_essence.py 與批次腳本都讀這份注入到 </body> 前。idempotent 標記字串：zw-social -->
+<style>
+/* === 覺知學苑工具列：右側社群按鈕 + 計數器 === */
+.zw-social{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:9990;display:flex;flex-direction:column;gap:9px;padding:11px 9px;background:rgba(255,255,255,0.58);border-radius:14px 0 0 14px;box-shadow:0 4px 18px rgba(0,0,0,0.13);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);}
+.zw-social a{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.22);transition:transform .16s;position:relative;}
+.zw-social a:hover{transform:scale(1.12);}
+.zw-social a svg{width:22px;height:22px;fill:#fff;display:block;}
+.zw-social .zw-web{background:#fff;overflow:hidden;}
+.zw-social .zw-web img{width:100%;height:100%;object-fit:contain;display:block;}
+.zw-social .zw-fb{background:#1877f2;}
+.zw-social .zw-line{background:#06c755;}
+.zw-social .zw-map{background:#ea4335;}
+.zw-social a::after{content:attr(data-label);position:absolute;right:54px;top:50%;transform:translateY(-50%);background:#2a1810;color:#fff;font-size:12px;padding:6px 11px;border-radius:6px;white-space:nowrap;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;opacity:0;pointer-events:none;transition:opacity .15s;}
+.zw-social a:hover::after{opacity:1;}
+.zw-counter{text-align:center;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:13px;color:#8a7a5f;padding:22px 16px 32px;letter-spacing:.5px;line-height:1.8;}
+.zw-counter .zw-dot{margin:0 9px;color:#c9bfa6;}
+.zw-counter b{color:#c0392b;font-weight:700;font-variant-numeric:tabular-nums;}
+.zw-counter .zw-art{color:#2d4a3e;}
+.zw-counter .zw-art b{color:#2d4a3e;}
+  /* 修正：頁尾標語(.foot .tagline)過長換行 → 字距字級縮小，桌機不換行 */
+  .foot .tagline{font-size:12px !important;letter-spacing:1px !important;white-space:nowrap !important;}
+@media(max-width:600px){
+  .foot .tagline{white-space:normal !important;font-size:10.5px !important;letter-spacing:0 !important;}
+
+  .zw-social{gap:6px;padding:7px 5px;border-radius:11px 0 0 11px;}
+  .zw-social a{width:38px;height:38px;}
+  .zw-social a svg{width:19px;height:19px;}
+  .zw-social a::after{display:none;}
+  .zw-counter{font-size:12px;padding:18px 14px 26px;}
+  .zw-counter .zw-dot{margin:0 5px;}
+}
+</style>
+<nav class="zw-social" aria-label="覺知學苑連結">
+  <a class="zw-web" href="https://z-way-edu.com/" target="_blank" rel="noopener" data-label="覺知官網">
+    <img src="https://zway-education.github.io/education-dailynews/zw-logo.png" alt="覺知官網" loading="lazy">
+  </a>
+  <a class="zw-fb" href="https://www.facebook.com/K12KHART/" target="_blank" rel="noopener" data-label="Facebook 粉專">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.9h-2.34V22c4.78-.76 8.43-4.92 8.43-9.94z"/></svg>
+  </a>
+  <a class="zw-line" href="https://lin.ee/zHOtaIm" target="_blank" rel="noopener" data-label="LINE@ 諮詢">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3.5c-5.24 0-9.5 3.44-9.5 7.68 0 3.8 3.38 6.99 7.94 7.59.31.07.73.2.84.47.1.24.06.62.03.86l-.13.81c-.04.24-.19.94.83.51 1.02-.43 5.48-3.23 7.48-5.53 1.38-1.51 2.01-3.05 2.01-5.21 0-4.24-4.26-7.68-9.5-7.68z"/></svg>
+  </a>
+  <a class="zw-map" href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%9B%84%E5%B8%82%E9%BC%93%E5%B1%B1%E5%8D%80%E7%BE%8E%E8%A1%93%E6%9D%B1%E4%B8%89%E8%B7%AF86%E8%99%9F" target="_blank" rel="noopener" data-label="Google 地圖">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+  </a>
+</nav>
+<div class="zw-counter">
+  <span class="zw-art" id="zwArtWrap" style="display:none">本篇已被閱讀 <b id="zwArt">&#8230;</b> 次<span class="zw-dot">·</span></span>累計參訪 <b id="zwVisits">&#8230;</b> 人次<span class="zw-dot">·</span>累計瀏覽 <b id="zwViews">&#8230;</b> 次
+</div>
+<script>
+(function(){
+  var NS='k12kh-essence';
+  function show(id,v){var e=document.getElementById(id);if(e&&typeof v==='number'){e.textContent=v.toLocaleString('en-US');}}
+  fetch('https://abacus.jasoncameron.dev/hit/'+NS+'/views').then(function(r){return r.json();}).then(function(d){show('zwViews',d.value);}).catch(function(){});
+  var visited=false;
+  try{visited=!!sessionStorage.getItem('zw_v');if(!visited){sessionStorage.setItem('zw_v','1');}}catch(e){}
+  fetch('https://abacus.jasoncameron.dev/'+(visited?'get':'hit')+'/'+NS+'/visits').then(function(r){return r.json();}).then(function(d){show('zwVisits',d.value);}).catch(function(){});
+  var m=location.pathname.match(/parenting_(?:essence|insight)_(\d{4})-(\d{2})-(\d{2})/);
+  if(m){
+    var key='p'+m[1]+m[2]+m[3];
+    var w=document.getElementById('zwArtWrap'); if(w){w.style.display='';}
+    fetch('https://abacus.jasoncameron.dev/hit/'+NS+'/'+key).then(function(r){return r.json();}).then(function(d){show('zwArt',d.value);}).catch(function(){});
+  }
+})();
+</script>
+<!-- /ZW_TOOLBAR_BLOCK -->
+
+</body>
+</html>
