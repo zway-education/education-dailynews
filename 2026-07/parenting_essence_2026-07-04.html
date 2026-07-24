@@ -2970,7 +2970,7 @@ body .body section {
   if(m){
     var key='p'+m[1]+m[2]+m[3];
     var w=document.getElementById('zwArtWrap'); if(w){w.style.display='';}
-    fetch('https://abacus.jasoncameron.dev/hit/'+NS+'/'+key).then(function(r){return r.json();}).then(function(d){show('zwArt',d.value);}).catch(function(){});
+    (function(){var a=false;try{a=!!sessionStorage.getItem('zw_a_'+key);if(!a){sessionStorage.setItem('zw_a_'+key,'1');}}catch(e){}fetch('https://abacus.jasoncameron.dev/'+(a?'get':'hit')+'/'+NS+'/'+key).then(function(r){return r.json();}).then(function(d){show('zwArt',d.value);}).catch(function(){});})();
   }
 })();
 </script>
