@@ -3,7 +3,7 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/e/:y(\d{4})-:m(\d{2})-:d(\d{2})",
+      "source": "/e/:y(\\d{4})-:m(\\d{2})-:d(\\d{2})",
       "destination": "/:y-:m/parenting_essence_:y-:m-:d"
     }
   ]
