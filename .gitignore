@@ -1,0 +1,5 @@
+system-commandline-sentinel-files/
+*.tmp
+*.log
+Thumbs.db
+desktop.ini
