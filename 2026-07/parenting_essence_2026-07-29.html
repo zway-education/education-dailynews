@@ -530,7 +530,7 @@ body{
   margin:0 0 18px;
 }
 .body h2::before{
-  content:'§ ';
+  content:'';
   font-family:var(--serif);
   color:var(--accent);
   font-weight:900;
@@ -568,7 +568,7 @@ body{
   letter-spacing:0.5px;
   border-left:none;padding-left:0;position:relative;padding-bottom:10px;
 }
-.steps h2::before{content:'§ ';color:var(--accent);font-weight:900;}
+.steps h2::before{content:'';color:var(--accent);font-weight:900;}
 .steps h2::after{
   content:'';position:absolute;left:0;bottom:0;width:48px;height:2px;background:var(--accent);
 }
@@ -636,7 +636,7 @@ body{
   color:var(--brand-deep);
 }
 .spectrum > h2::before{
-  content:'§ ';color:var(--accent);font-weight:900;
+  content:'';color:var(--accent);font-weight:900;
 }
 .spectrum > h2::after{
   content:'';position:absolute;left:0;bottom:0;
@@ -3337,7 +3337,7 @@ html[data-vary="4"] .body h2::before{
 }
 /* 變體5：§ 章節符（極簡） */
 html[data-vary="5"] .body h2::before{
-  content:"§"!important;font-size:40px!important;color:var(--accent)!important;
+  content:""!important;font-size:40px!important;color:var(--accent)!important;
   letter-spacing:0!important;margin:0 0 6px!important;
 }
 /* 變體2：保留羅馬數字、但首段放大成 lead 段（雜誌感） */
