@@ -1292,12 +1292,11 @@ window.v20imgFb=function(img){
     topBtn.classList.toggle('show',scrollY>600);
   },{passive:true});
   topBtn.onclick=function(){scrollTo({top:0,behavior:'smooth'});};
-  // 覺知豆跟滑鼠（KWJ 2026-09-01；LINE 貼圖版、每天換一隻、阿龍也輪值）
+  // 覺知豆跟滑鼠（KWJ 2026-09-01；LINE 貼圖版、重整隨機換一隻、阿龍也在池）
   if(matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion:reduce)').matches){
     var beanN=25;
-    var tpe=new Date(Date.now()+8*3600*1000);           // 台北時區的「今天」
-    var dayIdx=Math.floor(tpe.getTime()/86400000)%beanN;
-    var beanSrc='bean-'+('0'+(dayIdx+1)).slice(-2)+'.png';
+    var pick=Math.floor(Math.random()*beanN);
+    var beanSrc='bean-'+('0'+(pick+1)).slice(-2)+'.png';
     var bean=document.createElement('div');bean.id='v20-bean';
     var bi=document.createElement('img');bi.alt='';bi.src=beanSrc;bean.appendChild(bi);
     bi.onerror=function(){bean.remove();};
