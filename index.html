@@ -28,6 +28,9 @@ header.v20{animation:fadeUp .62s cubic-bezier(.22,.61,.36,1) both}
 .v20-brand img{width:38px;height:38px;border-radius:12px}
 .v20-brand span{font-size:13px;letter-spacing:.14em;color:#8a7360;font-weight:700}
 #v20date{font-family:Figtree,sans-serif;font-weight:700;font-size:13px;letter-spacing:.12em;color:#b3a084}
+.v20-links{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.v20-link{display:inline-block;background:#fffdf9;border:1px solid #f0e8db;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#5c4c3e;transition:.16s;box-shadow:0 2px 6px rgba(51,38,30,.04)}
+.v20-link:hover{border-color:#e9531d;color:#e9531d;transform:translateY(-2px)}
 .v20-hero{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:30px 0 8px;flex-wrap:wrap;position:relative}
 .v20-hero-txt{flex:1;min-width:280px}
 .v20-stickers{display:flex;align-items:center;gap:12px;margin-bottom:16px}
@@ -99,6 +102,10 @@ nav.v20{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:8px 0 6px
 .v20-morewrap{text-align:center;padding:36px 0 8px}
 .v20-more{background:#fffdf9;border:1px solid #e7d6bb;border-radius:999px;padding:13px 36px;font-size:14px;font-weight:700;letter-spacing:.14em;color:#5c4c3e;cursor:pointer;font-family:inherit;box-shadow:0 4px 14px rgba(51,38,30,.06);transition:.16s}
 .v20-more:hover{border-color:#e9531d;color:#e9531d}
+.v20-contact{margin-top:40px;background:#fffdf9;border:1px solid #f0e8db;border-radius:20px;padding:24px clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:2;color:#5c4c3e;letter-spacing:.06em}
+.v20-contact .ct{font-family:'Zen Maru Gothic','Noto Sans TC',sans-serif;font-weight:700;font-size:16px;color:#33261e;letter-spacing:.1em;margin-bottom:2px}
+.v20-contact a{color:#c2410c;font-weight:700}
+.v20-contact a:hover{color:#e9531d}
 footer.v20{border-top:1px solid #f0e8db;margin-top:36px;padding:26px 2px 10px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#8a7360;letter-spacing:.1em}
 footer.v20 .fb{display:flex;align-items:center;gap:8px}
 footer.v20 img{width:24px;height:24px;border-radius:8px}
@@ -131,8 +138,14 @@ footer.v20 .fslogan{color:#b3a084}
 
 <header class="v20">
   <div class="v20-topbar">
-    <div class="v20-brand"><img src="zw-logo.png" alt=""><span>K12 覺知素養教育學苑</span></div>
-    <span id="v20date"></span>
+    <div class="v20-brand"><img src="k12-logo.png" alt=""><span>K12 覺知素養教育學苑</span></div>
+    <div class="v20-links">
+      <a class="v20-link" href="https://z-way-edu.com/" target="_blank" rel="noopener">官網</a>
+      <a class="v20-link" href="https://www.facebook.com/K12KHART/" target="_blank" rel="noopener">Facebook</a>
+      <a class="v20-link" href="https://www.instagram.com/k12khawareness/" target="_blank" rel="noopener">Instagram</a>
+      <a class="v20-link" href="https://lin.ee/zHOtaIm" target="_blank" rel="noopener">LINE</a>
+      <span id="v20date"></span>
+    </div>
   </div>
   <div class="v20-hero">
     <div class="v20-hero-txt">
@@ -1103,14 +1116,32 @@ footer.v20 .fslogan{color:#b3a084}
 <div id="v20-progress" aria-hidden="true"></div>
 <button id="v20-top" aria-label="回到頂端">↑</button>
 
+<div class="v20-contact">
+  <div class="ct">K12 覺知素養教育學苑</div>
+  <div><a href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%9B%84%E5%B8%82%E9%BC%93%E5%B1%B1%E5%8D%80%E7%BE%8E%E8%A1%93%E6%9D%B1%E4%B8%89%E8%B7%AF86%E8%99%9F" target="_blank" rel="noopener">高雄市鼓山區美術東三路 86 號</a>　｜　07-2693525</div>
+  <div><a href="mailto:K12-KH-ART@z-way-edu.com">K12-KH-ART@z-way-edu.com</a>　｜　官網 <a href="https://z-way-edu.com/" target="_blank" rel="noopener">z-way-edu.com</a>　｜　<a href="https://lin.ee/zHOtaIm" target="_blank" rel="noopener">LINE：@931irimh</a></div>
+  <div>服務時間：週一至週六 9:00–18:00</div>
+</div>
+
 <footer class="v20">
-  <span class="fb"><img src="zw-logo.png" alt="">覺知教養・每日精華 ｜ K12 覺知素養教育學苑</span>
+  <span class="fb"><img src="k12-logo.png" alt="">覺知教養・每日精華 ｜ K12 覺知素養教育學苑</span>
+  <span class="v20-links">
+    <a class="v20-link" href="https://z-way-edu.com/" target="_blank" rel="noopener">官網</a>
+    <a class="v20-link" href="https://www.facebook.com/K12KHART/" target="_blank" rel="noopener">Facebook</a>
+    <a class="v20-link" href="https://www.instagram.com/k12khawareness/" target="_blank" rel="noopener">Instagram</a>
+    <a class="v20-link" href="https://lin.ee/zHOtaIm" target="_blank" rel="noopener">LINE</a>
+  </span>
   <span class="fslogan">先懂心 ・ 再懂教</span>
 </footer>
 
 </div>
 </div>
 <script>
+window.v20imgFb=function(img){
+  var alt=img.getAttribute('data-alt');
+  if(alt){img.removeAttribute('data-alt');img.src=alt;}
+  else{img.parentNode.classList.add('noimg');img.remove();}
+};
 (function(){
   var C={'幼兒':'#e8478f','學齡':'#2f6fd8','青少':'#7a5cd8','父母':'#18a087','趨勢':'#d9940a','全部':'#e9531d'};
   var T={'幼兒情緒與依附':'#e8478f','學習動機與自主':'#2f6fd8','青少年自我認同':'#7a5cd8','3 秒鐘覺知對話':'#18a087','父母自我覺知':'#d9940a','家庭氛圍與儀式感':'#e9531d','跨世代與家庭文化':'#8a63c9','覺知書籍':'#18a087','趨勢人物':'#d9940a','趨勢研究':'#d9940a'};
@@ -1130,7 +1161,7 @@ footer.v20 .fslogan{color:#b3a084}
     return {url:href,cls:age,wd:(dm[4]||m[1]||''),theme:(m[2]||axis),title:title,excerpt:hook,
       date:(dm[1]?dm[1]+'-'+dm[2]+'-'+dm[3]:''),cat:cat,cat2:cat2,
       color:T[(m[2]||'').trim()]||C[cat]||'#e9531d',
-      thumb:href.replace('.html','_share.png')};
+      thumb:href.replace('.html','_share.png'),cover:href.replace('.html','_cover.png')};
   }).filter(function(a){return a.url&&a.title;});
   arts.sort(function(a,b){return a.date<b.date?1:-1;});
 
@@ -1151,7 +1182,7 @@ footer.v20 .fslogan{color:#b3a084}
     // 精選
     if(feat){
       featEl.innerHTML=
-        '<a class="v20-feat-img" href="'+feat.url+'"><img loading="lazy" src="'+feat.thumb+'" alt="" onerror="this.parentNode.classList.add(&quot;noimg&quot;);this.remove()"></a>'+
+        '<a class="v20-feat-img" href="'+feat.url+'"><img loading="lazy" src="'+feat.cover+'" data-alt="'+feat.thumb+'" alt="" onerror="v20imgFb(this)"></a>'+
         '<div class="v20-feat-body">'+
         '<div class="v20-badges"><span class="v20-b-today">今日</span>'+chipHtml(feat)+
         '<span class="v20-b-cat">'+esc(feat.cat)+'</span><span class="v20-b-meta">'+esc(feat.cls)+'｜'+esc(feat.wd)+'</span></div>'+
@@ -1175,7 +1206,7 @@ footer.v20 .fslogan{color:#b3a084}
         '<span class="v20-mcount">'+items.length+' 篇</span></span><span class="v20-mrule"></span></div>'+
         '<div class="v20-mgrid">'+items.map(function(a){
           return '<a class="v20-card" href="'+a.url+'" style="border-top:4px solid '+a.color+'">'+
-            '<span class="v20-thumb"><img loading="lazy" src="'+a.thumb+'" alt="" onerror="this.parentNode.classList.add(&quot;noimg&quot;);this.remove()"></span>'+
+            '<span class="v20-thumb"><img loading="lazy" src="'+a.cover+'" data-alt="'+a.thumb+'" alt="" onerror="v20imgFb(this)"></span>'+
             '<span class="v20-crow">'+chipHtml(a)+'<span class="v20-ccat">'+esc(a.cat)+'・'+esc(a.wd)+'</span></span>'+
             '<span class="v20-ctitle">'+esc(a.title)+'</span>'+
             '<span class="v20-cex">'+esc(a.excerpt)+'</span>'+
