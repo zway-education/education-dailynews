@@ -29,8 +29,14 @@ header.v20{animation:fadeUp .62s cubic-bezier(.22,.61,.36,1) both}
 .v20-brand span{font-size:13px;letter-spacing:.14em;color:#8a7360;font-weight:700}
 #v20date{font-family:Figtree,sans-serif;font-weight:700;font-size:13px;letter-spacing:.12em;color:#b3a084}
 .v20-links{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.v20-link{display:inline-block;background:#fffdf9;border:1px solid #f0e8db;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#5c4c3e;transition:.16s;box-shadow:0 2px 6px rgba(51,38,30,.04)}
-.v20-link:hover{border-color:#e9531d;color:#e9531d;transform:translateY(-2px)}
+.v20-link{background:#fffdf9;border:1px solid #f0e8db;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#5c4c3e;transition:.16s;box-shadow:0 2px 6px rgba(51,38,30,.04)}
+.v20-link{display:inline-flex;align-items:center;gap:7px}
+.v20-link svg{width:15px;height:15px;flex:none}
+.v20-link:hover{transform:translateY(-2px)}
+.v20-link.web:hover{border-color:#e9531d;color:#e9531d}
+.v20-link.fb{color:#1877F2}.v20-link.fb:hover{border-color:#1877F2;background:#1877F212}
+.v20-link.ig{color:#D6336C}.v20-link.ig:hover{border-color:#D6336C;background:#D6336C12}
+.v20-link.ln{color:#06C755}.v20-link.ln:hover{border-color:#06C755;background:#06C75512}
 .v20-hero{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:30px 0 8px;flex-wrap:wrap;position:relative}
 .v20-hero-txt{flex:1;min-width:280px}
 .v20-stickers{display:flex;align-items:center;gap:12px;margin-bottom:16px}
@@ -132,6 +138,8 @@ footer.v20 .fslogan{color:#b3a084}
 #v20-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#e9531d,#f9a11b);width:0;z-index:60;border-radius:0 2px 2px 0}
 #v20-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:#fffdf9;border:1px solid #f0e8db;box-shadow:0 6px 18px rgba(51,38,30,.14);color:#e9531d;font-size:18px;font-weight:700;cursor:pointer;opacity:0;pointer-events:none;transition:.25s;z-index:60;font-family:inherit}
 #v20-top.show{opacity:1;pointer-events:auto}
+#v20-bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+.v20-wrap{position:relative;z-index:1}
 #v20-bean{position:fixed;left:0;top:0;width:54px;z-index:55;pointer-events:none;opacity:0;transition:opacity .4s;will-change:transform;filter:drop-shadow(0 6px 8px rgba(51,38,30,.18))}
 #v20-bean.on{opacity:1}
 #v20-bean img{width:100%;display:block}
@@ -145,6 +153,7 @@ footer.v20 .fslogan{color:#b3a084}
 </style>
 </head>
 <body>
+<canvas id="v20-bg" aria-hidden="true"></canvas>
 <div class="v20-wrap">
 <div class="v20-inner">
 
@@ -152,10 +161,10 @@ footer.v20 .fslogan{color:#b3a084}
   <div class="v20-topbar">
     <div class="v20-brand"><img src="k12-logo.png" alt=""><span>K12 覺知素養教育學苑</span></div>
     <div class="v20-links">
-      <a class="v20-link" href="https://z-way-edu.com/" target="_blank" rel="noopener">官網</a>
-      <a class="v20-link" href="https://www.facebook.com/K12KHART/" target="_blank" rel="noopener">Facebook</a>
-      <a class="v20-link" href="https://www.instagram.com/k12khawareness/" target="_blank" rel="noopener">Instagram</a>
-      <a class="v20-link" href="https://lin.ee/zHOtaIm" target="_blank" rel="noopener">LINE</a>
+      <a class="v20-link web" href="https://z-way-edu.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#e9531d" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21M12 3c-2.5 2.6-3.8 5.7-3.8 9s1.3 6.4 3.8 9"/></svg>官網</a>
+      <a class="v20-link fb" href="https://www.facebook.com/K12KHART/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#1877F2"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>Facebook</a>
+      <a class="v20-link ig" href="https://www.instagram.com/k12khawareness/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#D6336C" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#D6336C" stroke="none"/></svg>Instagram</a>
+      <a class="v20-link ln" href="https://lin.ee/zHOtaIm" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#06C755"><path d="M12 3C6.5 3 2 6.7 2 11.2c0 4 3.4 7.4 8.1 8.1.3.1.8.2.9.5.1.3.1.7 0 1 0 0-.1.7-.1.8-.1.3-.2 1 .9.6 1.1-.5 6-3.6 8.2-6.1 1.5-1.7 2-3.3 2-4.9C22 6.7 17.5 3 12 3z"/></svg>LINE</a>
       <span id="v20date"></span>
     </div>
   </div>
@@ -1138,10 +1147,10 @@ footer.v20 .fslogan{color:#b3a084}
 <footer class="v20">
   <span class="fb"><img src="k12-logo.png" alt="">覺知教養・每日精華 ｜ K12 覺知素養教育學苑</span>
   <span class="v20-links">
-    <a class="v20-link" href="https://z-way-edu.com/" target="_blank" rel="noopener">官網</a>
-    <a class="v20-link" href="https://www.facebook.com/K12KHART/" target="_blank" rel="noopener">Facebook</a>
-    <a class="v20-link" href="https://www.instagram.com/k12khawareness/" target="_blank" rel="noopener">Instagram</a>
-    <a class="v20-link" href="https://lin.ee/zHOtaIm" target="_blank" rel="noopener">LINE</a>
+    <a class="v20-link web" href="https://z-way-edu.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#e9531d" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21M12 3c-2.5 2.6-3.8 5.7-3.8 9s1.3 6.4 3.8 9"/></svg>官網</a>
+    <a class="v20-link fb" href="https://www.facebook.com/K12KHART/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#1877F2"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>Facebook</a>
+    <a class="v20-link ig" href="https://www.instagram.com/k12khawareness/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#D6336C" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#D6336C" stroke="none"/></svg>Instagram</a>
+    <a class="v20-link ln" href="https://lin.ee/zHOtaIm" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#06C755"><path d="M12 3C6.5 3 2 6.7 2 11.2c0 4 3.4 7.4 8.1 8.1.3.1.8.2.9.5.1.3.1.7 0 1 0 0-.1.7-.1.8-.1.3-.2 1 .9.6 1.1-.5 6-3.6 8.2-6.1 1.5-1.7 2-3.3 2-4.9C22 6.7 17.5 3 12 3z"/></svg>LINE</a>
   </span>
   <span class="fslogan">先懂心 ・ 再懂教</span>
 </footer>
@@ -1292,6 +1301,39 @@ window.v20imgFb=function(img){
     topBtn.classList.toggle('show',scrollY>600);
   },{passive:true});
   topBtn.onclick=function(){scrollTo({top:0,behavior:'smooth'});};
+  // 背景互動粒子（KWJ 2026-09-01「背景的動畫要可以跟滑鼠互動」）
+  if(matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion:reduce)').matches){
+    var cv=document.getElementById('v20-bg'),cx=cv.getContext('2d');
+    var W,H,ps=[],COLS=['#e9531d','#f9a11b','#2f6fd8','#18a087','#e8478f','#8a63c9'];
+    function sz(){W=cv.width=innerWidth;H=cv.height=innerHeight;}
+    sz();addEventListener('resize',sz);
+    for(var i=0;i<26;i++){ps.push({
+      x:Math.random()*innerWidth,y:Math.random()*innerHeight,
+      r:2.5+Math.random()*3.5,c:COLS[i%COLS.length],
+      vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,
+      star:(i%4===0),a:.28+Math.random()*.22,rot:Math.random()*6.28});}
+    var mx=-999,my=-999;
+    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;},{passive:true});
+    function star(x,y,r,rot){cx.beginPath();for(var k=0;k<10;k++){
+      var rr=(k%2?r*.45:r),an=rot+k*Math.PI/5;
+      cx[k?'lineTo':'moveTo'](x+Math.cos(an)*rr,y+Math.sin(an)*rr);}cx.closePath();}
+    (function loop(){
+      cx.clearRect(0,0,W,H);
+      for(var i=0;i<ps.length;i++){var q=ps[i];
+        var dx=q.x-mx,dy=q.y-my,d2=dx*dx+dy*dy;
+        if(d2<16900){var d=Math.sqrt(d2)||1,f=(130-d)/130*.9;q.vx+=dx/d*f;q.vy+=dy/d*f;}
+        q.vx*=.96;q.vy*=.96;
+        q.vx+=(Math.random()-.5)*.02;q.vy+=(Math.random()-.5)*.02;
+        q.x+=q.vx;q.y+=q.vy;q.rot+=.004;
+        if(q.x<-20)q.x=W+20;if(q.x>W+20)q.x=-20;
+        if(q.y<-20)q.y=H+20;if(q.y>H+20)q.y=-20;
+        cx.globalAlpha=q.a;cx.fillStyle=q.c;
+        if(q.star){star(q.x,q.y,q.r*2.2,q.rot);cx.fill();}
+        else{cx.beginPath();cx.arc(q.x,q.y,q.r,0,6.29);cx.fill();}}
+      cx.globalAlpha=1;
+      requestAnimationFrame(loop);
+    })();
+  }
   // 覺知豆跟滑鼠（KWJ 2026-09-01；LINE 貼圖版、重整隨機換一隻、阿龍也在池）
   if(matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion:reduce)').matches){
     var beanN=25;
