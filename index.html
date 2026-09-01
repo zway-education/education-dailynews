@@ -28,16 +28,22 @@ header.v20{animation:fadeUp .62s cubic-bezier(.22,.61,.36,1) both}
 .v20-brand img{width:38px;height:38px;border-radius:12px}
 .v20-brand span{font-size:13px;letter-spacing:.14em;color:#8a7360;font-weight:700}
 #v20date{font-family:Figtree,sans-serif;font-weight:700;font-size:13px;letter-spacing:.12em;color:#b3a084}
-.v20-hero{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:30px 0 8px;flex-wrap:wrap}
+.v20-hero{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:30px 0 8px;flex-wrap:wrap;position:relative}
 .v20-hero-txt{flex:1;min-width:280px}
 .v20-stickers{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.v20-doodlebits{position:absolute;inset:0;pointer-events:none}
+.v20-doodlebits svg{position:absolute;animation:floaty 5s ease-in-out infinite}
+.v20-statrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px}
+.v20-stat{display:inline-flex;align-items:center;gap:7px;background:#fffdf9;border:1px solid #f0e8db;border-radius:999px;padding:6px 15px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#5c4c3e;box-shadow:0 3px 8px rgba(51,38,30,.05)}
+.v20-stat b{font-family:Figtree,sans-serif;color:#e9531d}
+.v20-stat .v20-dots{margin-left:2px}
 .v20-st1{display:inline-block;background:#e9531d;color:#fffdf9;border-radius:12px;padding:7px 18px;font-size:13px;font-weight:700;letter-spacing:.18em;transform:rotate(-3.5deg);box-shadow:0 4px 10px rgba(233,83,29,.25)}
 .v20-st2{display:inline-block;background:#fffdf9;color:#c2410c;border:2px dashed #f2b98c;border-radius:999px;padding:5px 16px;font-size:12px;font-weight:700;letter-spacing:.18em;transform:rotate(2deg)}
-.v20-hero h1{margin:0;font-family:'Zen Maru Gothic','Noto Sans TC',sans-serif;font-weight:900;line-height:1.25;letter-spacing:.04em}
-.v20-h1a{display:block;font-size:clamp(18px,2.4vw,24px);color:#8a7360;margin-bottom:4px}
-.v20-h1b{display:inline-block;font-size:clamp(48px,8vw,84px);color:#33261e}
-.v20-h1b .star{display:inline-block;font-size:.42em;color:#e9531d;transform:rotate(-8deg) translateY(-1.2em);margin-left:6px}
-.v20-h1c{display:inline-block;font-size:clamp(22px,3.2vw,34px);margin-left:14px;background:linear-gradient(transparent 62%,#fcd9a8 62%)}
+.v20-hero h1{margin:0;font-family:'Zen Maru Gothic','Noto Sans TC',sans-serif;font-weight:900;line-height:1.25;letter-spacing:.04em;display:flex;align-items:baseline;gap:4px 14px;flex-wrap:wrap}
+.v20-h1a{font-size:clamp(24px,3.4vw,38px);color:#33261e}
+.v20-h1b{font-size:clamp(44px,6.2vw,72px);color:#33261e;line-height:1}
+.v20-h1b .star{display:inline-block;font-size:.42em;color:#e9531d;transform:rotate(-8deg) translateY(-1.2em);margin-left:4px}
+.v20-h1c{font-size:clamp(22px,3vw,32px);background:linear-gradient(transparent 62%,#fcd9a8 62%)}
 .v20-tagline{margin:14px 0 0;font-size:14.5px;letter-spacing:.3em;color:#8a7360;font-weight:500}
 .v20-hero-doodle{width:clamp(180px,24vw,250px);flex:none;animation:floaty 4s ease-in-out infinite}
 nav.v20{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:8px 0 6px;animation:fadeUp .62s .08s cubic-bezier(.22,.61,.36,1) both}
@@ -93,17 +99,30 @@ nav.v20{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:8px 0 6px
 .v20-morewrap{text-align:center;padding:36px 0 8px}
 .v20-more{background:#fffdf9;border:1px solid #e7d6bb;border-radius:999px;padding:13px 36px;font-size:14px;font-weight:700;letter-spacing:.14em;color:#5c4c3e;cursor:pointer;font-family:inherit;box-shadow:0 4px 14px rgba(51,38,30,.06);transition:.16s}
 .v20-more:hover{border-color:#e9531d;color:#e9531d}
-.v20-daily{margin:44px 0 0;display:flex;gap:20px;align-items:center;background:#fffdf9;border:1px solid #f0e8db;border-radius:20px;padding:20px clamp(20px,3vw,30px);flex-wrap:wrap}
-.v20-daily img.walk{width:110px;flex:none}
-.v20-daily img.plant{width:72px;flex:none;opacity:.9}
-.v20-daily-body{flex:1;min-width:220px}
-.v20-daily-t{font-family:'Zen Maru Gothic','Noto Sans TC',sans-serif;font-weight:700;font-size:16px}
-.v20-daily-d{font-size:12.5px;color:#8a7360;margin-top:4px;line-height:1.8}
 footer.v20{border-top:1px solid #f0e8db;margin-top:36px;padding:26px 2px 10px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#8a7360;letter-spacing:.1em}
 footer.v20 .fb{display:flex;align-items:center;gap:8px}
 footer.v20 img{width:24px;height:24px;border-radius:8px}
 footer.v20 .fslogan{color:#b3a084}
 .grid{display:none}
+@keyframes twinkle{0%,100%{opacity:1;transform:rotate(-8deg) translateY(-1.2em) scale(1)}50%{opacity:.45;transform:rotate(6deg) translateY(-1.2em) scale(.8)}}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+@keyframes wiggle{0%,100%{transform:rotate(-3.5deg)}50%{transform:rotate(2deg)}}
+.v20-h1b .star{animation:twinkle 2.6s ease-in-out infinite}
+.v20-dots span{animation:breathe 2.2s ease-in-out infinite}
+.v20-dots span:nth-child(2){animation-delay:.3s}.v20-dots span:nth-child(3){animation-delay:.6s}.v20-dots span:nth-child(4){animation-delay:.9s}
+.v20-st1:hover{animation:wiggle .5s ease-in-out}
+.v20-thumb img,.v20-feat-img img{transition:transform .35s ease}
+.v20-card:hover .v20-thumb img{transform:scale(1.035)}
+.v20-feat-img:hover img{transform:scale(1.02)}
+.v20-card,.v20-mhead{opacity:0;transform:translateY(18px);transition:opacity .55s cubic-bezier(.22,.61,.36,1),transform .55s cubic-bezier(.22,.61,.36,1),box-shadow .18s,border-color .18s}
+.v20-card.v20-in,.v20-mhead.v20-in{opacity:1;transform:none}
+.v20-card.v20-in:hover{transform:translateY(-3px)}
+#v20-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#e9531d,#f9a11b);width:0;z-index:60;border-radius:0 2px 2px 0}
+#v20-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:#fffdf9;border:1px solid #f0e8db;box-shadow:0 6px 18px rgba(51,38,30,.14);color:#e9531d;font-size:18px;font-weight:700;cursor:pointer;opacity:0;pointer-events:none;transition:.25s;z-index:60;font-family:inherit}
+#v20-top.show{opacity:1;pointer-events:auto}
+#v20-top:hover{transform:translateY(-3px);border-color:#e9531d}
+@media (prefers-reduced-motion:reduce){.v20-card,.v20-mhead{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
@@ -120,8 +139,20 @@ footer.v20 .fslogan{color:#b3a084}
       <div class="v20-stickers"><span class="v20-st1">覺知教養</span><span class="v20-st2">每日精華</span></div>
       <h1><span class="v20-h1a">用覺知，啟動</span><span class="v20-h1b">SEL<span class="star">✦</span></span><span class="v20-h1c">先懂心，再懂教</span></h1>
       <p class="v20-tagline">每 日 一 篇 ・ 陪 你 練 覺 知</p>
+      <div class="v20-statrow">
+        <span class="v20-stat">已累積 <b id="v20total">—</b> 篇</span>
+        <span class="v20-stat">天賦光譜<span class="v20-dots"><span style="background:#ef5350"></span><span style="background:#f9a11b"></span><span style="background:#4ccb9a"></span><span style="background:#8fc1ff"></span></span></span>
+        <span class="v20-stat">每日 <b>更新</b>中</span>
+      </div>
     </div>
     <img class="v20-hero-doodle" src="doodle-sitting-reading.svg" alt="">
+    <div class="v20-doodlebits" aria-hidden="true">
+      <svg style="right:2%;top:-6px;width:34px;animation-delay:.4s" viewBox="0 0 40 40" fill="none"><path d="M20 3l4.2 11.5L36 19l-11.8 4.5L20 35l-4.2-11.5L4 19l11.8-4.5z" stroke="#e9531d" stroke-width="2.6" stroke-linejoin="round"/></svg>
+      <svg style="right:26%;top:16px;width:22px;animation-delay:1.3s" viewBox="0 0 30 28" fill="none"><path d="M15 25C8 19 3 14.5 3 9.5 3 6 5.7 3 9.2 3c2.4 0 4.5 1.3 5.8 3.4C16.3 4.3 18.4 3 20.8 3 24.3 3 27 6 27 9.5c0 5-5 9.5-12 15.5z" stroke="#2f6fd8" stroke-width="2.4" stroke-linejoin="round"/></svg>
+      <svg style="left:44%;bottom:8px;width:46px;animation-delay:.9s" viewBox="0 0 60 24" fill="none"><path d="M3 16c6-9 10 6 16-3s10 6 16-3 10 6 16-3" stroke="#f9a11b" stroke-width="2.6" stroke-linecap="round"/></svg>
+      <svg style="right:8%;bottom:-4px;width:40px;animation-delay:1.8s" viewBox="0 0 48 40" fill="none"><path d="M4 22L44 4 30 36l-7-11z" stroke="#18a087" stroke-width="2.4" stroke-linejoin="round"/><path d="M23 25L44 4" stroke="#18a087" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <svg style="left:31%;top:-2px;width:18px;animation-delay:2.2s" viewBox="0 0 20 20" fill="none"><path d="M10 2v16M2 10h16" stroke="#e8478f" stroke-width="2.6" stroke-linecap="round"/></svg>
+    </div>
   </div>
 </header>
 
@@ -146,15 +177,6 @@ footer.v20 .fslogan{color:#b3a084}
 
   <div class="v20-morewrap" id="v20-morewrap" hidden>
     <button class="v20-more" id="v20-more"></button>
-  </div>
-
-  <div class="v20-daily">
-    <img class="walk" src="doodle-strolling.svg" alt="">
-    <div class="v20-daily-body">
-      <div class="v20-daily-t">每天早上 7:00，新的一篇準時上線</div>
-      <div class="v20-daily-d">從 2026 年 5 月至今，一天一篇，沒有停過。</div>
-    </div>
-    <img class="plant" src="doodle-plant.svg" alt="">
   </div>
 
   <div class="grid">
@@ -1078,6 +1100,9 @@ footer.v20 .fslogan{color:#b3a084}
 </div>
 </main>
 
+<div id="v20-progress" aria-hidden="true"></div>
+<button id="v20-top" aria-label="回到頂端">↑</button>
+
 <footer class="v20">
   <span class="fb"><img src="zw-logo.png" alt="">覺知教養・每日精華 ｜ K12 覺知素養教育學苑</span>
   <span class="fslogan">先懂心 ・ 再懂教</span>
@@ -1179,11 +1204,30 @@ footer.v20 .fslogan{color:#b3a084}
     nav.appendChild(b);
   });
   nav.appendChild(countEl);
+  var tot=document.getElementById('v20total');if(tot)tot.textContent=arts.length;
   // header 日期＝最新文章日
   if(arts[0]){var p=arts[0].date.split('-');
     var wd=['SUN','MON','TUE','WED','THU','FRI','SAT'][new Date(+p[0],+p[1]-1,+p[2]).getDay()];
     document.getElementById('v20date').textContent=p.join('.')+' '+wd;}
   render();
+  // 捲動逐卡浮現（render 後每次重掛）
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v20-in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.04}):null;
+  function watch(){var els=document.querySelectorAll('.v20-card:not(.v20-in),.v20-mhead:not(.v20-in)');
+    if(!io){els.forEach(function(el){el.classList.add('v20-in');});return;}
+    els.forEach(function(el){io.observe(el);});}
+  watch();
+  var _render=render;render=function(){_render();watch();};
+  moreBtn.onclick=function(){state.limit+=12;render();};
+  // 閱讀進度條＋回頂鈕
+  var pg=document.getElementById('v20-progress'),topBtn=document.getElementById('v20-top');
+  addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    pg.style.width=(h>0?(scrollY/h*100):0)+'%';
+    topBtn.classList.toggle('show',scrollY>600);
+  },{passive:true});
+  topBtn.onclick=function(){scrollTo({top:0,behavior:'smooth'});};
 })();
 </script>
 </body>
