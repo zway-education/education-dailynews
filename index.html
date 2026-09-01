@@ -137,6 +137,8 @@ footer.v20 .fslogan{color:#b3a084}
 #v20-bean img{width:100%;display:block}
 @keyframes beanbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 #v20-bean.walk img{animation:beanbob .5s ease-in-out infinite}
+@keyframes beanhop{0%,100%{transform:translateY(0)}30%{transform:translateY(-14px) rotate(-4deg)}55%{transform:translateY(0)}75%{transform:translateY(-7px) rotate(3deg)}}
+#v20-bean.hi img{animation:beanhop .9s ease-in-out 2}
 #v20-top:hover{transform:translateY(-3px);border-color:#e9531d}
 @media (prefers-reduced-motion:reduce){.v20-card,.v20-mhead{opacity:1;transform:none}}
 
@@ -1290,24 +1292,29 @@ window.v20imgFb=function(img){
     topBtn.classList.toggle('show',scrollY>600);
   },{passive:true});
   topBtn.onclick=function(){scrollTo({top:0,behavior:'smooth'});};
-  // 覺知豆跟滑鼠（KWJ 2026-09-01）
+  // 覺知豆跟滑鼠（KWJ 2026-09-01；LINE 貼圖版、每天換一隻、阿龍也輪值）
   if(matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion:reduce)').matches){
+    var beanN=25;
+    var tpe=new Date(Date.now()+8*3600*1000);           // 台北時區的「今天」
+    var dayIdx=Math.floor(tpe.getTime()/86400000)%beanN;
+    var beanSrc='bean-'+('0'+(dayIdx+1)).slice(-2)+'.png';
     var bean=document.createElement('div');bean.id='v20-bean';
-    var bi=document.createElement('img');bi.alt='';bi.src='bean-walk.png';bean.appendChild(bi);
+    var bi=document.createElement('img');bi.alt='';bi.src=beanSrc;bean.appendChild(bi);
+    bi.onerror=function(){bean.remove();};
     document.body.appendChild(bean);
-    var tx=-100,ty=-100,bx=-100,by=-100,face=1,idleT=null,waving=false,started=false;
+    var tx=-100,ty=-100,bx=-100,by=-100,face=1,idleT=null,started=false;
     addEventListener('mousemove',function(e){
       tx=e.clientX+18;ty=e.clientY+14;
       if(!started){started=true;bx=tx;by=ty;bean.classList.add('on');}
-      if(waving){waving=false;bi.src='bean-walk.png';}
+      bean.classList.remove('hi');
       clearTimeout(idleT);
-      idleT=setTimeout(function(){waving=true;bi.src='bean-wave.png';bean.classList.remove('walk');},1200);
+      idleT=setTimeout(function(){bean.classList.remove('walk');bean.classList.add('hi');},1200);
     },{passive:true});
     (function step(){
       var dx=tx-bx,dy=ty-by;
       bx+=dx*.085;by+=dy*.085;
       var moving=Math.abs(dx)+Math.abs(dy)>3;
-      if(moving&&!waving){bean.classList.add('walk');if(Math.abs(dx)>1.5)face=dx<0?-1:1;}
+      if(moving){bean.classList.add('walk');bean.classList.remove('hi');if(Math.abs(dx)>1.5)face=dx<0?-1:1;}
       else{bean.classList.remove('walk');}
       bean.style.transform='translate('+bx+'px,'+by+'px) scaleX('+face+')';
       requestAnimationFrame(step);
