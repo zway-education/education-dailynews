@@ -61,6 +61,11 @@ nav.v20{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:8px 0 6px
 .v20-badges{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .v20-b-today{background:#e9531d;color:#fffdf9;font-size:13px;font-weight:700;letter-spacing:.14em;padding:6px 15px;border-radius:12px;transform:rotate(-5deg);box-shadow:0 3px 8px rgba(233,83,29,.3)}
 .v20-chip{font-size:11.5px;font-weight:700;letter-spacing:.1em;padding:4px 12px;border-radius:999px;transform:rotate(-2deg);display:inline-block}
+.v20-chip,.v20-ccat,.v20-b-cat{cursor:pointer}
+.v20-chip:hover{filter:brightness(.92);text-decoration:underline}
+.v20-ccat:hover,.v20-b-cat:hover{color:#e9531d;text-decoration:underline}
+.v20-tfilter{display:inline-flex;align-items:center;gap:6px;background:#33261e;color:#fffdf9;border-radius:999px;padding:8px 16px;font-size:12.5px;font-weight:700;letter-spacing:.08em;cursor:pointer}
+.v20-tfilter:hover{background:#e9531d}
 .v20-b-cat{font-size:12px;font-weight:700;color:#8a7360}
 .v20-b-meta{font-size:12.5px;color:#8a7360}
 .v20-feat-title{font-family:'Zen Maru Gothic','Noto Sans TC',sans-serif;font-weight:700;font-size:clamp(22px,2.8vw,28px);line-height:1.6;text-wrap:pretty}
@@ -1165,7 +1170,7 @@ window.v20imgFb=function(img){
   }).filter(function(a){return a.url&&a.title;});
   arts.sort(function(a,b){return a.date<b.date?1:-1;});
 
-  var state={cat:'全部',limit:12};
+  var state={cat:'全部',theme:'',limit:12};
   var nav=document.getElementById('v20nav');
   var monthsEl=document.getElementById('v20-months');
   var featEl=document.getElementById('v20-featured');
@@ -1173,11 +1178,14 @@ window.v20imgFb=function(img){
   var moreBtn=document.getElementById('v20-more');
   var countEl=document.createElement('span');countEl.className='v20-count';
 
-  function chipHtml(a){return '<span class="v20-chip" style="background:'+a.color+'1c;color:'+a.color+'">'+esc(a.theme)+'</span>';}
+  function chipHtml(a){return '<span class="v20-chip" data-theme="'+esc(a.theme)+'" title="看同主題文章" style="background:'+a.color+'1c;color:'+a.color+'">'+esc(a.theme)+'</span>';}
   function dot(d){return d.replace(/-/g,'.');}
 
   function render(){
-    var all=arts.filter(function(a){return state.cat==='全部'||a.cat===state.cat||a.cat2===state.cat;});
+    var all=arts.filter(function(a){
+      var okCat=(state.cat==='全部')||a.cat===state.cat||a.cat2===state.cat;
+      var okTheme=(!state.theme)||a.theme===state.theme;
+      return okCat&&okTheme;});
     var feat=all[0]||arts[0];
     // 精選
     if(feat){
@@ -1185,7 +1193,7 @@ window.v20imgFb=function(img){
         '<a class="v20-feat-img" href="'+feat.url+'"><img loading="lazy" src="'+feat.cover+'" data-alt="'+feat.thumb+'" alt="" onerror="v20imgFb(this)"></a>'+
         '<div class="v20-feat-body">'+
         '<div class="v20-badges"><span class="v20-b-today">今日</span>'+chipHtml(feat)+
-        '<span class="v20-b-cat">'+esc(feat.cat)+'</span><span class="v20-b-meta">'+esc(feat.cls)+'｜'+esc(feat.wd)+'</span></div>'+
+        '<span class="v20-b-cat" data-cat="'+esc(feat.cat)+'" title="看同分類文章">'+esc(feat.cat)+'</span><span class="v20-b-meta">'+esc(feat.cls)+'｜'+esc(feat.wd)+'</span></div>'+
         '<a class="v20-feat-title" href="'+feat.url+'">'+esc(feat.title)+'</a>'+
         '<p class="v20-feat-ex">'+esc(feat.excerpt)+'</p>'+
         '<div class="v20-feat-foot"><a class="v20-cta" href="'+feat.url+'">閱讀全文 →</a>'+
@@ -1207,7 +1215,7 @@ window.v20imgFb=function(img){
         '<div class="v20-mgrid">'+items.map(function(a){
           return '<a class="v20-card" href="'+a.url+'" style="border-top:4px solid '+a.color+'">'+
             '<span class="v20-thumb"><img loading="lazy" src="'+a.cover+'" data-alt="'+a.thumb+'" alt="" onerror="v20imgFb(this)"></span>'+
-            '<span class="v20-crow">'+chipHtml(a)+'<span class="v20-ccat">'+esc(a.cat)+'・'+esc(a.wd)+'</span></span>'+
+            '<span class="v20-crow">'+chipHtml(a)+'<span class="v20-ccat" data-cat="'+esc(a.cat)+'" title="看同分類文章">'+esc(a.cat)+'・'+esc(a.wd)+'</span></span>'+
             '<span class="v20-ctitle">'+esc(a.title)+'</span>'+
             '<span class="v20-cex">'+esc(a.excerpt)+'</span>'+
             '<span class="v20-cfoot"><span class="v20-cread" style="color:'+a.color+'">閱讀全文 →</span>'+
@@ -1220,6 +1228,13 @@ window.v20imgFb=function(img){
     moreWrap.hidden=remaining<=0;
     moreBtn.textContent='載入更多（還有 '+remaining+' 篇）';
     countEl.textContent=all.length+' 篇';
+    var tf=document.getElementById('v20-tfilter');
+    if(state.theme){
+      if(!tf){tf=document.createElement('button');tf.id='v20-tfilter';tf.className='v20-tfilter';
+        tf.onclick=function(){state.theme='';state.limit=12;render();};
+        nav.insertBefore(tf,countEl);}
+      tf.textContent='主題：'+state.theme+'　✕';
+    }else if(tf){tf.remove();}
     // 膠囊
     Array.prototype.forEach.call(nav.querySelectorAll('.v20-pill'),function(b){
       var on=b.textContent===state.cat,c=C[b.textContent]||'#e9531d';
@@ -1231,7 +1246,7 @@ window.v20imgFb=function(img){
   ['全部','幼兒','學齡','青少','父母','趨勢'].forEach(function(cname){
     if(cname!=='全部'&&!arts.some(function(a){return a.cat===cname||a.cat2===cname;}))return;
     var b=document.createElement('button');b.className='v20-pill';b.textContent=cname;
-    b.onclick=function(){state.cat=cname;state.limit=12;render();window.scrollTo({top:0,behavior:'smooth'});};
+    b.onclick=function(){state.cat=cname;state.theme='';state.limit=12;render();window.scrollTo({top:0,behavior:'smooth'});};
     nav.appendChild(b);
   });
   nav.appendChild(countEl);
@@ -1251,6 +1266,17 @@ window.v20imgFb=function(img){
   watch();
   var _render=render;render=function(){_render();watch();};
   moreBtn.onclick=function(){state.limit+=12;render();};
+  function chipClick(e){
+    var t=e.target.closest('[data-theme],[data-cat]');
+    if(!t)return;
+    e.preventDefault();e.stopPropagation();
+    if(t.hasAttribute('data-theme')){state.theme=t.getAttribute('data-theme');}
+    else{state.cat=t.getAttribute('data-cat');state.theme='';}
+    state.limit=12;render();
+    document.getElementById('v20nav').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  monthsEl.addEventListener('click',chipClick);
+  featEl.addEventListener('click',chipClick);
   // 閱讀進度條＋回頂鈕
   var pg=document.getElementById('v20-progress'),topBtn=document.getElementById('v20-top');
   addEventListener('scroll',function(){
