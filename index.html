@@ -214,7 +214,7 @@ footer.v20 .fslogan{color:#b3a084}
   </div>
 
   <div class="grid">
-<a class="card is-latest theme-orange" href="2026-09/parenting_essence_2026-09-03.html" data-axis="thu" data-age="cross" data-hero="https://images.unsplash.com/photo-1653566031304-2bae3d104a11?w=1920&auto=format&fit=crop&q=80">
+<a class="card is-latest theme-orange" href="2026-09/parenting_essence_2026-09-03.html" data-axis="thu" data-age="cross" data-hero="2026-09/parenting_essence_2026-09-03_hero.jpg">
     <div class="card-tags"><span class="age">覺知．開智班（6-10）</span><span class="axis">週四 ｜ 3 秒鐘覺知對話</span></div>
     <h3 class="card-title">班語寫著「我們要成為彼此的幫助」，孩子要先留意同學現在需要什麼</h3>
     <p class="card-hook">開學第二週，覺知．開智班的老師把這學期的班語寫在黑板上：我們要成為彼此的幫助。同一週，國語日報報導了 DFC 臺灣（臺灣童心創意行動協會）發表的「AI 時代家長焦慮調查」：近七成三的家長擔心孩子「在人際互動中受傷，或難以在團體中被接納與包容」，僅五成家長擔心學習進度落後；近五成五家長認為，孩子在未來最該具備的能力是「同理心」。家長最擔心的是孩子在班上跟同學處得好不好，最想要的是同理心，這兩件事，班語那一句都寫到了。只是十個字念起來很順，孩子要真的做到，得從一件更小的事開始：先留意同學現在需要什麼。</p>
@@ -1365,15 +1365,20 @@ window.v20imgFb=function(img){
       clearTimeout(idleT);
       idleT=setTimeout(function(){bean.classList.remove('walk');bean.classList.add('hi');},1200);
     },{passive:true});
-    (function step(){
+    var lastT=performance.now(),wasMoving=false;
+    (function step(now){
+      // KWJ 2026-09-03「貼圖跟隨滑鼠的速度要快，現在很頓」：
+      // 追隨係數 .085 -> .30，並改成 frame-rate independent（120Hz 螢幕不會變兩倍快）
+      var dt=Math.min((now-lastT)/16.667,3);lastT=now;
+      var k=1-Math.pow(0.70,dt);
       var dx=tx-bx,dy=ty-by;
-      bx+=dx*.085;by+=dy*.085;
-      var moving=Math.abs(dx)+Math.abs(dy)>3;
-      if(moving){bean.classList.add('walk');bean.classList.remove('hi');if(Math.abs(dx)>1.5)face=dx<0?-1:1;}
-      else{bean.classList.remove('walk');}
-      bean.style.transform='translate('+bx+'px,'+by+'px) scaleX('+face+')';
+      bx+=dx*k;by+=dy*k;
+      var moving=Math.abs(dx)+Math.abs(dy)>2;
+      if(moving!==wasMoving){wasMoving=moving;bean.classList.toggle('walk',moving);if(moving)bean.classList.remove('hi');}
+      if(moving&&Math.abs(dx)>1.5)face=dx<0?-1:1;
+      bean.style.transform='translate3d('+bx.toFixed(1)+'px,'+by.toFixed(1)+'px,0) scaleX('+face+')';
       requestAnimationFrame(step);
-    })();
+    })(lastT);
   }
 })();
 </script>
