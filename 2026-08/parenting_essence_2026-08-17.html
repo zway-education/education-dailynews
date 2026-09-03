@@ -2869,7 +2869,80 @@ body .body section {
     </section>
   </div>
 
-    <div class="cta-row" style="max-width:820px;margin:16px auto 30px;display:flex;flex-wrap:wrap;gap:18px;align-items:stretch">
+  
+<!-- ask-v21 -->
+  <section class="ask-v21" style="max-width:820px;margin:34px auto 8px;padding:28px 26px;background:linear-gradient(180deg,#fffaf0,#fff);border:1px solid #f0e2c6;border-radius:22px;box-shadow:0 18px 46px -24px rgba(120,88,20,.30)">
+    <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#F2A40C;flex:0 0 auto">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.6A8.4 8.4 0 1 1 21 11.5z"/></svg>
+      </span>
+      <div style="font-size:20px;font-weight:900;color:#4A2E14;line-height:1.4">孩子的事，想問我們嗎？</div>
+    </div>
+    <p style="margin:0 0 16px;font-size:14.5px;line-height:1.85;color:#6b6252">寫下你家現在遇到的狀況，我們會看過。留 Email 的話，我們會回信跟你聊聊。</p>
+
+    <form class="ask-form" novalidate style="display:flex;flex-direction:column;gap:12px">
+      <textarea name="q" rows="4" maxlength="1500" required placeholder="例如：孩子三年級，最近不太敢跟同學開口，我可以怎麼陪他？" style="width:100%;box-sizing:border-box;padding:14px 15px;font-size:15px;line-height:1.8;font-family:inherit;color:#3a2f22;background:#fff;border:1px solid #e6d9bf;border-radius:14px;resize:vertical;outline:none"></textarea>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <input name="name" type="text" maxlength="40" placeholder="怎麼稱呼你（可不填）" style="flex:1 1 180px;min-width:0;box-sizing:border-box;padding:12px 14px;font-size:14.5px;font-family:inherit;color:#3a2f22;background:#fff;border:1px solid #e6d9bf;border-radius:12px;outline:none">
+        <input name="email" type="email" maxlength="120" placeholder="Email（想收到回覆再填）" style="flex:1 1 220px;min-width:0;box-sizing:border-box;padding:12px 14px;font-size:14.5px;font-family:inherit;color:#3a2f22;background:#fff;border:1px solid #e6d9bf;border-radius:12px;outline:none">
+      </div>
+      <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>不要填這一欄<input name="hp" type="text" tabindex="-1" autocomplete="off"></label></div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px">
+        <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;gap:7px;background:linear-gradient(135deg,#F7B733,#F2A40C);color:#fff;font-weight:800;font-size:15.5px;font-family:inherit;border:0;cursor:pointer;padding:13px 30px;border-radius:14px;box-shadow:0 12px 24px -10px rgba(242,164,12,.75)">送出留言</button>
+        <span class="ask-msg" role="status" aria-live="polite" style="font-size:14px;line-height:1.7;color:#6b6252"></span>
+      </div>
+      <p style="margin:2px 0 0;font-size:12.5px;line-height:1.7;color:#9a8f7c">Email 只用來回覆你這則留言，不會拿去做別的事。孩子若有較長期的情緒或人際困擾，也建議同時和學校老師討論。</p>
+    </form>
+  </section>
+  <script>
+  (function(){
+    var FN = "https://tlzrznomcpstwdkfshsk.supabase.co/functions/v1/essence-ask";
+    document.querySelectorAll('.ask-v21 .ask-form').forEach(function(f){
+      var btn = f.querySelector('button[type=submit]'),
+          msg = f.querySelector('.ask-msg'),
+          ta  = f.querySelector('[name=q]'),
+          sent = false;
+      function say(t, ok){ msg.textContent = t; msg.style.color = ok ? '#18a087' : '#c2410c'; }
+      f.addEventListener('submit', function(e){
+        e.preventDefault();
+        if (sent) return;
+        var q = (ta.value || '').trim();
+        if (q.length < 5) { say('想問的事再多寫幾個字，我們才回得準'); ta.focus(); return; }
+        var em = (f.querySelector('[name=email]').value || '').trim();
+        if (em && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) { say('Email 格式看起來不對'); return; }
+        btn.disabled = true; btn.style.opacity = .6; say('送出中…');
+        var t = document.querySelector('meta[name="share-title"]');
+        fetch(FN, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            q: q,
+            name: f.querySelector('[name=name]').value || '',
+            email: em,
+            hp: f.querySelector('[name=hp]').value || '',
+            d: (location.pathname.match(/(\d{4}-\d{2}-\d{2})/) || [])[1] || '',
+            title: (document.title || '').split('｜')[0].trim(),
+            url: location.href.split('?')[0]
+          })
+        }).then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return { s: r.status, j: j }; }); })
+          .then(function(o){
+            if (o.j && o.j.ok) {
+              sent = true;
+              f.querySelectorAll('textarea,input,button').forEach(function(el){ el.disabled = true; });
+              btn.textContent = '已送出';
+              say('收到了，謝謝你告訴我們。', true);
+            } else {
+              btn.disabled = false; btn.style.opacity = 1;
+              say((o.j && o.j.error) || '送出失敗，請稍後再試');
+            }
+          })
+          .catch(function(){ btn.disabled = false; btn.style.opacity = 1; say('網路不太穩，請再送一次'); });
+      });
+    });
+  })();
+  </script>
+
+  <div class="cta-row" style="max-width:820px;margin:16px auto 30px;display:flex;flex-wrap:wrap;gap:18px;align-items:stretch">
     <div class="cta-experience" style="flex:1 1 300px;padding:30px 26px;background:#ffffff;border:1px solid #eaeef4;border-radius:22px;box-shadow:0 18px 46px -20px rgba(28,48,88,.28);display:flex;flex-direction:column;text-align:left">
       <span style="display:inline-flex;align-items:center;gap:7px;align-self:flex-start;font-size:12px;font-weight:800;letter-spacing:1px;color:#ee6f10;background:#fff2e6;border-radius:999px;padding:5px 13px;margin-bottom:16px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ee6f10" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/></svg>親子體驗活動</span>
       <div style="font-size:20px;font-weight:900;color:#1e2b48;line-height:1.42;margin-bottom:9px">一起來參加<span style="color:#ee6f10">覺知SEL親子體驗活動</span></div>
