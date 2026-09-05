@@ -3,8 +3,16 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/",
+      "destination": "https://zway-education.github.io/education-dailynews/"
+    },
+    {
       "source": "/e/:y(\\d{4})-:m(\\d{2})-:d(\\d{2})",
-      "destination": "/:y-:m/parenting_essence_:y-:m-:d"
+      "destination": "https://zway-education.github.io/education-dailynews/:y-:m/parenting_essence_:y-:m-:d"
+    },
+    {
+      "source": "/:path*",
+      "destination": "https://zway-education.github.io/education-dailynews/:path*"
     }
   ]
 }
