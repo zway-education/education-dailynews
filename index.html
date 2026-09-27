@@ -214,7 +214,7 @@ footer.v20 .fslogan{color:#b3a084}
   </div>
 
   <div class="grid">
-<a class="card is-latest theme-blue" href="2026-09/parenting_essence_2026-09-27.html" data-axis="sun" data-age="cross" data-hero="2026-09/parenting_essence_2026-09-27_hero.jpg">
+<a class="card is-latest theme-blue" href="2026-09/parenting_essence_2026-09-27.html" data-axis="sun" data-age="cross" data-hero="2026-09/parenting_essence_2026-09-27_hero.jpg?v=20260927-letter2" data-asset-version="?v=20260927-letter2">
     <div class="card-tags"><span class="age">覺知．成人班</span><span class="axis">週日 ｜ 孩子參與 × 有回應的討論</span></div>
     <h3 class="card-title">聽完孩子的意見，記得把決定說給他聽</h3>
     <p class="card-hook">問孩子的意見，不只是讓他有機會說。決定後，大人再回來交代採納了什麼、哪些受到限制，孩子才看得見自己的話去了哪裡。</p>
@@ -1353,6 +1353,7 @@ window.v20imgFb=function(img){
   var raw=Array.prototype.slice.call(document.querySelectorAll('.grid a.card'));
   var arts=raw.map(function(c){
     var href=c.getAttribute('href')||'';
+    var assetVer=c.getAttribute('data-asset-version')||'';
     var age=((c.querySelector('.age')||{}).textContent||'').trim();
     var axis=((c.querySelector('.axis')||{}).textContent||'').trim();
     var m=axis.match(/^(週[一二三四五六日])?\s*[｜|]?\s*(.*)$/)||[];
@@ -1364,7 +1365,7 @@ window.v20imgFb=function(img){
     return {url:href,cls:age,wd:(dm[4]||m[1]||''),theme:(m[2]||axis),title:title,excerpt:hook,
       date:(dm[1]?dm[1]+'-'+dm[2]+'-'+dm[3]:''),cat:cat,cat2:cat2,
       color:T[(m[2]||'').trim()]||C[cat]||'#e9531d',
-      thumb:href.replace('.html','_share.png'),cover:href.replace('.html','_cover.png')};
+      thumb:href.replace('.html','_share.png')+assetVer,cover:href.replace('.html','_cover.png')+assetVer};
   }).filter(function(a){return a.url&&a.title;});
   arts.sort(function(a,b){return a.date<b.date?1:-1;});
 
