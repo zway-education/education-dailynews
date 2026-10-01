@@ -2867,7 +2867,7 @@ body .body section {
   </section>
   <script>
   (function(){
-    var FN = "https://tlzrznomcpstwdkfshsk.supabase.co/functions/v1/essence-ask";
+    var FN = "https://icqjurgljllyltvvpqpw.supabase.co/functions/v1/essence-ask";
     document.querySelectorAll('.ask-v21 .ask-form').forEach(function(f){
       var btn = f.querySelector('button[type=submit]'),
           msg = f.querySelector('.ask-msg'),
@@ -3244,13 +3244,13 @@ img{image-rendering:auto;}
    匿名、非個資；RLS 全鎖、僅透過 SECURITY DEFINER RPC 累加。 */
 (function(){
   "use strict";
-  var SB_URL = "https://tlzrznomcpstwdkfshsk.supabase.co";
-  var SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRsenJ6bm9tY3BzdHdka2ZzaHNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkyMjE1MjcsImV4cCI6MjA5NDc5NzUyN30.KB6Q71W1PO-22T_exYSllaESkTl5-oG8983g33H6pq8";
+  var SB_URL = "https://icqjurgljllyltvvpqpw.supabase.co";
+  var SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImljcWp1cmdsamxseWx0dnZwcXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxMTUxNjksImV4cCI6MjA5NDY5MTE2OX0.5LhiK6Nbtheon6d_0FQFta2KislZCbxbpn23_OxwUDY";
 
   function sbRpc(fn, body){
     return fetch(SB_URL + "/rest/v1/rpc/" + fn, {
       method:"POST",
-      headers:{ "apikey":SB_KEY, "Authorization":"Bearer "+SB_KEY, "Content-Type":"application/json" },
+      headers:{ "apikey":SB_KEY, "Authorization":"Bearer "+SB_KEY, "Content-Type":"application/json", "Accept-Profile":"crm", "Content-Profile":"crm" },
       body: JSON.stringify(body || {})
     }).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; });
   }
