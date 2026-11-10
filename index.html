@@ -43,6 +43,16 @@ footer.v20{display:flex;align-items:center;justify-content:space-between;gap:16p
 .v20-title-part{display:inline-block}.v20-title-part:last-child{color:var(--accent)}
 @media(max-width:650px){.v20-title-part{display:block}.v20-title-part:last-child{margin-top:3px}.v20-b-meta,.v20-ccat,.v20-cdate,.v20-feat-date,.v20-chip{font-size:12px}}
 
+
+.v20-editorial{margin-top:32px}.v20-editorial h2{font-size:24px;margin:0 0 14px}
+.v20-editorial-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.v20-selection{display:grid;grid-template-columns:minmax(105px,32%) minmax(0,1fr);gap:16px;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+.v20-selection .v20-thumb{align-self:start}.v20-selection .v20-thumb img{aspect-ratio:16/9;object-fit:cover}
+.v20-selection h3{font-size:19px;margin:4px 0;line-height:1.45}.v20-selection p{font-size:14px;line-height:1.65;margin:4px 0 10px}
+.v20-selection .v20-selection-meta,.v20-selection small{font-size:12px;color:var(--muted)}
+.v20-selection-link{display:inline-block;color:var(--accent);font-weight:700;margin:0 0 6px}.v20-selection small{display:block}
+@media(max-width:740px){.v20-editorial-grid{grid-template-columns:1fr}}
+@media(max-width:420px){.v20-selection{grid-template-columns:1fr}.v20-selection .v20-thumb{max-height:155px}}
 </style></head>
 <body>
 
@@ -74,6 +84,22 @@ footer.v20{display:flex;align-items:center;justify-content:space-between;gap:16p
 
 <main>
   <article id="v20-featured" hidden></article>
+  <section id="editorial-picks" class="v20-editorial" aria-labelledby="editorial-picks-title">
+  <h2 id="editorial-picks-title">時事選讀與教養新書</h2>
+  <div class="v20-editorial-grid"><article class="v20-selection">
+      <a class="v20-thumb" href="https://www.parenting.com.tw/article/6002768"><img src="2026-11/parenting_essence_2026-11-09_hero.jpg?v=20261110-photo2" loading="lazy" alt="桌上的筆記本與文具" width="640" height="360"></a>
+      <div class="v20-selection-copy"><p class="v20-selection-meta">時事選讀 · 親子天下・吳和懋</p>
+        <h3>期中考後，怎麼接住孩子的失落？</h3><p>期中考卷發回來時，家長可以先用自己的話回應孩子剛才說的內容，讓他知道自己被聽見。親子天下整理了日本親子專家的建議。</p>
+        <a class="v20-selection-link" href="https://www.parenting.com.tw/article/6002768">閱讀原文 →</a>
+        <small>示意照片：<a href="https://unsplash.com/photos/an-open-notebook-and-pens-on-a-desk-hBdaqrr5Z3k">Kelly Sikkema／Unsplash</a></small>
+      </div></article><article class="v20-selection">
+      <a class="v20-thumb" href="https://www.cite.com.tw/book.php?id=109314"><img src="editorial/reading.jpg?v=20261110-photo2" loading="lazy" alt="書頁與咖啡的閱讀情境示意照" width="640" height="360"></a>
+      <div class="v20-selection-copy"><p class="v20-selection-meta">教養新書 · 商周出版・呂家慧</p>
+        <h3>《接住孩子，也接住自己》</h3><p>想幫孩子，又想留空間讓他自己試？呂家慧從家庭與教育現場整理 33 個親子練習，談怎麼理解孩子的挫折，也照顧家長自己的焦慮。</p>
+        <a class="v20-selection-link" href="https://www.cite.com.tw/book.php?id=109314">看出版社書訊 →</a>
+        <small>示意照片：<a href="https://unsplash.com/photos/a-mug-of-coffee-rests-on-an-open-book-rp-uVA22hXM">Noha Badawi／Unsplash</a></small>
+      </div></article></div>
+</section>
 
   <a class="v20-quiz" href="https://zway-education.github.io/mindspectrum/">
 
@@ -94,8 +120,8 @@ footer.v20{display:flex;align-items:center;justify-content:space-between;gap:16p
   </div>
 
   <div class="grid">
-<a class="card is-latest theme-coffee" data-asset-version="?v=20261110-sportsday1" href="2026-11/parenting_essence_2026-11-10.html" data-axis="tue" data-age="primary" data-hero="2026-11/parenting_essence_2026-11-10_hero.jpg?v=20261110-sportsday1"><div class="card-tags"><span class="age">覺知．學齡家庭</span><span class="axis">時事觀察 ｜ 運動陪伴</span></div><h3 class="card-title">孩子參加運動會，家長可以怎麼支持他？</h3><p class="card-hook">孩子參加運動會時，家長可以用掌聲為隊伍加油，把指揮留給老師。比賽後，肯定自己親眼看見的努力。</p><span class="upload-date">2026-11-10&nbsp;&nbsp;週二</span><span class="card-cta">閱讀全文 &rarr;</span></a>
-<a class="card theme-coffee" data-asset-version="?v=20261109-homework1" href="2026-11/parenting_essence_2026-11-09.html" data-axis="mon" data-age="primary" data-hero="2026-11/parenting_essence_2026-11-09_hero.jpg?v=20261109-homework1"><div class="card-tags"><span class="age">覺知．學齡家庭</span><span class="axis">教養知識 ｜ 親師合作</span></div><h3 class="card-title">孩子在家寫不出作業，家長能幫到哪一步？</h3><p class="card-hook">孩子寫不出作業時，陪他確認要求、找出停下來的那一步。若翻過課堂筆記仍不會，留下他試過的做法，讓老師接著協助。</p><span class="upload-date">2026-11-09&nbsp;&nbsp;週一</span><span class="card-cta">閱讀全文 &rarr;</span></a>
+<a class="card is-latest theme-coffee" data-asset-version="?v=20261110-photo2" href="2026-11/parenting_essence_2026-11-10.html" data-axis="tue" data-age="primary" data-hero="2026-11/parenting_essence_2026-11-10_hero.jpg?v=20261110-photo2"><div class="card-tags"><span class="age">覺知．學齡家庭</span><span class="axis">時事觀察 ｜ 面對挫折</span></div><h3 class="card-title">孩子在運動會上失誤，家長怎麼陪他再試一次？</h3><p class="card-hook">孩子在比賽中失誤時，家長可以先讓他喘口氣，再肯定他怎麼調整、把比賽接下去。幼兒時期受到的肯定，也和幾年後孩子怎麼看待挑戰有關。</p><span class="upload-date">2026-11-10&nbsp;&nbsp;週二</span><span class="card-cta">閱讀全文 &rarr;</span></a>
+<a class="card theme-coffee" data-asset-version="?v=20261110-photo2" href="2026-11/parenting_essence_2026-11-09.html" data-axis="mon" data-age="primary" data-hero="2026-11/parenting_essence_2026-11-09_hero.jpg?v=20261110-photo2"><div class="card-tags"><span class="age">覺知．學齡家庭</span><span class="axis">教養知識 ｜ 親師合作</span></div><h3 class="card-title">孩子寫作業卡住，是看不懂題目，還是不知道怎麼開始？</h3><p class="card-hook">作業做不下去，可能是要求沒看懂，也可能是還不會開始。家長可以先確認要求，再把題號和孩子試過的做法留給老師參考。</p><span class="upload-date">2026-11-09&nbsp;&nbsp;週一</span><span class="card-cta">閱讀全文 &rarr;</span></a>
 <a class="card theme-coffee" data-asset-version="?v=20261108-museum1" href="2026-11/parenting_essence_2026-11-08.html" data-axis="sun" data-age="family" data-hero="2026-11/parenting_essence_2026-11-08_hero.jpg?v=20261108-museum1"><div class="card-tags"><span class="age">覺知．幼兒家庭</span><span class="axis">教養知識 ｜ 文化參與</span></div><h3 class="card-title">帶幼兒逛美術館，怎麼知道孩子有在參與？</h3><p class="card-hook">幼兒不只用說話表達參觀興趣。從一項英國博物館研究出發，練習看懂孩子的回應，陪他停留、對話，也保留休息與參觀界線。</p><span class="upload-date">2026-11-08&nbsp;&nbsp;週日</span><span class="card-cta">閱讀全文 &rarr;</span></a>
 <a class="card theme-coffee" data-asset-version="?v=20261107-chores1" href="2026-11/parenting_essence_2026-11-07.html" data-axis="sat" data-age="family" data-hero="2026-11/parenting_essence_2026-11-07_hero.jpg?v=20261107-chores1"><div class="card-tags"><span class="age">覺知．幼兒與學齡家庭</span><span class="axis">教養知識 ｜ 家庭合作</span></div><h3 class="card-title">孩子想幫忙做家事，家長可以交給他什麼？</h3><p class="card-hook">孩子想幫忙收餐桌，卻不知道從哪裡開始？從UNICEF的家事參與建議出發，練習把工作說清楚、示範一小步，並依孩子卡住的地方提供協助。</p><span class="upload-date">2026-11-07&nbsp;&nbsp;週六</span><span class="card-cta">閱讀全文 &rarr;</span></a>
 <a class="card theme-coffee" data-asset-version="?v=20261106-friends1" href="2026-11/parenting_essence_2026-11-06.html" data-axis="fri" data-age="secondary" data-hero="2026-11/parenting_essence_2026-11-06_hero.jpg?v=20261106-friends1"><div class="card-tags"><span class="age">覺知．青少年家庭</span><span class="axis">教養知識 ｜ 同儕交往</span></div><h3 class="card-title">孩子放學想和朋友聚一聚，家長要先問什麼？</h3><p class="card-hook">孩子放學想和朋友聚一聚，家長可以先問他想參與什麼，再一起約好回家方式。文中示範怎麼談臨時換地點、沒搭上公車，以及孩子想提早離開時怎麼求助。</p><span class="upload-date">2026-11-06&nbsp;&nbsp;週五</span><span class="card-cta">閱讀全文 &rarr;</span></a>
